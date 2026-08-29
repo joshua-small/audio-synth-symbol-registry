@@ -4,16 +4,18 @@ This project uses [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.htm
 
 ## Independently versioned artifacts
 
-- Registry release: the published set of accepted records and evidence links.
-- Schema release: the machine-readable record contract.
-- Artwork release: neutral reference SVGs, when published.
-- Tooling release: validators, generators, and related code.
+The authoritative metadata is `registry/registry-metadata.json`.
 
-The current bootstrap release is `0.1.0`.
+- Registry data: the published collection of entries at every status.
+- Schema: the machine-readable entry contracts.
+- Artwork: original neutral reference SVGs, when published.
+- Tooling: validators, generators, and related code.
+
+The bootstrap publishes registry, schema, and tooling at `0.1.0`. Artwork has no published version until original artwork exists.
 
 ## Compatibility rules
 
-- MAJOR: incompatible schema changes, removal or semantic redefinition of a published stable identifier, or incompatible public tooling API changes.
+- MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.
 - MINOR: backwards-compatible fields, records, families, renderings, or features.
 - PATCH: corrections, evidence additions, documentation changes, and non-semantic artwork refinements.
 
@@ -21,4 +23,4 @@ Before `1.0.0`, the project may make breaking changes in a MINOR release as perm
 
 ## Stable identifiers
 
-An accepted identifier is never reassigned to a different semantic meaning. Deprecated identifiers remain resolvable with an explicit replacement or historical note.
+An identifier is provisional while its record is `evidence-collecting` or `registry-candidate`. A `registry-accepted` identifier is permanent and is never reassigned to a different semantic meaning. Deprecated permanent identifiers remain resolvable with an explicit replacement or historical note.
