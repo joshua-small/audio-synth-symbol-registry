@@ -6,6 +6,8 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 Registry release: **0.1.0**  
 Schema release: **0.1.0**  
+Tooling release: **0.1.0**  
+Artwork release: **not yet published**  
 Standards status: **Unicode preparatory research only. No submission has been made.**
 
 The project begins with a reviewable semantic registry and evidence corpus. It does not claim that any symbol will be encoded in Unicode.
@@ -25,7 +27,7 @@ Potential later work includes shelving, bell/peak, all-pass, tilt, waveform, rou
 
 ## Interchange model
 
-Each entry has a durable ASCII identifier, human-readable name, aliases, text fallback, accessibility speech label, evidence references, and optional neutral original artwork.
+Each entry has an ASCII identifier, human-readable name, aliases or related terms, text fallback, accessibility speech label, evidence references, confidence, open questions, and optional neutral original artwork.
 
 ```text
 ID: asr:filter.high-pass
@@ -33,7 +35,7 @@ Text fallback: HPF
 Speech: high-pass filter
 ```
 
-The identifier and text fallback are portable. A rendered glyph is optional and must not carry undefined semantic information.
+An `asr:` identifier is provisional while a record is `evidence-collecting` or `registry-candidate`. It becomes permanent at `registry-accepted`. The identifier and text fallback are portable. A rendered glyph is optional and must not carry undefined semantic information.
 
 ## What this is not
 
@@ -45,7 +47,11 @@ The identifier and text fallback are portable. A rendered glyph is optional and 
 
 ## Versioning
 
-This repository follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html). The registry, schema, artwork package, and tooling are versioned independently. See [docs/versioning.md](docs/versioning.md).
+This repository follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html). Registry data, schema, artwork, and tooling have independent version metadata. A registry release may include records at any status; the accepted repertoire is the `registry-accepted` subset. See [docs/versioning.md](docs/versioning.md).
+
+## Licensing
+
+See [LICENSES.md](LICENSES.md). Registry data and original neutral SVGs are CC0-1.0, tooling is Apache-2.0, and prose documentation is CC-BY-4.0.
 
 ## Repository layout
 
@@ -75,4 +81,4 @@ Adjacent communities and projects:
 
 ## Participate
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), and the [decision log](docs/decision-log.md) before contributing evidence, artwork, or candidate entries.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), [AGENTS.md](AGENTS.md), and the [decision log](docs/decision-log.md) before contributing evidence, artwork, or candidate entries.
