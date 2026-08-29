@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "validate": "node tooling/validate-registry.mjs",
-    "test": "npm run validate"
+    "test": "npm run validate && node --test tests/*.test.mjs"
   },
   "license": "Apache-2.0",
   "devDependencies": {
