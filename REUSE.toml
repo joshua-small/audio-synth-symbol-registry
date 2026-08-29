@@ -1,0 +1,16 @@
+version = 1
+
+[[annotations]]
+path = ["registry/**", "evidence/**", "artwork/**"]
+SPDX-FileCopyrightText = "2026 Joshua Small and contributors"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["tooling/**", "tests/**", ".github/**", "package.json", "package-lock.json"]
+SPDX-FileCopyrightText = "2026 Joshua Small and contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["README.md", "AGENTS.md", "CONTRIBUTING.md", "GOVERNANCE.md", "docs/**", "LICENSE", "LICENSES.md"]
+SPDX-FileCopyrightText = "2026 Joshua Small and contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
