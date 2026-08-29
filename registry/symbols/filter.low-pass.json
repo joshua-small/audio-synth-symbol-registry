@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "id": "asr:filter.low-pass",
+  "name": "Low-pass filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that passes frequencies below a cutoff region and attenuates frequencies above it.",
+    "aliases": [
+      "low pass",
+      "high cut",
+      "LPF"
+    ],
+    "text_fallback": "LPF",
+    "spoken_label": "low-pass filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "axis-less-low-pass-response",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-002",
+      "claim": "Documents a compact low-pass or high-cut response selector in the EQ Eight interface.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-003",
+      "claim": "Defines and illustrates low-pass filtering as a frequency-response concept.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-004",
+      "claim": "Provides related low-pass terminology and circuit-diagram symbols, not the target compact audio glyph.",
+      "scope": "standards"
+    }
+  ],
+  "notes": [
+    "High cut is a common audio alias, not a separate semantic entry.",
+    "The representative glyph is a concept, not vendor artwork."
+  ]
+}
