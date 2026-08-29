@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "registry": "Open Audio and Synthesis Symbol Registry",
+  "registry_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "status": "bootstrap",
+  "canonical_interchange": "ASCII semantic identifiers in the asr: namespace",
+  "unicode_status": "preparatory research only"
+}
