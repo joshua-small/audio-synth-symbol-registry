@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "id": "asr:filter.high-pass",
+  "name": "High-pass filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that attenuates frequencies below a cutoff region and passes frequencies above it.",
+    "aliases": [
+      "high pass",
+      "low cut",
+      "HPF"
+    ],
+    "text_fallback": "HPF",
+    "spoken_label": "high-pass filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "axis-less-high-pass-response",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-002",
+      "claim": "Documents a compact high-pass or low-cut response selector in the EQ Eight interface.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-003",
+      "claim": "Defines and illustrates high-pass filtering as a frequency-response concept.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-004",
+      "claim": "Provides related high-pass terminology and circuit-diagram symbols, not the target compact audio glyph.",
+      "scope": "standards"
+    }
+  ],
+  "notes": [
+    "The ASCII identifier, fallback, and speech label are the canonical portable forms.",
+    "The representative glyph is a concept, not vendor artwork."
+  ]
+}
