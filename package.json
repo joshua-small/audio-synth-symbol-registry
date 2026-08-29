@@ -8,5 +8,8 @@
     "validate": "node tooling/validate-registry.mjs",
     "test": "npm run validate"
   },
-  "license": "UNLICENSED"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ajv": "8.17.1"
+  }
 }
