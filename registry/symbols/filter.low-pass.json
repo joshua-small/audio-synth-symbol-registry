@@ -40,8 +40,18 @@
       "scope": "standards"
     }
   ],
+  "confidence": {
+    "level": "medium",
+    "rationale": "Terminology and response semantics are well established, but compact cross-vendor glyph convergence and plain-text use require further corpus evidence."
+  },
+  "open_questions": [
+    {
+      "question": "Is high cut consistently interchangeable with low-pass in the source corpus?",
+      "status": "open"
+    }
+  ],
   "notes": [
-    "High cut is a common audio alias, not a separate semantic entry.",
+    "The ASCII identifier is provisional until registry-accepted.",
     "The representative glyph is a concept, not vendor artwork."
   ]
 }
