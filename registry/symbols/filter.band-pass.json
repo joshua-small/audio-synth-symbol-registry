@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "id": "asr:filter.band-pass",
+  "name": "Band-pass filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that passes a bounded band of frequencies and attenuates frequencies below and above that band.",
+    "aliases": [
+      "band pass",
+      "BPF"
+    ],
+    "text_fallback": "BPF",
+    "spoken_label": "band-pass filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "axis-less-band-pass-response",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-003",
+      "claim": "Defines and illustrates band-pass filtering as a frequency-response concept.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-004",
+      "claim": "Provides related band-pass terminology and circuit-diagram symbols, not the target compact audio glyph.",
+      "scope": "standards"
+    }
+  ],
+  "confidence": {
+    "level": "medium",
+    "rationale": "The semantic filter class is stable, but the compact response-glyph family and text-interchange need require further evidence."
+  },
+  "open_questions": [
+    {
+      "question": "Which audio-product families expose band-pass as a compact standalone filter mode?",
+      "status": "open"
+    }
+  ],
+  "notes": [
+    "This entry does not specify bandwidth, slope, or center frequency.",
+    "The ASCII identifier is provisional until registry-accepted."
+  ]
+}

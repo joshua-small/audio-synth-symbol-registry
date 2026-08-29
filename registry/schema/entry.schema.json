@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/entry.schema.json",
+  "title": "Open Audio and Synthesis Symbol Registry entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "name", "status", "semantics", "representations", "unicode", "evidence", "confidence", "open_questions"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "id": {
+      "type": "string",
+      "pattern": "^asr:[a-z][a-z0-9-]*(?:\\.[a-z][a-z0-9-]*)+$",
+      "description": "Stable ASCII semantic identifier. It is provisional until registry-accepted."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["evidence-collecting", "registry-candidate", "registry-accepted", "deprecated"] },
+    "semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "definition", "aliases", "text_fallback", "spoken_label"],
+      "properties": {
+        "category": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string", "minLength": 1 },
+        "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "related_terms": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "text_fallback": { "type": "string", "pattern": "^[A-Z0-9 -]+$" },
+        "spoken_label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "representations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["representative_glyph_concept", "axis_bearing_form", "asset_status"],
+      "properties": {
+        "representative_glyph_concept": { "type": "string", "minLength": 1 },
+        "axis_bearing_form": { "enum": ["illustrative-only", "not-defined"] },
+        "asset_status": { "enum": ["not-yet-drawn", "draft-svg", "approved-svg"] }
+      }
+    },
+    "unicode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "existing_unicode_mapping"],
+      "properties": {
+        "status": { "enum": ["not-submitted", "under-review", "encoded", "not-pursuing"] },
+        "existing_unicode_mapping": { "type": "null" }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "claim", "scope"],
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^EV-[0-9]{3}$" },
+          "claim": { "type": "string", "minLength": 1 },
+          "scope": { "enum": ["terminology", "product-ui", "education", "community", "standards"] }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "rationale"],
+      "properties": {
+        "level": { "enum": ["low", "medium", "high"] },
+        "rationale": { "type": "string", "minLength": 1 }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "status"],
+        "properties": {
+          "question": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["open", "deferred", "resolved"] }
+        }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}
