@@ -4,15 +4,12 @@
   "artifacts": {
     "registry": {
       "version": "0.1.0",
-      "status": "bootstrap"
+      "status": "bootstrap",
+      "includes": ["registry/symbols/", "evidence/ledger.json"]
     },
     "schema": {
       "version": "0.1.0",
       "entry_schema": "registry/schema/entry.schema.json"
-    },
-    "evidence": {
-      "version": "0.1.0",
-      "ledger": "evidence/ledger.json"
     },
     "artwork": {
       "version": null,

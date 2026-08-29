@@ -84,13 +84,13 @@ test("rejects metadata with a leading-zero SemVer component", () => {
 test("rejects a ledger version that differs from metadata", () => {
   const result = runValidator({ ledgerFixture: "ledger-version-mismatch.json" });
   assert.equal(result.status, 1, result.stdout);
-  assert.match(result.stderr, /evidence ledger version differs from evidence metadata/);
+  assert.match(result.stderr, /Evidence ledger and registry metadata versions differ/);
 });
 
 test("rejects metadata that omits the evidence ledger path", () => {
   const result = runValidator({ metadataFixture: "metadata-no-evidence-ledger.json" });
   assert.equal(result.status, 1, result.stdout);
-  assert.match(result.stderr, /metadata artifact evidence must define ledger path/);
+  assert.match(result.stderr, /Registry metadata must declare the evidence ledger as registry data/);
 });
 
 test("rejects metadata that declares a missing entry schema", () => {

@@ -6,12 +6,12 @@ This project uses [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.htm
 
 The authoritative metadata is `registry/registry-metadata.json`.
 
-- Registry data: the published collection of entries at every status.
+- Registry data: the published collection of entries at every status, including the evidence ledger.
 - Schema: the machine-readable entry contracts.
 - Artwork: original neutral reference SVGs, when published.
 - Tooling: validators, generators, and related code.
 
-The bootstrap publishes registry, schema, and tooling at `0.1.0`. Artwork has no published version until original artwork exists.
+The bootstrap publishes registry, schema, and tooling at `0.1.0`. Artwork has no published version until original artwork exists. The evidence ledger is part of the registry-data artifact and uses the registry version.
 
 ## Compatibility rules
 
