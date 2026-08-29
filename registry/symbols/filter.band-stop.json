@@ -9,8 +9,10 @@
     "aliases": [
       "band stop",
       "band reject",
-      "notch filter",
       "BSF"
+    ],
+    "related_terms": [
+      "notch filter"
     ],
     "text_fallback": "BSF",
     "spoken_label": "band-stop filter"
@@ -41,8 +43,18 @@
       "scope": "standards"
     }
   ],
+  "confidence": {
+    "level": "low",
+    "rationale": "Band-stop semantics are stable, but the source corpus must determine whether notch is treated as an exact synonym or a distinct high-Q case."
+  },
+  "open_questions": [
+    {
+      "question": "Does the source corpus establish notch filter as a distinct semantic category rather than a narrow band-stop case?",
+      "status": "open"
+    }
+  ],
   "notes": [
-    "Whether notch filter remains an alias or needs a parameterized future entry is an open evidence question.",
-    "The representative glyph is a concept, not vendor artwork."
+    "Notch filter is a provisional related term, not an accepted alias.",
+    "The ASCII identifier is provisional until registry-accepted."
   ]
 }
