@@ -34,8 +34,18 @@
       "scope": "standards"
     }
   ],
+  "confidence": {
+    "level": "medium",
+    "rationale": "The semantic filter class is stable, but the compact response-glyph family and text-interchange need require further evidence."
+  },
+  "open_questions": [
+    {
+      "question": "Which audio-product families expose band-pass as a compact standalone filter mode?",
+      "status": "open"
+    }
+  ],
   "notes": [
     "This entry does not specify bandwidth, slope, or center frequency.",
-    "The representative glyph is a concept, not vendor artwork."
+    "The ASCII identifier is provisional until registry-accepted."
   ]
 }
