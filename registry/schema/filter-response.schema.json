@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/filter-response.schema.json",
+  "title": "Filter-response registry entry",
+  "allOf": [
+    { "$ref": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/entry.schema.json" },
+    {
+      "properties": {
+        "semantics": {
+          "properties": {
+            "category": { "const": "filter-response" }
+          }
+        },
+        "representations": {
+          "properties": {
+            "representative_glyph_concept": {
+              "enum": [
+                "axis-less-high-pass-response",
+                "axis-less-low-pass-response",
+                "axis-less-band-pass-response",
+                "axis-less-band-stop-response"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
