@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1.0",
+  "id": "asr:filter.high-pass",
+  "name": "High-pass filter",
+  "status": "evidence-collecting",
+  "semantics": { "category": "filter-response", "definition": "Passes high frequencies.", "aliases": ["HPF"], "text_fallback": "HPF", "spoken_label": "high-pass filter" },
+  "representations": { "representative_glyph_concept": "axis-less-high-pass-response", "axis_bearing_form": "illustrative-only", "asset_status": "not-yet-drawn" },
+  "unicode": { "status": "not-submitted", "existing_unicode_mapping": null },
+  "evidence": [{ "source_id": "EV-001", "claim": "Terminology reference.", "scope": "terminology" }],
+  "confidence": { "level": "low", "rationale": "Fixture." },
+  "open_questions": [{ "question": "Fixture question?" }]
+}

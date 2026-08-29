@@ -1,0 +1,19 @@
+{
+  "ledger_version": "0.2.0",
+  "accessed_on": "2026-08-29",
+  "sources": [
+    {
+      "id": "EV-001",
+      "type": "fixture",
+      "publisher": "Fixture",
+      "title": "Fixture source",
+      "url": "https://example.invalid/fixture",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Fixture",
+      "direct_observation": "Fixture.",
+      "interpretation": "Fixture.",
+      "rights_note": "Fixture."
+    }
+  ]
+}

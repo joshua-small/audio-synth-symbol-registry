@@ -14,8 +14,10 @@ const identifier = /^asr:[a-z][a-z0-9-]*(?:[.][a-z][a-z0-9-]*)+$/;
 
 const metadata = await readJson("registry/registry-metadata.json");
 const packageJson = await readJson("package.json");
-const ledger = await readJson("evidence/ledger.json");
-const entrySchema = await readJson("registry/schema/entry.schema.json");
+const evidenceMetadata = metadata.artifacts.evidence;
+if (!evidenceMetadata?.ledger) fail("metadata artifact evidence must define ledger path");
+const ledger = await readJson(evidenceMetadata?.ledger ?? "evidence/ledger.json");
+const entrySchema = await readJson(metadata.artifacts.schema.entry_schema);
 const filterResponseSchema = await readJson("registry/schema/filter-response.schema.json");
 
 for (const [name, artifact] of Object.entries(metadata.artifacts)) {
@@ -25,16 +27,19 @@ for (const [name, artifact] of Object.entries(metadata.artifacts)) {
 }
 if (!semver.test(packageJson.version)) fail(`package.json has invalid SemVer ${packageJson.version}`);
 if (packageJson.version !== metadata.artifacts.tooling.version) fail("package.json and tooling metadata versions differ.");
+if (!semver.test(ledger.ledger_version)) fail(`evidence ledger has invalid SemVer ${ledger.ledger_version}`);
+if (ledger.ledger_version !== evidenceMetadata?.version) fail("evidence ledger version differs from evidence metadata");
 
 const ajv = new Ajv2020({ allErrors: true, strict: true });
 ajv.addSchema(entrySchema);
 const validateFilterResponse = ajv.compile(filterResponseSchema);
 
-if (!Array.isArray(ledger.sources) || ledger.sources.length === 0) {
+const sources = Array.isArray(ledger.sources) ? ledger.sources : [];
+if (sources.length === 0) {
   fail("Evidence ledger has no sources.");
 }
 const sourceIds = new Set();
-for (const source of ledger.sources ?? []) {
+for (const source of sources) {
   for (const field of ["id", "publisher", "title", "url", "accessed_on", "location", "direct_observation", "interpretation", "rights_note"]) {
     if (!source[field]) fail(`evidence source ${source.id ?? "<missing>"}: missing ${field}`);
   }
