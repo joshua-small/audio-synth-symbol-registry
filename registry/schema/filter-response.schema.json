@@ -5,13 +5,16 @@
   "allOf": [
     { "$ref": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/entry.schema.json" },
     {
+      "type": "object",
       "properties": {
         "semantics": {
+          "type": "object",
           "properties": {
             "category": { "const": "filter-response" }
           }
         },
         "representations": {
+          "type": "object",
           "properties": {
             "representative_glyph_concept": {
               "enum": [
