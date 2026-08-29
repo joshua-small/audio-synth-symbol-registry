@@ -1,0 +1,12 @@
+{
+  "name": "audio-synth-symbol-registry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-led open registry for audio and synthesis symbols.",
+  "type": "module",
+  "scripts": {
+    "validate": "node tooling/validate-registry.mjs",
+    "test": "npm run validate"
+  },
+  "license": "UNLICENSED"
+}
