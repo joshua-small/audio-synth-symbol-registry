@@ -1,3 +1,4 @@
+import Ajv2020 from "ajv/dist/2020.js";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -8,18 +9,39 @@ const readJson = async (relativePath) =>
 
 const failures = [];
 const fail = (message) => failures.push(message);
-const semver = /^0\.(?:[0-9]+)\.(?:[0-9]+)$/;
-const identifier = /^asr:[a-z][a-z0-9-]*(?:\.[a-z][a-z0-9-]*)+$/;
+const semver = /^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-(?:0|[1-9]\\d*|\\d*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$/;
+const identifier = /^asr:[a-z][a-z0-9-]*(?:\\.[a-z][a-z0-9-]*)+$/;
 
 const metadata = await readJson("registry/registry-metadata.json");
 const packageJson = await readJson("package.json");
 const ledger = await readJson("evidence/ledger.json");
+const entrySchema = await readJson("registry/schema/entry.schema.json");
+const filterResponseSchema = await readJson("registry/schema/filter-response.schema.json");
 
-if (!semver.test(packageJson.version)) fail(`package.json version is not a supported bootstrap SemVer: ${packageJson.version}`);
-if (metadata.registry_version !== packageJson.version) fail("Registry metadata and package version differ.");
-if (metadata.schema_version !== packageJson.version) fail("Registry metadata and schema version differ.");
+for (const [name, artifact] of Object.entries(metadata.artifacts)) {
+  if (artifact.version !== null && !semver.test(artifact.version)) {
+    fail(`metadata artifact ${name} has invalid SemVer ${artifact.version}`);
+  }
+}
+if (!semver.test(packageJson.version)) fail(`package.json has invalid SemVer ${packageJson.version}`);
+if (packageJson.version !== metadata.artifacts.tooling.version) fail("package.json and tooling metadata versions differ.");
 
-const sourceIds = new Set(ledger.sources.map((source) => source.id));
+const ajv = new Ajv2020({ allErrors: true, strict: true });
+ajv.addSchema(entrySchema);
+const validateFilterResponse = ajv.compile(filterResponseSchema);
+
+if (!Array.isArray(ledger.sources) || ledger.sources.length === 0) {
+  fail("Evidence ledger has no sources.");
+}
+const sourceIds = new Set();
+for (const source of ledger.sources ?? []) {
+  for (const field of ["id", "publisher", "title", "url", "accessed_on", "location", "direct_observation", "interpretation", "rights_note"]) {
+    if (!source[field]) fail(`evidence source ${source.id ?? "<missing>"}: missing ${field}`);
+  }
+  if (sourceIds.has(source.id)) fail(`evidence ledger has duplicate source ID ${source.id}`);
+  sourceIds.add(source.id);
+}
+
 const seenIds = new Set();
 const recordDir = path.join(root, "registry", "symbols");
 const files = (await readdir(recordDir)).filter((file) => file.endsWith(".json"));
@@ -27,20 +49,16 @@ const files = (await readdir(recordDir)).filter((file) => file.endsWith(".json")
 for (const file of files) {
   const relativePath = path.join("registry", "symbols", file);
   const record = await readJson(relativePath);
-  const required = ["schema_version", "id", "name", "status", "semantics", "representations", "unicode", "evidence"];
 
-  for (const field of required) {
-    if (!(field in record)) fail(`${relativePath}: missing ${field}`);
+  if (!validateFilterResponse(record)) {
+    for (const error of validateFilterResponse.errors ?? []) {
+      fail(`${relativePath}: schema ${error.instancePath || "/"} ${error.message}`);
+    }
   }
-
-  if (record.schema_version !== metadata.schema_version) fail(`${relativePath}: schema version differs from registry metadata`);
+  if (record.schema_version !== metadata.artifacts.schema.version) fail(`${relativePath}: schema version differs from schema metadata`);
   if (!identifier.test(record.id)) fail(`${relativePath}: invalid identifier ${record.id}`);
   if (seenIds.has(record.id)) fail(`${relativePath}: duplicate identifier ${record.id}`);
   seenIds.add(record.id);
-
-  if (!record.semantics?.text_fallback || !record.semantics?.spoken_label) fail(`${relativePath}: missing portable text or speech representation`);
-  if (record.representations?.axis_bearing_form !== "illustrative-only") fail(`${relativePath}: v0.1 requires axis-bearing forms to remain illustrative-only`);
-  if (record.unicode?.status !== "not-submitted") fail(`${relativePath}: v0.1 records must not imply a Unicode submission`);
 
   for (const evidence of record.evidence ?? []) {
     if (!sourceIds.has(evidence.source_id)) fail(`${relativePath}: unknown evidence source ${evidence.source_id}`);
@@ -54,5 +72,5 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log(`Validated ${files.length} registry record(s), ${sourceIds.size} evidence source(s), version ${packageJson.version}.`);
+  console.log(`Validated ${files.length} registry record(s), ${sourceIds.size} evidence source(s), registry ${metadata.artifacts.registry.version}, schema ${metadata.artifacts.schema.version}, tooling ${metadata.artifacts.tooling.version}.`);
 }
