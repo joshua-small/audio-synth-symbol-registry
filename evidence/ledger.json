@@ -5,37 +5,67 @@
     {
       "id": "EV-001",
       "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Unicode 17.0 NamesList",
       "url": "https://www.unicode.org/Public/17.0.0/ucd/NamesList.txt",
-      "claim": "Unicode 17.0 names contain no semantic entries for the initial filter-response set.",
-      "reuse_note": "Reference only; no Unicode glyph artwork is imported."
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "NamesList search for the initial filter-response terminology",
+      "direct_observation": "The NamesList does not contain semantic character names for high-pass filter, low-pass filter, band-pass filter, band-stop filter, low cut, high cut, equalizer, or filter.",
+      "interpretation": "No existing Unicode semantic equivalent was identified for the initial research set. This does not by itself establish a need for new characters.",
+      "rights_note": "Reference only; no Unicode glyph artwork is imported."
     },
     {
       "id": "EV-002",
       "type": "vendor-documentation",
+      "publisher": "Ableton",
+      "title": "Ableton Live 8.1 Manual",
       "url": "https://downloads.ableton.com/manuals/81/ableton_live_manual_en.pdf",
-      "claim": "Ableton Live 8.1 documents compact EQ Eight response selectors including low cut, low shelf, bell, notch, high shelf, and high cut.",
-      "reuse_note": "Evidence only; product artwork is not copied or traced."
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "EQ Eight, pages 294-295",
+      "direct_observation": "The EQ Eight interface documentation depicts selectable response forms labeled Low Cut, Low Shelf, Bell, Notch, High Shelf, and High Cut.",
+      "interpretation": "This is product-UI evidence for a compact response-form family. It does not prove portable plain-text character use or authorize reuse of Ableton artwork.",
+      "rights_note": "Evidence only; product artwork is not copied or traced."
     },
     {
       "id": "EV-003",
       "type": "education",
+      "publisher": "Simon Fraser University, Sonic Studio",
+      "title": "Filters and EQ Tutorial",
       "url": "https://www.sfu.ca/sonic-studio-webdav/cmns/Handbook%20Tutorial/Filters.html",
-      "claim": "Audio education material defines and illustrates low-pass, high-pass, band-pass, and band-stop filtering as frequency-response concepts.",
-      "reuse_note": "Linked as evidence."
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Filter-type explanations and response illustrations",
+      "direct_observation": "The tutorial describes and illustrates low-pass, high-pass, band-pass, and band-stop filtering as frequency-response concepts.",
+      "interpretation": "The terminology and response semantics are educationally stable. This is not direct evidence for a standalone text character.",
+      "rights_note": "Linked as evidence."
     },
     {
       "id": "EV-004",
       "type": "standards-reference",
+      "publisher": "International Electrotechnical Commission",
+      "title": "IEC 60617 graphical symbols database",
       "url": "https://std.iec.ch/iec60617",
-      "claim": "IEC 60617 standardizes related circuit-diagram filter symbols and terminology, which are not the compact audio-community response glyph target.",
-      "reuse_note": "Do not copy IEC artwork without permission."
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Public database landing page; individual record verification remains required",
+      "direct_observation": "The cited portal is the IEC 60617 graphical-symbols database reference.",
+      "interpretation": "IEC circuit-diagram filter symbols and terminology are adjacent semantic evidence, not direct evidence for the compact audio-community response glyph target. Individual records require page-level citation before stronger claims are made.",
+      "rights_note": "Do not copy IEC artwork without permission."
     },
     {
       "id": "EV-005",
       "type": "community-workaround",
+      "publisher": "NumberOneBot",
+      "title": "DSSSP icon font mapping",
       "url": "https://github.com/NumberOneBot/dsssp/blob/main/src/icons/font.css",
-      "claim": "A software project maps a filter-response icon family to custom font code points, demonstrating a nonportable implementation workaround.",
-      "reuse_note": "Evidence only."
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "src/icons/font.css",
+      "direct_observation": "The stylesheet maps a filter-response icon family to custom-font code points.",
+      "interpretation": "Custom font mappings can supply visual response symbols in software but are not portable plain-text interchange.",
+      "rights_note": "Evidence only."
     }
   ]
 }
