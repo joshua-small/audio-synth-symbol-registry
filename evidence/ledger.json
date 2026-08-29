@@ -1,0 +1,41 @@
+{
+  "ledger_version": "0.1.0",
+  "accessed_on": "2026-08-29",
+  "sources": [
+    {
+      "id": "EV-001",
+      "type": "unicode-reference",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/NamesList.txt",
+      "claim": "Unicode 17.0 names contain no semantic entries for the initial filter-response set.",
+      "reuse_note": "Reference only; no Unicode glyph artwork is imported."
+    },
+    {
+      "id": "EV-002",
+      "type": "vendor-documentation",
+      "url": "https://downloads.ableton.com/manuals/81/ableton_live_manual_en.pdf",
+      "claim": "Ableton Live 8.1 documents compact EQ Eight response selectors including low cut, low shelf, bell, notch, high shelf, and high cut.",
+      "reuse_note": "Evidence only; product artwork is not copied or traced."
+    },
+    {
+      "id": "EV-003",
+      "type": "education",
+      "url": "https://www.sfu.ca/sonic-studio-webdav/cmns/Handbook%20Tutorial/Filters.html",
+      "claim": "Audio education material defines and illustrates low-pass, high-pass, band-pass, and band-stop filtering as frequency-response concepts.",
+      "reuse_note": "Linked as evidence."
+    },
+    {
+      "id": "EV-004",
+      "type": "standards-reference",
+      "url": "https://std.iec.ch/iec60617",
+      "claim": "IEC 60617 standardizes related circuit-diagram filter symbols and terminology, which are not the compact audio-community response glyph target.",
+      "reuse_note": "Do not copy IEC artwork without permission."
+    },
+    {
+      "id": "EV-005",
+      "type": "community-workaround",
+      "url": "https://github.com/NumberOneBot/dsssp/blob/main/src/icons/font.css",
+      "claim": "A software project maps a filter-response icon family to custom font code points, demonstrating a nonportable implementation workaround.",
+      "reuse_note": "Evidence only."
+    }
+  ]
+}
