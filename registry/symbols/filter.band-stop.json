@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "id": "asr:filter.band-stop",
+  "name": "Band-stop filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that attenuates a bounded band of frequencies while passing frequencies below and above that band.",
+    "aliases": [
+      "band stop",
+      "band reject",
+      "notch filter",
+      "BSF"
+    ],
+    "text_fallback": "BSF",
+    "spoken_label": "band-stop filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "axis-less-band-stop-response",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-002",
+      "claim": "Documents a notch response selector in the EQ Eight interface.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-003",
+      "claim": "Defines and illustrates band-stop or notch filtering as a frequency-response concept.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-004",
+      "claim": "Provides related band-stop terminology and circuit-diagram symbols, not the target compact audio glyph.",
+      "scope": "standards"
+    }
+  ],
+  "notes": [
+    "Whether notch filter remains an alias or needs a parameterized future entry is an open evidence question.",
+    "The representative glyph is a concept, not vendor artwork."
+  ]
+}
