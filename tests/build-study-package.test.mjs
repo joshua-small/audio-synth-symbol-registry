@@ -14,7 +14,7 @@ async function fixture() {
   await writeFile(join(root, "input", "b.svg"), svg("M2 22 L22 2"));
   const plan = {
     study_id: "test-pilot-v1",
-    randomization_seed: "fixture-only-seed",
+    randomization_seed: "fixture-only-seed-at-least-32-bytes",
     form_count: 3,
     stimuli: [
       { record_id: "asr:test.a", blind_svg_path: "input/a.svg", forbidden_terms: ["test a"] },
@@ -68,4 +68,15 @@ test("refuses to overwrite an existing package directory", async () => {
   const output = join(root, "out");
   await buildStudyPackage(planPath, output);
   await assert.rejects(buildStudyPackage(planPath, output));
+});
+
+test("rejects a short randomization seed", async () => {
+  const { root, planPath } = await fixture();
+  const plan = JSON.parse(await readFile(planPath, "utf8"));
+  plan.randomization_seed = "too-short";
+  await writeFile(planPath, JSON.stringify(plan));
+  await assert.rejects(
+    buildStudyPackage(planPath, join(root, "out")),
+    /at least 32 UTF-8 bytes/,
+  );
 });
