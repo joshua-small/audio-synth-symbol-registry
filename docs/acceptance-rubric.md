@@ -33,6 +33,19 @@ Every assessment must:
 6. Avoid treating IEC, ISO, or other standards artwork as reusable artwork or direct proof of the target compact form.
 7. Avoid copying, tracing, or importing third-party artwork.
 
+## Derived-analysis provenance
+
+Evidence sources and project analyses have different roles:
+
+- `EV-*` entries are source observations in `evidence/ledger.json`. Independence and sector counts are calculated only from these underlying sources.
+- `DA-*` entries are versioned project analyses in `evidence/derived-analyses.json`. They may support a reproducible audit, classification, synthesis, limitation, or disposition, but they are not independent evidence sources.
+- An assessment cites a derived analysis through `artifact_refs`, including the exact artifact ID, version, claim, and `input_evidence_ids_used`. Every used input must be an input of that artifact and must also appear in the containing dimension, note, or blocker's `evidence_ids`; a derived artifact cannot replace or multiply those sources.
+- Reusing one source through multiple derived analyses counts that source once. A synthesis never creates a new publisher, sector, implementation, observed use, or independent corroboration.
+- Derived artifacts may depend on exact versions of earlier derived artifacts. The registry validates those dependency pairs and rejects cycles.
+- Scores must identify which facts come directly from ledger sources and which conclusions come from derived analysis. If a derived analysis changes materially, publish a new version at a distinct immutable path and preserve the earlier ID-version pair and assessments that cite it.
+
+These rules allow reproducible work such as the Unicode overlap audit to be cited without pretending that EV-001 or EV-004 alone contains the audit's project-authored comparison and disposition.
+
 ## Scoring dimensions
 
 The maximum score is 20.

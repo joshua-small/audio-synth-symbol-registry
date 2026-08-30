@@ -1,5 +1,6 @@
 import Ajv2020 from "ajv/dist/2020.js";
-import { readdir, readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { readdir, readFile, realpath } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
@@ -42,6 +43,9 @@ const artifacts = metadata && typeof metadata.artifacts === "object" && !Array.i
 const registryArtifact = artifacts.registry && typeof artifacts.registry === "object" ? artifacts.registry : {};
 const schemaArtifact = artifacts.schema && typeof artifacts.schema === "object" ? artifacts.schema : {};
 const assessmentsArtifact = artifacts.assessments && typeof artifacts.assessments === "object" ? artifacts.assessments : null;
+const derivedAnalysesArtifact = artifacts.derived_analyses && typeof artifacts.derived_analyses === "object"
+  ? artifacts.derived_analyses
+  : null;
 const toolingArtifact = artifacts.tooling && typeof artifacts.tooling === "object" ? artifacts.tooling : {};
 const entrySchemaPath = typeof schemaArtifact.entry_schema === "string"
   ? schemaArtifact.entry_schema
@@ -72,11 +76,11 @@ try {
 const filterResponseSchema = await readJson("registry/schema/filter-response.schema.json");
 const assessmentSchema = await readJson("registry/schema/acceptance-assessment.schema.json");
 const assessmentSetSchema = await readJson("registry/schema/assessment-set.schema.json");
-const assessmentFormatVersion = assessmentSchema.properties?.assessment_version?.const;
-const assessmentSetFormatVersion = assessmentSetSchema.properties?.assessment_set_version?.const;
+const assessmentFormatVersions = assessmentSchema.properties?.assessment_version?.enum ?? [];
+const assessmentSetFormatVersions = assessmentSetSchema.properties?.assessment_set_version?.enum ?? [];
 if (assessmentsArtifact
-  && (assessmentsArtifact.format_version !== assessmentFormatVersion
-    || assessmentsArtifact.format_version !== assessmentSetFormatVersion)) {
+  && (!assessmentFormatVersions.includes(assessmentsArtifact.format_version)
+    || !assessmentSetFormatVersions.includes(assessmentsArtifact.format_version))) {
   fail("Assessment metadata format version differs from the assessment schemas.");
 }
 
@@ -96,6 +100,13 @@ if (!assessmentsArtifact
   || typeof assessmentsArtifact.schema !== "string"
   || typeof assessmentsArtifact.current_snapshot !== "string") {
   fail("Registry metadata must declare a readable assessments artifact.");
+}
+if (!derivedAnalysesArtifact
+  || !semver.test(derivedAnalysesArtifact.version)
+  || !semver.test(derivedAnalysesArtifact.format_version)
+  || typeof derivedAnalysesArtifact.schema !== "string"
+  || typeof derivedAnalysesArtifact.index !== "string") {
+  fail("Registry metadata must declare a readable derived-analyses artifact.");
 }
 if (!semver.test(ledger.ledger_version)) fail(`evidence ledger has invalid SemVer ${ledger.ledger_version}`);
 if (ledger.ledger_version !== registryArtifact.version) {
@@ -122,6 +133,28 @@ if (!validateEvidenceLedger(ledger)) {
     fail(`evidence/ledger.json: schema ${error.instancePath || "/"} ${error.message}`);
   }
 }
+let derivedAnalysisSchema;
+let derivedAnalysisRegistry;
+try {
+  derivedAnalysisSchema = await readJson(derivedAnalysesArtifact?.schema ?? "registry/schema/derived-analysis-registry.schema.json");
+  derivedAnalysisRegistry = await readJson(derivedAnalysesArtifact?.index ?? "evidence/derived-analyses.json");
+} catch {
+  fail("Derived-analysis schema or index is not readable.");
+  derivedAnalysisSchema = await readJson("registry/schema/derived-analysis-registry.schema.json");
+  derivedAnalysisRegistry = { schema_version: "0.1.0", registry_version: "0.1.0", artifacts: [] };
+}
+const validateDerivedAnalysisRegistry = ajv.compile(derivedAnalysisSchema);
+if (!validateDerivedAnalysisRegistry(derivedAnalysisRegistry)) {
+  for (const error of validateDerivedAnalysisRegistry.errors ?? []) {
+    fail(`evidence/derived-analyses.json: schema ${error.instancePath || "/"} ${error.message}`);
+  }
+}
+if (derivedAnalysesArtifact && derivedAnalysisRegistry.schema_version !== derivedAnalysesArtifact.format_version) {
+  fail("Derived-analysis metadata format version differs from its index schema version.");
+}
+if (derivedAnalysesArtifact && derivedAnalysisRegistry.registry_version !== derivedAnalysesArtifact.version) {
+  fail("Derived-analysis registry version differs from metadata.");
+}
 
 const sources = Array.isArray(ledger.sources) ? ledger.sources : [];
 if (sources.length === 0) {
@@ -135,6 +168,69 @@ for (const source of sources) {
   if (sourceIds.has(source.id)) fail(`evidence ledger has duplicate source ID ${source.id}`);
   sourceIds.add(source.id);
 }
+
+const derivedArtifactsById = new Map();
+const artifactKey = ({ artifact_id, artifact_version }) => `${artifact_id}@${artifact_version}`;
+const artifactEntryKey = (artifact) => artifactKey({ artifact_id: artifact.id, artifact_version: artifact.version });
+for (const artifact of derivedAnalysisRegistry.artifacts ?? []) {
+  const key = artifactEntryKey(artifact);
+  if (derivedArtifactsById.has(key)) {
+    fail(`derived-analysis registry has duplicate artifact version ${key}`);
+  }
+  derivedArtifactsById.set(key, artifact);
+  for (const sourceId of artifact.input_evidence_ids ?? []) {
+    if (!sourceIds.has(sourceId)) fail(`derived analysis ${artifact.id} references unknown evidence source ${sourceId}`);
+  }
+  const resolvedPath = path.resolve(root, artifact.path ?? "");
+  const allowedDocsRoot = `${path.resolve(root, "docs")}${path.sep}`;
+  const allowedReportsRoot = `${path.resolve(root, "evidence", "reports")}${path.sep}`;
+  if (!resolvedPath.startsWith(allowedDocsRoot) && !resolvedPath.startsWith(allowedReportsRoot)) {
+    fail(`derived analysis ${artifact.id} has an unsafe artifact path`);
+  } else {
+    try {
+      const canonicalPath = await realpath(resolvedPath);
+      if (!canonicalPath.startsWith(allowedDocsRoot) && !canonicalPath.startsWith(allowedReportsRoot)) {
+        fail(`derived analysis ${artifact.id} resolves outside allowed artifact roots`);
+      }
+      const content = await readFile(canonicalPath);
+      const digest = createHash("sha256").update(content).digest("hex");
+      if (digest !== artifact.content_sha256) {
+        fail(`derived analysis ${artifact.id} content digest differs from its registered version`);
+      }
+    } catch {
+      fail(`derived analysis ${artifact.id} path is not readable: ${artifact.path}`);
+    }
+  }
+}
+
+const pathsByArtifactId = new Map();
+for (const artifact of derivedAnalysisRegistry.artifacts ?? []) {
+  const versions = pathsByArtifactId.get(artifact.id) ?? new Map();
+  if (versions.has(artifact.path)) {
+    fail(`derived analysis ${artifact.id} versions must use distinct immutable paths`);
+  }
+  versions.set(artifact.path, artifact.version);
+  pathsByArtifactId.set(artifact.id, versions);
+  for (const dependency of artifact.input_artifact_refs ?? []) {
+    if (!derivedArtifactsById.has(artifactKey(dependency))) {
+      fail(`derived analysis ${artifactEntryKey(artifact)} references unknown derived input ${artifactKey(dependency)}`);
+    }
+  }
+}
+
+const visitState = new Map();
+const visitArtifact = (key) => {
+  if (visitState.get(key) === "active") {
+    fail(`derived-analysis dependency cycle includes ${key}`);
+    return;
+  }
+  if (visitState.get(key) === "done") return;
+  visitState.set(key, "active");
+  const artifact = derivedArtifactsById.get(key);
+  for (const dependency of artifact?.input_artifact_refs ?? []) visitArtifact(artifactKey(dependency));
+  visitState.set(key, "done");
+};
+for (const key of derivedArtifactsById.keys()) visitArtifact(key);
 
 const seenIds = new Set();
 const recordsById = new Map();
@@ -166,6 +262,24 @@ if (recordFiles.length === 0) fail("No symbol records found.");
 const checkEvidenceIds = (relativePath, label, evidenceIds = []) => {
   for (const sourceId of evidenceIds) {
     if (!sourceIds.has(sourceId)) fail(`${relativePath}: ${label} references unknown evidence source ${sourceId}`);
+  }
+};
+const checkArtifactRefs = (relativePath, label, artifactRefs = [], evidenceIds = []) => {
+  for (const reference of artifactRefs) {
+    const key = artifactKey(reference);
+    const artifact = derivedArtifactsById.get(key);
+    if (!artifact) {
+      fail(`${relativePath}: ${label} references unknown derived artifact ${key}`);
+      continue;
+    }
+    for (const sourceId of reference.input_evidence_ids_used ?? []) {
+      if (!artifact.input_evidence_ids.includes(sourceId)) {
+        fail(`${relativePath}: ${label} uses ${sourceId}, which is not an input of ${key}`);
+      }
+      if (!evidenceIds.includes(sourceId)) {
+        fail(`${relativePath}: ${label} derived-artifact input ${sourceId} is absent from evidence_ids`);
+      }
+    }
   }
 };
 
@@ -227,6 +341,11 @@ for (const file of assessmentFiles) {
     }
     continue;
   }
+  if (assessmentsArtifact
+    && path.normalize(relativePath) === path.normalize(assessmentsArtifact.current_snapshot)
+    && assessmentSet.assessment_set_version !== assessmentsArtifact.format_version) {
+    fail(`${relativePath}: current assessment-set format version differs from assessment metadata`);
+  }
 
   for (const assessment of assessmentSet.assessments) {
     const record = recordsById.get(assessment.record_id);
@@ -234,11 +353,24 @@ for (const file of assessmentFiles) {
       fail(`${relativePath}: assessment references unknown record ${assessment.record_id}`);
       continue;
     }
-    if (assessmentsArtifact && assessment.assessment_version !== assessmentsArtifact.format_version) {
-      fail(`${relativePath}: ${assessment.record_id} assessment format version differs from assessment metadata`);
+    if (!assessmentFormatVersions.includes(assessment.assessment_version)) {
+      fail(`${relativePath}: ${assessment.record_id} uses an unsupported assessment format version`);
+    }
+    if (assessment.assessment_version !== assessmentSet.assessment_set_version) {
+      fail(`${relativePath}: ${assessment.record_id} assessment version differs from its set version`);
+    }
+    const nodesWithArtifactRefs = [
+      ...Object.values(assessment.dimensions),
+      ...assessment.counterevidence,
+      ...assessment.material_open_questions,
+      ...assessment.hard_blockers,
+    ];
+    if (assessment.assessment_version === "0.1.0"
+      && nodesWithArtifactRefs.some((node) => Object.hasOwn(node, "artifact_refs"))) {
+      fail(`${relativePath}: ${assessment.record_id} format 0.1.0 cannot contain artifact_refs`);
     }
     const snapshots = assessmentsByRecord.get(assessment.record_id) ?? [];
-    snapshots.push({ relativePath, assessment });
+    snapshots.push({ relativePath, assessment, assessmentSetVersion: assessmentSet.assessment_set_version });
     assessmentsByRecord.set(assessment.record_id, snapshots);
 
     const dimensions = Object.values(assessment.dimensions);
@@ -249,15 +381,18 @@ for (const file of assessmentFiles) {
 
     for (const [name, dimension] of Object.entries(assessment.dimensions)) {
       checkEvidenceIds(relativePath, `${assessment.record_id} ${name}`, dimension.evidence_ids);
+      checkArtifactRefs(relativePath, `${assessment.record_id} ${name}`, dimension.artifact_refs, dimension.evidence_ids);
       if (dimension.score > 0 && dimension.evidence_ids.length === 0) {
         fail(`${relativePath}: ${assessment.record_id} ${name} has a positive score without evidence IDs`);
       }
     }
     for (const note of [...assessment.counterevidence, ...assessment.material_open_questions]) {
       checkEvidenceIds(relativePath, `${assessment.record_id} note`, note.evidence_ids);
+      checkArtifactRefs(relativePath, `${assessment.record_id} note`, note.artifact_refs, note.evidence_ids);
     }
     for (const blocker of assessment.hard_blockers) {
       checkEvidenceIds(relativePath, `${assessment.record_id} hard blocker`, blocker.evidence_ids);
+      checkArtifactRefs(relativePath, `${assessment.record_id} hard blocker`, blocker.artifact_refs, blocker.evidence_ids);
     }
 
     const recommendsPromotion = ["registry-candidate", "registry-accepted"].includes(assessment.result.recommended_status);

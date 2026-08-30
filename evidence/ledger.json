@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.1.3",
+  "ledger_version": "0.1.4",
   "accessed_on": "2026-08-29",
   "sources": [
     {
@@ -469,6 +469,45 @@
       "direct_observation": "The manual defines OFF, LPF, BPF, HPF, and PKG filter types, says frequency characteristics are graphically displayed at the lower left of the screen, and shows a small LPF response curve embedded in the LCD parameter display example.",
       "interpretation": "This broadens the documented period vocabulary and supplies positive evidence for a compact response curve inside a contextual product display. It does not establish a standalone selector glyph or portable plain-text character.",
       "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
+    },
+    {
+      "id": "EV-037",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Unicode 17.0 code charts",
+      "url": "https://www.unicode.org/charts/",
+      "publication_date": "2025-09-09",
+      "accessed_on": "2026-08-29",
+      "location": "Mathematical Operators, Miscellaneous Technical, Box Drawing, and Supplemental Arrows-B charts",
+      "direct_observation": "The official charts identify the audited visual candidates as mathematical operators, technical marks, box-drawing pieces, and arrows rather than filter-response characters.",
+      "interpretation": "These charts support the visual-confusable non-equivalence analysis; resemblance in some fonts does not supply filter semantics.",
+      "rights_note": "Reference only; no Unicode glyph artwork is imported."
+    },
+    {
+      "id": "EV-038",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Unicode Technical Standard #39: Unicode Security Mechanisms",
+      "url": "https://www.unicode.org/reports/tr39/",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Confusable detection model and terminology",
+      "direct_observation": "UTS #39 defines confusable detection for encoded strings and character sequences.",
+      "interpretation": "An unencoded registry concept cannot be a formal UTS #39 confusable target, so the audit uses visual-confusable as an explicitly narrower project term.",
+      "rights_note": "Reference only; no Unicode content is imported."
+    },
+    {
+      "id": "EV-039",
+      "type": "standards-reference",
+      "publisher": "International Electrotechnical Commission",
+      "title": "IEC 60617 database preview",
+      "url": "https://webstore.iec.ch/en/iec_catalog/product/preview/?id=L3B1Yi9wZGYvcHJldmlldy9pbmZvX2llYzYwNjE3e2VkMS4wfWIucGRm",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Database description and identity list for S01247 through S01250",
+      "direct_observation": "The official preview lists S01247 High-pass filter, S01248 Low-pass filter, S01249 Band-pass filter, and S01250 Band-stop filter as IEC 60617 diagram-symbol entries.",
+      "interpretation": "The entries establish adjacent electrotechnical terminology and diagram-symbol context, not Unicode encoding or equivalence to the target audio response shorthand.",
+      "rights_note": "Reference only; no IEC artwork is copied, traced, or imported."
     }
   ]
 }

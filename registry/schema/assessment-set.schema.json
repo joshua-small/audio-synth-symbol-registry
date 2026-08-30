@@ -11,7 +11,7 @@
     "assessments"
   ],
   "properties": {
-    "assessment_set_version": { "const": "0.1.0" },
+    "assessment_set_version": { "enum": ["0.1.0", "0.2.0"] },
     "assessed_at": {
       "type": "string",
       "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:[.][0-9]+)?[+-][0-9]{2}:[0-9]{2}$"
@@ -24,5 +24,39 @@
         "$ref": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/acceptance-assessment.schema.json"
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "assessment_set_version": { "const": "0.1.0" } } },
+      "then": {
+        "properties": {
+          "assessments": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                { "$ref": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/acceptance-assessment.schema.json" },
+                { "type": "object", "properties": { "assessment_version": { "const": "0.1.0" } } }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "assessment_set_version": { "const": "0.2.0" } } },
+      "then": {
+        "properties": {
+          "assessments": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                { "$ref": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/acceptance-assessment.schema.json" },
+                { "type": "object", "properties": { "assessment_version": { "const": "0.2.0" } } }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
 }
