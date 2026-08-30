@@ -111,6 +111,7 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Outcome: high-pass 12/20, low-pass 12/20, band-pass 10/20, and band-stop 8/20; every record remains `evidence-collecting`.
 - Lifecycle: preserved the bootstrap snapshot, separated assessment artifact SemVer from snapshot format version, and declared the current snapshot in registry metadata.
 - Validation: full repository validation and tests are required before merge.
+- Completion annotation: superseded by the [PR #17 completion report](https://github.com/joshua-small/audio-synth-symbol-registry/pull/17#issuecomment-5466688030); independent review passed, 20/20 tests and GitHub Actions passed, and the work merged as `1473f77921e9de9cca024f926e430989a0e24911`.
 - Limitations: no new source was added, no independent review is encoded into the immutable snapshot, and no record, semantic ID, alias, artwork, or external position changed.
 
 ## Agent Report - 2026-08-29T23:21:04-07:00
@@ -119,4 +120,5 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Evidence: checked the merged plain-text search, historical-manual sample, representation matrix, band-stop/notch report, Unicode overlap audit, registry metadata, and interchange prototype.
 - Outcome: distinguished the latest recorded 0.1.1 assessment from the current 0.1.3 evidence corpus; preserved every record at `evidence-collecting` and the formal Unicode proposal at `HOLD`.
 - Validation: repository tests and independent review are required before merge.
+- Completion annotation: superseded by the [PR #29 independent review](https://github.com/joshua-small/audio-synth-symbol-registry/pull/29#issuecomment-5467138402); review passed on the merge head with 24/24 tests and GitHub Actions run 64 passing, and the work merged as `e7d8eb164fae0d70f2c470ce52063ee8f5510d15`.
 - Guardrails: changed no registry semantics, score, status, alias, artwork, license, outreach authorization, or external position.
