@@ -463,11 +463,11 @@
       "publisher": "Roland",
       "title": "XP-60/XP-80 Owner's Manual",
       "url": "https://static.roland.com/assets/media/pdf/XP-60_80_OM.pdf",
-      "publication_date": "1996",
+      "publication_date": "1998",
       "accessed_on": "2026-08-29",
       "location": "PDF page 56; printed page 54; TVF Param and Filter Type",
-      "direct_observation": "The manual defines OFF, LPF, BPF, HPF, and PKG filter types and shows LPF as a parameter value in an LCD display example. The cited page contains no standalone response-curve selector glyph.",
-      "interpretation": "This broadens the documented period vocabulary while providing counterevidence to a claim that compact response drawings were required or universal in 1990s synthesizer interfaces.",
+      "direct_observation": "The manual defines OFF, LPF, BPF, HPF, and PKG filter types, says frequency characteristics are graphically displayed at the lower left of the screen, and shows a small LPF response curve embedded in the LCD parameter display example.",
+      "interpretation": "This broadens the documented period vocabulary and supplies positive evidence for a compact response curve inside a contextual product display. It does not establish a standalone selector glyph or portable plain-text character.",
       "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
     }
   ]
