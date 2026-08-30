@@ -60,7 +60,7 @@ The acceptance rubric requires at least 13/20 with dimension floors and no mater
 
 ## Decision rule
 
-Continue the registry while the evidence improves documentation, accessibility, interoperability, or research value. Revisit Unicode only when at least one record is `registry-accepted`, the plain-text-workaround threshold is met, overlap has been audited, neutral artwork and character-property rationale are supportable, and separate human authorization permits external standards action.
+Continue the registry while the evidence improves documentation, accessibility, interoperability, or research value. Revisit Unicode only after all formal non-go conditions in the acceptance rubric are cleared, including at least one `registry-accepted` record, the plain-text-workaround threshold, a reproducible overlap audit, sufficient community use, review, and support under the current Unicode Symbol and Emoji Subcommittee guidance, supportable neutral artwork and character-property rationale, and separate human authorization for external standards action.
 
 ## Source pointers
 
