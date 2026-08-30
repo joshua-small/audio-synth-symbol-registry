@@ -33,7 +33,7 @@ Therefore, a single shelf glyph that encodes only low-versus-high side must not 
 
 The sampled exchange methods are:
 
-- portable text labels such as `low shelf`, `high shelf`, `LS`, or a shelf name plus gain/frequency;
+- portable text labels such as `low shelf`, `high shelf`, or a shelf name plus gain/frequency;
 - screenshots or contextual product curves when the exact shape matters;
 - prose descriptions such as reducing bass by a stated amount below a stated frequency;
 - named UI buttons whose meaning depends on their position in an EQ window.
