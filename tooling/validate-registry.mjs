@@ -11,6 +11,26 @@ const failures = [];
 const fail = (message) => failures.push(message);
 const semver = /^(0|[1-9][0-9]*)[.](0|[1-9][0-9]*)[.](0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:[.](?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:[+][0-9A-Za-z-]+(?:[.][0-9A-Za-z-]+)*)?$/;
 const identifier = /^asr:[a-z][a-z0-9-]*(?:[.][a-z][a-z0-9-]*)+$/;
+const fullDate = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/;
+const isFullDate = (value) => {
+  const match = fullDate.exec(value);
+  if (!match) return false;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const daysInMonth = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  return year >= 1 && month >= 1 && month <= 12 && day >= 1 && day <= daysInMonth[month - 1];
+};
+const isHttpsUrl = (value) => {
+  if (/\s/.test(value)) return false;
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "https:" && parsed.hostname.length > 0;
+  } catch {
+    return false;
+  }
+};
 
 const metadata = await readJson("registry/registry-metadata.json");
 const packageJson = await readJson("package.json");
@@ -26,6 +46,9 @@ const toolingArtifact = artifacts.tooling && typeof artifacts.tooling === "objec
 const entrySchemaPath = typeof schemaArtifact.entry_schema === "string"
   ? schemaArtifact.entry_schema
   : "registry/schema/entry.schema.json";
+const evidenceLedgerSchemaPath = typeof schemaArtifact.evidence_ledger_schema === "string"
+  ? schemaArtifact.evidence_ledger_schema
+  : "registry/schema/evidence-ledger.schema.json";
 if (entrySchemaPath === "registry/schema/entry.schema.json" && typeof schemaArtifact.entry_schema !== "string") {
   fail("Registry metadata must declare a readable entry schema path.");
 }
@@ -35,6 +58,16 @@ try {
 } catch {
   fail(`Registry metadata entry schema is not readable: ${entrySchemaPath}`);
   entrySchema = await readJson("registry/schema/entry.schema.json");
+}
+if (typeof schemaArtifact.evidence_ledger_schema !== "string") {
+  fail("Registry metadata must declare a readable evidence ledger schema path.");
+}
+let evidenceLedgerSchema;
+try {
+  evidenceLedgerSchema = await readJson(evidenceLedgerSchemaPath);
+} catch {
+  fail(`Registry metadata evidence ledger schema is not readable: ${evidenceLedgerSchemaPath}`);
+  evidenceLedgerSchema = await readJson("registry/schema/evidence-ledger.schema.json");
 }
 const filterResponseSchema = await readJson("registry/schema/filter-response.schema.json");
 const assessmentSchema = await readJson("registry/schema/acceptance-assessment.schema.json");
@@ -76,10 +109,19 @@ if (!readmeRegistryVersion) {
 }
 
 const ajv = new Ajv2020({ allErrors: true, strict: true });
+ajv.addFormat("date", { type: "string", validate: isFullDate });
+ajv.addFormat("https-url", { type: "string", validate: isHttpsUrl });
 ajv.addSchema(entrySchema);
 ajv.addSchema(assessmentSchema);
+const validateEvidenceLedger = ajv.compile(evidenceLedgerSchema);
 const validateFilterResponse = ajv.compile(filterResponseSchema);
 const validateAssessmentSet = ajv.compile(assessmentSetSchema);
+
+if (!validateEvidenceLedger(ledger)) {
+  for (const error of validateEvidenceLedger.errors ?? []) {
+    fail(`evidence/ledger.json: schema ${error.instancePath || "/"} ${error.message}`);
+  }
+}
 
 const sources = Array.isArray(ledger.sources) ? ledger.sources : [];
 if (sources.length === 0) {

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/evidence-ledger.schema.json",
+  "title": "Open Audio and Synthesis Symbol Registry evidence ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ledger_version", "accessed_on", "sources"],
+  "properties": {
+    "ledger_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "accessed_on": { "$ref": "#/$defs/fullDate" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "fullDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "publicationDate": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^[1-9][0-9]{3}$" },
+        { "$ref": "#/$defs/fullDate" }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "publisher",
+        "title",
+        "url",
+        "publication_date",
+        "accessed_on",
+        "location",
+        "direct_observation",
+        "interpretation",
+        "rights_note"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^EV-[0-9]{3,}$" },
+        "type": {
+          "enum": [
+            "community-discussion",
+            "community-workaround",
+            "education",
+            "engineering-reference",
+            "historical-primary-source",
+            "historical-retrospective",
+            "historical-vendor-documentation",
+            "historical-vendor-publication",
+            "journalism",
+            "open-source-icon-font",
+            "standards-reference",
+            "unicode-reference",
+            "vendor-documentation"
+          ]
+        },
+        "publisher": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "https-url" },
+        "publication_date": { "$ref": "#/$defs/publicationDate" },
+        "accessed_on": { "$ref": "#/$defs/fullDate" },
+        "location": { "type": "string", "minLength": 1 },
+        "direct_observation": { "type": "string", "minLength": 1 },
+        "interpretation": { "type": "string", "minLength": 1 },
+        "rights_note": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
