@@ -141,4 +141,5 @@ No IEC artwork is reproduced, traced, or used to select a contour. This audit ci
 - Outcome: found no Unicode semantic equivalent; documented non-equivalent visual candidates and failed sequence substitutes; mapped IEC S01247-S01250 as adjacent diagram-symbol terminology.
 - Guardrails: made no record, semantic, property, alias, identifier, artwork, score, status, outreach, or external-position change; reproduced no standards artwork.
 - Validation: exact repository validation and independent review are required before merge.
+- Completion annotation: superseded by the [PR #20 completion report](https://github.com/joshua-small/audio-synth-symbol-registry/pull/20#issuecomment-5466737486); independent source review passed, 20/20 tests and GitHub Actions passed, and the work merged as `25f0e2efe94e0ec9edc3f4c5a713b524c5fba4b8`.
 - Limitations: did not audit later Unicode versions, restricted IEC subscriber-only data sheets, IEC 60417, ISO 7000, or font-by-font rendering behavior.
