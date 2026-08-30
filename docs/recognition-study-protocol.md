@@ -4,6 +4,15 @@
 
 Draft protocol. Human Review is required before participant recruitment, a public participant call, incentives, or study launch.
 
+Operational preparation templates:
+
+- [Formative pilot preregistration](studies/pilot-preregistration-template.md)
+- [Pilot instrument and data contract](studies/pilot-instrument-and-data-contract.md)
+- [Pilot consent and data plan](studies/pilot-consent-and-data-plan-template.md)
+- [Neutral candidate artwork briefs](studies/neutral-candidate-briefs.md)
+
+The templates may be prepared before Human Review, but they do not authorize recruitment, collection, incentives, outreach, publication, or artwork acceptance.
+
 ## Purpose and limits
 
 This protocol evaluates whether an original neutral reference glyph communicates its intended audio or synthesis semantic identity to its intended audience without explanatory text.
