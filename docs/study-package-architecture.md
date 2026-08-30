@@ -33,13 +33,14 @@ new-package/
     answer-key.json
 ```
 
-Only `public/` is suitable for a participant-facing delivery system. `private/answer-key.json` contains record mappings and the seed and must not be served to participants. Operational access control remains the study operator's responsibility.
+Only `public/` is suitable for a participant-facing delivery system. `private/answer-key.json` contains record mappings and the seed and must not be served to participants. The packager requests owner-only permissions for the private directory and answer key, but operational access control and platform-specific permission verification remain the study operator's responsibility.
 
 ## Reproducibility and blinding
 
 - Opaque stimulus tokens are HMAC-SHA-256 derivations of the local seed and record ID.
 - Stimulus and choice orders are deterministic HMAC-derived sorts scoped by form and stimulus.
 - Every copied SVG has an exact SHA-256 digest in both manifests.
+- The exact byte buffer checked for forbidden terms and hashed is retained in memory and written to the package; the source path is not re-read after validation.
 - Re-running the same plan and inputs produces the same manifests and asset names.
 - The tool rejects a blind SVG containing its registry ID or any configured forbidden term.
 - The tool refuses to write into an existing output directory, reducing accidental replacement of a locked package.
