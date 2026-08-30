@@ -170,7 +170,7 @@ The declaration records source observations, not artwork source material.
 
 1. Confirm the linked semantic record and evidence.
 2. Add original geometry and provenance in `draft` status.
-3. Validate SVG syntax, external-resource absence, accessibility markup, and rendering at every required size on light and dark backgrounds.
+3. Validate SVG syntax, external-resource absence, accessibility markup, and rendering at every required size on light and dark backgrounds using the [SVG validation and render-QA tooling](svg-validation-and-render-qa.md).
 4. Obtain independent agent review for provenance, semantic leakage, portability, and visual-family consistency.
 5. Run the applicable blind study only on a locked `study-ready` rendering.
 6. Open a focused PR with validation results and an Agent Report.
