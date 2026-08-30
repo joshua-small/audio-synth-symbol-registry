@@ -81,6 +81,8 @@ Adjacent communities and projects:
 - [SMuFL contribution process](https://www.smufl.org/contribute/)
 - [FontAudio](https://github.com/fefanto/fontaudio)
 
+See the [synergistic applications roadmap](docs/synergistic-applications-roadmap.md) for a conservative comparison of registry-first interchange, typography, AES, ISO/IEC, SMuFL, Unicode, emoji, and future-family paths.
+
 ## Participate
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), [AGENTS.md](AGENTS.md), and the [decision log](docs/decision-log.md) before contributing evidence, artwork, or candidate entries.
