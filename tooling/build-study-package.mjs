@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createHash, createHmac } from "node:crypto";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -66,7 +66,7 @@ export async function buildStudyPackage(planPath, outputPath) {
     const digest = sha256(bytes);
     publicStimuli.push({ token, asset: `assets/${filename}`, sha256: digest });
     privateStimuli.push({ token, record_id: recordId, source_path: stimulus.blind_svg_path, sha256: digest });
-    assetWrites.push({ sourcePath, filename });
+    assetWrites.push({ bytes, filename });
   }
 
   const publicChoices = plan.forced_choices.map((choice, index) => ({
@@ -103,11 +103,15 @@ export async function buildStudyPackage(planPath, outputPath) {
 
   await mkdir(outputDirectory, { recursive: false });
   await mkdir(join(outputDirectory, "public", "assets"), { recursive: true });
-  await mkdir(join(outputDirectory, "private"), { recursive: false });
-  await Promise.all(assetWrites.map(({ sourcePath, filename }) =>
-    copyFile(sourcePath, join(outputDirectory, "public", "assets", filename))));
+  await mkdir(join(outputDirectory, "private"), { recursive: false, mode: 0o700 });
+  await Promise.all(assetWrites.map(({ bytes, filename }) =>
+    writeFile(join(outputDirectory, "public", "assets", filename), bytes)));
   await writeFile(join(outputDirectory, "public", "instrument.json"), stableJson(publicInstrument));
-  await writeFile(join(outputDirectory, "private", "answer-key.json"), stableJson(privateKey));
+  await writeFile(
+    join(outputDirectory, "private", "answer-key.json"),
+    stableJson(privateKey),
+    { mode: 0o600 },
+  );
   return { publicInstrument, privateKey };
 }
 
