@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joshua-small/audio-synth-symbol-registry/blob/main/registry/schema/acceptance-assessment.schema.json",
+  "title": "Open Audio and Synthesis Symbol Registry acceptance assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assessment_version",
+    "record_id",
+    "assessed_at",
+    "status_at_assessment",
+    "dimensions",
+    "total_score",
+    "counterevidence",
+    "material_open_questions",
+    "hard_blockers",
+    "result",
+    "review",
+    "human_review"
+  ],
+  "properties": {
+    "assessment_version": {
+      "const": "0.1.0"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^asr:[a-z][a-z0-9-]*(?:\\.[a-z][a-z0-9-]*)+$"
+    },
+    "assessed_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:[.][0-9]+)?[+-][0-9]{2}:[0-9]{2}$"
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic_stability",
+        "independent_usage",
+        "text_and_accessibility",
+        "visual_convergence",
+        "overlap_audit",
+        "legal_provenance"
+      ],
+      "properties": {
+        "semantic_stability": {
+          "$ref": "#/$defs/four_point_dimension"
+        },
+        "independent_usage": {
+          "$ref": "#/$defs/four_point_dimension"
+        },
+        "text_and_accessibility": {
+          "$ref": "#/$defs/three_point_dimension"
+        },
+        "visual_convergence": {
+          "$ref": "#/$defs/three_point_dimension"
+        },
+        "overlap_audit": {
+          "$ref": "#/$defs/three_point_dimension"
+        },
+        "legal_provenance": {
+          "$ref": "#/$defs/three_point_dimension"
+        }
+      }
+    },
+    "total_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20,
+      "description": "Must equal the sum of the six dimension scores. CI enforces this calculation."
+    },
+    "counterevidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence_note"
+      }
+    },
+    "material_open_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence_note"
+      }
+    },
+    "hard_blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "description",
+          "status"
+        ],
+        "properties": {
+          "code": {
+            "enum": [
+              "schema-invalid",
+              "overlapping-semantics",
+              "material-ambiguity",
+              "non-equivalent-representation",
+              "derivative-evidence",
+              "undefined-visual-semantics",
+              "rights-risk",
+              "unresolved-counterevidence",
+              "overstated-claim",
+              "human-review-gate"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "open",
+              "resolved"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{3}$"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recommended_status",
+        "eligible",
+        "failed_requirements",
+        "rationale"
+      ],
+      "properties": {
+        "recommended_status": {
+          "enum": [
+            "evidence-collecting",
+            "registry-candidate",
+            "registry-accepted",
+            "no-promotion"
+          ]
+        },
+        "eligible": {
+          "type": "boolean"
+        },
+        "failed_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "independent_agent_review",
+        "public_review_days",
+        "public_review_reference"
+      ],
+      "properties": {
+        "independent_agent_review": {
+          "enum": [
+            "not-requested",
+            "passed",
+            "failed"
+          ]
+        },
+        "public_review_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "public_review_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "authorization_status",
+        "authorization_reference"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "authorization_status": {
+          "enum": [
+            "not-required",
+            "pending",
+            "received"
+          ]
+        },
+        "authorization_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "status_at_assessment": {
+      "enum": [
+        "evidence-collecting",
+        "registry-candidate",
+        "registry-accepted",
+        "deprecated"
+      ]
+    }
+  },
+  "$defs": {
+    "four_point_dimension": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/dimension"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "maximum": 4
+            }
+          }
+        }
+      ]
+    },
+    "three_point_dimension": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/dimension"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "maximum": 3
+            }
+          }
+        }
+      ]
+    },
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "basis",
+        "evidence_ids",
+        "limitations"
+      ],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^EV-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "evidence_note": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "status",
+        "material"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "open",
+            "resolved",
+            "not-applicable"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^EV-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+        "material": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

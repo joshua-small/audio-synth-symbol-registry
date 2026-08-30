@@ -36,11 +36,6 @@
       "source_id": "EV-003",
       "claim": "Defines and illustrates band-stop or notch filtering as a frequency-response concept.",
       "scope": "education"
-    },
-    {
-      "source_id": "EV-004",
-      "claim": "Provides related band-stop terminology and circuit-diagram symbols, not the target compact audio glyph.",
-      "scope": "standards"
     }
   ],
   "confidence": {

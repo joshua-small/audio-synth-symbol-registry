@@ -1,0 +1,480 @@
+{
+  "assessment_set_version": "0.1.0",
+  "assessed_at": "2026-08-29T16:48:00-07:00",
+  "assessment_scope": "Bootstrap filter-response records against evidence ledger version 0.1.0.",
+  "assessments": [
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.high-pass",
+      "assessed_at": "2026-08-29T16:48:00-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 establishes the canonical filter-response concept, while EV-002 documents the adjacent Low Cut product label.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "The corpus has not resolved whether Low Cut is an exact alias in all relevant audio contexts."
+          ]
+        },
+        "independent_usage": {
+          "score": 2,
+          "basis": "EV-002 provides one documented target-product implementation, supported by independent education evidence.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "Only one target compact implementation is documented.",
+            "Education evidence does not establish target-glyph deployment."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 1,
+          "basis": "The canonical term is source-supported, while HPF and the spoken label remain drafted fallbacks.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "The current ledger does not directly document HPF as independent plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-002 documents one compact product response selector.",
+          "evidence_ids": [
+            "EV-002"
+          ],
+          "limitations": [
+            "No second independent compact target rendering is currently recorded."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search with no semantic equivalent identified.",
+          "evidence_ids": [
+            "EV-001"
+          ],
+          "limitations": [
+            "A reproducible visual-confusability, sequence, and adjacent-standard audit is not yet recorded."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, no third-party artwork is imported, and no reference asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 10,
+      "counterevidence": [
+        {
+          "description": "EV-004 is circuit-diagram notation, not evidence that the compact audio-community high-pass response glyph is standardized.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Low Cut is an exact alias of High-pass filter across the intended corpus.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Text and accessibility score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material alias question remains open."
+        ],
+        "rationale": "The semantic concept is strong enough to retain, but cross-vendor compact rendering, independent text-use evidence, and alias resolution are not yet sufficient."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.low-pass",
+      "assessed_at": "2026-08-29T16:48:00-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 establishes the canonical filter-response concept, while EV-002 documents the adjacent High Cut product label.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "The corpus has not resolved whether High Cut is an exact alias in all relevant audio contexts."
+          ]
+        },
+        "independent_usage": {
+          "score": 2,
+          "basis": "EV-002 provides one documented target-product implementation, supported by independent education evidence.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "Only one target compact implementation is documented.",
+            "Education evidence does not establish target-glyph deployment."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 1,
+          "basis": "The canonical term is source-supported, while LPF and the spoken label remain drafted fallbacks.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "The current ledger does not directly document LPF as independent plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-002 documents one compact product response selector.",
+          "evidence_ids": [
+            "EV-002"
+          ],
+          "limitations": [
+            "No second independent compact target rendering is currently recorded."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search with no semantic equivalent identified.",
+          "evidence_ids": [
+            "EV-001"
+          ],
+          "limitations": [
+            "A reproducible visual-confusability, sequence, and adjacent-standard audit is not yet recorded."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, no third-party artwork is imported, and no reference asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 10,
+      "counterevidence": [
+        {
+          "description": "EV-004 is circuit-diagram notation, not evidence that the compact audio-community low-pass response glyph is standardized.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether High Cut is an exact alias of Low-pass filter across the intended corpus.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Text and accessibility score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material alias question remains open."
+        ],
+        "rationale": "The semantic concept is strong enough to retain, but cross-vendor compact rendering, independent text-use evidence, and alias resolution are not yet sufficient."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.band-pass",
+      "assessed_at": "2026-08-29T16:48:00-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 establishes band-pass frequency-response semantics.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "No independent target-product corpus is yet linked to the compact band-pass representation."
+          ]
+        },
+        "independent_usage": {
+          "score": 1,
+          "basis": "EV-003 provides one independent educational source for the concept.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "No documented target compact implementation or actual use is in the current ledger."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 1,
+          "basis": "The canonical term is source-supported, while BPF and the spoken label remain drafted fallbacks.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "The current ledger does not directly document BPF as independent plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 0,
+          "basis": "No compact target band-pass rendering is documented in the current ledger.",
+          "evidence_ids": [],
+          "limitations": [
+            "Education and IEC circuit-diagram illustrations are adjacent, not target compact-rendering evidence."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search with no semantic equivalent identified.",
+          "evidence_ids": [
+            "EV-001"
+          ],
+          "limitations": [
+            "A reproducible visual-confusability, sequence, and adjacent-standard audit is not yet recorded."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, no third-party artwork is imported, and no reference asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-003",
+            "EV-004"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 8,
+      "counterevidence": [
+        {
+          "description": "The current evidence establishes band-pass semantics but does not establish a compact audio-community target glyph.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Which independent audio-product families expose a compact standalone band-pass mode or symbol?",
+          "status": "open",
+          "evidence_ids": [],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Independent usage score is below 2.",
+          "Text and accessibility score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material target-representation question remains open."
+        ],
+        "rationale": "Band-pass is a stable engineering concept, but the registry question is whether the compact representation has independently adopted meaning."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.band-stop",
+      "assessed_at": "2026-08-29T16:48:00-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 establishes band-stop frequency-response semantics, while EV-002 documents a related product Notch control.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "The relationship between Band-stop and Notch remains materially unresolved."
+          ]
+        },
+        "independent_usage": {
+          "score": 1,
+          "basis": "EV-002 documents one product Notch control and EV-003 provides an independent semantic source.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "limitations": [
+            "The current ledger does not establish that the product Notch control is semantically equivalent to the proposed Band-stop record."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 1,
+          "basis": "The canonical term is source-supported, while BSF and the spoken label remain drafted fallbacks.",
+          "evidence_ids": [
+            "EV-003"
+          ],
+          "limitations": [
+            "The current ledger does not directly document BSF as independent plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 0,
+          "basis": "No target compact band-stop rendering is documented in the current ledger.",
+          "evidence_ids": [],
+          "limitations": [
+            "EV-002 documents a Notch selector, which is not credited as a Band-stop target rendering while their semantic boundary is unresolved."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search with no semantic equivalent identified.",
+          "evidence_ids": [
+            "EV-001"
+          ],
+          "limitations": [
+            "A reproducible visual-confusability, sequence, and adjacent-standard audit is not yet recorded."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, no third-party artwork is imported, and no reference asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 8,
+      "counterevidence": [
+        {
+          "description": "Some communities may use Notch as an exact synonym, while others reserve it for a narrow or high-Q Band-stop response.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "material": true
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Notch filter is an exact alias, a related narrow-band case, or a distinct semantic record.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "material-ambiguity",
+          "description": "The canonical boundary between Band-stop and Notch is unresolved.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003"
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Independent usage score is below 2.",
+          "Text and accessibility score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A hard blocker remains open."
+        ],
+        "rationale": "Retain the entry for disciplined research while the Band-stop and Notch relationship is resolved by a broader corpus."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    }
+  ]
+}

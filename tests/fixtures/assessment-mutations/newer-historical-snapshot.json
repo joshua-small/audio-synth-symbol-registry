@@ -1,0 +1,6 @@
+{
+  "operation": "append-newer-historical-snapshot",
+  "record_id": "asr:filter.high-pass",
+  "assessed_at": "2026-08-30T09:00:00-07:00",
+  "status_at_assessment": "evidence-collecting"
+}
