@@ -67,6 +67,8 @@ This does not establish three qualifying examples for any single registry record
 
 The other formal Unicode non-go conditions also remain active: no current record is `registry-accepted`, the overlap/confusability audit is incomplete, visual convergence remains under study, community adoption of a portable form is not established, and no external action is authorized.
 
+> **At time of report - 2026-08-29:** The statement that the overlap/confusability audit was incomplete was superseded later that day by the [Unicode and adjacent-standards overlap audit](unicode-overlap-audit.md). That audit found no Unicode 17 semantic equivalent and documented visual near-misses, plausible sequences, and adjacent IEC terminology. It cleared only that research task; the other non-go conditions in the sentence above remain active.
+
 ## Recommended disposition
 
 - Record this family-level bounded pass as completed while leaving the per-record three-example safeguard open.
