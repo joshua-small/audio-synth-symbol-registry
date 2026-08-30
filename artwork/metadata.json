@@ -1,0 +1,37 @@
+{
+  "metadata_schema_version": "0.1.0",
+  "artwork_version": null,
+  "publication_status": "unpublished",
+  "canonical_assets": [],
+  "draft_candidates": [
+    {
+      "asset_id": "asr-art:draft.monoline-linear.filter.high-pass",
+      "record_id": "asr:filter.high-pass",
+      "asset_path": "artwork/svg/filter.high-pass.svg",
+      "asset_status": "draft",
+      "provenance_path": "artwork/provenance/filter.high-pass.yaml"
+    },
+    {
+      "asset_id": "asr-art:draft.monoline-linear.filter.low-pass",
+      "record_id": "asr:filter.low-pass",
+      "asset_path": "artwork/svg/filter.low-pass.svg",
+      "asset_status": "draft",
+      "provenance_path": "artwork/provenance/filter.low-pass.yaml"
+    },
+    {
+      "asset_id": "asr-art:draft.monoline-linear.filter.band-pass",
+      "record_id": "asr:filter.band-pass",
+      "asset_path": "artwork/svg/filter.band-pass.svg",
+      "asset_status": "draft",
+      "provenance_path": "artwork/provenance/filter.band-pass.yaml"
+    },
+    {
+      "asset_id": "asr-art:draft.monoline-linear.filter.band-stop",
+      "record_id": "asr:filter.band-stop",
+      "asset_path": "artwork/svg/filter.band-stop.svg",
+      "asset_status": "draft",
+      "provenance_path": "artwork/provenance/filter.band-stop.yaml"
+    }
+  ],
+  "notice": "Draft candidates are unpublished, noncanonical, and not study-ready or accepted artwork."
+}

@@ -41,7 +41,7 @@ accessibility:
   title_present: true
   description_present: true
 validation:
-  source_sha256: "2fcb7b9bd890a03094e73288d86c0a4587e04b26747ec48bbe2e67d83d099bd4"
+  source_sha256: "5fd801c2eaf0c26577a6bbc8dfd7b1aee51c51d17127a41ec392ac5219a49758"
   svg_syntax: "passed"
   external_resources: "passed"
   size_review_px: [16, 20, 24, 32, 64]

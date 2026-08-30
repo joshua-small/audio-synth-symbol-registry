@@ -1,7 +1,7 @@
 {
   "qa_schema_version": "0.1.0",
   "source_file": "filter.low-pass.svg",
-  "source_sha256": "2fcb7b9bd890a03094e73288d86c0a4587e04b26747ec48bbe2e67d83d099bd4",
+  "source_sha256": "5fd801c2eaf0c26577a6bbc8dfd7b1aee51c51d17127a41ec392ac5219a49758",
   "renderer": {
     "name": "sharp",
     "version": "0.35.4",
@@ -14,70 +14,70 @@
       "size_px": 16,
       "theme": "light",
       "ink_pixels": 40,
-      "sha256": "3ecbd043db03a64fc96f5b9e9936bc38f0b02a7bc7ac37de2a73dd101ec53d09"
+      "sha256": "651af1e4ab07514fc9a9b0ea06ac1afb3cbe160f733d963b94ea31c75d9241bf"
     },
     {
       "filename": "filter.low-pass-16-dark.png",
       "size_px": 16,
       "theme": "dark",
       "ink_pixels": 40,
-      "sha256": "7b549d8362f59a760e8ae46d0d91ed4fcb8b6e22d195bf0a5184e8f16a603706"
+      "sha256": "75fe5b9eef52823e795eee6047540f0ccf99aaa1c1508d3ca735083a13c57449"
     },
     {
       "filename": "filter.low-pass-20-light.png",
       "size_px": 20,
       "theme": "light",
       "ink_pixels": 56,
-      "sha256": "d544a5acf52bf86a98e88a19019a0c71c94717fb9cabb1b609fcae9996fe9d77"
+      "sha256": "3bf20c1355461453c2c4744b626929676e45f5c1786b70bf1f7731c9d2146956"
     },
     {
       "filename": "filter.low-pass-20-dark.png",
       "size_px": 20,
       "theme": "dark",
       "ink_pixels": 56,
-      "sha256": "8712f43ea3504deb721dd40ab8dac86e35f7d41ee54c6195e4a63b18e53ba164"
+      "sha256": "0d7e12849da458e50bdf07a4b0161c7242d8458be4e3b0f4ef3ec1febb22e672"
     },
     {
       "filename": "filter.low-pass-24-light.png",
       "size_px": 24,
       "theme": "light",
       "ink_pixels": 66,
-      "sha256": "8863be365d5f113cfb1a6e882e8eca7ea5ef9b50922e2fbf2fc273a32da1be91"
+      "sha256": "e84baf3cac504170f661e7e9d40a817f7f1cee1c7477761c36d60cd754f8f4c7"
     },
     {
       "filename": "filter.low-pass-24-dark.png",
       "size_px": 24,
       "theme": "dark",
       "ink_pixels": 66,
-      "sha256": "6199e8cf42702dfc83c36eca326bcb2b4a6af97bda3c10285c643d7b422ef046"
+      "sha256": "b2f51c156996920bd5ecfd0d629fb3f8b98430e074539206c8636db8e90d9bbb"
     },
     {
       "filename": "filter.low-pass-32-light.png",
       "size_px": 32,
       "theme": "light",
       "ink_pixels": 122,
-      "sha256": "82810d1c622902357305fc4d676f335ba00b6af932596e78db712015d37e4b3c"
+      "sha256": "960631c2717cacc5dabcc32df92a7c82c1588a6fb7344ffca8202a09e5e41c90"
     },
     {
       "filename": "filter.low-pass-32-dark.png",
       "size_px": 32,
       "theme": "dark",
       "ink_pixels": 122,
-      "sha256": "37c721b39d3ec3442fbe24d79390b0686e978db7479c72ea10b2b85483d8d24d"
+      "sha256": "ab6a6c6b99b1263b3c5921ca2387b50664876b1b1519546c434436afe48a4112"
     },
     {
       "filename": "filter.low-pass-64-light.png",
       "size_px": 64,
       "theme": "light",
       "ink_pixels": 435,
-      "sha256": "a14322cef974dca97637d455a9041b941654f0bee4be95e90d42a85598433a8e"
+      "sha256": "b46ddfe26a0db3c838e4f170c10a9bb488e3d6a602e4df1dc6b418ecca638dbe"
     },
     {
       "filename": "filter.low-pass-64-dark.png",
       "size_px": 64,
       "theme": "dark",
       "ink_pixels": 435,
-      "sha256": "4ce0f9089a6f0ff24eb18470efec9bcaf90ca10d2f07a7a4941d6903905c4a22"
+      "sha256": "27081b66e6bffad856e1e0b61b8a97b9458ed2b903963babd9e9f0aad3941d70"
     }
   ],
   "limitation": "Automated rendering proves reproducibility and dimensions, not human legibility or artwork acceptance."

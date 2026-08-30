@@ -8,7 +8,7 @@ Every asset remains `draft`. These candidates are original repository-authored g
 
 ## Construction system
 
-All four candidates use a 24-unit square, a single continuous open path, a 2-unit `currentColor` stroke, round caps and joins, endpoints at x=3 and x=21, and response levels at y=7 and y=17. High-pass and low-pass use one cubic transition. Band-pass and band-stop use two mirrored cubic transitions centered at x=12. Only response-class topology and direction vary.
+All four candidates use a 24-unit square, a single continuous open path, a 2-unit `currentColor` stroke, round caps and joins, endpoints at x=3 and x=21, and response levels at y=7 and y=17. High-pass and low-pass are vertical inversions with one shared-position cubic transition. Band-pass and band-stop are vertical inversions with two mirrored cubic transitions centered at x=12. Only response-class topology and direction vary.
 
 The system intentionally omits axes, labels, gain baselines, parameter values, cutoff markers, resonance, slope order, bandwidth, center frequency, interaction state, and product context.
 
