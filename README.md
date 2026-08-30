@@ -4,7 +4,7 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 ## Status
 
-Registry release: **0.1.5**\
+Registry release: **0.1.6**\
 Schema release: **0.3.0**\
 Tooling release: **0.4.0**\
 Artwork release: **not yet published**  
