@@ -1,14 +1,15 @@
 {
   "name": "audio-synth-symbol-registry",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Evidence-led open registry for audio and synthesis symbols.",
   "type": "module",
   "scripts": {
     "study:package": "node tooling/build-study-package.mjs",
+    "report:hygiene": "node tooling/check-agent-reports.mjs",
     "interchange": "node tooling/interchange-prototype.mjs",
     "validate": "node tooling/validate-registry.mjs",
-    "test": "npm run validate && node --test tests/*.test.mjs"
+    "test": "npm run validate && npm run report:hygiene && node --test tests/*.test.mjs"
   },
   "license": "Apache-2.0",
   "devDependencies": {
