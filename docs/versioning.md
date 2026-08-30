@@ -24,6 +24,8 @@ A registry version change does not automatically publish or bump artwork. An art
 
 Assessment sets are append-only dated snapshots. `status_at_assessment` records the registry status observed when that assessment was made; it is not rewritten when a record later changes status.
 
+The assessments artifact version advances when a snapshot is published or its lifecycle changes. The snapshot's `assessment_set_version` and each record's `assessment_version` identify the machine-readable format, which is declared separately as `artifacts.assessments.format_version`. A PATCH artifact release may therefore add a new immutable snapshot without rewriting historical snapshots or changing their format version. `artifacts.assessments.current_snapshot` identifies the file containing the most recent assessment for every live record and must agree with timestamp-based selection.
+
 Every live registry record must have at least one assessment. The validator selects its current assessment as the unique snapshot with the most recent `assessed_at` timestamp. Timestamps for multiple assessments of the same record must therefore be distinct.
 
 - A live `registry-candidate` record requires a current eligible candidate-or-accepted assessment.

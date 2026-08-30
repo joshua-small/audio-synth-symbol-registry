@@ -1,0 +1,656 @@
+{
+  "assessment_set_version": "0.1.0",
+  "assessed_at": "2026-08-29T21:10:51-07:00",
+  "assessment_scope": "Four bootstrap filter-response records reassessed against evidence ledger version 0.1.1 (EV-001 through EV-025).",
+  "assessments": [
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.high-pass",
+      "assessed_at": "2026-08-29T21:10:51-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003, EV-018, and the cross-vendor corpus support high-pass semantics; EV-002 and EV-024 leave the exact Low Cut alias boundary open.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-018",
+            "EV-024"
+          ],
+          "limitations": [
+            "The corpus does not establish that Low Cut is an exact alias in every intended context."
+          ]
+        },
+        "independent_usage": {
+          "score": 3,
+          "basis": "Independent vendor, education, historical, trade-media, and community sources document the high-pass concept and its recognizable response-control convention; EV-002 is the only ledger entry that directly documents a compact product selector for this record.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-020",
+            "EV-023"
+          ],
+          "limitations": [
+            "The corpus spans more than three independent sources and two sectors, but does not document two independent axis-less target renderings.",
+            "Current vendor entries often prove named or contextual use rather than standalone-glyph deployment."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 2,
+          "basis": "high-pass terminology and HPF are source-grounded in education and vendor documentation, supporting the record's fallback and spoken label.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018"
+          ],
+          "limitations": [
+            "No ledger source demonstrates the compact response glyph as portable plain-text interchange.",
+            "EV-023 documents terminology confusion, so textual naming alone does not prove universal comprehension."
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-002 documents one compact target product selector; EV-018, EV-019, and EV-020 provide axis-bearing, descriptive, or educational visual evidence that cannot count as a second independent target rendering.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-018",
+            "EV-019",
+            "EV-020"
+          ],
+          "limitations": [
+            "A second independently documented axis-less target rendering is absent.",
+            "Axes, explanatory context, vendor interaction state, and specific contours remain excluded from the target representation."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 is a preliminary Unicode NamesList terminology search, and EV-004 identifies adjacent IEC context without page-level symbol verification.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004"
+          ],
+          "limitations": [
+            "No reproducible semantic-equivalent, visual-confusable, character-sequence, and adjacent-standard audit is recorded.",
+            "IEC 60617 is not treated as equivalent to the audio-community target form."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, the repository imports no third-party artwork, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-020",
+            "EV-023",
+            "EV-024"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 12,
+      "counterevidence": [
+        {
+          "description": "EV-004 is adjacent circuit-diagram context and does not standardize the compact audio response glyph.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-008 through EV-013 show that vendors may communicate filter semantics through names, abbreviations, and contextual UI rather than a standalone glyph.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-008",
+            "EV-009",
+            "EV-010",
+            "EV-011",
+            "EV-012",
+            "EV-013"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-005 and EV-025 show custom icon-font implementations, not interoperable Unicode or ordinary plain-text use.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-005",
+            "EV-025"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Low Cut is an exact alias of high-pass filter across the intended corpus.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-024"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material alias question remains open.",
+          "Independent review has not yet been recorded in this immutable snapshot."
+        ],
+        "rationale": "The expanded ledger strengthens independent high-pass usage and accessible fallback evidence, but it does not establish a second compact target rendering, portable glyph interchange, a complete overlap audit, or a settled Low Cut alias boundary."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.low-pass",
+      "assessed_at": "2026-08-29T21:10:51-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003, EV-018, and the cross-vendor corpus support low-pass semantics; EV-002 and EV-024 leave the exact High Cut alias boundary open.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-018",
+            "EV-024"
+          ],
+          "limitations": [
+            "The corpus does not establish that High Cut is an exact alias in every intended context."
+          ]
+        },
+        "independent_usage": {
+          "score": 3,
+          "basis": "Independent vendor, education, historical, trade-media, and community sources document the low-pass concept and its recognizable response-control convention; EV-002 is the only ledger entry that directly documents a compact product selector for this record.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-020",
+            "EV-023"
+          ],
+          "limitations": [
+            "The corpus spans more than three independent sources and two sectors, but does not document two independent axis-less target renderings.",
+            "Current vendor entries often prove named or contextual use rather than standalone-glyph deployment."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 2,
+          "basis": "low-pass terminology and LPF are source-grounded in education and vendor documentation, supporting the record's fallback and spoken label.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018"
+          ],
+          "limitations": [
+            "No ledger source demonstrates the compact response glyph as portable plain-text interchange.",
+            "EV-023 documents terminology confusion, so textual naming alone does not prove universal comprehension."
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-002 documents one compact target product selector; EV-018, EV-019, and EV-020 provide axis-bearing, descriptive, or educational visual evidence that cannot count as a second independent target rendering.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-018",
+            "EV-019",
+            "EV-020"
+          ],
+          "limitations": [
+            "A second independently documented axis-less target rendering is absent.",
+            "Axes, explanatory context, vendor interaction state, and specific contours remain excluded from the target representation."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 is a preliminary Unicode NamesList terminology search, and EV-004 identifies adjacent IEC context without page-level symbol verification.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004"
+          ],
+          "limitations": [
+            "No reproducible semantic-equivalent, visual-confusable, character-sequence, and adjacent-standard audit is recorded.",
+            "IEC 60617 is not treated as equivalent to the audio-community target form."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, the repository imports no third-party artwork, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-020",
+            "EV-023",
+            "EV-024"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 12,
+      "counterevidence": [
+        {
+          "description": "EV-004 is adjacent circuit-diagram context and does not standardize the compact audio response glyph.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-008 through EV-013 show that vendors may communicate filter semantics through names, abbreviations, and contextual UI rather than a standalone glyph.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-008",
+            "EV-009",
+            "EV-010",
+            "EV-011",
+            "EV-012",
+            "EV-013"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-005 and EV-025 show custom icon-font implementations, not interoperable Unicode or ordinary plain-text use.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-005",
+            "EV-025"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether High Cut is an exact alias of low-pass filter across the intended corpus.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-024"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material alias question remains open.",
+          "Independent review has not yet been recorded in this immutable snapshot."
+        ],
+        "rationale": "The expanded ledger strengthens independent low-pass usage and accessible fallback evidence, but it does not establish a second compact target rendering, portable glyph interchange, a complete overlap audit, or a settled High Cut alias boundary."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.band-pass",
+      "assessed_at": "2026-08-29T21:10:51-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 3,
+          "basis": "EV-003 and EV-018 independently establish band-pass response semantics, while current vendor and synthesizer sources corroborate the filter category without introducing a material scope conflict.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-008",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018"
+          ],
+          "limitations": [
+            "The ledger supports the semantic record but not a mandatory glyph contour."
+          ]
+        },
+        "independent_usage": {
+          "score": 1,
+          "basis": "Education and vendor sources document band-pass semantics, but the ledger does not directly document an axis-less compact band-pass target implementation.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-008",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018"
+          ],
+          "limitations": [
+            "EV-018 is an axis-bearing explanatory diagram and is adjacent evidence under the rubric.",
+            "Generic vendor filter-category documentation cannot be promoted into record-specific target-glyph evidence."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 2,
+          "basis": "EV-003 grounds the canonical and spoken term, and EV-018 explicitly uses BPF, supporting the ASCII fallback.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018"
+          ],
+          "limitations": [
+            "No ledger source demonstrates a band-pass response glyph in portable plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 0,
+          "basis": "EV-018 documents an axis-bearing BPF response diagram, not the axis-less target representation.",
+          "evidence_ids": [
+            "EV-018"
+          ],
+          "limitations": [
+            "No compact target band-pass rendering is directly documented.",
+            "Axes and explanatory graph context are illustrative, not semantic character evidence."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search; EV-004 records only the adjacent IEC database context.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004"
+          ],
+          "limitations": [
+            "No reproducible confusability, sequence, or page-level adjacent-standard audit is recorded.",
+            "IEC circuit symbols are not credited as target audio response glyphs."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, the repository imports no third-party artwork, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-003",
+            "EV-004",
+            "EV-008",
+            "EV-009",
+            "EV-012",
+            "EV-013",
+            "EV-018"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 10,
+      "counterevidence": [
+        {
+          "description": "EV-018 establishes the response semantics with an axis-bearing diagram but does not establish the axis-less target glyph.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-018"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-004 is adjacent circuit-symbol context, not evidence of the target compact audio representation.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-005 and EV-025 demonstrate custom icon-font approaches generally, not a portable band-pass character.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-005",
+            "EV-025"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Which independent audio-product families directly expose an axis-less compact band-pass mode or symbol?",
+          "status": "open",
+          "evidence_ids": [
+            "EV-007",
+            "EV-008",
+            "EV-009"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Independent usage score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A material target-representation question remains open.",
+          "Independent review has not yet been recorded in this immutable snapshot."
+        ],
+        "rationale": "Band-pass semantics and the BPF fallback are better supported, but the ledger still lacks direct compact target-rendering evidence and portable glyph interchange."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    },
+    {
+      "assessment_version": "0.1.0",
+      "record_id": "asr:filter.band-stop",
+      "assessed_at": "2026-08-29T21:10:51-07:00",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 and EV-018 establish band-stop or band-eliminate response semantics; EV-002 and EV-024 do not resolve the semantic boundary with Notch.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-018",
+            "EV-024"
+          ],
+          "limitations": [
+            "Notch remains a provisional related term, not an exact alias.",
+            "EV-018 uses BEF rather than the record's BSF fallback."
+          ]
+        },
+        "independent_usage": {
+          "score": 1,
+          "basis": "EV-003 and EV-018 document the band-stop or band-eliminate concept, but no ledger source directly documents the axis-less band-stop target representation.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018"
+          ],
+          "limitations": [
+            "EV-002 documents a Notch selector and is not borrowed as equivalent band-stop evidence.",
+            "Axis-bearing BEF explanation is adjacent semantic evidence, not a compact target implementation."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 1,
+          "basis": "The canonical and spoken term are source-supported, but the ledger does not independently establish BSF; EV-018 instead documents BEF.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018"
+          ],
+          "limitations": [
+            "BSF remains a drafted fallback in this corpus.",
+            "No portable plain-text response glyph practice is documented."
+          ]
+        },
+        "visual_convergence": {
+          "score": 0,
+          "basis": "No ledger source directly documents an axis-less compact band-stop rendering; EV-018 is axis-bearing and EV-002 is a semantically unresolved Notch selector.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-018"
+          ],
+          "limitations": [
+            "Notch evidence is not counted toward Band-stop visual convergence.",
+            "Axes and explanatory graph context are excluded from the target representation."
+          ]
+        },
+        "overlap_audit": {
+          "score": 1,
+          "basis": "EV-001 records a preliminary Unicode NamesList search, while EV-004 provides only adjacent IEC database context.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004"
+          ],
+          "limitations": [
+            "No reproducible confusability, sequence, or page-level adjacent-standard audit is recorded.",
+            "IEC is not treated as equivalent evidence."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited sources carry rights notes, the repository imports no third-party artwork, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004",
+            "EV-018",
+            "EV-024"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 8,
+      "counterevidence": [
+        {
+          "description": "EV-018 documents the abbreviation BEF and an axis-bearing band-eliminate graph, not the BSF fallback or axis-less target glyph.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-018"
+          ],
+          "material": false
+        },
+        {
+          "description": "EV-002 documents Notch, whose exact relationship to Band-stop remains unresolved; it is not counted as equivalent usage or rendering evidence.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-024"
+          ],
+          "material": true
+        },
+        {
+          "description": "EV-004 is adjacent circuit-symbol context and does not standardize the compact audio response glyph.",
+          "status": "resolved",
+          "evidence_ids": [
+            "EV-004"
+          ],
+          "material": false
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Notch filter is an exact alias, a related narrow-band case, or a distinct semantic record.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-024"
+          ],
+          "material": true
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "material-ambiguity",
+          "description": "The canonical boundary between Band-stop and Notch remains unresolved.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-024"
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Total score is below 13.",
+          "Semantic stability score is below 3.",
+          "Independent usage score is below 2.",
+          "Text and accessibility score is below 2.",
+          "Visual convergence score is below 2.",
+          "Overlap audit score is below 2.",
+          "A hard blocker remains open.",
+          "Independent review has not yet been recorded in this immutable snapshot."
+        ],
+        "rationale": "Band-stop remains useful as a research record, but the ledger cannot transfer Notch evidence to it, does not establish BSF, and leaves the semantic boundary unresolved."
+      },
+      "review": {
+        "independent_agent_review": "not-requested",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      },
+      "status_at_assessment": "evidence-collecting"
+    }
+  ]
+}
+
