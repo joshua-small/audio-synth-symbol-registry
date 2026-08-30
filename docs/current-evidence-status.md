@@ -85,3 +85,12 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Guardrails: made no status, semantic, artwork, licensing, outreach, or external-standards change.
 - Validation: document was checked for internal consistency against the repository's current assessment and evidence ledger.
 - Limitation: the 0.1.0 assessment has not yet been recalculated against evidence ledger 0.1.1; this document identifies that as the next mechanical evidence task.
+
+## Agent Report - 2026-08-29T21:21:01-07:00
+
+- Scope: reassessed all four records against evidence ledger 0.1.1 and published an immutable dated snapshot as assessment artifact 0.1.1.
+- Evidence handling: kept semantic, visual, implementation, plain-text, adjacent IEC, and legal-provenance evidence distinct; did not transfer Notch evidence to Band-stop.
+- Outcome: high-pass 12/20, low-pass 12/20, band-pass 10/20, and band-stop 8/20; every record remains `evidence-collecting`.
+- Lifecycle: preserved the bootstrap snapshot, separated assessment artifact SemVer from snapshot format version, and declared the current snapshot in registry metadata.
+- Validation: full repository validation and tests are required before merge.
+- Limitations: no new source was added, no independent review is encoded into the immutable snapshot, and no record, semantic ID, alias, artwork, or external position changed.
