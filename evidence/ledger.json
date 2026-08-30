@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.1.2",
+  "ledger_version": "0.1.3",
   "accessed_on": "2026-08-29",
   "sources": [
     {
@@ -417,6 +417,58 @@
       "direct_observation": "Participants explicitly disagree with treating notch and rejection filters as the same behavior while discussing audio plug-in requirements.",
       "interpretation": "The thread is non-authoritative but demonstrates that audio-community usage does not guarantee an exact shared semantic boundary from the labels alone.",
       "rights_note": "Linked discussion only; user content is summarized rather than reproduced."
+    },
+    {
+      "id": "EV-033",
+      "type": "historical-primary-source",
+      "publisher": "Korg",
+      "title": "DSS-1 Owner's Manual",
+      "url": "https://cdn.korg.com/us/support/download/files/6c1d8a2715773887c2d200aea4dbc289.pdf",
+      "publication_date": "1986",
+      "accessed_on": "2026-08-29",
+      "location": "PDF and printed page 30; manual colophon on page 240",
+      "direct_observation": "The manual places a labeled VCF block after two oscillators and before the VCA in the DSS-1 signal path. The cited page contains filter terminology and architecture but no filter-response curve or standalone selector glyph.",
+      "interpretation": "This is period evidence for VCF semantics and a material negative finding for compact response-glyph use in this manual context.",
+      "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
+    },
+    {
+      "id": "EV-034",
+      "type": "historical-primary-source",
+      "publisher": "Roland",
+      "title": "D-50 Owner's Manual",
+      "url": "https://archive.org/details/synthmanual-roland-d-50-owners-manual",
+      "publication_date": "1987",
+      "accessed_on": "2026-08-29",
+      "location": "PDF page 69; printed page 37; cutoff-frequency discussion",
+      "direct_observation": "The manual describes TVF cutoff frequency and shows labeled, axis-bearing low-pass response sketches associated with cutoff point and frequency.",
+      "interpretation": "This is direct period evidence for the low-pass response shape as an explanatory graph, not for an axis-less standalone glyph or portable text character.",
+      "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
+    },
+    {
+      "id": "EV-035",
+      "type": "historical-primary-source",
+      "publisher": "Roland",
+      "title": "JV-80 Owner's Manual",
+      "url": "https://archive.org/details/synthmanual-roland-jv-80-owners-manual",
+      "publication_date": "1991",
+      "accessed_on": "2026-08-29",
+      "location": "PDF and printed page 45; Filter Type",
+      "direct_observation": "The Filter Type section names LPF and HPF and presents two small labeled, axis-bearing response diagrams beside the product display example.",
+      "interpretation": "This is direct period evidence for a paired low-pass/high-pass response-curve convention, but the labels, axes, and product-screen context are integral; it does not establish a portable standalone glyph.",
+      "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
+    },
+    {
+      "id": "EV-036",
+      "type": "historical-primary-source",
+      "publisher": "Roland",
+      "title": "XP-60/XP-80 Owner's Manual",
+      "url": "https://static.roland.com/assets/media/pdf/XP-60_80_OM.pdf",
+      "publication_date": "1996",
+      "accessed_on": "2026-08-29",
+      "location": "PDF page 56; printed page 54; TVF Param and Filter Type",
+      "direct_observation": "The manual defines OFF, LPF, BPF, HPF, and PKG filter types and shows LPF as a parameter value in an LCD display example. The cited page contains no standalone response-curve selector glyph.",
+      "interpretation": "This broadens the documented period vocabulary while providing counterevidence to a claim that compact response drawings were required or universal in 1990s synthesizer interfaces.",
+      "rights_note": "Linked historical source only; no manufacturer artwork, scan, typography, or diagram is reproduced or traced."
     }
   ]
 }
