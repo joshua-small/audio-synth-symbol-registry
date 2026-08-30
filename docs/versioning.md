@@ -4,14 +4,20 @@ This project uses [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.htm
 
 ## Independently versioned artifacts
 
-The authoritative metadata is `registry/registry-metadata.json`.
+Each artifact type has its own authority. A version recorded in one artifact's metadata is not authority to release, redefine, or version another artifact.
 
-- Registry data: the published collection of entries at every status, including the evidence ledger.
-- Schema: the machine-readable entry contracts.
-- Artwork: original neutral reference SVGs, when published.
-- Tooling: validators, generators, and related code.
+| Artifact | Authoritative metadata | Notes |
+| --- | --- | --- |
+| Registry data | `registry/registry-metadata.json` | Authoritative for the published registry collection, record-status model, and registry version. |
+| Schema | `registry/registry-metadata.json` | The schema version is the compatibility contract for machine-readable records. |
+| Tooling | Root `package.json` | Authoritative for the published tooling package version. |
+| Artwork | `artwork/metadata.json` | Created with the first original artwork asset. Authoritative for artwork version, publication status, and canonical asset mapping. |
 
-The bootstrap publishes registry, schema, and tooling at `0.1.0`. Artwork has no published version until original artwork exists. The evidence ledger is part of the registry-data artifact and uses the registry version.
+`registry/registry-metadata.json` MAY report an informational artwork-version summary for discovery, but it is not authority for artwork release state, canonical asset paths, or artwork SemVer. If a future registry summary conflicts with `artwork/metadata.json`, the artwork metadata wins for artwork.
+
+The bootstrap publishes registry, schema, and tooling at `0.1.0`. Artwork has no published version until original artwork exists and `artwork/metadata.json` declares its first authorized release. The evidence ledger is part of the registry-data artifact and uses the registry version.
+
+A registry version change does not automatically publish or bump artwork. An artwork version change does not automatically change registry, schema, or tooling versions. Promotion of a semantic record to `registry-accepted` may make a linked artwork eligible for acceptance, but it does not itself accept or publish that artwork. Artwork acceptance and public artwork release remain separate Human Review gates under `AGENTS.md`.
 
 ## Compatibility rules
 
