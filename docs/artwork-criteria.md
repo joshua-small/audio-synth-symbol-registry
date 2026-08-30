@@ -210,6 +210,8 @@ Minimum contract:
 
 Artwork SemVer is independent from registry, schema, and tooling SemVer under D-007. Artwork version changes do not automatically change registry version, and a registry release does not automatically publish artwork.
 
+Before any artwork is accepted, the index MUST use `publication_status: "unpublished"`, a valid pre-release corpus version of `artwork_version: "0.0.0"`, an empty `canonical_assets` array, and a `draft_candidates` array for proposed assets. Each draft-candidate item records its asset ID, record ID, asset path, `draft` status, and provenance path. Draft candidates are noncanonical working material and are not a publication or release. A draft candidate MUST NOT enter `canonical_assets` until the linked record and artwork satisfy the acceptance and release gates above.
+
 - PATCH: Non-semantic geometry, metadata, formatting, accessibility, or rendering corrections.
 - MINOR: First publication at `0.1.0`, a new accepted reference asset, a backward-compatible variant, or a material but semantically equivalent redesign.
 - MAJOR: Removal of a published canonical path without compatibility treatment, incompatible metadata-contract change, or redefinition of a documented rendering contract.

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title id="title">Band-pass filter</title>
+  <desc id="desc">Draft axis-less response glyph for a band-pass filter.</desc>
+  <path d="M3 17 H6 C8.5 17 9 7 12 7 C15 7 15.5 17 18 17 H21"/>
+</svg>
