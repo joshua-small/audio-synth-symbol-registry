@@ -36,6 +36,7 @@ export async function buildStudyPackage(planPath, outputPath) {
   const plan = JSON.parse(await readFile(absolutePlan, "utf8"));
   const studyId = requireString(plan.study_id, "study_id");
   const seed = requireString(plan.randomization_seed, "randomization_seed");
+  if (Buffer.byteLength(seed, "utf8") < 32) fail("randomization_seed must contain at least 32 UTF-8 bytes");
   if (!Number.isInteger(plan.form_count) || plan.form_count < 1) fail("form_count must be a positive integer");
   if (!Array.isArray(plan.stimuli) || plan.stimuli.length < 2) fail("stimuli must contain at least two entries");
   if (!Array.isArray(plan.forced_choices) || plan.forced_choices.length < 2) fail("forced_choices must contain at least two entries");
