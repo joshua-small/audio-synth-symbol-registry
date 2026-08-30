@@ -1,0 +1,5 @@
+{
+  "operation": "clear-dimension-evidence",
+  "record_id": "asr:filter.high-pass",
+  "dimension": "semantic_stability"
+}

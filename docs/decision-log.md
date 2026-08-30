@@ -171,3 +171,14 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Stop after every human decision and wait for an explicit new work request.
 - Consequences: Agents resume implementation, validation, review, merge, and safe follow-on tasks until the next real decision, authorization, or external-capability boundary.
 - Revisit trigger: A continuation causes scope or authority confusion.
+## D-015: Registry acceptance rubric
+
+- Date: 2026-08-29T17:16:18-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: Adopt the registry acceptance rubric and assessment lifecycle in PR #12.
+- Evidence: Owner authorization in project chat; independently reviewed PR #12; passing CI validation and the documented assessment schema, score, and promotion checks.
+- Counterevidence or objections: Current scores remain below candidate threshold, and the rubric cannot establish external Unicode suitability or replace evidence-quality review.
+- Alternatives considered: Lower thresholds, remove dimension floors or the 14-day public-review safeguard, or retain the unscored process.
+- Consequences: Candidate and accepted promotion require a current eligible assessment and the documented thresholds; registry-accepted additionally requires documented public review, independent review, and explicit human authorization. No current record is promoted by this decision.
+- Revisit trigger: Assessment practice or external feedback demonstrates that the thresholds or lifecycle need refinement.

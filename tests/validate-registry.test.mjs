@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { cpSync, copyFileSync, mkdtempSync, rmSync, symlinkSync } from "node:fs";
+import { cpSync, copyFileSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -19,7 +19,46 @@ const temporaryCorpus = () => {
   return directory;
 };
 
-const runValidator = ({ fixture, metadataFixture, ledgerFixture } = {}) => {
+const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
+  const mutation = JSON.parse(readFileSync(
+    path.join(corpusRoot, "tests", "fixtures", "assessment-mutations", mutationFixture),
+    "utf8",
+  ));
+  const assessmentPath = path.join(corpusRoot, "registry", "assessments", "bootstrap-2026-08-29.json");
+  const readAssessmentSet = () => JSON.parse(readFileSync(assessmentPath, "utf8"));
+  const writeAssessmentSet = (assessmentSet) => writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
+
+  if (mutation.operation === "remove-assessments") {
+    rmSync(path.join(corpusRoot, "registry", "assessments"), { force: true, recursive: true });
+    return;
+  }
+
+  const assessmentSet = readAssessmentSet();
+  const assessment = assessmentSet.assessments.find((item) => item.record_id === mutation.record_id);
+  assert.ok(assessment, `Fixture targets a missing assessment: ${mutation.record_id}`);
+
+  if (mutation.operation === "clear-dimension-evidence") {
+    assessment.dimensions[mutation.dimension].evidence_ids = [];
+  } else if (mutation.operation === "promote-record-with-ineligible-latest") {
+    const recordPath = path.join(corpusRoot, "registry", "symbols", `${mutation.symbol_file}.json`);
+    const record = JSON.parse(readFileSync(recordPath, "utf8"));
+    record.status = mutation.status;
+    writeFileSync(recordPath, `${JSON.stringify(record, null, 2)}\n`);
+  } else if (mutation.operation === "duplicate-assessment-timestamp") {
+    assessmentSet.assessments.push(structuredClone(assessment));
+  } else if (mutation.operation === "append-newer-historical-snapshot") {
+    const newerSnapshot = structuredClone(assessment);
+    newerSnapshot.assessed_at = mutation.assessed_at;
+    newerSnapshot.status_at_assessment = mutation.status_at_assessment;
+    assessmentSet.assessments.push(newerSnapshot);
+  } else {
+    throw new Error(`Unsupported assessment mutation: ${mutation.operation}`);
+  }
+
+  writeAssessmentSet(assessmentSet);
+};
+
+const runValidator = ({ fixture, metadataFixture, ledgerFixture, assessmentMutationFixture } = {}) => {
   const corpusRoot = temporaryCorpus();
   try {
     if (metadataFixture) {
@@ -41,6 +80,9 @@ const runValidator = ({ fixture, metadataFixture, ledgerFixture } = {}) => {
         path.join(corpusRoot, "registry", "symbols"),
         { recursive: true },
       );
+    }
+    if (assessmentMutationFixture) {
+      applyAssessmentMutation(corpusRoot, assessmentMutationFixture);
     }
     return spawnSync(process.execPath, ["tooling/validate-registry.mjs"], {
       cwd: corpusRoot,
@@ -97,4 +139,25 @@ test("rejects metadata that declares a missing entry schema", () => {
   const result = runValidator({ metadataFixture: "metadata-missing-entry-schema.json" });
   assert.notEqual(result.status, 0, result.stdout);
   assert.match(result.stderr, /does-not-exist\.json/);
+});
+
+const invalidAssessmentMutations = [
+  ["positive-score-missing-evidence-id.json", /semantic_stability has a positive score without evidence IDs/],
+  ["no-assessment.json", /No acceptance assessment found for asr:filter\.high-pass/],
+  ["promoted-record-ineligible-latest.json", /registry-accepted requires a current eligible accepted assessment/],
+  ["same-timestamp-ambiguity.json", /current assessment is ambiguous/],
+];
+
+for (const [assessmentMutationFixture, expectedFailure] of invalidAssessmentMutations) {
+  test(`rejects ${assessmentMutationFixture} for the intended assessment rule`, () => {
+    const result = runValidator({ assessmentMutationFixture });
+    assert.equal(result.status, 1, result.stdout);
+    assert.match(result.stderr, expectedFailure);
+  });
+}
+
+test("preserves historical assessments when a newer snapshot is appended", () => {
+  const result = runValidator({ assessmentMutationFixture: "newer-historical-snapshot.json" });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Validated 4 registry record\(s\), 1 assessment set\(s\)/);
 });

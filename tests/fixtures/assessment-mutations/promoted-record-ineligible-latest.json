@@ -1,0 +1,6 @@
+{
+  "operation": "promote-record-with-ineligible-latest",
+  "record_id": "asr:filter.high-pass",
+  "symbol_file": "filter.high-pass",
+  "status": "registry-accepted"
+}
