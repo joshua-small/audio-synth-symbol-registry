@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { cpSync, copyFileSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { cpSync, copyFileSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -24,17 +24,26 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
     path.join(corpusRoot, "tests", "fixtures", "assessment-mutations", mutationFixture),
     "utf8",
   ));
-  const assessmentPath = path.join(corpusRoot, "registry", "assessments", "bootstrap-2026-08-29.json");
-  const readAssessmentSet = () => JSON.parse(readFileSync(assessmentPath, "utf8"));
-  const writeAssessmentSet = (assessmentSet) => writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
-
   if (mutation.operation === "remove-assessments") {
     rmSync(path.join(corpusRoot, "registry", "assessments"), { force: true, recursive: true });
     return;
   }
 
-  const assessmentSet = readAssessmentSet();
-  const assessment = assessmentSet.assessments.find((item) => item.record_id === mutation.record_id);
+  const assessmentDirectory = path.join(corpusRoot, "registry", "assessments");
+  const snapshots = readdirSync(assessmentDirectory)
+    .filter((file) => file.endsWith(".json"))
+    .flatMap((file) => {
+      const assessmentPath = path.join(assessmentDirectory, file);
+      const assessmentSet = JSON.parse(readFileSync(assessmentPath, "utf8"));
+      return assessmentSet.assessments
+        .filter((item) => item.record_id === mutation.record_id)
+        .map((assessment) => ({ assessment, assessmentPath, assessmentSet }));
+    });
+  const current = snapshots.sort(
+    (left, right) => Date.parse(right.assessment.assessed_at) - Date.parse(left.assessment.assessed_at),
+  )[0];
+  assert.ok(current, `Fixture targets a missing assessment: ${mutation.record_id}`);
+  const { assessment, assessmentPath, assessmentSet } = current;
   assert.ok(assessment, `Fixture targets a missing assessment: ${mutation.record_id}`);
 
   if (mutation.operation === "clear-dimension-evidence") {
@@ -55,7 +64,7 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
     throw new Error(`Unsupported assessment mutation: ${mutation.operation}`);
   }
 
-  writeAssessmentSet(assessmentSet);
+  writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
 };
 
 const runValidator = ({ fixture, metadataFixture, ledgerFixture, assessmentMutationFixture } = {}) => {
@@ -159,5 +168,5 @@ for (const [assessmentMutationFixture, expectedFailure] of invalidAssessmentMuta
 test("preserves historical assessments when a newer snapshot is appended", () => {
   const result = runValidator({ assessmentMutationFixture: "newer-historical-snapshot.json" });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /Validated 4 registry record\(s\), 1 assessment set\(s\)/);
+  assert.match(result.stdout, /Validated 4 registry record\(s\), 2 assessment set\(s\)/);
 });
