@@ -1,0 +1,19 @@
+{
+  "operation": "set",
+  "source_id": "EV-006",
+  "field": "source_capture",
+  "value": {
+    "accessed_at": "2026-08-29",
+    "product": "Ableton Live",
+    "product_version": "12",
+    "exact_locator": "28.2.1 Filter Types",
+    "stable_fragment": null,
+    "preservation": {
+      "mode": "metadata-only",
+      "archive_url": null,
+      "checksum": null,
+      "rights_basis": "Public documentation metadata only.",
+      "limitations": "No source bytes retained."
+    }
+  }
+}

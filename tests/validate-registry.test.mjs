@@ -206,7 +206,7 @@ test("rejects a ledger version that differs from metadata", () => {
 test("rejects a README registry release that differs from metadata", () => {
   const result = runValidator({ readmeRegistryVersion: "0.1.0" });
   assert.equal(result.status, 1, result.stdout);
-  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.1\.4/);
+  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.1\.5/);
 });
 
 const invalidLedgerMutations = [
@@ -219,6 +219,12 @@ const invalidLedgerMutations = [
   ["invalid-zero-year.json", /\/sources\/0\/accessed_on must match format "date"/],
   ["invalid-publication-date.json", /\/sources\/0\/publication_date must match a schema in anyOf/],
   ["invalid-url.json", /\/sources\/0\/url must match format "https-url"/],
+  ["invalid-capture-timestamp.json", /\/source_capture\/accessed_at must match format "offset-date-time"/],
+  ["impossible-capture-timestamp.json", /\/source_capture\/accessed_at must match format "offset-date-time"/],
+  ["metadata-only-with-archive.json", /\/source_capture\/preservation\/archive_url must be equal to constant/],
+  ["checksum-only-with-archive.json", /\/source_capture\/preservation\/archive_url must be equal to constant/],
+  ["archive-only-with-checksum.json", /\/source_capture\/preservation\/checksum must be equal to constant/],
+  ["invalid-capture-checksum.json", /\/source_capture\/preservation\/checksum must match a schema in anyOf/],
 ];
 
 for (const [ledgerMutationFixture, expectedFailure] of invalidLedgerMutations) {

@@ -36,6 +36,10 @@ Assessment data and schemas are versioned independently. A change to assessment 
 
 Assessment format 0.2.0 adds optional `artifact_refs` while retaining support for immutable 0.1.0 snapshots. A set and all its member assessments use the same format version; format 0.1.0 cannot carry 0.2.0 references. Each reference pins a `DA-*` artifact version, states its use, and identifies the underlying ledger inputs used by that claim. The derived-analysis registry identifies artifacts by ID-version pair, supports version-pinned derived dependencies, rejects dependency cycles, and pins each registered file with SHA-256. New versions of one artifact ID use distinct immutable paths so historical digests and assessment references remain verifiable. Changing an analysis in a way that could change an assessment conclusion requires a new artifact version. Moving a file without changing its content is a patch-level registry correction.
 
+Schema 0.3.0 adds optional `source_capture` metadata to evidence-ledger sources. Existing sources remain valid without it. Capture metadata records reproducibility and rights limitations under [the mutable-source capture policy](mutable-source-capture-policy.md); it does not archive source content or strengthen the underlying evidence claim.
+
+Tooling 0.4.0 adds semantic validation for numeric-offset capture timestamps, including calendar, clock, and UTC-offset bounds.
+
 ## Compatibility rules
 
 - MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.
