@@ -1,0 +1,53 @@
+schema_version: "0.1.0"
+asset_id: "asr-art:draft.monoline-linear.filter.band-stop"
+record_id: "asr:filter.band-stop"
+asset_path: "artwork/svg/filter.band-stop.svg"
+asset_status: "draft"
+artwork_version: "0.0.0"
+created_at: "2026-08-30T00:19:50-07:00"
+created_by:
+  - name: "Codex agent glyph_family_linear"
+    role: "original geometry author"
+authorization:
+  statement: >
+    Joshua authorized draft candidate creation in chat on 2026-08-30 but did
+    not authorize candidate selection, artwork acceptance, study-ready status,
+    recruitment, or study launch.
+originality:
+  statement: >
+    This SVG was created for this repository. No third-party artwork was copied,
+    traced, reconstructed, or used as source geometry.
+  prohibited_source_material_used: false
+  reference_sources: []
+construction:
+  description: >
+    Two horizontal high-level end segments join two mirrored cubic transitions
+    around one bounded low-level point in a continuous open path.
+  family_constants: ["24-unit square", "2-unit stroke", "round caps", "round joins", "levels y=7 and y=17", "endpoints x=3 and x=21"]
+  intentional_difference: "Only response-class topology and direction differ among family members."
+tools:
+  - name: "text editor"
+    use: "Original coordinate and path authoring"
+  - name: "repository SVG validator and Sharp renderer"
+    use: "Strict SVG validation and synthetic render QA"
+license: "CC0-1.0"
+semantic_constraints:
+  axis_bearing_form: "illustrative-only"
+  encoded_properties: ["filter response class"]
+  excluded_properties: ["axes", "gain baseline", "frequency values", "slope", "bandwidth", "center frequency", "notch depth", "interaction state"]
+accessibility:
+  canonical_name: "Band-stop filter"
+  spoken_label: "band-stop filter"
+  title_present: true
+  description_present: true
+validation:
+  source_sha256: "6f19a81eacb4810c651ef8faaba862a08d30fa85395108d7b47c0e204e9c92a6"
+  svg_syntax: "passed"
+  external_resources: "passed"
+  size_review_px: [16, 20, 24, 32, 64]
+  contrast_host_review: "pending human visual review"
+review:
+  independent_agent_review: "pending"
+  human_candidate_selection: "pending"
+  human_artwork_acceptance: "not authorized"
+  decision_log_entry: null

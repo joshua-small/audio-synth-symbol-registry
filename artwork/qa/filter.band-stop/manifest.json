@@ -1,0 +1,84 @@
+{
+  "qa_schema_version": "0.1.0",
+  "source_file": "filter.band-stop.svg",
+  "source_sha256": "6f19a81eacb4810c651ef8faaba862a08d30fa85395108d7b47c0e204e9c92a6",
+  "renderer": {
+    "name": "sharp",
+    "version": "0.35.4",
+    "vips": "8.18.6",
+    "rsvg": "2.62.91"
+  },
+  "outputs": [
+    {
+      "filename": "filter.band-stop-16-light.png",
+      "size_px": 16,
+      "theme": "light",
+      "ink_pixels": 52,
+      "sha256": "9773d99cd8604cefd400a310e2cbd9622c1b1d0000acd3d7d63fba51ca772138"
+    },
+    {
+      "filename": "filter.band-stop-16-dark.png",
+      "size_px": 16,
+      "theme": "dark",
+      "ink_pixels": 52,
+      "sha256": "6812a5f3842c1de22cb86ebe0798688ec4a1d176431b057b49d91a67b91c6898"
+    },
+    {
+      "filename": "filter.band-stop-20-light.png",
+      "size_px": 20,
+      "theme": "light",
+      "ink_pixels": 72,
+      "sha256": "cc726843f1822d27870751945cd26daf2a2727ed11945cdfc4f2c95863f46b99"
+    },
+    {
+      "filename": "filter.band-stop-20-dark.png",
+      "size_px": 20,
+      "theme": "dark",
+      "ink_pixels": 72,
+      "sha256": "460380dbc89e434e65ec18ee478a5116b639475da2014fa9c82e16d1a1f7224e"
+    },
+    {
+      "filename": "filter.band-stop-24-light.png",
+      "size_px": 24,
+      "theme": "light",
+      "ink_pixels": 92,
+      "sha256": "583f824d95ffa02a51168bc70ab504e5153cc4d1495274a90c3c40168845f106"
+    },
+    {
+      "filename": "filter.band-stop-24-dark.png",
+      "size_px": 24,
+      "theme": "dark",
+      "ink_pixels": 92,
+      "sha256": "fc6959b9811dcec10c668445f0d3d4153e6eacbeebad95abfb6b8bc69abf45d8"
+    },
+    {
+      "filename": "filter.band-stop-32-light.png",
+      "size_px": 32,
+      "theme": "light",
+      "ink_pixels": 162,
+      "sha256": "dabd68ecf1e43fcf7d5a1705bf8cf7c80f627edfc3739909b2e1f24a21d2f27a"
+    },
+    {
+      "filename": "filter.band-stop-32-dark.png",
+      "size_px": 32,
+      "theme": "dark",
+      "ink_pixels": 162,
+      "sha256": "4f46f52cca2993e0b677e08c2392ac6ae774afe35f129484f724cbb44c4d8b84"
+    },
+    {
+      "filename": "filter.band-stop-64-light.png",
+      "size_px": 64,
+      "theme": "light",
+      "ink_pixels": 546,
+      "sha256": "6e7e3c3d027351cd3a929321b6291e2f111e02f26eaebf94dad8f7e95393b834"
+    },
+    {
+      "filename": "filter.band-stop-64-dark.png",
+      "size_px": 64,
+      "theme": "dark",
+      "ink_pixels": 546,
+      "sha256": "9357610fa6b59f7c8f68c6e3741a34e3c757d0429f509c5e61e315227a1ef4af"
+    }
+  ],
+  "limitation": "Automated rendering proves reproducibility and dimensions, not human legibility or artwork acceptance."
+}

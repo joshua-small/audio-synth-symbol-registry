@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title id="title">High-pass filter</title>
+  <desc id="desc">Draft axis-less response glyph for a high-pass filter.</desc>
+  <path d="M3 17 H8 C10.5 17 11 7 14 7 H21"/>
+</svg>

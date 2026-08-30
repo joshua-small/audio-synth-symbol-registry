@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title id="title">Band-stop filter</title>
+  <desc id="desc">Draft axis-less response glyph for a band-stop filter.</desc>
+  <path d="M3 7 H6 C8.5 7 9 17 12 17 C15 17 15.5 7 18 7 H21"/>
+</svg>
