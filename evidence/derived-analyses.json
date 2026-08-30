@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.1.0",
+  "registry_version": "0.1.1",
   "artifacts": [
     {
       "id": "DA-001", "version": "0.1.0", "title": "Plain-text workaround search",
@@ -71,6 +71,15 @@
       "input_artifact_refs": [],
       "scope": "Compared historical manuals and teaching material, current education, trade media, and practitioner discussion for shelf semantics, representation, text friction, and boost/cut polarity.",
       "limitations": ["The bounded English-language sample is not an industry census and does not prove absence of portable shelf-glyph use elsewhere."]
+    },
+    {
+      "id": "DA-008", "version": "0.1.0", "title": "Low-shelf and high-shelf vendor semantics",
+      "path": "evidence/reports/2026-08-30-shelf-vendor-semantics.md", "kind": "corpus-analysis", "produced_at": "2026-08-30T14:53:30-07:00",
+      "content_sha256": "f63bb1010dac3125274eb7683b08bb2782995fc7ff2cff6934afcde10cf012cc",
+      "input_evidence_ids": ["EV-050", "EV-051", "EV-052", "EV-053", "EV-054", "EV-055", "EV-056", "EV-057"],
+      "input_artifact_refs": [],
+      "scope": "Tested whether low-shelf and high-shelf side semantics remain stable across gain sign and compared compact selectors, contextual curves, and text or hardware controls.",
+      "limitations": ["The purposive sample is not a market census and did not inspect running product builds or establish a shared standalone contour."]
     }
   ]
 }
