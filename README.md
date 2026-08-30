@@ -4,7 +4,7 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 ## Status
 
-Registry release: **0.1.0**  
+Registry release: **0.1.3**\
 Schema release: **0.1.0**  
 Tooling release: **0.1.0**  
 Artwork release: **not yet published**  
@@ -50,6 +50,8 @@ See the [experimental interchange prototype](docs/interchange-prototype.md) for 
 ## Versioning
 
 This repository follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html). Registry data, schema, artwork, and tooling have independent version metadata. A registry release may include records at any status; the accepted repertoire is the `registry-accepted` subset. See [docs/versioning.md](docs/versioning.md).
+
+[`registry/registry-metadata.json`](registry/registry-metadata.json) is authoritative for the registry, schema, assessment, artwork, and tooling artifact versions. Repository validation checks this README's registry release against that metadata.
 
 ## Licensing
 
