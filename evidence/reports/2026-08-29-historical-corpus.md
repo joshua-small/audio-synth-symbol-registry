@@ -10,7 +10,7 @@ This pass traces selected primary and vendor sources across the early-synth, sof
 
 The evidence supports long-lived response semantics. It does not establish an unbroken, stable, axis-less compact-glyph lineage: the historical sources variously use labels, controls, or explanatory graphs. The 1980s and 1990s remain under-sampled.
 
-> **At time of report - 2026-08-29:** The under-sampling and pending page-level acquisition statements above describe this initial pass. They were later superseded by the [1980s and 1990s Historical Visual-Gap Report](2026-08-29-1980s-1990s-visual-gap.md), which verifies two page-level manufacturer manuals per decade, including a 1986 Korg DSS-1 manual. The later report preserves the original conclusion that the corpus does not establish an unbroken standardized axis-less glyph lineage.
+> **At time of report - 2026-08-29:** The under-sampling status in this initial report was later superseded by the [1980s and 1990s Historical Visual-Gap Report](2026-08-29-1980s-1990s-visual-gap.md), which verifies two page-level manufacturer manuals per decade, including a 1986 Korg DSS-1 manual. The EV-015 Korg acquisition lead remains recorded as a lead rather than retroactively becoming page-level evidence. The later report preserves the original conclusion that the corpus does not establish an unbroken standardized axis-less glyph lineage.
 
 ## Limitations and next evidence
 
