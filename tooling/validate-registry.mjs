@@ -38,6 +38,13 @@ try {
 const filterResponseSchema = await readJson("registry/schema/filter-response.schema.json");
 const assessmentSchema = await readJson("registry/schema/acceptance-assessment.schema.json");
 const assessmentSetSchema = await readJson("registry/schema/assessment-set.schema.json");
+const assessmentFormatVersion = assessmentSchema.properties?.assessment_version?.const;
+const assessmentSetFormatVersion = assessmentSetSchema.properties?.assessment_set_version?.const;
+if (assessmentsArtifact
+  && (assessmentsArtifact.format_version !== assessmentFormatVersion
+    || assessmentsArtifact.format_version !== assessmentSetFormatVersion)) {
+  fail("Assessment metadata format version differs from the assessment schemas.");
+}
 
 for (const [name, artifact] of Object.entries(artifacts)) {
   if (artifact.version !== null && !semver.test(artifact.version)) {
@@ -49,7 +56,11 @@ if (packageJson.version !== toolingArtifact.version) fail("package.json and tool
 if (!Array.isArray(registryArtifact.includes) || !registryArtifact.includes.includes("evidence/ledger.json")) {
   fail("Registry metadata must declare the evidence ledger as registry data.");
 }
-if (!assessmentsArtifact || !semver.test(assessmentsArtifact.version) || typeof assessmentsArtifact.schema !== "string") {
+if (!assessmentsArtifact
+  || !semver.test(assessmentsArtifact.version)
+  || !semver.test(assessmentsArtifact.format_version)
+  || typeof assessmentsArtifact.schema !== "string"
+  || typeof assessmentsArtifact.current_snapshot !== "string") {
   fail("Registry metadata must declare a readable assessments artifact.");
 }
 if (!semver.test(ledger.ledger_version)) fail(`evidence ledger has invalid SemVer ${ledger.ledger_version}`);
@@ -174,8 +185,8 @@ for (const file of assessmentFiles) {
       fail(`${relativePath}: assessment references unknown record ${assessment.record_id}`);
       continue;
     }
-    if (assessmentsArtifact && assessment.assessment_version !== assessmentsArtifact.version) {
-      fail(`${relativePath}: ${assessment.record_id} assessment version differs from assessment metadata`);
+    if (assessmentsArtifact && assessment.assessment_version !== assessmentsArtifact.format_version) {
+      fail(`${relativePath}: ${assessment.record_id} assessment format version differs from assessment metadata`);
     }
     const snapshots = assessmentsByRecord.get(assessment.record_id) ?? [];
     snapshots.push({ relativePath, assessment });
@@ -256,11 +267,23 @@ for (const [recordId, record] of recordsById) {
 }
 
 if (assessmentFiles.length === 0) fail("No acceptance assessment files found.");
+if (assessmentsArtifact && !assessmentFiles.includes(path.basename(assessmentsArtifact.current_snapshot))) {
+  fail("Assessment metadata current snapshot is not readable from the assessment directory.");
+} else if (assessmentsArtifact) {
+  const declaredCurrentPath = path.normalize(assessmentsArtifact.current_snapshot);
+  for (const [recordId, snapshots] of assessmentsByRecord) {
+    const mostRecentTimestamp = Math.max(...snapshots.map(({ assessment }) => Date.parse(assessment.assessed_at)));
+    const current = snapshots.find(({ assessment }) => Date.parse(assessment.assessed_at) === mostRecentTimestamp);
+    if (current && path.normalize(current.relativePath) !== declaredCurrentPath) {
+      fail(`${recordId}: metadata current snapshot does not contain the most recent assessment`);
+    }
+  }
+}
 
 if (failures.length) {
   console.error("Registry validation failed:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log(`Validated ${recordFiles.length} registry record(s), ${assessmentFiles.length} assessment set(s), ${sourceIds.size} evidence source(s), registry ${registryArtifact.version}, schema ${schemaArtifact.version}, tooling ${toolingArtifact.version}.`);
+  console.log(`Validated ${recordFiles.length} registry record(s), ${assessmentFiles.length} assessment set(s), ${sourceIds.size} evidence source(s), registry ${registryArtifact.version}, assessments ${assessmentsArtifact.version}, schema ${schemaArtifact.version}, tooling ${toolingArtifact.version}.`);
 }
