@@ -158,3 +158,16 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Case-by-case artwork and study rules, or deferring artwork policy until a later registry status.
 - Consequences: Draft/study artwork may support evidence-collecting or registry-candidate records; accepted artwork requires registry-accepted status. Artwork metadata is independently versioned and authoritative at `artwork/metadata.json`; recruitment and each artwork acceptance remain Human Review gates.
 - Revisit trigger: First artwork implementation or study execution exposes an operational gap.
+
+
+## D-014: Continue after resolved Human Review
+
+- Date: 2026-08-29T17:11:21-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: After a Human Review gate is resolved through interactive chat or an available action runner, agents must record the authorization and continue the approved project work without waiting for a new prompt.
+- Evidence: Owner authorization in project chat and the completed PR #10 artwork-policy gate.
+- Counterevidence or objections: Continuing past a resolved gate must not be mistaken for authority to cross a separate gate.
+- Alternatives considered: Stop after every human decision and wait for an explicit new work request.
+- Consequences: Agents resume implementation, validation, review, merge, and safe follow-on tasks until the next real decision, authorization, or external-capability boundary.
+- Revisit trigger: A continuation causes scope or authority confusion.
