@@ -36,27 +36,28 @@ These are evidence gaps and counterevidence, not reasons to close the registry e
 
 ## Current four-record assessment
 
-The only checked-in assessment is dated 2026-08-29 against ledger version 0.1.0. The ledger has since expanded to 0.1.1, so these scores are the current recorded scores, not a claim that the new evidence has already been rescored.
+The current immutable assessment snapshot is dated 2026-08-29 against ledger version 0.1.1. It supersedes the bootstrap snapshot for current-score selection while preserving that earlier assessment as history.
 
 | Record | Score | Main recorded gaps | Status |
 | --- | ---: | --- | --- |
-| `asr:filter.high-pass` | 10/20 | Alias boundary; independent plain-text use; second compact rendering; reproducible overlap/confusability audit | evidence-collecting |
-| `asr:filter.low-pass` | 10/20 | Alias boundary; independent plain-text use; second compact rendering; reproducible overlap/confusability audit | evidence-collecting |
-| `asr:filter.band-pass` | 8/20 | More independent usage; plain-text use; compact-rendering convergence; overlap/confusability audit | evidence-collecting |
+| `asr:filter.high-pass` | 12/20 | Alias boundary; portable glyph use; second compact rendering; reproducible overlap/confusability audit | evidence-collecting |
+| `asr:filter.low-pass` | 12/20 | Alias boundary; portable glyph use; second compact rendering; reproducible overlap/confusability audit | evidence-collecting |
+| `asr:filter.band-pass` | 10/20 | Target-specific implementation evidence; portable glyph use; compact-rendering convergence; overlap/confusability audit | evidence-collecting |
 | `asr:filter.band-stop` | 8/20 | Same gaps as band-pass, plus the open band-stop/notch semantic boundary | evidence-collecting |
+
+The increases for high-pass, low-pass, and band-pass reflect broader semantic, independent-usage, and source-grounded fallback evidence. They do not credit axis-bearing graphs as compact target renderings or UI evidence as plain-text interchange. Band-stop does not inherit Notch evidence while that semantic relationship remains unresolved.
 
 The acceptance rubric requires at least 13/20 with dimension floors and no material question for `registry-candidate`; `registry-accepted` requires at least 18/20, stronger floors, public review, independent review, and human authorization. A numerical increase cannot override a blocker.
 
 ## Prioritized next work
 
-1. **Reassess against ledger 0.1.1.** Score the four records using EV-006 through EV-025, keeping implementation, semantic, visual, and plain-text evidence distinct.
-2. **Run a bounded positive plain-text search.** Seek at least three independent cases where text communication is ambiguous, lossy, image-dependent, or custom-font-dependent. Record a negative result if no positive artifacts are found.
-3. **Close the historical visual gaps.** Review primary 1980s and 1990s manufacturer manuals at page level, with at least two sources per decade, to test compact-glyph lineage rather than infer it.
-4. **Build a representation matrix.** Record vendor, product/version, semantic label, abbreviation, compact curve presence, axes/context, and divergence without copying artwork. This should test convergence and identify false equivalences.
-5. **Resolve band-stop versus notch.** Collect engineering, educational, vendor, and community usage that explicitly distinguishes or equates bandwidth/scope. Keep "notch" as a provisional related term meanwhile.
-6. **Complete a reproducible overlap audit.** Check Unicode semantic candidates, visual confusables, character sequences, and adjacent standards terminology for each record.
-7. **Pilot original neutral artwork and recognition testing.** Use the adopted artwork criteria and study protocol. Treat recognition results as registry evidence, not proof of Unicode eligibility.
-8. **Prototype registry-first interchange.** Test canonical ASCII IDs, fallbacks, speech labels, SVG assets, and optional font mappings in documentation or tooling. Measure whether the prototype creates genuine text workflows and community adoption.
+1. **Run a bounded positive plain-text search.** Seek at least three independent cases where text communication is ambiguous, lossy, image-dependent, or custom-font-dependent. Record a negative result if no positive artifacts are found.
+2. **Close the historical visual gaps.** Review primary 1980s and 1990s manufacturer manuals at page level, with at least two sources per decade, to test compact-glyph lineage rather than infer it.
+3. **Build a representation matrix.** Record vendor, product/version, semantic label, abbreviation, compact curve presence, axes/context, and divergence without copying artwork. This should test convergence and identify false equivalences.
+4. **Resolve band-stop versus notch.** Collect engineering, educational, vendor, and community usage that explicitly distinguishes or equates bandwidth/scope. Keep "notch" as a provisional related term meanwhile.
+5. **Complete a reproducible overlap audit.** Check Unicode semantic candidates, visual confusables, character sequences, and adjacent standards terminology for each record.
+6. **Pilot original neutral artwork and recognition testing.** Use the adopted artwork criteria and study protocol. Treat recognition results as registry evidence, not proof of Unicode eligibility.
+7. **Prototype registry-first interchange.** Test canonical ASCII IDs, fallbacks, speech labels, SVG assets, and optional font mappings in documentation or tooling. Measure whether the prototype creates genuine text workflows and community adoption.
 
 ## Decision rule
 
@@ -65,6 +66,7 @@ Continue the registry while the evidence improves documentation, accessibility, 
 ## Source pointers
 
 - [Evidence ledger](../evidence/ledger.json), especially EV-004 through EV-025
+- [Current ledger 0.1.1 assessment](../registry/assessments/ledger-0.1.1-2026-08-29.json)
 - [Recorded bootstrap assessment](../registry/assessments/bootstrap-2026-08-29.json)
 - [Registry acceptance rubric](acceptance-rubric.md)
 - [Unicode Symbol and Emoji Subcommittee guidelines](https://sew.unicode.org/guidelines)
