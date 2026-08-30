@@ -67,7 +67,7 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
   writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
 };
 
-const runValidator = ({ fixture, metadataFixture, ledgerFixture, assessmentMutationFixture } = {}) => {
+const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixture, assessmentMutationFixture } = {}) => {
   const corpusRoot = temporaryCorpus();
   try {
     if (metadataFixture) {
@@ -75,6 +75,12 @@ const runValidator = ({ fixture, metadataFixture, ledgerFixture, assessmentMutat
         path.join(corpusRoot, "tests", "fixtures", "invalid-metadata", metadataFixture),
         path.join(corpusRoot, "registry", "registry-metadata.json"),
       );
+    }
+    if (metadataMutation) {
+      const metadataPath = path.join(corpusRoot, "registry", "registry-metadata.json");
+      const metadata = JSON.parse(readFileSync(metadataPath, "utf8"));
+      Object.assign(metadata.artifacts.assessments, metadataMutation);
+      writeFileSync(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
     }
     if (ledgerFixture) {
       copyFileSync(
@@ -148,6 +154,24 @@ test("rejects metadata that declares a missing entry schema", () => {
   const result = runValidator({ metadataFixture: "metadata-missing-entry-schema.json" });
   assert.notEqual(result.status, 0, result.stdout);
   assert.match(result.stderr, /does-not-exist\.json/);
+});
+
+test("rejects assessment metadata whose format version differs from its schemas", () => {
+  const result = runValidator({ metadataMutation: { format_version: "0.1.1" } });
+  assert.equal(result.status, 1, result.stdout);
+  assert.match(result.stderr, /Assessment metadata format version differs from the assessment schemas/);
+});
+
+test("rejects assessment metadata that points to a missing current snapshot", () => {
+  const result = runValidator({ metadataMutation: { current_snapshot: "registry/assessments/missing.json" } });
+  assert.equal(result.status, 1, result.stdout);
+  assert.match(result.stderr, /Assessment metadata current snapshot is not readable/);
+});
+
+test("rejects assessment metadata that designates a historical snapshot as current", () => {
+  const result = runValidator({ metadataMutation: { current_snapshot: "registry/assessments/bootstrap-2026-08-29.json" } });
+  assert.equal(result.status, 1, result.stdout);
+  assert.match(result.stderr, /metadata current snapshot does not contain the most recent assessment/);
 });
 
 const invalidAssessmentMutations = [
