@@ -43,7 +43,7 @@ These objections defeat immediate record or artwork adoption. They do not defeat
 | --- | --- | --- |
 | Semantic stability | Strong for two side-based concepts independent of gain sign | Suitable for provisional research scope |
 | Practical relevance | Strong across software, hardware, education, and owner practice | Six-concept study coverage is warranted |
-| Standalone glyph feasibility | Plausible but unresolved; axis-less ambiguity is material | Compare neutral, signed illustrative, and baseline-bearing treatments |
+| Standalone glyph feasibility | Plausible but unresolved; axis-less ambiguity is material | Refine and test the two-prong fork topology against the four existing concepts |
 | Registry eligibility | Not assessed under the acceptance rubric | Do not create or promote records through this decision |
 | Unicode eligibility | Not established; no portable character convention or encoding evidence | Maintain Unicode HOLD and make no proposal claim |
 
@@ -52,10 +52,11 @@ These objections defeat immediate record or artwork adoption. They do not defeat
 Approval authorizes the project to:
 
 - treat low shelf and high shelf as provisional concepts in research plans and six-way confusability analysis;
-- develop original, non-traced study candidates that preserve the sign-agnostic semantic nucleus;
-- compare axis-free forms with expanded axis/baseline-bearing alternatives;
+- develop original, non-traced study candidates that preserve the sign-agnostic semantic nucleus using the two-prong fork as the active shelf topology;
 - include separately labeled signed boost/cut illustrations as presentation variants, not peer concepts;
 - test shelf/pass and low/high confusions before any registry proposal.
+
+The three-prong/baseline-bearing shelf experiment is rejected from active low-shelf and high-shelf research. If a rejected experiment is already present in repository history, retain it only as historical evidence; do not treat it as a candidate, import unmerged assets, or include it in active comparison materials.
 
 Approval does **not** authorize:
 
@@ -77,7 +78,8 @@ Each of those actions retains its existing Human Review boundary.
 - **B - Keep four primary concepts and park shelves:** Preserve this corpus as future-scope evidence, but do not include shelves in the current candidate or recognition work. This reduces current complexity but postpones testing a practically important and semantically mature pair.
 - **C - Require additional evidence before deciding:** Keep Issue #50 open and specify the missing evidence class. This avoids commitment but should be used only if the existing vendor, engineering, historical, education, media, and community sample leaves a concrete unanswered scope question.
 - **D - Exclude shelves from this project:** Close Issue #50 as not planned while retaining the reports. This produces the narrowest registry but leaves a routine EQ family outside the project's intended practical coverage.
-- **Merge status:** Blocked pending project-owner authorization. Issue #50 should remain open until the decision is recorded and any approved implementation work is tracked.
+- **Resolution:** Joshua approved A on 2026-08-30. The active shelf topology is the two-prong fork; the three-prong/baseline-bearing alternative is rejected from active shelf research.
+- **Merge status:** Resolved. The durable authorization is recorded in D-016 and PR #54.
 
 ## Evidence basis
 
@@ -102,3 +104,11 @@ Each of those actions retains its existing Human Review boundary.
 - Changes deliberately omitted: no registry record, identifier, name, alias, fallback, status, assessment, artwork, study launch, or external position.
 - Validation: `npm test` passed 84/84 tests and `git diff --check` passed.
 - Independent review: APPROVE with no substantive blockers at remote head `92da9b81c0ee899a09b8eca018b76b41326773c5`; GitHub review comment `5062027866` records the verdict because the connected identity could not formally approve its own PR.
+
+## Agent Report - 2026-08-30T16:02:43-07:00
+
+- Report status: completed
+- Scope: record the project-owner resolution of HR-001 and the bounded active-topology decision.
+- Result: active research now covers six provisional concepts. Low shelf and high shelf are sign-agnostic, gain sign remains separate, and the two-prong fork is the active shelf topology. The three-prong/baseline-bearing shelf experiment is excluded from active research.
+- Authority: Joshua's project-chat approval, recorded in PR #54 at `2026-08-30T16:00:59-07:00` and in D-016.
+- Changes deliberately omitted: no registry record, permanent identifier, alias, status promotion, accepted or study-ready artwork, recruitment, study launch, release, external position, outreach, or Unicode action.
