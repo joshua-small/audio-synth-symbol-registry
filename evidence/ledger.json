@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.1.6",
+  "ledger_version": "0.1.7",
   "accessed_on": "2026-08-30",
   "sources": [
     {
@@ -710,6 +710,222 @@
           "checksum": null,
           "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
           "limitations": "Forum content is mutable and no source bytes were retained. The bounded thread cannot establish population-wide practice."
+        }
+      }
+    },
+    {
+      "id": "EV-050",
+      "type": "vendor-documentation",
+      "publisher": "Ableton",
+      "title": "Live 12 Manual: Live Audio Effect Reference",
+      "url": "https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "28.2.7 Sidechain Parameters; Type chooser and low-shelf/high-shelf descriptions; 28.7 Channel EQ; High parameter",
+      "direct_observation": "The sidechain Type chooser includes low-shelf and high-shelf. Low-shelf affects frequencies below cutoff and uses positive Shelf Gain to boost or negative Shelf Gain to attenuate; high-shelf affects frequencies above cutoff and uses the same gain control while leaving the opposite side largely unaffected.",
+      "interpretation": "The affected side remains the filter-type identity while signed gain is separate state. The same manual's Channel EQ is counterevidence to a perfectly invariant algorithm because negative High gain combines shelving with a low-pass filter.",
+      "rights_note": "Linked public vendor documentation only; no interface, image, curve, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "Ableton Live",
+        "product_version": "12",
+        "exact_locator": "28.2 Auto Filter > 28.2.7 Sidechain Parameters; Type chooser, low-shelf, high-shelf, and Shelf Gain; 28.7 Channel EQ; High parameter",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "No stable publisher fragment was established, no source bytes were retained, and the mutable page may change."
+        }
+      }
+    },
+    {
+      "id": "EV-051",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "Logic Pro for iPad User Guide: Channel EQ parameters",
+      "url": "https://support.apple.com/guide/logicpro-ipad/eq-parameters-lpip1816dc6e/ipados",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Channel EQ parameters; Band 2 and Band 7",
+      "direct_observation": "Band 2 is a low shelving filter that cuts or boosts below the set frequency, and Band 7 is a high shelving filter that cuts or boosts above it. Each band is edited in a graphic display through its shaded area, curve, or control point, with vertical movement changing gain.",
+      "interpretation": "Low/high side remains stable across gain signs, while the contextual curve carries frequency, gain, and Q state and is not a pure standalone type token.",
+      "rights_note": "Linked public vendor documentation only; no interface, screenshot, curve, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "Logic Pro for iPad",
+        "product_version": null,
+        "exact_locator": "Channel EQ parameters > Band 2 On/Off button and Band 7 On/Off button",
+        "stable_fragment": "Apple guide article ID lpip1816dc6e",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "The article ID aids relocation but does not freeze content; no source bytes were retained and the guide did not state a product version."
+        }
+      }
+    },
+    {
+      "id": "EV-052",
+      "type": "vendor-documentation",
+      "publisher": "FabFilter",
+      "title": "Pro-Q 4 Help: Band controls",
+      "url": "https://www.fabfilter.com/help/pro-q/using/bandcontrols",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Band controls; shape button and gain knob descriptions",
+      "direct_observation": "The shape button offers Low Shelf and High Shelf as distinct choices. A separate gain control operates from -30 to +30 dB and is used for shelving types; slope, Q, and dynamic range are separately adjustable.",
+      "interpretation": "A compact shape selector can preserve shelf type while gain changes, but the complete rendered response contains mutable state and the product control does not establish a portable or standardized glyph.",
+      "rights_note": "Linked public vendor documentation only; no interface, image, selector shape, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "FabFilter Pro-Q",
+        "product_version": "4",
+        "exact_locator": "Using FabFilter Pro-Q 4 > Band controls; shape button list and gain knob description",
+        "stable_fragment": "URL path /help/pro-q/using/bandcontrols",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "The stable route aids relocation but does not freeze content; no source bytes were retained."
+        }
+      }
+    },
+    {
+      "id": "EV-053",
+      "type": "vendor-documentation",
+      "publisher": "Steinberg",
+      "title": "Cubase Pro 15 Plug-in Reference: Frequency 2",
+      "url": "https://www.steinberg.help/r/cubase-pro/cubaseplugref/15.0/en/_shared/topics/plug_ref/frequency/frequency_r.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Frequency 2; filter type list and Freq, Q, Gain, and Invert Gain parameters",
+      "direct_observation": "Low Shelf boosts or attenuates below cutoff and High Shelf boosts or attenuates above cutoff. Gain is a separate parameter, and Invert Gain changes positive gain to negative and vice versa without changing the filter type.",
+      "interpretation": "This directly separates low/high shelf identity from boost/cut sign. Q and dynamic filtering also show that a current response curve can carry more state than the semantic type.",
+      "rights_note": "Linked public vendor documentation only; no interface, image, curve, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "Cubase Pro",
+        "product_version": "15.0",
+        "exact_locator": "Frequency 2 > filter type list; Freq, Q, Gain, and Invert Gain",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "No stable publisher fragment was established and no source bytes were retained; the mutable page may change."
+        }
+      }
+    },
+    {
+      "id": "EV-054",
+      "type": "vendor-documentation",
+      "publisher": "Image-Line",
+      "title": "FL Studio Manual: Fruity Parametric EQ 2",
+      "url": "https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/plugins/Fruity%20Parametric%20EQ%202.htm",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Parameters; Band Type and Filter Slope Selectors, EQ Faders, and adaptive band solo",
+      "direct_observation": "The upper selector section displays different shapes for Band Type, including Low Shelf and High Shelf, while separate EQ faders adjust level. Adaptive solo maps Low Shelf to low-pass audition and High Shelf to high-pass audition.",
+      "interpretation": "This establishes compact shelf shape selectors and stable affected-side behavior, but not a cross-vendor contour, portable character, or reuse right.",
+      "rights_note": "Linked public vendor documentation only; no interface, image, selector shape, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "FL Studio Fruity Parametric EQ 2",
+        "product_version": null,
+        "exact_locator": "Parameters > 1. Band Type & Filter Slope Selectors; 2. EQ Faders; Options and Settings > Adaptive solo",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "No stable fragment or product version was established and no source bytes were retained; the mutable page may change."
+        }
+      }
+    },
+    {
+      "id": "EV-055",
+      "type": "historical-primary-source",
+      "publisher": "Roland",
+      "title": "MVWS14: Using EQ",
+      "url": "https://cdn.roland.com/assets/media/pdf/MVWS14.pdf",
+      "publication_date": "2006",
+      "accessed_on": "2026-08-30",
+      "location": "PDF and printed page 4; The EQ Parameters",
+      "direct_observation": "The EQ High section uses signed gain to boost or cut all high frequencies beginning at the selected frequency. The EQ Low section uses signed gain to boost or cut all low frequencies up to the selected frequency. The prose calls both shelving EQs.",
+      "interpretation": "The same Low or High parameter section serves both gain signs without a response glyph, showing that axes and curves are not required to operate or name the semantics. The source is historical rather than current flagship evidence.",
+      "rights_note": "Linked public manufacturer PDF only; no scan, interface, diagram, typography, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "Roland MV-8000",
+        "product_version": "O.S. Version 3.5 or higher",
+        "exact_locator": "PDF and printed page 4 > The EQ Parameters > EQ High and EQ Low sections",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "A public manufacturer PDF was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "No source bytes or checksum were retained by the project; availability remains controlled by the publisher."
+        }
+      }
+    },
+    {
+      "id": "EV-056",
+      "type": "vendor-documentation",
+      "publisher": "Universal Audio",
+      "title": "UA 610 Tube Preamp & EQ Collection Manual",
+      "url": "https://help.uaudio.com/hc/en-us/articles/17475989779860-UA-610-Tube-Preamp-EQ-Collection-Manual",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "EQ Controls; 610-A EQ and 610-B EQ",
+      "direct_observation": "The 610-A and 610-B expose low and high shelf bands that can each be cut or boosted. The 610-B uses separate LO/HI Frequency and LO/HI Gain controls; 0 dB makes the filter inactive.",
+      "interpretation": "Hardware-derived Low/High control groupings preserve affected-side identity across gain signs without needing a response graph or LS/HS glyph.",
+      "rights_note": "Linked public vendor documentation only; no hardware panel, interface, image, page content, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "UA 610 Tube Preamp & EQ Collection",
+        "product_version": null,
+        "exact_locator": "EQ Controls > 610-A EQ and 610-B EQ > L.F./H.F. Gain and LO/HI Frequency and Gain",
+        "stable_fragment": "Zendesk article ID 17475989779860",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was lawfully observed and linked for evidence; no redistribution right is claimed.",
+          "limitations": "The article ID aids relocation but does not freeze content; no source bytes were retained and no product version was stated."
+        }
+      }
+    },
+    {
+      "id": "EV-057",
+      "type": "standards-reference",
+      "publisher": "World Wide Web Consortium",
+      "title": "Web Audio API 1.1 First Public Working Draft",
+      "url": "https://www.w3.org/TR/webaudio-1.1/",
+      "publication_date": "2024-11-05",
+      "accessed_on": "2026-08-30",
+      "location": "BiquadFilterNode; BiquadFilterType enum and filter type parameter table",
+      "direct_observation": "The API defines separate lowshelf and highshelf type tokens. Lowshelf applies signed gain to lower frequencies up to an upper frequency limit; highshelf applies signed gain to higher frequencies from a lower limit. Negative gain attenuates without changing type.",
+      "interpretation": "The draft implementation model cleanly separates affected-side semantics from boost/cut sign and prescribes no visual glyph or presentation; its First Public Working Draft status means it remains work in progress.",
+      "rights_note": "Linked standards reference only; no specification figure, response plot, page content, or artwork is copied, retained, or imported.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:53:30-07:00",
+        "product": "Web Audio API",
+        "product_version": "1.1",
+        "exact_locator": "BiquadFilterNode > BiquadFilterType enum and type/parameter table rows lowshelf and highshelf",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public W3C First Public Working Draft was lawfully observed and linked for evidence; no content is redistributed.",
+          "limitations": "No source bytes were retained by the project; the linked W3C publication remains the authoritative source."
         }
       }
     }
