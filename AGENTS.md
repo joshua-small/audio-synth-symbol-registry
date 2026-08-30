@@ -15,6 +15,7 @@ Proceed autonomously for routine implementation, research, validation, documenta
 - GitHub Issues track work; pull requests carry review evidence.
 - Trello tracks project planning and cross-repository research.
 - A chat instruction from Joshua is valid authorization when it is clearly responsive to a stated Human Review question. Record the resulting decision in the PR and decision log before merging or releasing.
+- After a Human Review gate is resolved through interactive chat or an available action runner, resume the approved work immediately. Do not wait for a new prompt or ceremonial confirmation; continue until the next real decision, authorization, or external-capability gate.
 
 ## Versioning
 
