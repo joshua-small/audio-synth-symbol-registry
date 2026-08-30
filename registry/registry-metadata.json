@@ -9,7 +9,8 @@
     },
     "schema": {
       "version": "0.1.0",
-      "entry_schema": "registry/schema/entry.schema.json"
+      "entry_schema": "registry/schema/entry.schema.json",
+      "evidence_ledger_schema": "registry/schema/evidence-ledger.schema.json"
     },
     "assessments": {
       "version": "0.1.1",

@@ -67,7 +67,28 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
   writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
 };
 
-const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixture, assessmentMutationFixture, readmeRegistryVersion } = {}) => {
+const applyLedgerMutation = (corpusRoot, mutationFixture) => {
+  const mutation = JSON.parse(readFileSync(
+    path.join(corpusRoot, "tests", "fixtures", "ledger-mutations", mutationFixture),
+    "utf8",
+  ));
+  const ledgerPath = path.join(corpusRoot, "evidence", "ledger.json");
+  const ledger = JSON.parse(readFileSync(ledgerPath, "utf8"));
+  const source = ledger.sources.find((item) => item.id === mutation.source_id);
+  assert.ok(source, `Fixture targets a missing evidence source: ${mutation.source_id}`);
+
+  if (mutation.operation === "set") {
+    source[mutation.field] = mutation.value;
+  } else if (mutation.operation === "delete") {
+    delete source[mutation.field];
+  } else {
+    throw new Error(`Unsupported ledger mutation: ${mutation.operation}`);
+  }
+
+  writeFileSync(ledgerPath, `${JSON.stringify(ledger, null, 2)}\n`);
+};
+
+const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixture, ledgerMutationFixture, assessmentMutationFixture, readmeRegistryVersion } = {}) => {
   const corpusRoot = temporaryCorpus();
   try {
     if (metadataFixture) {
@@ -87,6 +108,9 @@ const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixtur
         path.join(corpusRoot, "tests", "fixtures", "invalid-ledgers", ledgerFixture),
         path.join(corpusRoot, "evidence", "ledger.json"),
       );
+    }
+    if (ledgerMutationFixture) {
+      applyLedgerMutation(corpusRoot, ledgerMutationFixture);
     }
     if (readmeRegistryVersion) {
       const readmePath = path.join(corpusRoot, "README.md");
@@ -157,6 +181,25 @@ test("rejects a README registry release that differs from metadata", () => {
   assert.equal(result.status, 1, result.stdout);
   assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.1\.3/);
 });
+
+const invalidLedgerMutations = [
+  ["invalid-id.json", /\/sources\/0\/id must match pattern/],
+  ["missing-required-field.json", /\/sources\/0 must have required property 'rights_note'/],
+  ["unknown-property.json", /\/sources\/0 must NOT have additional properties/],
+  ["unsupported-source-type.json", /\/sources\/0\/type must be equal to one of the allowed values/],
+  ["invalid-accessed-date.json", /\/sources\/0\/accessed_on must match format "date"/],
+  ["invalid-calendar-date.json", /\/sources\/0\/accessed_on must match format "date"/],
+  ["invalid-publication-date.json", /\/sources\/0\/publication_date must match a schema in anyOf/],
+  ["invalid-url.json", /\/sources\/0\/url must match pattern/],
+];
+
+for (const [ledgerMutationFixture, expectedFailure] of invalidLedgerMutations) {
+  test(`rejects ${ledgerMutationFixture} for the intended ledger schema rule`, () => {
+    const result = runValidator({ ledgerMutationFixture });
+    assert.equal(result.status, 1, result.stdout);
+    assert.match(result.stderr, expectedFailure);
+  });
+}
 
 test("rejects metadata that omits the evidence ledger path", () => {
   const result = runValidator({ metadataFixture: "metadata-no-evidence-ledger.json" });
