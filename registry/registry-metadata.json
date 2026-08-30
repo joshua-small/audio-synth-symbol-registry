@@ -8,7 +8,7 @@
       "includes": ["registry/symbols/", "evidence/ledger.json"]
     },
     "schema": {
-      "version": "0.1.0",
+      "version": "0.2.0",
       "entry_schema": "registry/schema/entry.schema.json",
       "evidence_ledger_schema": "registry/schema/evidence-ledger.schema.json"
     },

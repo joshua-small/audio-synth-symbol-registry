@@ -1,6 +1,6 @@
 {
   "operation": "set",
   "source_id": "EV-001",
-  "field": "url",
-  "value": "https://?"
+  "field": "accessed_on",
+  "value": "0000-01-01"
 }

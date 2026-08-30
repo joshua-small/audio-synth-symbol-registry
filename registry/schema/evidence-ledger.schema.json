@@ -25,7 +25,7 @@
     "publicationDate": {
       "anyOf": [
         { "type": "null" },
-        { "type": "string", "pattern": "^[0-9]{4}$" },
+        { "type": "string", "pattern": "^[1-9][0-9]{3}$" },
         { "$ref": "#/$defs/fullDate" }
       ]
     },
@@ -66,7 +66,7 @@
         },
         "publisher": { "type": "string", "minLength": 1 },
         "title": { "type": "string", "minLength": 1 },
-        "url": { "type": "string", "pattern": "^https://[^\\s]+$" },
+        "url": { "type": "string", "format": "https-url" },
         "publication_date": { "$ref": "#/$defs/publicationDate" },
         "accessed_on": { "$ref": "#/$defs/fullDate" },
         "location": { "type": "string", "minLength": 1 },

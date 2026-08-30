@@ -119,7 +119,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^EV-[0-9]{3}$"
+              "pattern": "^EV-[0-9]{3,}$"
             },
             "uniqueItems": true
           }
@@ -280,7 +280,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^EV-[0-9]{3}$"
+            "pattern": "^EV-[0-9]{3,}$"
           },
           "uniqueItems": true
         },
@@ -317,7 +317,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^EV-[0-9]{3}$"
+            "pattern": "^EV-[0-9]{3,}$"
           },
           "uniqueItems": true
         },

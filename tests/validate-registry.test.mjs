@@ -189,8 +189,9 @@ const invalidLedgerMutations = [
   ["unsupported-source-type.json", /\/sources\/0\/type must be equal to one of the allowed values/],
   ["invalid-accessed-date.json", /\/sources\/0\/accessed_on must match format "date"/],
   ["invalid-calendar-date.json", /\/sources\/0\/accessed_on must match format "date"/],
+  ["invalid-zero-year.json", /\/sources\/0\/accessed_on must match format "date"/],
   ["invalid-publication-date.json", /\/sources\/0\/publication_date must match a schema in anyOf/],
-  ["invalid-url.json", /\/sources\/0\/url must match pattern/],
+  ["invalid-url.json", /\/sources\/0\/url must match format "https-url"/],
 ];
 
 for (const [ledgerMutationFixture, expectedFailure] of invalidLedgerMutations) {
@@ -200,6 +201,31 @@ for (const [ledgerMutationFixture, expectedFailure] of invalidLedgerMutations) {
     assert.match(result.stderr, expectedFailure);
   });
 }
+
+test("keeps evidence IDs with four or more digits citable across schemas", () => {
+  const schemaPaths = [
+    "registry/schema/evidence-ledger.schema.json",
+    "registry/schema/entry.schema.json",
+    "registry/schema/acceptance-assessment.schema.json",
+  ];
+  const patterns = schemaPaths.flatMap((schemaPath) => {
+    const schema = JSON.parse(readFileSync(path.join(repositoryRoot, schemaPath), "utf8"));
+    const found = [];
+    const visit = (value) => {
+      if (!value || typeof value !== "object") return;
+      if (typeof value.pattern === "string" && value.pattern.startsWith("^EV-")) found.push(value.pattern);
+      for (const child of Object.values(value)) visit(child);
+    };
+    visit(schema);
+    return found;
+  });
+
+  assert.equal(patterns.length, 5);
+  for (const pattern of patterns) {
+    assert.match("EV-1000", new RegExp(pattern));
+    assert.doesNotMatch("EV-01", new RegExp(pattern));
+  }
+});
 
 test("rejects metadata that omits the evidence ledger path", () => {
   const result = runValidator({ metadataFixture: "metadata-no-evidence-ledger.json" });
