@@ -1,0 +1,9 @@
+{
+  "operation": "add-artifact-ref",
+  "record_id": "asr:filter.high-pass",
+  "dimension": "overlap_audit",
+  "references": [
+    { "artifact_id": "DA-005", "artifact_version": "0.1.0", "claim": "Historical audit.", "input_evidence_ids_used": ["EV-001", "EV-004"] },
+    { "artifact_id": "DA-005", "artifact_version": "0.2.0", "claim": "Later audit.", "input_evidence_ids_used": ["EV-001", "EV-004"] }
+  ]
+}

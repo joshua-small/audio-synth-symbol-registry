@@ -11,6 +11,7 @@ Each artifact type has its own authority. A version recorded in one artifact's m
 | Registry data | `registry/registry-metadata.json` | Authoritative for the published registry collection, record-status model, and registry version. |
 | Schema | `registry/registry-metadata.json` | The schema version is the compatibility contract for machine-readable records. |
 | Assessments | `registry/registry-metadata.json` | Dated evidence-readiness snapshots governed by `registry/schema/assessment-set.schema.json`. |
+| Derived analyses | `evidence/derived-analyses.json` | Versioned project-authored audits, matrices, boundary analyses, and syntheses. These preserve provenance but do not create independent evidence. |
 | Tooling | Root `package.json` | Authoritative for the published tooling package version. |
 | Artwork | `artwork/metadata.json` | Created with the first original artwork asset. Authoritative for artwork version, publication status, and canonical asset mapping. |
 
@@ -32,6 +33,8 @@ Every live registry record must have at least one assessment. The validator sele
 - A live `registry-accepted` record requires a current eligible accepted assessment, including the documented independent review, public-review period, and human authorization fields required by the project rubric.
 
 Assessment data and schemas are versioned independently. A change to assessment structure, scoring interpretation, or selection behavior follows the same SemVer compatibility rules below and must preserve the ability to read historical snapshots.
+
+Assessment format 0.2.0 adds optional `artifact_refs` while retaining support for immutable 0.1.0 snapshots. A set and all its member assessments use the same format version; format 0.1.0 cannot carry 0.2.0 references. Each reference pins a `DA-*` artifact version, states its use, and identifies the underlying ledger inputs used by that claim. The derived-analysis registry identifies artifacts by ID-version pair, supports version-pinned derived dependencies, rejects dependency cycles, and pins each registered file with SHA-256. New versions of one artifact ID use distinct immutable paths so historical digests and assessment references remain verifiable. Changing an analysis in a way that could change an assessment conclusion requires a new artifact version. Moving a file without changing its content is a patch-level registry correction.
 
 ## Compatibility rules
 

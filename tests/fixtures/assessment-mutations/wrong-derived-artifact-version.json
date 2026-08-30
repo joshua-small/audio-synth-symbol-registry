@@ -1,0 +1,11 @@
+{
+  "operation": "add-artifact-ref",
+  "record_id": "asr:filter.high-pass",
+  "dimension": "overlap_audit",
+  "reference": {
+    "artifact_id": "DA-005",
+    "artifact_version": "9.9.9",
+    "claim": "Mismatched version must be rejected.",
+    "input_evidence_ids_used": ["EV-001"]
+  }
+}

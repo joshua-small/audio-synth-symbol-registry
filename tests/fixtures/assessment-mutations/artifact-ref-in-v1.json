@@ -1,0 +1,6 @@
+{
+  "operation": "add-artifact-ref-without-version-bump",
+  "record_id": "asr:filter.high-pass",
+  "dimension": "overlap_audit",
+  "reference": { "artifact_id": "DA-005", "artifact_version": "0.1.0", "claim": "Invalid in v1.", "input_evidence_ids_used": ["EV-001"] }
+}

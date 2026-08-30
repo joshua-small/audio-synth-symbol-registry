@@ -1,0 +1,67 @@
+{
+  "$schema": "../registry/schema/derived-analysis-registry.schema.json",
+  "schema_version": "0.1.0",
+  "registry_version": "0.1.0",
+  "artifacts": [
+    {
+      "id": "DA-001", "version": "0.1.0", "title": "Plain-text workaround search",
+      "path": "docs/plain-text-workaround-search.md", "kind": "corpus-analysis", "produced_at": "2026-08-29T21:28:06-07:00",
+      "content_sha256": "4418a82857f770ff437736bc5608113b3d00073eff4c2f5904fd4aa3191ea223",
+      "input_evidence_ids": ["EV-005", "EV-021", "EV-022", "EV-025"],
+      "input_artifact_refs": [],
+      "scope": "Bounded search for portable text use and image, prose, custom-font, or PUA workarounds.",
+      "limitations": ["Family-level workaround classes do not establish three qualifying examples for any individual record."]
+    },
+    {
+      "id": "DA-002", "version": "0.1.0", "title": "1980s and 1990s historical visual-gap report",
+      "path": "evidence/reports/2026-08-29-1980s-1990s-visual-gap.md", "kind": "historical-analysis", "produced_at": "2026-08-29T21:48:13-07:00",
+      "content_sha256": "90f10750f4973bd888af0708184dfad2910da45c496cd111e817e2f3da1b3894",
+      "input_evidence_ids": ["EV-033", "EV-034", "EV-035", "EV-036"],
+      "input_artifact_refs": [],
+      "scope": "Sampled primary manufacturer manuals for historical response-curve and standalone-glyph evidence.",
+      "limitations": ["The bounded sample cannot establish a complete industry lineage or prove absence outside the reviewed manuals."]
+    },
+    {
+      "id": "DA-003", "version": "0.1.0", "title": "Current representation matrix",
+      "path": "docs/current-representation-matrix.md", "kind": "corpus-analysis", "produced_at": "2026-08-29T22:51:42-07:00",
+      "content_sha256": "00c6bdfdf827d4fbea8ae524fef36ddab765003ca60b38837fc7551d64e19f98",
+      "input_evidence_ids": ["EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013"],
+      "input_artifact_refs": [],
+      "scope": "Compared terminology and representation treatments in eight current vendor sources.",
+      "limitations": ["The source set is not a market census, and mutable online documentation may change."]
+    },
+    {
+      "id": "DA-004", "version": "0.1.0", "title": "Band-stop and notch semantic boundary report",
+      "path": "evidence/reports/2026-08-29-band-stop-notch-boundary.md", "kind": "boundary-analysis", "produced_at": "2026-08-29T21:30:39-07:00",
+      "content_sha256": "db1613b33f726add990d7b300d1be7e56696e50d7c963698f15be9ad312cad22",
+      "input_evidence_ids": ["EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032"],
+      "input_artifact_refs": [],
+      "scope": "Tested exact-alias, narrow-subtype, response-region, and product-mode uses of notch and band-stop.",
+      "limitations": ["No reviewed standards-body source supplied a universal numerical boundary."]
+    },
+    {
+      "id": "DA-005", "version": "0.1.0", "title": "Unicode and adjacent-standards overlap audit",
+      "path": "docs/unicode-overlap-audit.md", "kind": "overlap-audit", "produced_at": "2026-08-29T21:38:22-07:00",
+      "content_sha256": "52223f42b1555cd0df5b0ce531dfcb762d56ad9687e4f0c1f92805ea839f9e12",
+      "input_evidence_ids": ["EV-001", "EV-004", "EV-037", "EV-038", "EV-039"],
+      "input_artifact_refs": [],
+      "scope": "Reproducibly audited Unicode 17 semantic candidates, visual near-misses, sequences, and IEC 60617 terminology for all four records.",
+      "limitations": ["Later Unicode versions, restricted IEC data sheets, IEC 60417, ISO 7000, and font-by-font rendering were outside scope."]
+    },
+    {
+      "id": "DA-006", "version": "0.1.0", "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md", "kind": "status-synthesis", "produced_at": "2026-08-29T23:25:10-07:00",
+      "content_sha256": "7919ca49b68f39240c5377f8457a969b9b1c92da312dc1518b169e3726062d1a",
+      "input_evidence_ids": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013", "EV-014", "EV-015", "EV-016", "EV-017", "EV-018", "EV-019", "EV-020", "EV-021", "EV-022", "EV-023", "EV-024", "EV-025", "EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032", "EV-033", "EV-034", "EV-035", "EV-036"],
+      "input_artifact_refs": [
+        { "artifact_id": "DA-001", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-002", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-003", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-004", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-005", "artifact_version": "0.1.0" }
+      ],
+      "scope": "Synthesized project evidence and counterevidence merged through PR 24 without changing record state.",
+      "limitations": ["A synthesis is not an independent source and cannot increase source-independence counts."]
+    }
+  ]
+}
