@@ -1,6 +1,6 @@
 # Current evidence-status synthesis
 
-Status as of 2026-08-29. This document summarizes the evidence corpus; it does not change any record status, semantic scope, artwork policy, or external-outreach position.
+Status as of 2026-08-29, including repository work merged through PR #24. This document summarizes the evidence corpus; it does not change any record status, semantic scope, artwork policy, or external-outreach position.
 
 ## Executive finding
 
@@ -34,9 +34,26 @@ The evidence does not establish that:
 
 These are evidence gaps and counterevidence, not reasons to close the registry effort.
 
-## Current four-record assessment
+## Completed evidence and prototype work
 
-The current immutable assessment snapshot is dated 2026-08-29 against ledger version 0.1.1. It supersedes the bootstrap snapshot for current-score selection while preserving that earlier assessment as history.
+Five evidence packages from the initial queue are complete, and an initial bounded registry-first interchange prototype has been implemented. Original neutral artwork and recognition testing remain unperformed; the next queue separates non-gated study infrastructure from the later artwork, stimulus-locking, recruitment, and launch gates.
+
+| Work package | Result | Durable artifact |
+| --- | --- | --- |
+| Bounded positive plain-text search | Found three independent family-level workaround classes, but no record has the three qualifying examples required by the project's formal Unicode safeguard. | [Plain-text workaround search](plain-text-workaround-search.md) |
+| 1980s and 1990s manufacturer-manual sample | Verified semantic and contextual response-graph use, but did not establish an unbroken standalone axis-less glyph lineage. | [Historical visual-gap report](../evidence/reports/2026-08-29-1980s-1990s-visual-gap.md) |
+| Current-vendor representation matrix | Found recurring semantics and abbreviations alongside heterogeneous contextual graphics; no row establishes portable standalone character use. | [Current representation matrix](current-representation-matrix.md) |
+| Band-stop versus notch boundary | Found concurrent narrow-subtype, exact-synonym, and contextual/product-mode usages; no universal Q or bandwidth threshold was established. | [Band-stop/notch boundary report](../evidence/reports/2026-08-29-band-stop-notch-boundary.md) |
+| Unicode and adjacent-standards overlap audit | Found no Unicode 17 semantic equivalent; documented visual near-misses, lossy sequences, and IEC 60617 terminology as adjacent rather than equivalent. | [Unicode overlap audit](unicode-overlap-audit.md) |
+| Initial registry-first interchange prototype | Demonstrated registry-derived text and speech resolution from canonical ASCII IDs, with optional application-owned asset references and no PUA, font, or artwork dependency. Community adoption, optional font experiments, and stable-protocol work were not performed. | [Interchange prototype](interchange-prototype.md) |
+
+These results strengthen the registry's research foundation without clearing the Unicode `HOLD` or promoting a record.
+
+## Recorded four-record assessment
+
+The latest immutable assessment snapshot is dated 2026-08-29 against ledger version 0.1.1. It supersedes the bootstrap snapshot for assessment selection while preserving that earlier assessment as history.
+
+The registry and evidence ledger are now version 0.1.3 after the band-stop/notch and historical-manual additions. The 0.1.1 scores below are therefore the latest recorded scores, not a reassessment of every source now in the corpus. A new immutable 0.1.3 assessment is the next mechanical evidence-maintenance task. Until it exists, do not describe these numbers as current corpus scores or infer promotion from later evidence.
 
 | Record | Score | Main recorded gaps | Status |
 | --- | ---: | --- | --- |
@@ -51,13 +68,13 @@ The acceptance rubric requires at least 13/20 with dimension floors and no mater
 
 ## Prioritized next work
 
-1. **Run a bounded positive plain-text search.** Seek at least three independent cases where text communication is ambiguous, lossy, image-dependent, or custom-font-dependent. Record a negative result if no positive artifacts are found.
-2. **Close the historical visual gaps.** Review primary 1980s and 1990s manufacturer manuals at page level, with at least two sources per decade, to test compact-glyph lineage rather than infer it.
-3. **Build a representation matrix.** Record vendor, product/version, semantic label, abbreviation, compact curve presence, axes/context, and divergence without copying artwork. This should test convergence and identify false equivalences.
-4. **Resolve band-stop versus notch.** Collect engineering, educational, vendor, and community usage that explicitly distinguishes or equates bandwidth/scope. Keep "notch" as a provisional related term meanwhile.
-5. **Complete a reproducible overlap audit.** Check Unicode semantic candidates, visual confusables, character sequences, and adjacent standards terminology for each record.
-6. **Pilot original neutral artwork and recognition testing.** Use the adopted artwork criteria and study protocol. Treat recognition results as registry evidence, not proof of Unicode eligibility.
-7. **Prototype registry-first interchange.** Test canonical ASCII IDs, fallbacks, speech labels, SVG assets, and optional font mappings in documentation or tooling. Measure whether the prototype creates genuine text workflows and community adoption.
+The outdated initial list has been replaced by the bounded queue in [Prioritized next work](prioritized-next-work.md). It preserves the unfinished artwork/recognition and prototype-evaluation work while separating routine preparation from later Human Review gates. In order:
+
+1. Reassess all four records against evidence ledger 0.1.3 without changing status.
+2. Prepare reproducible recognition-study infrastructure without creating or selecting geometry, recruiting participants, or launching a study.
+3. Run a per-record plain-text-friction follow-up focused on band-pass and band-stop.
+4. Exercise the interchange prototype in repository-owned examples and record usability failures without declaring a stable protocol.
+5. Map related standardization, font, emoji, and broader-industry opportunities as research-only paths, with no outreach or adopted external position.
 
 ## Decision rule
 
@@ -65,8 +82,9 @@ Continue the registry while the evidence improves documentation, accessibility, 
 
 ## Source pointers
 
-- [Evidence ledger](../evidence/ledger.json), especially EV-004 through EV-025
+- [Evidence ledger](../evidence/ledger.json), especially EV-004 through EV-036
 - [Current ledger 0.1.1 assessment](../registry/assessments/ledger-0.1.1-2026-08-29.json)
+- [Prioritized next work](prioritized-next-work.md)
 - [Recorded bootstrap assessment](../registry/assessments/bootstrap-2026-08-29.json)
 - [Registry acceptance rubric](acceptance-rubric.md)
 - [Unicode Symbol and Emoji Subcommittee guidelines](https://sew.unicode.org/guidelines)
@@ -94,3 +112,11 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Lifecycle: preserved the bootstrap snapshot, separated assessment artifact SemVer from snapshot format version, and declared the current snapshot in registry metadata.
 - Validation: full repository validation and tests are required before merge.
 - Limitations: no new source was added, no independent review is encoded into the immutable snapshot, and no record, semantic ID, alias, artwork, or external position changed.
+
+## Agent Report - 2026-08-29T23:21:04-07:00
+
+- Scope: reconciled completed and unfinished work from the initial queue with work merged through PR #24, linked the durable artifacts, and added a new bounded work plan.
+- Evidence: checked the merged plain-text search, historical-manual sample, representation matrix, band-stop/notch report, Unicode overlap audit, registry metadata, and interchange prototype.
+- Outcome: distinguished the latest recorded 0.1.1 assessment from the current 0.1.3 evidence corpus; preserved every record at `evidence-collecting` and the formal Unicode proposal at `HOLD`.
+- Validation: repository tests and independent review are required before merge.
+- Guardrails: changed no registry semantics, score, status, alias, artwork, license, outreach authorization, or external position.
