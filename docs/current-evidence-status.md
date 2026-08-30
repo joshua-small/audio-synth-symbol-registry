@@ -113,6 +113,11 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Outcome: high-pass 12/20, low-pass 12/20, band-pass 10/20, and band-stop 8/20; every record remains `evidence-collecting`.
 - Lifecycle: preserved the bootstrap snapshot, separated assessment artifact SemVer from snapshot format version, and declared the current snapshot in registry metadata.
 - Validation: full repository validation and tests are required before merge.
+- Report status: completed
+- Completion PR: [PR #17 completion report](https://github.com/joshua-small/audio-synth-symbol-registry/pull/17#issuecomment-5466688030)
+- Merge commit: [`1473f77921e9de9cca024f926e430989a0e24911`](https://github.com/joshua-small/audio-synth-symbol-registry/commit/1473f77921e9de9cca024f926e430989a0e24911)
+- Validation result: passed; 20/20 tests and GitHub Actions passed.
+- Independent review result: passed with no blockers.
 - Limitations: no new source was added, no independent review is encoded into the immutable snapshot, and no record, semantic ID, alias, artwork, or external position changed.
 
 ## Agent Report - 2026-08-29T23:21:04-07:00
@@ -121,4 +126,9 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Evidence: checked the merged plain-text search, historical-manual sample, representation matrix, band-stop/notch report, Unicode overlap audit, registry metadata, and interchange prototype.
 - Outcome: distinguished the latest recorded 0.1.1 assessment from the current 0.1.3 evidence corpus; preserved every record at `evidence-collecting` and the formal Unicode proposal at `HOLD`.
 - Validation: repository tests and independent review are required before merge.
+- Report status: completed
+- Completion PR: [PR #29 retrospective completion report](https://github.com/joshua-small/audio-synth-symbol-registry/pull/29#issuecomment-5467218776)
+- Merge commit: [`e7d8eb164fae0d70f2c470ce52063ee8f5510d15`](https://github.com/joshua-small/audio-synth-symbol-registry/commit/e7d8eb164fae0d70f2c470ce52063ee8f5510d15)
+- Validation result: passed; 24/24 tests, `git diff --check`, and GitHub Actions run 64 passed.
+- Independent review result: passed with no blockers.
 - Guardrails: changed no registry semantics, score, status, alias, artwork, license, outreach authorization, or external position.
