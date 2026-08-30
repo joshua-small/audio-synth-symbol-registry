@@ -13,10 +13,10 @@
       "evidence_ledger_schema": "registry/schema/evidence-ledger.schema.json"
     },
     "assessments": {
-      "version": "0.2.0",
-      "format_version": "0.1.0",
+      "version": "0.2.1",
+      "format_version": "0.2.0",
       "schema": "registry/schema/assessment-set.schema.json",
-      "current_snapshot": "registry/assessments/ledger-0.1.1-2026-08-29.json"
+      "current_snapshot": "registry/assessments/ledger-0.1.4-2026-08-29.json"
     },
     "derived_analyses": {
       "version": "0.1.0",
