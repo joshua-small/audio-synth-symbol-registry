@@ -10,6 +10,8 @@ The four MVP response semantics remain legible across current product documentat
 
 The corpus does not show a single portable standalone response glyph shared as text. Several vendors use labels, abbreviations, parameters, or contextual graphs instead. This is counterevidence to treating cross-vendor semantic use as proof of Unicode readiness.
 
+The [current representation matrix](../../docs/current-representation-matrix.md) makes the terminology, abbreviation, curve-presence, context, and divergence observations reproducible across EV-006 through EV-013 without reproducing vendor artwork.
+
 ## Limitations and next evidence
 
 Documentation may change and this sample is not a market census. A future rendering corpus can compare representations without copying artwork. The highest-value missing evidence is positive, independently sourced use of a compact response glyph in ordinary portable text interchange.
