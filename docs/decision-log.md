@@ -182,3 +182,15 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Lower thresholds, remove dimension floors or the 14-day public-review safeguard, or retain the unscored process.
 - Consequences: Candidate and accepted promotion require a current eligible assessment and the documented thresholds; registry-accepted additionally requires documented public review, independent review, and explicit human authorization. No current record is promoted by this decision.
 - Revisit trigger: Assessment practice or external feedback demonstrates that the thresholds or lifecycle need refinement.
+
+## D-016: Six-concept shelf research scope
+
+- Date: 2026-08-30T16:00:59-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: Expand active research from four to six provisional concepts by adding sign-agnostic low shelf and high shelf. Treat signed gain as a separate parameter or illustrative state. Use the two-prong fork as the active shelf research topology and reject the three-prong/baseline-bearing shelf alternative from active low-shelf and high-shelf research.
+- Evidence: Owner authorization in project chat and PR #54; shelf semantic, historical/education/community, and vendor reports backed by EV-050 through EV-057 and EV-060 through EV-065.
+- Counterevidence or objections: Axis-less shelf curves remain underdetermined; cross-vendor contour convergence and portable character usage are not established; six-way confusability remains untested.
+- Alternatives considered: Keep shelves outside current research; require more evidence; exclude shelves; or retain a three-prong/baseline-bearing active alternative.
+- Consequences: Research plans and draft comparisons may cover high-pass, low-pass, band-pass, band-stop, low shelf, and high shelf. Rejected experiments already in repository history may remain historical evidence only. This decision does not create registry records or permanent IDs, accept artwork, authorize study-ready status or recruitment, change external positions, or authorize Unicode action.
+- Revisit trigger: Recognition results, evidence review, or an independently established convention materially contradicts the sign-agnostic pair or two-prong topology.
