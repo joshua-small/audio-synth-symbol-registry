@@ -67,7 +67,7 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
   writeFileSync(assessmentPath, `${JSON.stringify(assessmentSet, null, 2)}\n`);
 };
 
-const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixture, assessmentMutationFixture } = {}) => {
+const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixture, assessmentMutationFixture, readmeRegistryVersion } = {}) => {
   const corpusRoot = temporaryCorpus();
   try {
     if (metadataFixture) {
@@ -86,6 +86,14 @@ const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixtur
       copyFileSync(
         path.join(corpusRoot, "tests", "fixtures", "invalid-ledgers", ledgerFixture),
         path.join(corpusRoot, "evidence", "ledger.json"),
+      );
+    }
+    if (readmeRegistryVersion) {
+      const readmePath = path.join(corpusRoot, "README.md");
+      const readme = readFileSync(readmePath, "utf8");
+      writeFileSync(
+        readmePath,
+        readme.replace(/^Registry release: \*\*[^*]+\*\*[ \t]*\r?$/m, `Registry release: **${readmeRegistryVersion}**`),
       );
     }
     if (fixture) {
@@ -142,6 +150,12 @@ test("rejects a ledger version that differs from metadata", () => {
   const result = runValidator({ ledgerFixture: "ledger-version-mismatch.json" });
   assert.equal(result.status, 1, result.stdout);
   assert.match(result.stderr, /Evidence ledger and registry metadata versions differ/);
+});
+
+test("rejects a README registry release that differs from metadata", () => {
+  const result = runValidator({ readmeRegistryVersion: "0.1.0" });
+  assert.equal(result.status, 1, result.stdout);
+  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.1\.3/);
 });
 
 test("rejects metadata that omits the evidence ledger path", () => {

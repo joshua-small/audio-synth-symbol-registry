@@ -15,6 +15,7 @@ const identifier = /^asr:[a-z][a-z0-9-]*(?:[.][a-z][a-z0-9-]*)+$/;
 const metadata = await readJson("registry/registry-metadata.json");
 const packageJson = await readJson("package.json");
 const ledger = await readJson("evidence/ledger.json");
+const readme = await readFile(path.join(root, "README.md"), "utf8");
 const artifacts = metadata && typeof metadata.artifacts === "object" && !Array.isArray(metadata.artifacts)
   ? metadata.artifacts
   : {};
@@ -66,6 +67,12 @@ if (!assessmentsArtifact
 if (!semver.test(ledger.ledger_version)) fail(`evidence ledger has invalid SemVer ${ledger.ledger_version}`);
 if (ledger.ledger_version !== registryArtifact.version) {
   fail("Evidence ledger and registry metadata versions differ.");
+}
+const readmeRegistryVersion = readme.match(/^Registry release: \*\*([^*]+)\*\*[ \t]*\r?$/m)?.[1];
+if (!readmeRegistryVersion) {
+  fail("README must declare the registry release in its Status section.");
+} else if (readmeRegistryVersion !== registryArtifact.version) {
+  fail(`README registry release ${readmeRegistryVersion} differs from registry metadata ${registryArtifact.version}.`);
 }
 
 const ajv = new Ajv2020({ allErrors: true, strict: true });
