@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.1.1",
+  "ledger_version": "0.1.2",
   "accessed_on": "2026-08-29",
   "sources": [
     {
@@ -326,6 +326,97 @@
       "direct_observation": "The project supplies audio-oriented UI icons through a dedicated icon-font project.",
       "interpretation": "A dedicated font can fill a UI-icon gap, but its glyph mappings are not proof of interoperable Unicode characters or ordinary plain-text use.",
       "rights_note": "Evidence only; do not import icon artwork or font data without separate license review."
+    },
+    {
+      "id": "EV-026",
+      "type": "engineering-reference",
+      "publisher": "Analog Devices",
+      "title": "Notch Filter",
+      "url": "https://www.analog.com/en/resources/glossary/notch-filter.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Glossary definition",
+      "direct_observation": "The glossary describes a notch filter as a band-stop filter with a narrow stopband and high Q, with Q defined as center frequency divided by bandwidth.",
+      "interpretation": "In this engineering usage, notch is a narrower subtype of band-stop rather than an exact synonym for every band-stop response.",
+      "rights_note": "Linked as evidence; no diagrams or artwork are reproduced."
+    },
+    {
+      "id": "EV-027",
+      "type": "engineering-reference",
+      "publisher": "Analog Devices",
+      "title": "A Filter Primer",
+      "url": "https://www.analog.com/en/resources/technical-articles/a-filter-primer.html",
+      "publication_date": "2002-09-18",
+      "accessed_on": "2026-08-29",
+      "location": "Notch and All-Pass Filters",
+      "direct_observation": "The primer introduces a second-order rejection response as a 'notch, or bandstop, filter' and gives its transfer function.",
+      "interpretation": "This source uses notch and band-stop as interchangeable names for the modeled response, countering a universal narrow-subtype rule even within one engineering publisher's materials.",
+      "rights_note": "Linked as evidence; equations are described but not reproduced."
+    },
+    {
+      "id": "EV-028",
+      "type": "engineering-reference",
+      "publisher": "Texas Instruments",
+      "title": "Bandstop filters and the Bainter topology",
+      "url": "https://www.ti.com/lit/pdf/slyt613",
+      "publication_date": "2015",
+      "accessed_on": "2026-08-29",
+      "location": "Band-stop response definitions and Figure 1 discussion",
+      "direct_observation": "The article repeatedly pairs 'bandstop' and 'notch', defines passband and stopband bandwidths separately, defines Q as center frequency divided by passband bandwidth, and describes the deepest central rejection region as a notch within the band-stop response.",
+      "interpretation": "This treatment alternates between alias-like usage and describing a notch as a response region; it shows that bandwidth, attenuation threshold, and Q are necessary to state the boundary precisely.",
+      "rights_note": "Linked as evidence; no diagrams or artwork are reproduced."
+    },
+    {
+      "id": "EV-029",
+      "type": "vendor-documentation",
+      "publisher": "MathWorks",
+      "title": "Notch Filter",
+      "url": "https://www.mathworks.com/discovery/notch-filter.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Notch and band-stop comparison",
+      "direct_observation": "The documentation says a band-stop filter attenuates a wider frequency range while a notch filter targets a very narrow band, and relates higher Q to a narrower rejection band.",
+      "interpretation": "MathWorks presents notch as a narrow/high-Q band-stop subtype, not an exact alias for the broader category.",
+      "rights_note": "Linked as evidence; no diagrams or artwork are reproduced."
+    },
+    {
+      "id": "EV-030",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "Logic Pro for iPad User Guide: Filters overview",
+      "url": "https://support.apple.com/guide/logicpro-ipad/filters-overview-lpipd3ece48e/ipados",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Basic filter types",
+      "direct_observation": "The guide defines a band-reject filter as attenuating frequencies within a band and states that this filter type is also known as a notch filter.",
+      "interpretation": "This mainstream audio-vendor documentation treats band-reject and notch as aliases without making narrowness part of the stated distinction.",
+      "rights_note": "Linked as evidence; no diagrams or artwork are reproduced."
+    },
+    {
+      "id": "EV-031",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "Logic Pro for iPad User Guide: Step FX filter types",
+      "url": "https://support.apple.com/guide/logicpro-ipad/step-fx-filter-types-lpip94d25257/ipados",
+      "publication_date": null,
+      "accessed_on": "2026-08-29",
+      "location": "Notch and peaking filter types",
+      "direct_observation": "The guide describes a notch filter as cutting a narrow band around a resonant frequency while minimally affecting the remainder of the signal.",
+      "interpretation": "Within the same vendor's documentation, a product-specific explanation makes narrowness central even though the general overview treats notch as another name for band-reject.",
+      "rights_note": "Linked as evidence; no diagrams or artwork are reproduced."
+    },
+    {
+      "id": "EV-032",
+      "type": "community-discussion",
+      "publisher": "KVR Audio Community",
+      "title": "Band-Rejection or Band-Stop filter plugin (not Band Pass)",
+      "url": "https://www.kvraudio.com/forum/viewtopic.php?t=483762",
+      "publication_date": "2017-04-27",
+      "accessed_on": "2026-08-29",
+      "location": "Forum discussion of band-rejection and notch behavior",
+      "direct_observation": "Participants explicitly disagree with treating notch and rejection filters as the same behavior while discussing audio plug-in requirements.",
+      "interpretation": "The thread is non-authoritative but demonstrates that audio-community usage does not guarantee an exact shared semantic boundary from the labels alone.",
+      "rights_note": "Linked discussion only; user content is summarized rather than reproduced."
     }
   ]
 }
