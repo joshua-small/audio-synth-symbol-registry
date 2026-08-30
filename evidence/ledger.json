@@ -1,6 +1,6 @@
 {
-  "ledger_version": "0.1.5",
-  "accessed_on": "2026-08-29",
+  "ledger_version": "0.1.6",
+  "accessed_on": "2026-08-30",
   "sources": [
     {
       "id": "EV-001",
@@ -550,6 +550,168 @@
       "direct_observation": "The official preview lists S01247 High-pass filter, S01248 Low-pass filter, S01249 Band-pass filter, and S01250 Band-stop filter as IEC 60617 diagram-symbol entries.",
       "interpretation": "The entries establish adjacent electrotechnical terminology and diagram-symbol context, not Unicode encoding or equivalence to the target audio response shorthand.",
       "rights_note": "Reference only; no IEC artwork is copied, traced, or imported."
+    },
+    {
+      "id": "EV-060",
+      "type": "education",
+      "publisher": "University of Iowa Electronic Music Studios",
+      "title": "Composition: Electronic Media I, Assignment 5",
+      "url": "https://theremin.music.uiowa.edu/EMS.Files/Assignments/1996/F.1996/EMS.F1996.Assignment5.pdf",
+      "publication_date": "1996-09-23",
+      "accessed_on": "2026-08-30",
+      "location": "PDF page 3, step 5(c)-(d)",
+      "direct_observation": "The assignment identifies five Sound Designer Parametric EQ filter buttons, from left to right, as High Pass, Low-shelf, Band Pass/Reject, High-shelf, and Low-pass, then directs students to set a separate Boost/Cut value.",
+      "interpretation": "This is dated historical education evidence for the low-shelf/high-shelf semantic pair and contextual product buttons. The separate Boost/Cut control shows that the shelf names do not imply polarity; the screenshot and ordered positions do not establish portable text glyphs.",
+      "rights_note": "Linked historical teaching source only; no screenshot, interface artwork, or typography is reproduced or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": "Sound Designer",
+        "product_version": null,
+        "exact_locator": "Assignment 5, PDF page 3, step 5(c)-(d)",
+        "stable_fragment": "Path /EMS.Files/Assignments/1996/F.1996/EMS.F1996.Assignment5.pdf",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public university teaching material was observed and linked as evidence; no permission to redistribute its text or screenshots is claimed.",
+          "limitations": "No source bytes were retained. The dated path and page locator aid relocation but do not guarantee continued availability."
+        }
+      }
+    },
+    {
+      "id": "EV-061",
+      "type": "historical-primary-source",
+      "publisher": "Mackie Designs",
+      "title": "CR1604-VLZ Owner's Manual",
+      "url": "https://archive.org/stream/manualsbase-id-223529/223529_djvu.txt",
+      "publication_date": "1997",
+      "accessed_on": "2026-08-30",
+      "location": "Printed pages 3, 19-20, and 40; OCR lines 1019-1021, 3327-3344, 3556-3607, and 6394-6406",
+      "direct_observation": "The manual documents LOW shelving at 80 Hz and HI shelving at 12 kHz, each with up to 15 dB boost or cut. Its glossary defines shelving as a response that rises or falls and then flattens, and the channel section uses labeled, axis-bearing frequency curves in context.",
+      "interpretation": "This is dated historical manual evidence for a paired, bidirectional shelf concept communicated through text, controls, specifications, and contextual graphs. It does not establish an axis-less standalone shelf glyph or portable text character.",
+      "rights_note": "Linked public-archive source only; no manual page, curve, control artwork, or typography is reproduced or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": "Mackie CR1604-VLZ",
+        "product_version": "Rev. C",
+        "exact_locator": "Printed pages 3, 19-20, and 40; OCR lines 1019-1021, 3327-3344, 3556-3607, and 6394-6406",
+        "stable_fragment": "Internet Archive item manualsbase-id-223529, full-text derivative 223529_djvu.txt",
+        "preservation": {
+          "mode": "linked-public-archive",
+          "archive_url": "https://archive.org/details/manualsbase-id-223529",
+          "checksum": null,
+          "rights_basis": "The source is linked at its public Internet Archive item; the project does not redistribute it or claim reuse permission.",
+          "limitations": "Archive availability and OCR accuracy are outside project control; page images remain authoritative where OCR is imperfect."
+        }
+      }
+    },
+    {
+      "id": "EV-062",
+      "type": "education",
+      "publisher": "Berklee College of Music",
+      "title": "Mastering with Plug-Ins",
+      "url": "https://www.berklee.edu/berklee-today/fall-2004/mastering",
+      "publication_date": "2004",
+      "accessed_on": "2026-08-30",
+      "location": "Processing section, paragraph beginning 'Start with the EQ'; article identified as Berklee Today Fall 2004",
+      "direct_observation": "The tutorial names parametric, low pass, high pass, low shelf, and high shelf as EQ filter types while discussing tonal changes in prose. Screenshots illustrate other plug-in context, but the article uses words rather than compact shelf symbols in its text.",
+      "interpretation": "This supports educational and practitioner familiarity with the shelf pair and supplies a negative observation for portable shelf-glyph text use in this article.",
+      "rights_note": "Linked education source only; no article image, screenshot, or typography is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Processing section, paragraph beginning 'Start with the EQ'; Fall 2004 issue note",
+        "stable_fragment": "Path /berklee-today/fall-2004/mastering",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public educational article was observed and linked; no permission to redistribute article content is claimed.",
+          "limitations": "The publisher page is mutable and no source bytes were retained."
+        }
+      }
+    },
+    {
+      "id": "EV-063",
+      "type": "education",
+      "publisher": "Indiana University Center for Electronic and Computer Music",
+      "title": "Synthesis Chapter Four: Filters",
+      "url": "https://cmtext.com/synthesis/chapter4_filters.php",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Additional Filter Types, Low Shelf and High Shelf",
+      "direct_observation": "The text says a low shelf can cut or boost below a cutoff and a high shelf can cut or boost above it, then separately labels low-shelf negative gain, low-shelf positive gain, high-shelf negative gain, and high-shelf positive gain illustrations.",
+      "interpretation": "This directly establishes side and polarity as separate dimensions. The labeled response illustrations support semantic recognition but are contextual educational graphs, not portable plain-text glyphs.",
+      "rights_note": "Linked education source only; no illustration or contour is reproduced or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Additional Filter Types > Low Shelf and High Shelf",
+        "stable_fragment": "Path /synthesis/chapter4_filters.php",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public university-associated teaching text was observed and linked; no permission to redistribute its illustrations is claimed.",
+          "limitations": "The page is mutable and no source bytes were retained."
+        }
+      }
+    },
+    {
+      "id": "EV-064",
+      "type": "journalism",
+      "publisher": "Sound On Sound",
+      "title": "EQ: How & When To Use It",
+      "url": "https://www.soundonsound.com/techniques/eq-how-when-use-it",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "Shelving-EQ explanation accompanying the low-frequency shelving response illustration",
+      "direct_observation": "The article states that its illustrated low-frequency shelving boost could instead be a high-frequency cut with a similarly shaped but differently oriented curve.",
+      "interpretation": "This trade-media explanation is material counterevidence to treating curve orientation alone as an unqualified low- or high-shelf identity. Side and gain polarity require labels, baseline context, or both.",
+      "rights_note": "Linked journalism source only; no article illustration or contour is reproduced or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Shelving-EQ explanation accompanying the low-frequency shelving response illustration",
+        "stable_fragment": "Path /techniques/eq-how-when-use-it",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public trade article was observed and linked; no permission to redistribute its prose or graphics is claimed.",
+          "limitations": "The page blocked direct full-page retrieval during this pass; the indexed passage was verified through search retrieval, but no source bytes or publication date were retained."
+        }
+      }
+    },
+    {
+      "id": "EV-065",
+      "type": "community-discussion",
+      "publisher": "KVR Audio Community",
+      "title": "Low Shelf vs. High Pass EQing",
+      "url": "https://www.kvraudio.com/forum/viewtopic.php?t=544352",
+      "publication_date": "2020-04-27",
+      "accessed_on": "2026-08-30",
+      "location": "Initial question and replies dated 2020-04-27 through 2020-04-28",
+      "direct_observation": "A practitioner asks when to use a low shelf versus a high-pass filter. Replies explain the difference using attenuation amount, frequency, slope, and mixing use cases in prose; the thread does not use a shelf glyph as portable text.",
+      "interpretation": "The thread documents semantic friction and a successful prose workaround. It supports real practitioner use of low-shelf attenuation without making attenuation the definition of low shelf, and it is negative evidence for established shelf-glyph interchange in this sampled discussion.",
+      "rights_note": "Linked public discussion only; no user avatar, screenshot, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T14:34:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Initial question at 2020-04-27T17:44:07+00:00 and first-page replies through 2020-04-28",
+        "stable_fragment": "Topic ID 544352",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Forum content is mutable and no source bytes were retained. The bounded thread cannot establish population-wide practice."
+        }
+      }
     }
   ]
 }
