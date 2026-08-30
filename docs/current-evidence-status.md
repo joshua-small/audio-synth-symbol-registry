@@ -104,6 +104,8 @@ Continue the registry while the evidence improves documentation, accessibility, 
 - Validation: document was checked for internal consistency against the repository's current assessment and evidence ledger.
 - Limitation: the 0.1.0 assessment has not yet been recalculated against evidence ledger 0.1.1; this document identifies that as the next mechanical evidence task.
 
+> **Superseded - 2026-08-29:** This limitation records the state of the first synthesis pass. The [ledger 0.1.1 assessment](../registry/assessments/ledger-0.1.1-2026-08-29.json) was subsequently published and is documented in the next Agent Report below.
+
 ## Agent Report - 2026-08-29T21:21:01-07:00
 
 - Scope: reassessed all four records against evidence ledger 0.1.1 and published an immutable dated snapshot as assessment artifact 0.1.1.

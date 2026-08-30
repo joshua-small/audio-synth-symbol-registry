@@ -15,3 +15,5 @@ The [current representation matrix](../../docs/current-representation-matrix.md)
 ## Limitations and next evidence
 
 Documentation may change and this sample is not a market census. A future rendering corpus can compare representations without copying artwork. The highest-value missing evidence is positive, independently sourced use of a compact response glyph in ordinary portable text interchange.
+
+> **At time of report - 2026-08-29:** Later work added the [Current Representation Matrix](../../docs/current-representation-matrix.md) and completed a [bounded plain-text workaround search](../../docs/plain-text-workaround-search.md). Those artifacts make the reviewed representation categories reproducible and document family-level communication friction, but they do not supply positive portable-glyph interchange evidence for an individual record. The missing-evidence conclusion above therefore remains materially current even though the named follow-up work has been completed in bounded form.

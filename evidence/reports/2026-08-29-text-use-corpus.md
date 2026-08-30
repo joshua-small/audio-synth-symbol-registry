@@ -15,3 +15,5 @@ The counterfinding is material for the Unicode question at this stage: this pass
 ## Limitations and next evidence
 
 This is not proof that no positive examples exist. Continue a bounded search for dated, independently authored portable-text artifacts. If that search remains negative, record it as a formal objection to Unicode encoding while retaining the registry and open-font paths as separate possibilities.
+
+> **Superseded - 2026-08-29:** The requested bounded follow-up was completed in the [Bounded plain-text workaround search](../../docs/plain-text-workaround-search.md). It found three independent family-level workaround classes but no established portable compact-glyph practice and no three qualifying examples for any individual record. The original caution against treating a bounded negative search as proof of absence remains in force.
