@@ -38,6 +38,7 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
       const assessmentSet = JSON.parse(readFileSync(assessmentPath, "utf8"));
       return assessmentSet.assessments
         .filter((item) => item.record_id === mutation.record_id)
+        .filter((item) => !mutation.target_assessment_version || item.assessment_version === mutation.target_assessment_version)
         .map((assessment) => ({ assessment, assessmentPath, assessmentSet }));
     });
   const current = snapshots.sort(
@@ -65,6 +66,10 @@ const applyAssessmentMutation = (corpusRoot, mutationFixture) => {
     assessmentSet.assessment_set_version = "0.2.0";
     for (const item of assessmentSet.assessments) item.assessment_version = "0.2.0";
     assessment.dimensions[mutation.dimension].artifact_refs = mutation.references ?? [mutation.reference];
+    if (mutation.remove_evidence_id) {
+      assessment.dimensions[mutation.dimension].evidence_ids = assessment.dimensions[mutation.dimension].evidence_ids
+        .filter((id) => id !== mutation.remove_evidence_id);
+    }
   } else if (mutation.operation === "add-artifact-ref-without-version-bump") {
     assessment.dimensions[mutation.dimension].artifact_refs = [mutation.reference];
   } else {
@@ -268,8 +273,8 @@ test("rejects assessment metadata whose format version differs from its schemas"
   assert.match(result.stderr, /Assessment metadata format version differs from the assessment schemas/);
 });
 
-test("rejects metadata that declares a newer format than the current snapshot", () => {
-  const result = runValidator({ metadataMutation: { format_version: "0.2.0" } });
+test("rejects metadata whose declared format differs from the current snapshot", () => {
+  const result = runValidator({ metadataMutation: { format_version: "0.1.0" } });
   assert.equal(result.status, 1, result.stdout);
   assert.match(result.stderr, /current assessment-set format version differs from assessment metadata/);
 });
@@ -304,7 +309,7 @@ for (const [assessmentMutationFixture, expectedFailure] of invalidAssessmentMuta
 test("preserves historical assessments when a newer snapshot is appended", () => {
   const result = runValidator({ assessmentMutationFixture: "newer-historical-snapshot.json" });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /Validated 4 registry record\(s\), 2 assessment set\(s\)/);
+  assert.match(result.stdout, /Validated 4 registry record\(s\), 3 assessment set\(s\)/);
 });
 
 test("rejects a duplicate derived-analysis ID-version pair", () => {
