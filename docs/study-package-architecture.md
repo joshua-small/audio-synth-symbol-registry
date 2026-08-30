@@ -10,7 +10,7 @@ The geometry and artistic parameters remain a Human Review boundary. Keeping tho
 
 The input plan is local, unpublished working material. It contains:
 
-- a study ID and secret randomization seed;
+- a study ID and cryptographically generated secret randomization seed of at least 32 bytes;
 - the requested number of counterbalanced forms;
 - a registry record ID and blind SVG path for each stimulus;
 - terms that must not occur in the blind derivative; and
@@ -44,6 +44,8 @@ Only `public/` is suitable for a participant-facing delivery system. `private/an
 - The tool rejects a blind SVG containing its registry ID or any configured forbidden term.
 - The tool refuses to write into an existing output directory, reducing accidental replacement of a locked package.
 
+The seed must be unpredictable and remain private until collection closes and the initial blinded coding is locked. A memorable phrase that merely satisfies the length check is not sufficient. If the seed or a record-to-token mapping is disclosed early, opaque tokens no longer preserve blinding.
+
 The leakage check is defense in depth, not proof of blinding. Before launch, an independent reviewer must inspect filenames, SVG elements and metadata, the public manifest, the rendered form, HTTP metadata, surrounding UI, and browser accessibility output. A blind derivative may omit semantic accessible text only inside the controlled visual-recognition instrument; it does not replace the accessible source SVG or the canonical text and speech alternatives.
 
 ## Input example
@@ -53,7 +55,7 @@ This shape-free example intentionally names no artwork paths that exist in the r
 ```json
 {
   "study_id": "formative-pilot-v1",
-  "randomization_seed": "generate-and-store-outside-public-package",
+  "randomization_seed": "generate-at-least-32-random-bytes-and-store-privately",
   "form_count": 12,
   "stimuli": [
     {
