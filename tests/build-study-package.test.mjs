@@ -1,8 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
+import { createHash } from "node:crypto";
 import { buildStudyPackage } from "../tooling/build-study-package.mjs";
 
 const svg = (shape) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="${shape}"/></svg>\n`;
@@ -40,6 +41,8 @@ test("creates separated public and private deterministic packages", async () => 
   assert.doesNotMatch(publicText, /must not be copied/);
   const privateText = await readFile(join(root, "out-a", "private", "answer-key.json"), "utf8");
   assert.match(privateText, /asr:test\.a/);
+  assert.equal((await stat(join(root, "out-a", "private"))).mode & 0o077, 0);
+  assert.equal((await stat(join(root, "out-a", "private", "answer-key.json"))).mode & 0o077, 0);
   assert.equal(first.publicInstrument.forms.length, 3);
   assert.equal(first.publicInstrument.stimuli.length, 2);
 });
@@ -49,8 +52,9 @@ test("locks each copied stimulus with a SHA-256 digest", async () => {
   const { publicInstrument } = await buildStudyPackage(planPath, join(root, "out"));
   for (const stimulus of publicInstrument.stimuli) {
     assert.match(stimulus.sha256, /^[0-9a-f]{64}$/);
-    const asset = await readFile(join(root, "out", "public", stimulus.asset), "utf8");
-    assert.match(asset, /^<svg/);
+    const asset = await readFile(join(root, "out", "public", stimulus.asset));
+    assert.match(asset.toString("utf8"), /^<svg/);
+    assert.equal(createHash("sha256").update(asset).digest("hex"), stimulus.sha256);
   }
 });
 
