@@ -44,4 +44,3 @@ Before geometry review, record for each candidate:
 - Hash of the exact candidate SVG and each blind-study derivative.
 
 An independent reviewer should be able to reproduce the construction from repository-authored primitives without consulting external artwork. Moving a candidate from `draft` to `study-ready` locks it only for the named study and requires protocol review; it does not accept the artwork.
-
