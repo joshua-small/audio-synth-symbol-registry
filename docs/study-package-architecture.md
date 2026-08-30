@@ -11,7 +11,7 @@ The geometry and artistic parameters remain a Human Review boundary. Keeping tho
 The input plan is local, unpublished working material. It contains:
 
 - a study ID and cryptographically generated secret randomization seed of at least 32 bytes;
-- the requested number of counterbalanced forms;
+- the requested number of deterministic randomized forms;
 - a registry record ID and blind SVG path for each stimulus;
 - terms that must not occur in the blind derivative; and
 - forced-choice IDs and participant-facing labels.
