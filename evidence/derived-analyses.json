@@ -62,6 +62,15 @@
       ],
       "scope": "Synthesized project evidence and counterevidence merged through PR 24 without changing record state.",
       "limitations": ["A synthesis is not an independent source and cannot increase source-independence counts."]
+    },
+    {
+      "id": "DA-007", "version": "0.1.0", "title": "Shelf history, education, trade-media, and community report",
+      "path": "evidence/reports/2026-08-30-shelf-history-education-community.md", "kind": "historical-analysis", "produced_at": "2026-08-30T14:54:28-07:00",
+      "content_sha256": "5bc0cc796d88420214cc083eead309074125fdefe1c67f3ede0c5cd7d5680e49",
+      "input_evidence_ids": ["EV-060", "EV-061", "EV-062", "EV-063", "EV-064", "EV-065"],
+      "input_artifact_refs": [],
+      "scope": "Compared historical manuals and teaching material, current education, trade media, and practitioner discussion for shelf semantics, representation, text friction, and boost/cut polarity.",
+      "limitations": ["The bounded English-language sample is not an industry census and does not prove absence of portable shelf-glyph use elsewhere."]
     }
   ]
 }
