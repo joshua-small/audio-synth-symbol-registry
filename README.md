@@ -35,7 +35,9 @@ Text fallback: HPF
 Speech: high-pass filter
 ```
 
-An `asr:` identifier is provisional while a record is `evidence-collecting` or `registry-candidate`. It becomes permanent at `registry-accepted`. The identifier and text fallback are portable. A rendered glyph is optional and must not carry undefined semantic information.\n\nSee the [experimental interchange prototype](docs/interchange-prototype.md) for a runnable demonstration using the four current records.
+An `asr:` identifier is provisional while a record is `evidence-collecting` or `registry-candidate`. It becomes permanent at `registry-accepted`. The identifier and text fallback are portable. A rendered glyph is optional and must not carry undefined semantic information.
+
+See the [experimental interchange prototype](docs/interchange-prototype.md) for a runnable demonstration using the four current records.
 
 ## What this is not
 
