@@ -166,7 +166,7 @@ Unicode's current [emoji proposal guidelines](https://unicode.org/emoji/proposal
 
 The current concept is functional notation that should remain recognizable in monochrome and should not acquire platform-dependent pictorial semantics. On present evidence, an emoji proposal would weaken the technical framing and duplicate research better directed to the symbol-character route.
 
-Recommendation: keep emoji out of the active roadmap. Reconsider only if independent evidence reveals an expressive conversational use distinct from the technical filter-response character use. The 2026 submission window is closed and the official page says submissions will reopen in 2027, but timing is not the substantive blocker.
+Recommendation: keep emoji out of the active roadmap. Reconsider only if independent evidence reveals an expressive conversational use distinct from the technical filter-response character use. Submission-window timing is not the substantive blocker.
 
 ## Workstream H: future glyph families
 
