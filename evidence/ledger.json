@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.1.4",
+  "ledger_version": "0.1.5",
   "accessed_on": "2026-08-29",
   "sources": [
     {
@@ -76,9 +76,23 @@
       "publication_date": null,
       "accessed_on": "2026-08-29",
       "location": "EQ Eight and filter/equalizer effect reference",
-      "direct_observation": "The current manual documents named filter and EQ response modes within a product interface.",
+      "direct_observation": "The current manual documents named filter-response modes and a filter-curve display within a product interface.",
       "interpretation": "This supports continued product use of the response semantics, but not portable plain-text character use or a single required glyph contour.",
-      "rights_note": "Evidence only; product artwork is not copied or traced."
+      "rights_note": "Evidence only; product artwork is not copied or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T00:02:57-07:00",
+        "product": "Ableton Live",
+        "product_version": "12",
+        "exact_locator": "28.2 Auto Filter > 28.2.1 Filter Types and 28.2.2 Filter Display",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was observed and linked as evidence; no permission to redistribute its page content or artwork is claimed.",
+          "limitations": "No stable publisher fragment was established and no source bytes were retained. This metadata cannot reproduce content if the vendor page changes or disappears."
+        }
+      }
     },
     {
       "id": "EV-007",
@@ -91,7 +105,21 @@
       "location": "Band controls and EQ display documentation",
       "direct_observation": "The documentation describes selectable EQ filter shapes and an interactive frequency-response display.",
       "interpretation": "This is evidence of a mature response-form UI family; its rich, contextual display is not evidence of an established standalone text glyph.",
-      "rights_note": "Evidence only; product artwork is not copied or traced."
+      "rights_note": "Evidence only; product artwork is not copied or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T00:03:04-07:00",
+        "product": "FabFilter Pro-Q",
+        "product_version": "4",
+        "exact_locator": "Using FabFilter Pro-Q 4 > Band controls; interactive EQ display description and Filter shape button/list",
+        "stable_fragment": "URL path /help/pro-q/using/bandcontrols",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor documentation was observed and linked as evidence; no permission to redistribute its page content or artwork is claimed.",
+          "limitations": "The stable page route aids relocation but does not freeze its contents. No source bytes were retained and no archive availability is implied."
+        }
+      }
     },
     {
       "id": "EV-008",
@@ -156,7 +184,21 @@
       "location": "Filter modes",
       "direct_observation": "The manufacturer documents selectable synthesizer filter modes by name.",
       "interpretation": "This adds synthesizer-hardware evidence for stable semantics while leaving symbol-form and text-interchange questions open.",
-      "rights_note": "Evidence only; product artwork is not copied or traced."
+      "rights_note": "Evidence only; product artwork is not copied or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T00:03:11-07:00",
+        "product": "Moog Matriarch",
+        "product_version": null,
+        "exact_locator": "Filter Modes article; HP/LP (Band Pass Filter) - Series, LP/LP (True Stereo Signal Path) - Independent, and HP/LP (Notch Filter) - Parallel",
+        "stable_fragment": "Freshdesk article ID 69000877830",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public vendor support documentation was observed and linked as evidence; no permission to redistribute its page content or artwork is claimed.",
+          "limitations": "The vendor article ID is a relocation aid, not a content guarantee. No source bytes were retained and no archive availability is implied."
+        }
+      }
     },
     {
       "id": "EV-013",

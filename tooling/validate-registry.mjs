@@ -23,6 +23,22 @@ const isFullDate = (value) => {
   const daysInMonth = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   return year >= 1 && month >= 1 && month <= 12 && day >= 1 && day <= daysInMonth[month - 1];
 };
+const offsetDateTime = /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})([+-])([0-9]{2}):([0-9]{2})$/;
+const isOffsetDateTime = (value) => {
+  const match = offsetDateTime.exec(value);
+  if (!match || !isFullDate(`${match[1]}-${match[2]}-${match[3]}`)) return false;
+  const hour = Number(match[4]);
+  const minute = Number(match[5]);
+  const second = Number(match[6]);
+  const offsetHour = Number(match[8]);
+  const offsetMinute = Number(match[9]);
+  return hour <= 23
+    && minute <= 59
+    && second <= 59
+    && offsetHour <= 14
+    && offsetMinute <= 59
+    && (offsetHour < 14 || offsetMinute === 0);
+};
 const isHttpsUrl = (value) => {
   if (/\s/.test(value)) return false;
   try {
@@ -122,6 +138,7 @@ if (!readmeRegistryVersion) {
 const ajv = new Ajv2020({ allErrors: true, strict: true });
 ajv.addFormat("date", { type: "string", validate: isFullDate });
 ajv.addFormat("https-url", { type: "string", validate: isHttpsUrl });
+ajv.addFormat("offset-date-time", { type: "string", validate: isOffsetDateTime });
 ajv.addSchema(entrySchema);
 ajv.addSchema(assessmentSchema);
 const validateEvidenceLedger = ajv.compile(evidenceLedgerSchema);

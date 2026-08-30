@@ -29,6 +29,84 @@
         { "$ref": "#/$defs/fullDate" }
       ]
     },
+    "accessedTimestamp": {
+      "type": "string",
+      "format": "offset-date-time"
+    },
+    "sourceCapture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accessed_at",
+        "product",
+        "product_version",
+        "exact_locator",
+        "stable_fragment",
+        "preservation"
+      ],
+      "properties": {
+        "accessed_at": { "$ref": "#/$defs/accessedTimestamp" },
+        "product": { "type": ["string", "null"], "minLength": 1 },
+        "product_version": { "type": ["string", "null"], "minLength": 1 },
+        "exact_locator": { "type": "string", "minLength": 1 },
+        "stable_fragment": { "type": ["string", "null"], "minLength": 1 },
+        "preservation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "archive_url", "checksum", "rights_basis", "limitations"],
+          "properties": {
+            "mode": {
+              "enum": ["metadata-only", "linked-public-archive", "checksum-only", "archive-and-checksum"]
+            },
+            "archive_url": {
+              "anyOf": [
+                { "type": "null" },
+                { "type": "string", "format": "https-url" }
+              ]
+            },
+            "checksum": {
+              "anyOf": [
+                { "type": "null" },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["algorithm", "digest", "scope"],
+                  "properties": {
+                    "algorithm": { "const": "sha256" },
+                    "digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+                    "scope": { "type": "string", "minLength": 1 }
+                  }
+                }
+              ]
+            },
+            "rights_basis": { "type": "string", "minLength": 1 },
+            "limitations": { "type": "string", "minLength": 1 }
+          },
+          "allOf": [
+            {
+              "if": { "properties": { "mode": { "const": "metadata-only" } } },
+              "then": { "properties": { "archive_url": { "const": null }, "checksum": { "const": null } } }
+            },
+            {
+              "if": { "properties": { "mode": { "enum": ["linked-public-archive", "archive-and-checksum"] } } },
+              "then": { "properties": { "archive_url": { "type": "string" } } }
+            },
+            {
+              "if": { "properties": { "mode": { "const": "checksum-only" } } },
+              "then": { "properties": { "archive_url": { "const": null } } }
+            },
+            {
+              "if": { "properties": { "mode": { "enum": ["checksum-only", "archive-and-checksum"] } } },
+              "then": { "properties": { "checksum": { "type": "object" } } }
+            },
+            {
+              "if": { "properties": { "mode": { "const": "linked-public-archive" } } },
+              "then": { "properties": { "checksum": { "const": null } } }
+            }
+          ]
+        }
+      }
+    },
     "source": {
       "type": "object",
       "additionalProperties": false,
@@ -72,7 +150,8 @@
         "location": { "type": "string", "minLength": 1 },
         "direct_observation": { "type": "string", "minLength": 1 },
         "interpretation": { "type": "string", "minLength": 1 },
-        "rights_note": { "type": "string", "minLength": 1 }
+        "rights_note": { "type": "string", "minLength": 1 },
+        "source_capture": { "$ref": "#/$defs/sourceCapture" }
       }
     }
   }

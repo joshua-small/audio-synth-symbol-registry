@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "id", "name", "status", "semantics", "representations", "unicode", "evidence", "confidence", "open_questions"],
   "properties": {
-    "schema_version": { "const": "0.2.0" },
+    "schema_version": { "const": "0.3.0" },
     "id": {
       "type": "string",
       "pattern": "^asr:[a-z][a-z0-9-]*(?:\\.[a-z][a-z0-9-]*)+$",

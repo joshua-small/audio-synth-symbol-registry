@@ -1,0 +1,23 @@
+{
+  "operation": "set",
+  "source_id": "EV-006",
+  "field": "source_capture",
+  "value": {
+    "accessed_at": "2026-08-30T00:20:11-07:00",
+    "product": "Ableton Live",
+    "product_version": "12",
+    "exact_locator": "28.2.1 Filter Types",
+    "stable_fragment": null,
+    "preservation": {
+      "mode": "checksum-only",
+      "archive_url": "https://example.com/archive",
+      "checksum": {
+        "algorithm": "sha256",
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "scope": "Public source bytes"
+      },
+      "rights_basis": "Checksum metadata only.",
+      "limitations": "No source bytes retained."
+    }
+  }
+}
