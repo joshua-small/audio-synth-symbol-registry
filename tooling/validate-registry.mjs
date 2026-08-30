@@ -68,7 +68,7 @@ if (!semver.test(ledger.ledger_version)) fail(`evidence ledger has invalid SemVe
 if (ledger.ledger_version !== registryArtifact.version) {
   fail("Evidence ledger and registry metadata versions differ.");
 }
-const readmeRegistryVersion = readme.match(/^Registry release: \*\*([^*]+)\*\*[ \t]*\r?$/m)?.[1];
+const readmeRegistryVersion = readme.match(/^Registry release: \*\*([^*]+)\*\*\\\r?$/m)?.[1];
 if (!readmeRegistryVersion) {
   fail("README must declare the registry release in its Status section.");
 } else if (readmeRegistryVersion !== registryArtifact.version) {

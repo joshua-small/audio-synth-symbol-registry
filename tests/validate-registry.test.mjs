@@ -93,7 +93,7 @@ const runValidator = ({ fixture, metadataFixture, metadataMutation, ledgerFixtur
       const readme = readFileSync(readmePath, "utf8");
       writeFileSync(
         readmePath,
-        readme.replace(/^Registry release: \*\*[^*]+\*\*[ \t]*\r?$/m, `Registry release: **${readmeRegistryVersion}**`),
+        readme.replace(/^Registry release: \*\*[^*]+\*\*\\\r?$/m, `Registry release: **${readmeRegistryVersion}**\\`),
       );
     }
     if (fixture) {
