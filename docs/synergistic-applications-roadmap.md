@@ -233,5 +233,9 @@ These tasks stay inside the established research scope and are reversible:
 - Recommendation: prioritize registry-first interchange and original evidence generation; treat AES as the most plausible later standards listening route; use SMuFL as adjacent process prior art; retain Unicode `HOLD`; do not actively pursue emoji.
 - Guardrails: made no scope, status, semantic, artwork, licensing, outreach, standards, protocol, or release decision. All consequential options remain subject to existing Human Review gates.
 - Validation: full repository tests and independent review are required before merge.
-- Completion annotation: superseded by the [PR #32 review record](https://github.com/joshua-small/audio-synth-symbol-registry/pull/32); independent re-review passed after remediation, 24/24 tests and GitHub Actions passed, and the work merged as `c938d5388b7cad722d25158a0c58adb6d28122fa`.
+- Report status: completed
+- Completion PR: [PR #32 review record](https://github.com/joshua-small/audio-synth-symbol-registry/pull/32)
+- Merge commit: [`c938d5388b7cad722d25158a0c58adb6d28122fa`](https://github.com/joshua-small/audio-synth-symbol-registry/commit/c938d5388b7cad722d25158a0c58adb6d28122fa)
+- Validation result: passed; 24/24 tests, `git diff --check`, and GitHub Actions passed.
+- Independent review result: passed after remediation with no blockers.
 - Limitations: no organization or community was contacted; no unpublished committee material was reviewed; the exact AES/ISO/IEC committee fit remains a future scope-mapping task; source processes can change and must be rechecked before action.
