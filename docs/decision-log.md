@@ -145,3 +145,16 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Require manual approval for every merge.
 - Consequences: Material human gates remain mandatory; routine work does not wait for ceremonial approval.
 - Revisit trigger: Review outcomes show a need for tighter or broader gates.
+
+
+## D-013: Artwork criteria and recognition-study protocol
+
+- Date: 2026-08-29T17:04:35-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: Adopt the neutral reference-artwork criteria and the pre-recruitment blind recognition-study protocol in PR #10.
+- Evidence: Owner authorization in project chat; independently reviewed PR #10; [SVG 2](https://www.w3.org/TR/SVG2/), [W3C Images Tutorial](https://www.w3.org/WAI/tutorials/images/), and ISO 9186-1:2014 as cited in the policy.
+- Counterevidence or objections: Draft/study artwork cannot establish semantic acceptance, and no participant study or published artwork has yet been performed.
+- Alternatives considered: Case-by-case artwork and study rules, or deferring artwork policy until a later registry status.
+- Consequences: Draft/study artwork may support evidence-collecting or registry-candidate records; accepted artwork requires registry-accepted status. Artwork metadata is independently versioned and authoritative at `artwork/metadata.json`; recruitment and each artwork acceptance remain Human Review gates.
+- Revisit trigger: First artwork implementation or study execution exposes an operational gap.
