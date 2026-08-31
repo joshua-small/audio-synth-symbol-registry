@@ -1,0 +1,39 @@
+{
+  "package_schema_version": "0.2.0",
+  "construction_status": "construction-only",
+  "study_id": "replace-with-construction-instance-id",
+  "randomization_seed": "REPLACE WITH AT LEAST 32 CRYPTOGRAPHICALLY RANDOM BYTES OUTSIDE THE REPOSITORY",
+  "form_count": 12,
+  "source_commit": "4ad8ec92477a938355df06bc943a57372c7f3438",
+  "binding_manifest_path": "six-member-compact-a-binding.json",
+  "participant_prompt": "Which filter response is the best match?",
+  "participant_instructions": ["Consider the symbol in an audio or synthesis context."],
+  "shelf_semantic_target": "affected-frequency-side",
+  "gain_sign_priming": false,
+  "stimuli": [
+    { "record_id": "asr:filter.high-pass", "expected_asset_id": "asr-art:compact-a.filter.high-pass", "expected_source_sha256": "7c24850dec29378b65b98e773843fe9f0a2cf1c63bea951acc0bec087e7eabc4", "forbidden_terms": ["high-pass", "high pass", "HPF", "low cut"] },
+    { "record_id": "asr:filter.low-pass", "expected_asset_id": "asr-art:compact-a.filter.low-pass", "expected_source_sha256": "e80d153a3f5bcaac016663579fef4bc93ea4d8659e4637ef445655710aa4ce2f", "forbidden_terms": ["low-pass", "low pass", "LPF", "high cut"] },
+    { "record_id": "asr:filter.band-pass", "expected_asset_id": "asr-art:compact-a.filter.band-pass", "expected_source_sha256": "30422a1bf1ba4e6fd44a88f8449839c2e84846087d27c54bb7d3805c8d1d44d9", "forbidden_terms": ["band-pass", "band pass", "BPF"] },
+    { "record_id": "asr:filter.band-stop", "expected_asset_id": "asr-art:compact-a.filter.band-stop", "expected_source_sha256": "a3a95dd236fc30544548a33c87da5323c2a142057c9bd0cb8c3552d366013292", "forbidden_terms": ["band-stop", "band stop", "band reject", "notch"] },
+    { "record_id": "asr:filter.low-shelf", "expected_asset_id": "asr-art:compact-a.filter.low-shelf", "expected_source_sha256": "0bb19d4a3a75aa219059897166c6bd02163255ced11709c86703b3edf444eabc", "forbidden_terms": ["low-shelf", "low shelf", "low shelving", "LS", "LSF", "boost", "cut"] },
+    { "record_id": "asr:filter.high-shelf", "expected_asset_id": "asr-art:compact-a.filter.high-shelf", "expected_source_sha256": "d7ddb71527ed3f655d9e146f227986977a92c4894fdb5112a9820d56e58544bf", "forbidden_terms": ["high-shelf", "high shelf", "high shelving", "HS", "HSF", "boost", "cut"] }
+  ],
+  "forced_choices": [
+    { "id": "high-pass", "label": "High-pass filter" },
+    { "id": "low-pass", "label": "Low-pass filter" },
+    { "id": "band-pass", "label": "Band-pass filter" },
+    { "id": "band-stop", "label": "Band-stop filter" },
+    { "id": "low-shelf", "label": "Low-shelf filter" },
+    { "id": "high-shelf", "label": "High-shelf filter" },
+    { "id": "none", "label": "None of these" },
+    { "id": "unknown", "label": "I do not know" }
+  ],
+  "directed_negative_controls": [
+    { "target_record_id": "asr:filter.low-shelf", "confused_with_choice_id": "high-pass" },
+    { "target_record_id": "asr:filter.high-shelf", "confused_with_choice_id": "low-pass" },
+    { "target_record_id": "asr:filter.high-pass", "confused_with_choice_id": "low-shelf" },
+    { "target_record_id": "asr:filter.low-pass", "confused_with_choice_id": "high-shelf" },
+    { "target_record_id": "asr:filter.band-pass", "confused_with_choice_id": "band-stop" },
+    { "target_record_id": "asr:filter.band-stop", "confused_with_choice_id": "band-pass" }
+  ]
+}

@@ -40,9 +40,11 @@ For each opaque token, once, in a randomized order:
    - `Low-pass filter`
    - `Band-pass filter`
    - `Band-stop filter`
+   - `Low-shelf filter`
+   - `High-shelf filter`
    - `None of these`
    - `I do not know`
-   - Randomize the four response-class choices and record their displayed order. Keep `None of these` and `I do not know` after the randomized classes to avoid inconsistent semantics.
+   - Randomize all eight choices and record their displayed order.
 4. Ask: `How confident are you in your answer?`
    - Integers 1 through 5, with endpoints `not at all confident` and `very confident`.
 5. Optional: `What visual feature led you to that answer?`
@@ -101,6 +103,9 @@ The approved data plan MUST choose whether ineligible events are retained indivi
 | `visual_explanation_redacted` | string or null | Scorer and publication working value |
 | `item_complete` | boolean | Required tasks captured |
 | `technical_failure_code` | enum or null | One preregistered technical code |
+| `directed_confusion` | enum or null | `low-shelf__high-pass`, `high-shelf__low-pass`, `high-pass__low-shelf`, `low-pass__high-shelf`, `band-pass__band-stop`, or `band-stop__band-pass`; otherwise null |
+
+Shelf recognition concerns affected frequency side only. Do not collect or derive boost/cut correctness from these items. The construction template fixes the ordered control pairs and excludes gain-sign and 0 dB-baseline prompting.
 
 The private analysis key maps `opaque_stimulus_token` to registry record ID, candidate asset ID, asset hash, and derivative hash. Keep it in the preregistered restricted location, hidden from participants and blinded scorers until collection closes and initial coding is locked. A public manifest may contain only a cryptographic commitment that does not expose or reversibly associate token meanings. Freeze the instrument text, choice identifiers, branching, candidate-allocation rule, randomization implementation, and private key by path and SHA-256 in the preregistration.
 
@@ -113,7 +118,7 @@ Keep each scorer's original code. Do not overwrite disagreement with adjudicatio
 | `response_id` | string | Participant join key |
 | `opaque_stimulus_token` | string | Item join key |
 | `scorer_id` | opaque enum | No scorer name in published data |
-| `meaning_code` | enum | `high-pass`, `low-pass`, `band-pass`, `band-stop`, `other`, `ambiguous`, `idk` |
+| `meaning_code` | enum | `high-pass`, `low-pass`, `band-pass`, `band-stop`, `low-shelf`, `high-shelf`, `other`, `ambiguous`, `idk` |
 | `exact_correct` | boolean | Derived only from locked scoring key |
 | `theme_codes` | array of enum strings | Preregistered themes; new themes remain labeled exploratory |
 | `adjudication_status` | enum | `not-needed`, `pending`, `resolved` |
