@@ -194,3 +194,15 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Keep shelves outside current research; require more evidence; exclude shelves; or retain a three-prong/baseline-bearing active alternative.
 - Consequences: Research plans and draft comparisons may cover high-pass, low-pass, band-pass, band-stop, low shelf, and high shelf. Rejected experiments already in repository history may remain historical evidence only. This decision does not create registry records or permanent IDs, accept artwork, authorize study-ready status or recruitment, change external positions, or authorize Unicode action.
 - Revisit trigger: Recognition results, evidence review, or an independently established convention materially contradicts the sign-agnostic pair or two-prong topology.
+
+## D-017: Provisional shelf registry records
+
+- Date: 2026-08-30T17:37:18-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: Create provisional `asr:filter.low-shelf` and `asr:filter.high-shelf` records at `evidence-collecting` with canonical names `Low-shelf filter` and `High-shelf filter`, full text fallbacks `LOW SHELF` and `HIGH SHELF`, sign-agnostic affected-side semantics, empty alias lists, and shelving forms as related terms. Explicitly exclude gain sign and reject low/high cut and unsupported abbreviations as aliases.
+- Evidence: Owner authorization in project chat responding to HR-001 and HR-002 in `docs/shelf-record-proposal.md`; EV-050 through EV-057 and EV-060 through EV-065.
+- Counterevidence or objections: Compact cross-vendor convergence, portable glyph use, six-way recognition, shelf-specific overlap review, and exact shelf/shelving alias treatment remain unresolved.
+- Alternatives considered: Defer records; use shelving IDs; encode signed boost/cut states; adopt abbreviations; or promote the original two-prong artwork.
+- Consequences: Registry 0.2.0 adds two provisional semantic records and schema 0.4.0 adds only their two representation-concept enum values. No artwork is accepted, no status is promoted, and no Unicode or external-standard position changes.
+- Revisit trigger: Dedicated terminology, overlap, recognition, or usage research materially changes the semantic or representation boundary.

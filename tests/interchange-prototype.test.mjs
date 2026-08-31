@@ -12,10 +12,12 @@ const expectedIds = [
   "asr:filter.band-pass",
   "asr:filter.band-stop",
   "asr:filter.high-pass",
+  "asr:filter.high-shelf",
   "asr:filter.low-pass",
+  "asr:filter.low-shelf",
 ];
 
-test("loads exactly the current four registry records", async () => {
+test("loads exactly the current six registry records", async () => {
   const registry = await loadRegistry();
   assert.deepEqual([...registry.keys()].sort(), expectedIds);
 });
@@ -23,15 +25,17 @@ test("loads exactly the current four registry records", async () => {
 test("resolves canonical IDs to registry-owned text and speech", async () => {
   const registry = await loadRegistry();
   const resolved = resolveInterchange(
-    ["asr:filter.low-pass", "asr:filter.high-pass"],
+    ["asr:filter.low-pass", "asr:filter.high-pass", "asr:filter.low-shelf", "asr:filter.high-shelf"],
     registry,
   );
   assert.deepEqual(resolved, [
     { id: "asr:filter.low-pass", text: "LPF", speech: "low-pass filter" },
     { id: "asr:filter.high-pass", text: "HPF", speech: "high-pass filter" },
+    { id: "asr:filter.low-shelf", text: "LOW SHELF", speech: "low-shelf filter" },
+    { id: "asr:filter.high-shelf", text: "HIGH SHELF", speech: "high-shelf filter" },
   ]);
-  assert.equal(formatInterchange(resolved, "text"), "LPF HPF");
-  assert.equal(formatInterchange(resolved, "speech"), "low-pass filter, high-pass filter");
+  assert.equal(formatInterchange(resolved, "text"), "LPF HPF LOW SHELF HIGH SHELF");
+  assert.equal(formatInterchange(resolved, "speech"), "low-pass filter, high-pass filter, low-shelf filter, high-shelf filter");
 });
 
 test("keeps an optional asset reference separate from canonical identity", async () => {

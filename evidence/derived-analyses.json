@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.1.1",
+  "registry_version": "0.2.0",
   "artifacts": [
     {
       "id": "DA-001", "version": "0.1.0", "title": "Plain-text workaround search",
@@ -50,7 +50,7 @@
     },
     {
       "id": "DA-006", "version": "0.1.0", "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md", "kind": "status-synthesis", "produced_at": "2026-08-29T23:25:10-07:00",
+      "path": "docs/current-evidence-status-0.1.0.md", "kind": "status-synthesis", "produced_at": "2026-08-29T23:25:10-07:00",
       "content_sha256": "7919ca49b68f39240c5377f8457a969b9b1c92da312dc1518b169e3726062d1a",
       "input_evidence_ids": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013", "EV-014", "EV-015", "EV-016", "EV-017", "EV-018", "EV-019", "EV-020", "EV-021", "EV-022", "EV-023", "EV-024", "EV-025", "EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032", "EV-033", "EV-034", "EV-035", "EV-036"],
       "input_artifact_refs": [
@@ -61,6 +61,23 @@
         { "artifact_id": "DA-005", "artifact_version": "0.1.0" }
       ],
       "scope": "Synthesized project evidence and counterevidence merged through PR 24 without changing record state.",
+      "limitations": ["A synthesis is not an independent source and cannot increase source-independence counts."]
+    },
+    {
+      "id": "DA-006", "version": "0.2.0", "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md", "kind": "status-synthesis", "produced_at": "2026-08-30T17:48:00-07:00",
+      "content_sha256": "9134c0af66047e7824e0cf04ff676f6bfbbbbee8763e45b2ae76578a0edb3305",
+      "input_evidence_ids": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013", "EV-014", "EV-015", "EV-016", "EV-017", "EV-018", "EV-019", "EV-020", "EV-021", "EV-022", "EV-023", "EV-024", "EV-025", "EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032", "EV-033", "EV-034", "EV-035", "EV-036", "EV-037", "EV-038", "EV-039", "EV-050", "EV-051", "EV-052", "EV-053", "EV-054", "EV-055", "EV-056", "EV-057", "EV-060", "EV-061", "EV-062", "EV-063", "EV-064", "EV-065"],
+      "input_artifact_refs": [
+        { "artifact_id": "DA-001", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-002", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-003", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-004", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-005", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-007", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-008", "artifact_version": "0.1.0" }
+      ],
+      "scope": "Superseding six-record status synthesis for registry 0.2.0, including conservative shelf-record assessments and unresolved gates.",
       "limitations": ["A synthesis is not an independent source and cannot increase source-independence counts."]
     },
     {

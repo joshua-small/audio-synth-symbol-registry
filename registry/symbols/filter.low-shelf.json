@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.4.0",
+  "id": "asr:filter.low-shelf",
+  "name": "Low-shelf filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that applies a signed gain difference to the low-frequency side of a transition region relative to the high-frequency side, with both sides approaching plateaus.",
+    "aliases": [],
+    "related_terms": [
+      "low shelving filter",
+      "low shelving"
+    ],
+    "text_fallback": "LOW SHELF",
+    "spoken_label": "low-shelf filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "sign-agnostic-low-shelf-side",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-050",
+      "claim": "Defines low shelf by the low-frequency side while signed shelf gain remains a separate parameter.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-051",
+      "claim": "Documents the related term low shelving filter and separate boost-or-cut behavior.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-052",
+      "claim": "Documents a compact Low Shelf type selector with gain, slope, and Q controlled separately.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-054",
+      "claim": "Documents an independent compact Low Shelf type selector without establishing shared geometry.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-057",
+      "claim": "Defines a lowshelf implementation token whose affected side is invariant across signed gain.",
+      "scope": "standards"
+    },
+    {
+      "source_id": "EV-060",
+      "claim": "Provides dated educational use of Low-shelf with a separate Boost/Cut value.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-063",
+      "claim": "Defines low shelf as boost or cut below cutoff and separates positive and negative illustrative states.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-064",
+      "claim": "Shows that response-curve orientation alone does not identify shelf side without gain context.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-065",
+      "claim": "Documents practitioner distinction between low shelf and high-pass filtering in prose.",
+      "scope": "community"
+    }
+  ],
+  "confidence": {
+    "level": "medium",
+    "rationale": "Affected-side semantics and full-name text communication are well supported, but compact cross-vendor glyph convergence, shelf-specific overlap review, and portable glyph use remain unresolved."
+  },
+  "open_questions": [
+    {
+      "question": "Should low shelving filter become an exact alias rather than a related term?",
+      "status": "open"
+    },
+    {
+      "question": "Do independent compact implementations converge on a reproducible sign-agnostic low-shelf primitive?",
+      "status": "open"
+    },
+    {
+      "question": "Which Unicode characters, sequences, and adjacent-standard symbols overlap or conflict with this concept?",
+      "status": "open"
+    }
+  ],
+  "notes": [
+    "The ASCII identifier is provisional until registry-accepted.",
+    "Boost versus attenuation, gain sign and amount, plateau placement, slope, order, Q, resonance, overshoot, implementation, and UI context are excluded from semantic identity.",
+    "Low cut is not an alias; it collides with the existing high-pass terminology boundary.",
+    "LS, LSF, bass shelf, and signed boost/cut names are not adopted as aliases or fallbacks.",
+    "The representative glyph concept does not accept or publish artwork."
+  ]
+}

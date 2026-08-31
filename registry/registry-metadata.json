@@ -3,23 +3,23 @@
   "registry": "Open Audio and Synthesis Symbol Registry",
   "artifacts": {
     "registry": {
-      "version": "0.1.7",
+      "version": "0.2.0",
       "status": "bootstrap",
       "includes": ["registry/symbols/", "evidence/ledger.json"]
     },
     "schema": {
-      "version": "0.3.0",
+      "version": "0.4.0",
       "entry_schema": "registry/schema/entry.schema.json",
       "evidence_ledger_schema": "registry/schema/evidence-ledger.schema.json"
     },
     "assessments": {
-      "version": "0.2.1",
+      "version": "0.3.0",
       "format_version": "0.2.0",
       "schema": "registry/schema/assessment-set.schema.json",
-      "current_snapshot": "registry/assessments/ledger-0.1.4-2026-08-29.json"
+      "current_snapshot": "registry/assessments/registry-0.2.0-2026-08-31.json"
     },
     "derived_analyses": {
-      "version": "0.1.1",
+      "version": "0.2.0",
       "format_version": "0.1.0",
       "schema": "registry/schema/derived-analysis-registry.schema.json",
       "index": "evidence/derived-analyses.json"
@@ -29,7 +29,7 @@
       "status": "not-published"
     },
     "tooling": {
-      "version": "0.4.0",
+      "version": "0.5.0",
       "package": "package.json"
     }
   },
