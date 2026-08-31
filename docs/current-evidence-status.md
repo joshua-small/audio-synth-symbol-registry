@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-30T17:37:18-07:00. This synthesis supersedes the historical [0.1.0 status synthesis](current-evidence-status-0.1.0.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-30T17:50:54-07:00. This synthesis supersedes the historical [0.2.0 status synthesis](current-evidence-status-0.2.0.md), which in turn superseded the [0.1.0 synthesis](current-evidence-status-0.1.0.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.0 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.1 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.0, format 0.2.0 | `registry/assessments/registry-0.2.0-2026-08-31.json` |
-| Derived analyses | 0.2.0, format 0.1.0 | `evidence/derived-analyses.json` |
+| Derived analyses | 0.2.1, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.5.0 | `package.json` |
 
 ## Current records
@@ -22,10 +22,10 @@ All six records remain `evidence-collecting`:
 | `asr:filter.low-pass` | 14/20 | Alias boundary and visual convergence |
 | `asr:filter.band-pass` | 13/20 | Independent target use and visual convergence |
 | `asr:filter.band-stop` | 10/20 | Notch boundary, fallback support, and visual convergence |
-| `asr:filter.low-shelf` | 14/20 | Shelf-specific overlap audit, visual convergence, six-way recognition, and shelving alias disposition |
-| `asr:filter.high-shelf` | 14/20 | Shelf-specific overlap audit, visual convergence, six-way recognition, and shelving alias disposition |
+| `asr:filter.low-shelf` | 14/20 | Visual convergence, six-way recognition, and shelving alias disposition |
+| `asr:filter.high-shelf` | 14/20 | Visual convergence, six-way recognition, and shelving alias disposition |
 
-Scores are readiness diagnostics, not status promotion. The shelf records meet the numerical candidate threshold but fail required dimension floors and retain material blockers. The four earlier records retain their independently reviewed 0.1.4 assessment conclusions inside the new six-record snapshot.
+Scores are readiness diagnostics, not status promotion. The shelf records meet the numerical candidate threshold but fail required dimension floors and retain material blockers. The scores come from the registry 0.2.0 assessment and predate DA-009; no score movement is inferred from completing the audit. The four earlier records retain their independently reviewed 0.1.4 assessment conclusions inside the six-record snapshot.
 
 ## Evidence synthesis
 
@@ -35,8 +35,9 @@ Scores are readiness diagnostics, not status promotion. The shelf records meet t
 - EV-065 preserves practical low-shelf versus high-pass distinction and a prose workaround.
 - The two-prong fork is original research geometry. It is not accepted artwork or evidence of an established portable glyph convention.
 - No sampled source establishes `LS`, `HS`, `LSF`, or `HSF` as a portable fallback. Full `LOW SHELF` and `HIGH SHELF` fallbacks avoid that overclaim.
+- EV-070 through EV-073 and DA-009 establish a bounded, reproducible shelf-specific Unicode and standards overlap audit. It found no semantic equivalent, while identifying phonetic `SHELF` false positives and representative fork, routing, mathematical, bracket, and OCR near-miss families.
 
-Derived reports DA-001 through DA-008 organize and constrain the direct evidence. They are not additional independent sources and are not double-counted in assessment scores.
+Derived reports DA-001 through DA-009 organize and constrain the direct evidence. They are not additional independent sources and are not double-counted in assessment scores.
 
 ## Current position
 
@@ -47,18 +48,17 @@ Derived reports DA-001 through DA-008 organize and constrain the direct evidence
 
 ## Next evidence work
 
-1. Complete a shelf-specific Unicode, character-sequence, visual-confusable, and adjacent-standard overlap audit.
+1. Reassess the shelf overlap dimension against DA-009 in a new immutable assessment without assuming score or status movement.
 2. Prepare a blinded six-way recognition comparison using original candidates, without recruitment until separately authorized.
 3. Test shelf/pass confusability and whether the two-prong topology communicates affected side without gain-sign priming.
 4. Run a dedicated terminology review before moving shelving forms from related terms into aliases.
 5. Continue searching for independently authored portable shelf-glyph use and real-world text-friction workarounds.
 
-## Agent Report - 2026-08-30T17:48:00-07:00
+## Agent Report - 2026-08-30T17:50:54-07:00
 
-- Report status: completed
-- Scope: superseding six-record evidence-status synthesis for registry 0.2.0.
-- Evidence: EV-001 through EV-065 as represented in the current ledger, with direct shelf findings concentrated in EV-050 through EV-057 and EV-060 through EV-065.
-- Derived inputs: DA-001 through DA-005, DA-007, and DA-008; none is counted as independent evidence.
-- Limitations: no new source search, overlap audit, recognition result, artwork decision, status promotion, or external position.
-- Validation: version and record assertions are covered by `tests/documentation-drift.test.mjs`; complete repository test results are reported in PR #62.
-- Independent review: passed after one correction cycle on PR #62; the reviewer verified the six-record documentation, both DA-006 digests and immutable paths, assessment lifecycle, and evidence boundaries.
+- Report status: in-progress
+- Scope: superseding six-record evidence-status synthesis for registry 0.2.1 after the shelf overlap audit.
+- Evidence: EV-001 through EV-073 as represented in the current ledger, with the new overlap inputs in EV-070 through EV-073.
+- Derived inputs: DA-001 through DA-005 and DA-007 through DA-009; none is counted as independent evidence.
+- Limitations: the existing scores predate DA-009; no reassessment, recognition result, artwork decision, status promotion, or external position is claimed.
+- Validation: version and record assertions are covered by `tests/documentation-drift.test.mjs`; complete repository validation and independent post-refresh review are required before merge.

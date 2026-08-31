@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.0",
+  "ledger_version": "0.2.1",
   "accessed_on": "2026-08-30",
   "sources": [
     {
@@ -926,6 +926,118 @@
           "checksum": null,
           "rights_basis": "The public W3C First Public Working Draft was lawfully observed and linked for evidence; no content is redistributed.",
           "limitations": "No source bytes were retained by the project; the linked W3C publication remains the authoritative source."
+        }
+      }
+    },
+    {
+      "id": "EV-070",
+      "type": "standards-reference",
+      "publisher": "W3C Music Notation Community Group",
+      "title": "SMuFL canonical glyph-name metadata",
+      "url": "https://github.com/w3c-cg/smufl/blob/14acb17a6a479036f38e337396ed605fc4197b23/metadata/glyphnames.json",
+      "publication_date": null,
+      "accessed_on": "2026-08-30",
+      "location": "metadata/glyphnames.json at commit 14acb17a6a479036f38e337396ed605fc4197b23; bounded key and description search",
+      "direct_observation": "A case-insensitive search of every canonical glyph key plus description for filter, shelf, equaliz, or frequency response produced no rows at the pinned commit.",
+      "interpretation": "The current canonical SMuFL glyph list does not supply a named low-shelf or high-shelf equivalent under the searched terms. This does not establish absence from optional font extensions, visually similar unrelated glyphs, or future SMuFL work.",
+      "rights_note": "Metadata is linked and mechanically searched; no SMuFL or font artwork is imported, copied, rendered, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T17:38:08-07:00",
+        "product": "Standard Music Font Layout",
+        "product_version": null,
+        "exact_locator": "metadata/glyphnames.json at Git commit 14acb17a6a479036f38e337396ed605fc4197b23",
+        "stable_fragment": "Git commit 14acb17a6a479036f38e337396ed605fc4197b23",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "cb72889c5f1fe470ac939a7f2c8c62f80b89e875d4eda8153027a372cb8ac531",
+            "scope": "Raw UTF-8 bytes of metadata/glyphnames.json at the pinned commit"
+          },
+          "rights_basis": "The public repository and immutable commit were lawfully inspected; the project records only metadata and a checksum and claims no redistribution right.",
+          "limitations": "The checksum verifies obtained bytes but the project does not retain or redistribute the file; optional glyphs and third-party font extensions were not searched."
+        }
+      }
+    },
+    {
+      "id": "EV-071",
+      "type": "standards-reference",
+      "publisher": "International Organization for Standardization and International Electrotechnical Commission",
+      "title": "ISO/IEC 10646:2020 catalogue entry",
+      "url": "https://www.iso.org/standard/76835.html",
+      "publication_date": "2020",
+      "accessed_on": "2026-08-30",
+      "location": "Public abstract and scope for the Universal Coded Character Set",
+      "direct_observation": "The public catalogue describes ISO/IEC 10646:2020 as defining graphic characters, their names, coded representations, private-use characters, and UTF-8, UTF-16, and UTF-32 encoding forms.",
+      "interpretation": "ISO/IEC 10646 is the relevant adjacent coded-character standard. Unicode's official synchronization documentation, not this catalogue abstract alone, supports applying the Unicode repertoire audit to synchronized UCS levels.",
+      "rights_note": "Public catalogue metadata is linked and summarized; no standards text, chart, or artwork is copied or retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T17:38:08-07:00",
+        "product": "ISO/IEC 10646",
+        "product_version": "2020",
+        "exact_locator": "ISO public catalogue page, abstract and scope bullets",
+        "stable_fragment": "ISO standard catalogue ID 76835",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public ISO catalogue was lawfully observed and linked; no redistribution right for the standard is claimed.",
+          "limitations": "Only public catalogue metadata was reviewed. The full standard and later amendments were not obtained or searched."
+        }
+      }
+    },
+    {
+      "id": "EV-072",
+      "type": "engineering-reference",
+      "publisher": "Frank Schultz, Nara Hahn, and Sascha Spors",
+      "title": "Shelving Filter Cascade with Adjustable Transition Slope and Bandwidth - AES 148 accompanying material",
+      "url": "https://github.com/spatialaudio/aes148-shelving-filter",
+      "publication_date": "2020",
+      "accessed_on": "2026-08-30",
+      "location": "README; paper identity, abstract, repository contents, and rendered-paper link for AES Convention Paper 10339",
+      "direct_observation": "The accompanying repository identifies AES Convention Paper 10339 and uses shelving filter, shelving level, transition slope, and transition bandwidth as engineering terminology. It presents response plots and equations, not a registered compact standalone shelf glyph.",
+      "interpretation": "This is AES-community technical usage of the concept, not an AES Standard, character encoding, symbol registry, or proof of a canonical low-shelf/high-shelf glyph.",
+      "rights_note": "Linked as engineering evidence. No paper figure, response plot, equation, typography, or artwork is copied, retained, or traced.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T17:38:08-07:00",
+        "product": "AES Convention Paper 10339 accompanying material",
+        "product_version": null,
+        "exact_locator": "Repository README > Paper, abstract summary, repository content, and copyright sections",
+        "stable_fragment": "GitHub repository spatialaudio/aes148-shelving-filter",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The authors' public repository was lawfully observed and linked; no content redistribution is required for this ledger entry.",
+          "limitations": "The repository is mutable and no source bytes were retained. A convention paper is not an AES Standard and cannot establish standards-body adoption."
+        }
+      }
+    },
+    {
+      "id": "EV-073",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Relationship to ISO/IEC 10646",
+      "url": "https://www.unicode.org/versions/Unicode16.0.0/core-spec/appendix-c/",
+      "publication_date": "2024",
+      "accessed_on": "2026-08-30",
+      "location": "Appendix C introduction and C.1.16 Unicode 16.0 synchronization statement",
+      "direct_observation": "The Unicode core specification states that synchronized Unicode and ISO/IEC 10646 version levels have identical character repertoires, encodings, and names; it identifies Unicode 16.0 as synchronized with ISO/IEC 10646:2020 plus Amendments 1 and 2.",
+      "interpretation": "A Unicode repertoire audit is relevant to ISO/IEC 10646 overlap at explicitly synchronized levels. This does not establish identity with a future amendment or replace review of differences in standards text.",
+      "rights_note": "Official public specification text is linked and summarized; no chart, page image, or artwork is copied or retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-30T17:38:08-07:00",
+        "product": "The Unicode Standard",
+        "product_version": "16.0.0",
+        "exact_locator": "Appendix C > Relationship to ISO/IEC 10646; C.1.16 Unicode 16.0",
+        "stable_fragment": "appendix-c / C.1.16",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The official public Unicode specification was lawfully observed and linked; no redistribution right is required for this metadata summary.",
+          "limitations": "The cited appendix documents synchronization through Unicode 16.0 and specified ISO/IEC 10646:2020 amendments; later levels require their own verification."
         }
       }
     }
