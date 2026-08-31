@@ -1,0 +1,4 @@
+{
+  "asr:filter.low-pass": "app://theme/filter-low-pass.svg",
+  "asr:filter.low-shelf": "app://theme/filter-low-shelf.svg"
+}

@@ -1,0 +1,11 @@
+{
+  "example": "mix-note exchange",
+  "non_normative": true,
+  "message": "On vocals, compare the low shelf with the high-pass filter; on the bus, compare the high shelf with the low-pass filter.",
+  "items": [
+    { "id": "asr:filter.low-shelf", "target": "vocals", "action": "compare" },
+    { "id": "asr:filter.high-pass", "target": "vocals", "action": "compare" },
+    { "id": "asr:filter.high-shelf", "target": "bus", "action": "compare" },
+    { "id": "asr:filter.low-pass", "target": "bus", "action": "compare" }
+  ]
+}

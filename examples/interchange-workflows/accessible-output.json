@@ -1,0 +1,12 @@
+{
+  "example": "accessible output",
+  "non_normative": true,
+  "items": [
+    { "id": "asr:filter.low-pass", "visible_text": "LPF", "speech": "low-pass filter" },
+    { "id": "asr:filter.high-pass", "visible_text": "HPF", "speech": "high-pass filter" },
+    { "id": "asr:filter.band-pass", "visible_text": "BPF", "speech": "band-pass filter" },
+    { "id": "asr:filter.band-stop", "visible_text": "BSF", "speech": "band-stop filter" },
+    { "id": "asr:filter.low-shelf", "visible_text": "LOW SHELF", "speech": "low-shelf filter" },
+    { "id": "asr:filter.high-shelf", "visible_text": "HIGH SHELF", "speech": "high-shelf filter" }
+  ]
+}

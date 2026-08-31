@@ -1,0 +1,11 @@
+{
+  "example": "structured metadata",
+  "non_normative": true,
+  "items": [
+    { "id": "asr:filter.high-pass", "frequency_hz": 80, "slope_db_per_octave": 12 },
+    { "id": "asr:filter.low-shelf", "frequency_hz": 120, "gain_db": -2.5 },
+    { "id": "asr:filter.low-shelf", "frequency_hz": 120, "gain_db": 2.5 },
+    { "id": "asr:filter.high-shelf", "frequency_hz": 8000, "gain_db": 1.5 }
+  ],
+  "note": "Parameters are application data, not registry semantics or a proposed wire schema."
+}
