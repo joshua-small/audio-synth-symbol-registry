@@ -1,6 +1,6 @@
 {
-  "ledger_version": "0.2.1",
-  "accessed_on": "2026-08-30",
+  "ledger_version": "0.2.2",
+  "accessed_on": "2026-08-31",
   "sources": [
     {
       "id": "EV-001",
@@ -1038,6 +1038,141 @@
           "checksum": null,
           "rights_basis": "The official public Unicode specification was lawfully observed and linked; no redistribution right is required for this metadata summary.",
           "limitations": "The cited appendix documents synchronization through Unicode 16.0 and specified ISO/IEC 10646:2020 amendments; later levels require their own verification."
+        }
+      }
+    },
+    {
+      "id": "EV-080",
+      "type": "community-discussion",
+      "publisher": "HifiGuides Forums",
+      "title": "IEM discussion thread (Part 1), page 415",
+      "url": "https://forum.hifiguides.com/t/iem-discussion-thread-part-1/14641?page=415",
+      "publication_date": "2023-06-20",
+      "accessed_on": "2026-08-31",
+      "location": "Posts 8334 through 8341, dated 2023-06-20",
+      "direct_observation": "During a screenshot-based EQ-profile exchange, a participant asks whether LSQ means low shelf and asks how Q differs from BW. Another participant confirms the expansion and supplies a screenshot-led guide, which the questioner describes as useful step-by-step help.",
+      "interpretation": "This is record-specific low-shelf text friction: an implementation abbreviation is not self-explanatory, and participants fall back to screenshots and expanded prose. It does not establish LSQ as a portable shelf-response character or prove that a new glyph would encode the other parameters.",
+      "rights_note": "Linked public discussion only; no screenshot, attachment, avatar, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T16:20:00-07:00",
+        "product": "Neutron Music Player",
+        "product_version": null,
+        "exact_locator": "Page 415, posts 8334 through 8341",
+        "stable_fragment": "Topic ID 14641, page 415",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Forum content and attachments are mutable; no source bytes were retained, and one discussion cannot establish broad convention."
+        }
+      }
+    },
+    {
+      "id": "EV-081",
+      "type": "community-discussion",
+      "publisher": "WiiM Community Forum",
+      "title": "How to PEQ: From graph to filter",
+      "url": "https://forum.wiimhome.com/threads/how-to-peq-from-graph-to-filter.6669/",
+      "publication_date": "2025-03-04",
+      "accessed_on": "2026-08-31",
+      "location": "Initial post and replies 1 through 5 dated 2025-03-04",
+      "direct_observation": "A participant attaches a target response graph after unsuccessfully trying HS, LS, and PK with dB and Q values. Replies suggest a low shelf only as an approximation, explain that the desired falling tail cannot be reproduced exactly, and note that the application's displayed shelving Q may not match its behavior.",
+      "interpretation": "This is low-shelf image dependence and lossy parameter/prose approximation for an instantiated response. The case also shows that a shelf-type token alone would not communicate the desired corner, gain, Q, and falling-tail behavior.",
+      "rights_note": "Linked public discussion only; no attachment, graph, screenshot, avatar, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T16:20:00-07:00",
+        "product": "WiiM Home",
+        "product_version": null,
+        "exact_locator": "Thread posts 1 through 5 dated 2025-03-04",
+        "stable_fragment": "Thread ID 6669",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Forum content and attachments are mutable; no source bytes were retained, and the target response is more specific than the low-shelf type."
+        }
+      }
+    },
+    {
+      "id": "EV-082",
+      "type": "community-discussion",
+      "publisher": "Logic Pro Help",
+      "title": "Definition? High-pass and high-shelf",
+      "url": "https://www.logicprohelp.com/forums/topic/33587-definition-high-pass-and-high-shelf/",
+      "publication_date": "2009-03-05",
+      "accessed_on": "2026-08-31",
+      "location": "Initial question and replies dated 2009-03-05 through 2009-03-06",
+      "direct_observation": "A participant asks for the difference between high-pass and high-shelf filters. Replies explain the distinction in prose and with two response images; the participant says the explanation is helpful and that they will retain screenshots of the images.",
+      "interpretation": "This is record-specific high-shelf semantic ambiguity resolved by expanded prose and image retention. It does not show a compact high-shelf glyph used in portable plain text.",
+      "rights_note": "Linked public discussion only; no response image, screenshot, avatar, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T16:20:00-07:00",
+        "product": "Logic Pro",
+        "product_version": null,
+        "exact_locator": "Initial question and featured replies dated 2009-03-05 through 2009-03-06",
+        "stable_fragment": "Topic ID 33587",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Forum content and images are mutable; no source bytes were retained, and concept-learning friction does not establish character demand."
+        }
+      }
+    },
+    {
+      "id": "EV-083",
+      "type": "community-workaround",
+      "publisher": "HomeRecording.com",
+      "title": "EQ confused",
+      "url": "https://homerecording.com/bbs/threads/eq-confused.429200/",
+      "publication_date": "2024-10-20",
+      "accessed_on": "2026-08-31",
+      "location": "Page 1, posts 1 through 20 dated 2024-10-20 through 2024-10-21",
+      "direct_observation": "A participant asks what a high shelf at a stated frequency affects and continues to misinterpret several text explanations. Other participants add response images distinguishing high-shelf boost and low-shelf cut, the questioner adds a hardware screenshot, and later replies map the device's Hi-F, Hi-G, Lo-F, and Lo-G controls to the two shelf sides.",
+      "interpretation": "This single artifact supplies record-specific friction for both low shelf and high shelf: prose alone remains lossy until response images and product context are added. It counts as one independent publisher for each record, not as multiple sources, and it does not establish portable glyph use.",
+      "rights_note": "Linked public discussion only; no response image, hardware screenshot, attachment, avatar, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T16:20:00-07:00",
+        "product": "Tascam DP-008EX",
+        "product_version": null,
+        "exact_locator": "Page 1, posts 1 through 20",
+        "stable_fragment": "Thread ID 429200",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Forum content and attachments are mutable; no source bytes were retained, and the prolonged misunderstanding is one user's experience rather than a population measure."
+        }
+      }
+    },
+    {
+      "id": "EV-084",
+      "type": "community-discussion",
+      "publisher": "Reddit r/WeAreTheMusicMakers",
+      "title": "What does it mean to high shelf or low shelf guitars in a mix?",
+      "url": "https://www.reddit.com/r/WeAreTheMusicMakers/comments/3xwb2c/what_does_it_mean_to_high_shelf_or_low_shelf/",
+      "publication_date": "2015-12-22",
+      "accessed_on": "2026-08-31",
+      "location": "Initial post and first two displayed comments dated 2015-12-22",
+      "direct_observation": "A participant reports encountering low-shelf and high-shelf technique names in videos without explanation and asks what they mean. The first displayed comment explains both sides and both gain signs with ordinary terms and numeric examples; a second displayed comment says a picture helps for a more specific reciprocal response and links an illustration.",
+      "interpretation": "This supplies semantic-friction evidence for both shelf records while also preserving counterevidence: expanded prose and numeric parameters communicate the basic concepts adequately, and an image becomes useful when a more specific response is intended. It is not portable-glyph evidence.",
+      "rights_note": "Linked public discussion only; no linked illustration, avatar, or long quotation is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T16:20:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Initial post and first two displayed comments, dated 2015-12-22",
+        "stable_fragment": "Reddit post ID 3xwb2c",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Reddit content and outbound images are mutable; no source bytes were retained, and adequate prose weakens any claim that a glyph is universally necessary."
         }
       }
     }
