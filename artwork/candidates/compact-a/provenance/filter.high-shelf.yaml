@@ -1,0 +1,55 @@
+schema_version: "0.1.0"
+asset_id: "asr-art:compact-a.filter.high-shelf"
+record_id: "asr:filter.high-shelf"
+asset_path: "artwork/candidates/compact-a/svg/filter.high-shelf.svg"
+asset_status: "draft"
+artwork_version: "0.0.0"
+created_at: "2026-08-30T16:04:31-07:00"
+created_by:
+  - name: "Codex subagent /root/refine_six_fork"
+    role: "original geometry author"
+  - name: "Codex subagent /root/integrate_fork_a"
+    role: "draft-family integrator"
+authorization:
+  source: "Joshua Small, interactive project chat, 2026-08-30"
+  scope: "select smooth two-prong Fork A for the active six-member draft candidate package"
+  excludes: "geometry lock, study-ready status, artwork acceptance, public release, recruitment, and study launch"
+originality:
+  statement: >
+    This SVG was authored from abstract shelf-side and sign-neutrality
+    constraints. No third-party artwork was copied, traced, reconstructed, or
+    used as source geometry.
+  prohibited_source_material_used: false
+  reference_sources: []
+construction:
+  description: "One neutral low-frequency-side segment forks smoothly into two parallel high-frequency-side levels."
+  family_constants: "24-unit square; 2.25-unit currentColor stroke; round endpoints and joins; 3-unit margins; 6-unit and 18-unit qualitative levels."
+tools:
+  - name: "repository text editor"
+    use: "Original path authoring and integration"
+  - name: "repository SVG validator and Sharp renderer"
+    use: "Validation and deterministic render QA"
+license: "CC0-1.0"
+semantic_constraints:
+  axis_bearing_form: "illustrative-only"
+  encoded_properties: ["affected frequency side"]
+  excluded_properties: ["boost", "cut", "gain magnitude", "axes", "gain baseline", "frequency values", "cutoff", "slope", "Q", "bandwidth", "interaction state"]
+accessibility:
+  canonical_name: "High-shelf filter"
+  spoken_label: "high-shelf filter"
+  title_present: true
+  description_present: true
+validation:
+  svg_syntax: "passed"
+  external_resources: "passed"
+  source_sha256: "d7ddb71527ed3f655d9e146f227986977a92c4894fdb5112a9820d56e58544bf"
+  qa_manifest: "artwork/candidates/compact-a/review/filter.high-shelf/manifest.json"
+  size_review_px: [16, 20, 24, 32, 64]
+  contrast_host_review: "pending human review"
+review:
+  independent_agent_review: "passed, PR #61, 2026-08-30"
+  human_candidate_selection: "approved for active draft comparison, 2026-08-30"
+  human_artwork_lock: "exact source SHA-256 locked for blinded study-package construction, 2026-08-30"
+  human_study_ready_authorization: "pending"
+  human_artwork_acceptance: "pending"
+  decision_log_entry: "D-018, D-019"

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc">
+  <title id="title">Band-stop filter</title>
+  <desc id="desc">Draft compact response silhouette for a band-stop filter.</desc>
+  <path d="M3 6 C7 6 7 18 12 18 C17 18 17 6 21 6" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

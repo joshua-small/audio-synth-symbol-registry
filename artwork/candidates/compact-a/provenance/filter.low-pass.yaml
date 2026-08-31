@@ -1,0 +1,52 @@
+schema_version: "0.1.0"
+asset_id: "asr-art:compact-a.filter.low-pass"
+record_id: "asr:filter.low-pass"
+asset_path: "artwork/candidates/compact-a/svg/filter.low-pass.svg"
+asset_status: "draft"
+artwork_version: "0.0.0"
+created_at: "2026-08-30T00:19:40-07:00"
+created_by:
+  - name: "Codex subagent /root/glyph_family_compact"
+    role: "original geometry author"
+authorization:
+  source: "Joshua Small, interactive project chat"
+  scope: "create original candidate graphics for human review"
+  excludes: "selection, study-ready status, acceptance, recruitment, and study launch"
+originality:
+  statement: >
+    This SVG was created directly from the repository's qualitative semantic
+    brief. No third-party artwork was copied, traced, reconstructed, or used
+    as source geometry.
+  prohibited_source_material_used: false
+  reference_sources: []
+construction:
+  description: "An open falling response path with separated low and high regions and one smooth transition, vertically paired with high-pass over the same horizontal range."
+  family_constants: "24-unit square; 2.25-unit currentColor stroke; round endpoints and joins; 3-unit margins; 6-unit and 18-unit qualitative levels."
+tools:
+  - name: "repository text editor"
+    use: "Original path authoring"
+  - name: "repository SVG validator and Sharp renderer"
+    use: "Validation and deterministic render QA"
+license: "CC0-1.0"
+semantic_constraints:
+  axis_bearing_form: "illustrative-only"
+  encoded_properties: ["filter response class"]
+  excluded_properties: ["axes", "gain baseline", "frequency values", "slope", "bandwidth", "resonance", "interaction state"]
+accessibility:
+  canonical_name: "Low-pass filter"
+  spoken_label: "low-pass filter"
+  title_present: true
+  description_present: true
+validation:
+  svg_syntax: "passed"
+  external_resources: "passed"
+  source_sha256: "e80d153a3f5bcaac016663579fef4bc93ea4d8659e4637ef445655710aa4ce2f"
+  qa_manifest: "artwork/candidates/compact-a/review/filter.low-pass/manifest.json"
+  size_review_px: [16, 20, 24, 32, 64]
+  contrast_host_review: "pending human review"
+review:
+  independent_agent_review: "passed, PR #61, 2026-08-30"
+  human_candidate_selection: "approved in six-member compact-a family, 2026-08-30"
+  human_artwork_lock: "exact source SHA-256 locked for blinded study-package construction, 2026-08-30"
+  human_artwork_acceptance: "pending"
+  decision_log_entry: "D-019"

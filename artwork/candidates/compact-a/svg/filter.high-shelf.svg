@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc">
+  <title id="title">High-shelf filter draft candidate</title>
+  <desc id="desc">Sign-agnostic high-frequency-side two-prong shelf marker.</desc>
+  <path d="M3 12 H11 C14 12 15 6 17 6 H21 M11 12 C14 12 15 18 17 18 H21" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

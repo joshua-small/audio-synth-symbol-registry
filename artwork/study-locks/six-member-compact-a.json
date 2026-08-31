@@ -1,0 +1,20 @@
+{
+  "lock_schema_version": "0.1.0",
+  "lock_id": "six-member-compact-a-2026-08-30",
+  "authorized_at": "2026-08-30T21:22:42-07:00",
+  "authorized_by": "@joshua-small",
+  "authorization_source": "interactive project chat responding to HR-001 in PR #61",
+  "purpose": "blinded-study-package-construction",
+  "asset_status": "draft",
+  "assets": [
+    { "record_id": "asr:filter.high-pass", "path": "artwork/candidates/compact-a/svg/filter.high-pass.svg", "sha256": "7c24850dec29378b65b98e773843fe9f0a2cf1c63bea951acc0bec087e7eabc4" },
+    { "record_id": "asr:filter.low-pass", "path": "artwork/candidates/compact-a/svg/filter.low-pass.svg", "sha256": "e80d153a3f5bcaac016663579fef4bc93ea4d8659e4637ef445655710aa4ce2f" },
+    { "record_id": "asr:filter.band-pass", "path": "artwork/candidates/compact-a/svg/filter.band-pass.svg", "sha256": "30422a1bf1ba4e6fd44a88f8449839c2e84846087d27c54bb7d3805c8d1d44d9" },
+    { "record_id": "asr:filter.band-stop", "path": "artwork/candidates/compact-a/svg/filter.band-stop.svg", "sha256": "a3a95dd236fc30544548a33c87da5323c2a142057c9bd0cb8c3552d366013292" },
+    { "record_id": "asr:filter.low-shelf", "path": "artwork/candidates/compact-a/svg/filter.low-shelf.svg", "sha256": "0bb19d4a3a75aa219059897166c6bd02163255ced11709c86703b3edf444eabc" },
+    { "record_id": "asr:filter.high-shelf", "path": "artwork/candidates/compact-a/svg/filter.high-shelf.svg", "sha256": "d7ddb71527ed3f655d9e146f227986977a92c4894fdb5112a9820d56e58544bf" }
+  ],
+  "selected_shelf_topology": "smooth-two-prong-fork-a",
+  "excluded_from_lock": ["fork-b-shouldered", "three-prong shelf", "baseline-bearing shelf"],
+  "does_not_authorize": ["study-ready status", "artwork acceptance", "participant recruitment", "participant incentives", "study launch", "publication", "release", "external outreach"]
+}

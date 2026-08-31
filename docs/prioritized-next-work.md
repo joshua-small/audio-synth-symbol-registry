@@ -12,7 +12,7 @@ The current queue is aligned with registry metadata 0.2.2.
 | Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
 | Six-record reassessment | Completed in Issue #64 | Preserve the 17/20 shelf diagnostics and all six `evidence-collecting` statuses until new evidence warrants another assessment. |
-| Six-member draft artwork | Human Review blocked in [Issue #58](https://github.com/joshua-small/audio-synth-symbol-registry/issues/58) and draft [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Await explicit geometry lock or revision; lock does not authorize study-ready status, recruitment, launch, acceptance, or publication. |
+| Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Bind only the exact lock-manifest hashes to blinded package inputs; study-ready status, recruitment, launch, acceptance, publication, release, and outreach remain unauthorized. |
 | Study-stimulus infrastructure | Routine infrastructure completed; umbrella [Issue #28](https://github.com/joshua-small/audio-synth-symbol-registry/issues/28) remains open | Preserve completed PR #31 and PR #46 work; remaining candidate and study actions follow the existing gates. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
@@ -34,7 +34,7 @@ This is mechanical assessment work only. Do not transfer notch evidence to band-
 
 ### 3. Prepare a blinded six-way study package after geometry lock
 
-Once the owner explicitly locks the six geometries, bind the locked hashes to the existing opaque-token packaging and protocol inputs. If revisions are requested, implement, review, and obtain a later explicit lock before binding any revised hash. Verify shelf/pass negative controls and two-prong affected-side recognition without gain-sign priming.
+Bind the six hashes in `artwork/study-locks/six-member-compact-a.json` to the existing opaque-token packaging and protocol inputs. Any geometry revision requires a new explicit lock before replacement. Verify shelf/pass negative controls and two-prong affected-side recognition without gain-sign priming.
 
 Geometry lock is the dependency, not authorization for `study-ready`, recruitment, incentives, launch, artwork acceptance, or publication. Those remain separate gates.
 
