@@ -154,7 +154,7 @@
         {"code": "unresolved-counterevidence", "description": "A shelf-specific Unicode and adjacent-standard overlap audit is absent.", "status": "open"}
       ],
       "result": {"recommended_status": "evidence-collecting", "eligible": false, "failed_requirements": ["Visual convergence score is below 2.", "Overlap audit score is below 2.", "Material visual, alias, and overlap questions remain open."], "rationale": "The semantic and accessible text layers warrant an evidence-collecting record, but a numerical total of 14 cannot overcome unmet dimension floors and open blockers."},
-      "review": {"independent_agent_review": "not-requested", "public_review_days": 0, "public_review_reference": null},
+      "review": {"independent_agent_review": "passed", "public_review_days": 0, "public_review_reference": null},
       "human_review": {"required": false, "authorization_status": "not-required", "authorization_reference": null}
     },
     {
@@ -184,7 +184,7 @@
         {"code": "unresolved-counterevidence", "description": "A shelf-specific Unicode and adjacent-standard overlap audit is absent.", "status": "open"}
       ],
       "result": {"recommended_status": "evidence-collecting", "eligible": false, "failed_requirements": ["Visual convergence score is below 2.", "Overlap audit score is below 2.", "Material visual, alias, and overlap questions remain open."], "rationale": "The semantic and accessible text layers warrant an evidence-collecting record, but a numerical total of 14 cannot overcome unmet dimension floors and open blockers."},
-      "review": {"independent_agent_review": "not-requested", "public_review_days": 0, "public_review_reference": null},
+      "review": {"independent_agent_review": "passed", "public_review_days": 0, "public_review_reference": null},
       "human_review": {"required": false, "authorization_status": "not-required", "authorization_reference": null}
     }
   ]
