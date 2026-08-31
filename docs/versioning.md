@@ -44,6 +44,8 @@ Registry 0.2.0 adds the provisional low-shelf and high-shelf records. Schema 0.4
 
 Assessments 0.3.1 adds an immutable post-evidence six-record snapshot using the unchanged 0.2.0 assessment format. Derived analyses 0.2.3 adds the corresponding current-status synthesis. Registry data remains 0.2.2 because the reassessment adds no ledger entry or live-record change.
 
+Tooling 0.6.0 adds backwards-compatible package schema 0.2.0 for exact binding of the six locked draft hashes, deterministic blind-derivative construction, six-way choice/control validation, and private provenance commitments. Package schema 0.1.0 remains readable. This does not bump or release artwork: artwork remains 0.0.0, unpublished, noncanonical, and draft.
+
 ## Compatibility rules
 
 - MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.

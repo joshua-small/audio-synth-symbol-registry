@@ -1,0 +1,59 @@
+{
+  "binding_schema_version": "0.1.0",
+  "construction_status": "construction-only",
+  "source_commit": "4ad8ec92477a938355df06bc943a57372c7f3438",
+  "repository_root": "../..",
+  "candidate_family_id": "compact-a",
+  "artwork_metadata_path": "artwork/metadata.json",
+  "lock_manifest_path": "artwork/study-locks/six-member-compact-a.json",
+  "assets": [
+    {
+      "record_id": "asr:filter.high-pass",
+      "asset_id": "asr-art:compact-a.filter.high-pass",
+      "source_path": "artwork/candidates/compact-a/svg/filter.high-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.high-pass.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.high-pass/manifest.json",
+      "source_sha256": "7c24850dec29378b65b98e773843fe9f0a2cf1c63bea951acc0bec087e7eabc4"
+    },
+    {
+      "record_id": "asr:filter.low-pass",
+      "asset_id": "asr-art:compact-a.filter.low-pass",
+      "source_path": "artwork/candidates/compact-a/svg/filter.low-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.low-pass.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.low-pass/manifest.json",
+      "source_sha256": "e80d153a3f5bcaac016663579fef4bc93ea4d8659e4637ef445655710aa4ce2f"
+    },
+    {
+      "record_id": "asr:filter.band-pass",
+      "asset_id": "asr-art:compact-a.filter.band-pass",
+      "source_path": "artwork/candidates/compact-a/svg/filter.band-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.band-pass.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.band-pass/manifest.json",
+      "source_sha256": "30422a1bf1ba4e6fd44a88f8449839c2e84846087d27c54bb7d3805c8d1d44d9"
+    },
+    {
+      "record_id": "asr:filter.band-stop",
+      "asset_id": "asr-art:compact-a.filter.band-stop",
+      "source_path": "artwork/candidates/compact-a/svg/filter.band-stop.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.band-stop.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.band-stop/manifest.json",
+      "source_sha256": "a3a95dd236fc30544548a33c87da5323c2a142057c9bd0cb8c3552d366013292"
+    },
+    {
+      "record_id": "asr:filter.low-shelf",
+      "asset_id": "asr-art:compact-a.filter.low-shelf",
+      "source_path": "artwork/candidates/compact-a/svg/filter.low-shelf.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.low-shelf.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.low-shelf/manifest.json",
+      "source_sha256": "0bb19d4a3a75aa219059897166c6bd02163255ced11709c86703b3edf444eabc"
+    },
+    {
+      "record_id": "asr:filter.high-shelf",
+      "asset_id": "asr-art:compact-a.filter.high-shelf",
+      "source_path": "artwork/candidates/compact-a/svg/filter.high-shelf.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.high-shelf.yaml",
+      "qa_manifest_path": "artwork/candidates/compact-a/review/filter.high-shelf/manifest.json",
+      "source_sha256": "d7ddb71527ed3f655d9e146f227986977a92c4894fdb5112a9820d56e58544bf"
+    }
+  ]
+}

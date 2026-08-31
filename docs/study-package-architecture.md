@@ -2,17 +2,17 @@
 
 ## Scope
 
-This scaffold packages already reviewed blind SVG derivatives for the recognition-study protocol. It does not generate geometry, designate an asset `study-ready`, accept artwork, launch a study, recruit participants, or publish results.
+This scaffold packages reviewed and explicitly hash-locked draft SVGs into deterministic blind derivatives for the recognition-study protocol. Geometry lock authorizes construction only. It does not designate an asset `study-ready`, accept artwork, launch a study, recruit participants, or publish results.
 
 The geometry and artistic parameters remain a Human Review boundary. Keeping those decisions outside the packager prevents a deterministic implementation detail from becoming an accidental artwork specification.
 
 ## Inputs and outputs
 
-The input plan is local, unpublished working material. It contains:
+Package schema 0.2.0 binds the six locked `compact-a` drafts through [`studies/six-member-compact-a-binding.json`](studies/six-member-compact-a-binding.json). The binding joins the lock manifest, artwork metadata, provenance declarations, QA manifests, and exact source bytes at lock-establishing commit `4ad8ec92477a938355df06bc943a57372c7f3438`. The input plan is local, unpublished working material. It contains:
 
 - a study ID and cryptographically generated secret randomization seed of at least 32 bytes;
 - the requested number of deterministic randomized forms;
-- a registry record ID and blind SVG path for each stimulus;
+- a registry record ID plus the expected locked asset ID and source SHA-256 for each stimulus;
 - terms that must not occur in the blind derivative; and
 - forced-choice IDs and participant-facing labels.
 
@@ -33,55 +33,28 @@ new-package/
     answer-key.json
 ```
 
-Only `public/` is suitable for a participant-facing delivery system. `private/answer-key.json` contains record mappings and the seed and must not be served to participants. The packager requests owner-only permissions for the private directory and answer key, but operational access control and platform-specific permission verification remain the study operator's responsibility.
+Only `public/` could later be used by a participant-facing delivery system; construction does not authorize serving it. `private/answer-key.json` contains record mappings and the seed and must not be served to participants. The packager requests owner-only permissions for the private directory and answer key, but operational access control and platform-specific permission verification remain the study operator's responsibility.
 
 ## Reproducibility and blinding
 
 - Opaque stimulus tokens are HMAC-SHA-256 derivations of the local seed and record ID.
 - Stimulus and choice orders are deterministic HMAC-derived sorts scoped by form and stimulus.
-- Every copied SVG has an exact SHA-256 digest in both manifests.
+- Every blind derivative has an exact SHA-256 digest in both manifests; its locked source digest remains private.
+- Schema 0.2.0 validates each source against all repository authorities, then creates a deterministic blind derivative from the retained source buffer by removing answer-bearing title, description, role, and ARIA metadata.
 - The exact byte buffer checked for forbidden terms and hashed is retained in memory and written to the package; the source path is not re-read after validation.
 - Re-running the same plan and inputs produces the same manifests and asset names.
-- The tool rejects a blind SVG containing its registry ID or any configured forbidden term.
+- The tool rejects a blind SVG containing its registry ID or any configured forbidden term. Participant-facing choice labels are intentionally present only in the forced-choice table, never in stimulus filenames, descriptors, or SVG bytes.
 - The tool refuses to write into an existing output directory, reducing accidental replacement of a locked package.
 
 The seed must be unpredictable and remain private until collection closes and the initial blinded coding is locked. A memorable phrase that merely satisfies the length check is not sufficient. If the seed or a record-to-token mapping is disclosed early, opaque tokens no longer preserve blinding.
 
 The leakage check is defense in depth, not proof of blinding. Before launch, an independent reviewer must inspect filenames, SVG elements and metadata, the public manifest, the rendered form, HTTP metadata, surrounding UI, and browser accessibility output. A blind derivative may omit semantic accessible text only inside the controlled visual-recognition instrument; it does not replace the accessible source SVG or the canonical text and speech alternatives.
 
-## Input example
+## Construction input
 
-This shape-free example intentionally names no artwork paths that exist in the repository:
+Use [`studies/six-way-construction-plan.template.json`](studies/six-way-construction-plan.template.json). Replace its conspicuous seed placeholder only in a private local instance; do not commit a real seed or generated package. The template fixes the neutral prompt, exact eight choices, sign-agnostic affected-side target, and six directed confusion pairs. Gain sign, gain magnitude, a 0 dB baseline, and upper/lower-branch framing are prohibited from participant-facing text.
 
-```json
-{
-  "study_id": "formative-pilot-v1",
-  "randomization_seed": "generate-at-least-32-random-bytes-and-store-privately",
-  "form_count": 12,
-  "stimuli": [
-    {
-      "record_id": "asr:filter.high-pass",
-      "blind_svg_path": "local-blind-derivatives/high-pass.svg",
-      "forbidden_terms": ["high-pass", "high pass", "HPF", "low cut"]
-    },
-    {
-      "record_id": "asr:filter.low-pass",
-      "blind_svg_path": "local-blind-derivatives/low-pass.svg",
-      "forbidden_terms": ["low-pass", "low pass", "LPF", "high cut"]
-    }
-  ],
-  "forced_choices": [
-    { "id": "high-pass", "label": "High-pass filter" },
-    { "id": "low-pass", "label": "Low-pass filter" },
-    { "id": "band-pass", "label": "Band-pass filter" },
-    { "id": "band-stop", "label": "Band-stop filter" },
-    { "id": "none", "label": "None of these" },
-    { "id": "unknown", "label": "I do not know" }
-  ]
-}
-```
-
-The example is incomplete as a launch plan because it includes only two stimuli. It demonstrates the packaging contract without proposing geometry or marking anything study-ready.
+Package schema 0.1.0 remains supported for generic historical fixtures, but it does not assert a repository artwork lock.
 
 ## Accessibility boundary
 
@@ -91,7 +64,7 @@ People who cannot access the visual stimulus must not be treated as incorrect re
 
 ## Pre-launch verification
 
-1. Confirm each source asset has complete provenance and an authorized `study-ready` state.
+1. For construction, confirm each source asset has complete provenance and matches the authorized draft geometry lock. Before serving anything, obtain separate `study-ready` authorization.
 2. Generate and retain the plan and private answer key outside the participant-serving tree.
 3. Verify copied asset hashes against the locked stimulus hashes.
 4. Inspect the full public tree for semantic names, IDs, source paths, comments, metadata, and answer-key material.
@@ -103,7 +76,7 @@ People who cannot access the visual stimulus must not be treated as incorrect re
 ## Explicit omissions
 
 - No SVG geometry generator or geometric parameters.
-- No canonical, draft, or study-ready artwork files.
+- No canonical or study-ready artwork files; the 0.2.0 binding consumes only the six authorized locked drafts and emits blind construction derivatives.
 - No provenance claim for future artwork.
 - No participant identifiers, response storage, analytics, consent collection, incentives, or recruitment integration.
 - No claim of ISO 9186 conformance.

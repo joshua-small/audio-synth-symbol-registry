@@ -13,7 +13,7 @@ The current queue is aligned with registry metadata 0.2.2.
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
 | Six-record reassessment | Completed in Issue #64 | Preserve the 17/20 shelf diagnostics and all six `evidence-collecting` statuses until new evidence warrants another assessment. |
 | Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Bind only the exact lock-manifest hashes to blinded package inputs; study-ready status, recruitment, launch, acceptance, publication, release, and outreach remain unauthorized. |
-| Study-stimulus infrastructure | Routine infrastructure completed; umbrella [Issue #28](https://github.com/joshua-small/audio-synth-symbol-registry/issues/28) remains open | Preserve completed PR #31 and PR #46 work; remaining candidate and study actions follow the existing gates. |
+| Study-stimulus infrastructure | Locked six-way construction binding implemented under [Issue #71](https://github.com/joshua-small/audio-synth-symbol-registry/issues/71) | Preserve opaque packaging and exact hashes; study-ready status and every operational study action remain gated. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
@@ -32,9 +32,9 @@ The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.
 
 This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record. If a score reaches a threshold, report the unmet floors and blockers and open a separate Human Review question only if promotion is actually recommended.
 
-### 3. Prepare a blinded six-way study package after geometry lock
+### 3. Review construction package before any operational study work
 
-Bind the six hashes in `artwork/study-locks/six-member-compact-a.json` to the existing opaque-token packaging and protocol inputs. Any geometry revision requires a new explicit lock before replacement. Verify shelf/pass negative controls and two-prong affected-side recognition without gain-sign priming.
+The six hashes in `artwork/study-locks/six-member-compact-a.json` are bound to opaque-token packaging and protocol inputs. Any geometry revision requires a new explicit lock before replacement. The next action is an independent prelaunch leakage, rendering, accessibility, and protocol review followed by a separate Human Review question for `study-ready` status.
 
 Geometry lock is the dependency, not authorization for `study-ready`, recruitment, incentives, launch, artwork acceptance, or publication. Those remain separate gates.
 

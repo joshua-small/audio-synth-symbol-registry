@@ -28,8 +28,9 @@ For each glyph:
 1. Can target-audience participants identify the intended response class from the glyph alone?
 2. Which wrong meanings are systematically inferred?
 3. Do participants distinguish high-pass from low-pass and band-pass from band-stop?
-4. Does an axis-less treatment communicate the documented semantic identity without importing an undocumented parameter?
-5. Does the geometry need revision, supplementary text, or rejection?
+4. Do participants distinguish low shelf from high shelf and each shelf from its directed adjacent pass-response control?
+5. Does an axis-less treatment communicate the documented semantic identity without importing an undocumented parameter?
+6. Does the geometry need revision, supplementary text, or rejection?
 
 ## Preconditions
 
@@ -77,14 +78,16 @@ Serve each stimulus under an opaque random token. The blind study MAY use a stat
 
 ### Stimuli
 
-The initial study may test:
+The construction-stage six-way instrument contains:
 
 - High-pass filter
 - Low-pass filter
 - Band-pass filter
 - Band-stop filter
+- Low-shelf filter
+- High-shelf filter
 
-Present monochrome, axis-less glyphs without axes, labels, numbers, color coding, surrounding controls, or product context.
+Present monochrome, axis-less glyphs without axes, labels, numbers, color coding, surrounding controls, or product context. Shelf items test only the affected frequency side. Prompts must not prime boost, cut, gain sign, gain magnitude, a 0 dB baseline, or upper/lower branches.
 
 Each participant sees every tested glyph once in randomized order. Do not provide feedback between items. Randomize forced-choice order.
 
@@ -97,8 +100,8 @@ For each stimulus, in this order:
    - Response: Free text plus "I do not know."
 
 2. **Forced recognition**
-   - Prompt: "Which response is the best match for this symbol?"
-   - Choices: High-pass filter, low-pass filter, band-pass filter, band-stop filter, none of these, I do not know.
+   - Prompt: "Which filter response is the best match?"
+   - Choices: High-pass filter, low-pass filter, band-pass filter, band-stop filter, low-shelf filter, high-shelf filter, none of these, I do not know.
    - Randomize choice order.
 
 3. **Confidence**
@@ -123,6 +126,10 @@ A free-text response is correct only if it identifies the intended response clas
 | Low-pass | low-pass, low pass, high cut, LPF | "cuts lows", "high-pass" |
 | Band-pass | band-pass, band pass, BPF | "notch", "band-stop" |
 | Band-stop | band-stop, band stop, band-reject | "notch" until an approved record decision establishes exact equivalence |
+| Low shelf | low shelf, low-shelf filter | low cut, LS, LSF, boost, cut |
+| High shelf | high shelf, high-shelf filter | high cut, HS, HSF, boost, cut |
+
+Record the six preregistered directed confusions separately: low shelf to high pass; high shelf to low pass; high pass to low shelf; low pass to high shelf; band pass to band stop; and band stop to band pass. A shelf answer's inferred boost/cut polarity is not the scoring target.
 
 Do not broaden correct responses after viewing results. Preserve ambiguous and uncategorizable responses. Report scorer agreement and resolve disagreement by a third blinded scorer or documented consensus.
 
