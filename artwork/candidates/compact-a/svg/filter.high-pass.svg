@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc">
+  <title id="title">High-pass filter</title>
+  <desc id="desc">Draft compact response silhouette for a high-pass filter.</desc>
+  <path d="M3 18 H8 C10 18 14 6 16 6 H21" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

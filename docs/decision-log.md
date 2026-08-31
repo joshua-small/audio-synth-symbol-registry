@@ -206,3 +206,27 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Defer records; use shelving IDs; encode signed boost/cut states; adopt abbreviations; or promote the original two-prong artwork.
 - Consequences: Registry 0.2.0 adds two provisional semantic records and schema 0.4.0 adds only their two representation-concept enum values. No artwork is accepted, no status is promoted, and no Unicode or external-standard position changes.
 - Revisit trigger: Dedicated terminology, overlap, recognition, or usage research materially changes the semantic or representation boundary.
+
+## D-018: Smooth two-prong shelf draft selection
+
+- Date: 2026-08-30T17:36:39-07:00
+- Status: Accepted for active draft comparison
+- Owner: @joshua-small
+- Decision: Integrate the smooth two-prong Fork A low-shelf and high-shelf geometry into the active six-member `compact-a` draft package. Preserve the original four compact candidates exactly. Exclude Fork B and every three-prong/baseline-bearing shelf alternative from the active package.
+- Evidence: Owner authorization in interactive project chat after reviewing the Fork A and Fork B contact sheets; bounded comparison preserved at commit `ef767192`.
+- Counterevidence or objections: Axis-less shelf forks may be confused with routing, split, merge, or crossover marks, and no recognition study has yet established six-way discrimination.
+- Alternatives considered: Fork B's shouldered construction, three-prong/baseline-bearing treatments, or retaining shelves only as experiments.
+- Consequences: Fork A becomes active draft material only. Geometry is not locked; artwork is not `study-ready`, accepted, canonical, published, or released; recruitment and study launch remain unauthorized.
+- Revisit trigger: Independent package review, human render review, recognition results, or new evidence supports revision or rejection.
+
+## D-019: Six-member geometry lock for study-package construction
+
+- Date: 2026-08-30T21:22:42-07:00
+- Status: Accepted
+- Owner: @joshua-small
+- Decision: Lock the exact SHA-256 hashes of the four `compact-a` response silhouettes and the smooth two-prong Fork A low-shelf and high-shelf silhouettes for blinded study-package construction.
+- Evidence: Owner authorization in interactive project chat responding to HR-001 in PR #61; original provenance declarations; deterministic SVG validation and render QA; independent package-integrity review recorded on PR #61.
+- Counterevidence or objections: Six-way recognition remains untested, axis-less shelves remain potentially underdetermined, and fork forms may be confused with routing, split, merge, or crossover symbols.
+- Alternatives considered: Revise one or more geometries before locking; retain four members; use Fork B; or use a three-prong/baseline-bearing shelf form.
+- Consequences: The six exact files listed in `artwork/study-locks/six-member-compact-a.json` may be bound to opaque-token study-package inputs. Smooth two-prong Fork A remains selected; Fork B and three-prong/baseline-bearing forms remain excluded. This decision does not mark artwork `study-ready` or accepted; authorize recruitment, incentives, launch, publication, release, or external outreach; promote any record; or change a Unicode or external-standard position.
+- Revisit trigger: Any locked SVG byte changes, review finds a material defect, or recognition evidence contradicts the selected family.

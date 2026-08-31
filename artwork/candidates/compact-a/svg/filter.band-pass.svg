@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title desc">
+  <title id="title">Band-pass filter</title>
+  <desc id="desc">Draft compact response silhouette for a band-pass filter.</desc>
+  <path d="M3 18 C7 18 7 6 12 6 C17 6 17 18 21 18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

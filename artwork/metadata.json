@@ -1,0 +1,63 @@
+{
+  "metadata_schema_version": "0.1.0",
+  "artwork_version": "0.0.0",
+  "publication_status": "unpublished",
+  "canonical_assets": [],
+  "draft_candidates": [
+    {
+      "asset_id": "asr-art:compact-a.filter.high-pass",
+      "record_id": "asr:filter.high-pass",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.high-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.high-pass.yaml",
+      "asset_status": "draft"
+    },
+    {
+      "asset_id": "asr-art:compact-a.filter.low-pass",
+      "record_id": "asr:filter.low-pass",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.low-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.low-pass.yaml",
+      "asset_status": "draft"
+    },
+    {
+      "asset_id": "asr-art:compact-a.filter.band-pass",
+      "record_id": "asr:filter.band-pass",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.band-pass.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.band-pass.yaml",
+      "asset_status": "draft"
+    },
+    {
+      "asset_id": "asr-art:compact-a.filter.band-stop",
+      "record_id": "asr:filter.band-stop",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.band-stop.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.band-stop.yaml",
+      "asset_status": "draft"
+    },
+    {
+      "asset_id": "asr-art:compact-a.filter.low-shelf",
+      "record_id": "asr:filter.low-shelf",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.low-shelf.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.low-shelf.yaml",
+      "asset_status": "draft"
+    },
+    {
+      "asset_id": "asr-art:compact-a.filter.high-shelf",
+      "record_id": "asr:filter.high-shelf",
+      "candidate_family_id": "compact-a",
+      "candidate_path": "artwork/candidates/compact-a/svg/filter.high-shelf.svg",
+      "provenance_path": "artwork/candidates/compact-a/provenance/filter.high-shelf.yaml",
+      "asset_status": "draft"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "candidate_family_id": "compact-a",
+      "path": "artwork/candidates/compact-a/review/contact-sheet.png",
+      "sha256": "0108361afa6c21c6efd2a40c141c745766d32346ddc714047fe6604f0168cdca"
+    }
+  ]
+}
