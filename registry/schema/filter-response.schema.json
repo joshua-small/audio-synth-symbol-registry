@@ -21,7 +21,9 @@
                 "axis-less-high-pass-response",
                 "axis-less-low-pass-response",
                 "axis-less-band-pass-response",
-                "axis-less-band-stop-response"
+                "axis-less-band-stop-response",
+                "sign-agnostic-low-shelf-side",
+                "sign-agnostic-high-shelf-side"
               ]
             }
           }

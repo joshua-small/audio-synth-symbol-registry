@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.4.0",
+  "id": "asr:filter.high-shelf",
+  "name": "High-shelf filter",
+  "status": "evidence-collecting",
+  "semantics": {
+    "category": "filter-response",
+    "definition": "A filter response that applies a signed gain difference to the high-frequency side of a transition region relative to the low-frequency side, with both sides approaching plateaus.",
+    "aliases": [],
+    "related_terms": [
+      "high shelving filter",
+      "high shelving"
+    ],
+    "text_fallback": "HIGH SHELF",
+    "spoken_label": "high-shelf filter"
+  },
+  "representations": {
+    "representative_glyph_concept": "sign-agnostic-high-shelf-side",
+    "axis_bearing_form": "illustrative-only",
+    "asset_status": "not-yet-drawn"
+  },
+  "unicode": {
+    "status": "not-submitted",
+    "existing_unicode_mapping": null
+  },
+  "evidence": [
+    {
+      "source_id": "EV-050",
+      "claim": "Defines high shelf by the high-frequency side while signed shelf gain remains a separate parameter and documents a hybrid product counterexample.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-051",
+      "claim": "Documents the related term high shelving filter and separate boost-or-cut behavior.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-052",
+      "claim": "Documents a compact High Shelf type selector with gain, slope, and Q controlled separately.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-054",
+      "claim": "Documents an independent compact High Shelf type selector without establishing shared geometry.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-057",
+      "claim": "Defines a highshelf implementation token whose affected side is invariant across signed gain.",
+      "scope": "standards"
+    },
+    {
+      "source_id": "EV-060",
+      "claim": "Provides dated educational use of High-shelf with a separate Boost/Cut value.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-063",
+      "claim": "Defines high shelf as boost or cut above cutoff and separates positive and negative illustrative states.",
+      "scope": "education"
+    },
+    {
+      "source_id": "EV-064",
+      "claim": "Shows that response-curve orientation alone does not identify shelf side without gain context.",
+      "scope": "education"
+    }
+  ],
+  "confidence": {
+    "level": "medium",
+    "rationale": "Affected-side semantics and full-name text communication are well supported, but compact cross-vendor glyph convergence, shelf-specific overlap review, and portable glyph use remain unresolved."
+  },
+  "open_questions": [
+    {
+      "question": "Should high shelving filter become an exact alias rather than a related term?",
+      "status": "open"
+    },
+    {
+      "question": "Do independent compact implementations converge on a reproducible sign-agnostic high-shelf primitive?",
+      "status": "open"
+    },
+    {
+      "question": "Which Unicode characters, sequences, and adjacent-standard symbols overlap or conflict with this concept?",
+      "status": "open"
+    }
+  ],
+  "notes": [
+    "The ASCII identifier is provisional until registry-accepted.",
+    "Boost versus attenuation, gain sign and amount, plateau placement, slope, order, Q, resonance, overshoot, implementation, and UI context are excluded from semantic identity.",
+    "High cut is not an alias; it collides with the existing low-pass terminology boundary.",
+    "HS, HSF, treble shelf, and signed boost/cut names are not adopted as aliases or fallbacks.",
+    "The representative glyph concept does not accept or publish artwork."
+  ]
+}

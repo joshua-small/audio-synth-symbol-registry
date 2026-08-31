@@ -4,9 +4,9 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 ## Status
 
-Registry release: **0.1.7**\
-Schema release: **0.3.0**\
-Tooling release: **0.4.0**\
+Registry release: **0.2.0**\
+Schema release: **0.4.0**\
+Tooling release: **0.5.0**\
 Artwork release: **not yet published**  
 Standards status: **Unicode preparatory research only. No submission has been made.**
 
@@ -14,16 +14,18 @@ The project begins with a reviewable semantic registry and evidence corpus. It d
 
 ## Initial scope
 
-The initial research set is deliberately narrow:
+The active research set is deliberately narrow:
 
 - High-pass filter
 - Low-pass filter
 - Band-pass filter
 - Band-stop filter
+- Low-shelf filter
+- High-shelf filter
 
 These are candidate semantic entries, not proposed Unicode characters. A compact axis-less response curve may be documented as a representative rendering. Axis-bearing response graphs are illustrative variants unless evidence establishes a distinct semantic need.
 
-Potential later work includes shelving, bell/peak, all-pass, tilt, waveform, routing, dynamics, polarity, phantom power, and other audio or synthesis symbol families. Each requires separate evidence review.
+Potential later work includes bell/peak, all-pass, tilt, waveform, routing, dynamics, polarity, phantom power, and other audio or synthesis symbol families. Each requires separate evidence review.
 
 ## Interchange model
 
@@ -37,7 +39,7 @@ Speech: high-pass filter
 
 An `asr:` identifier is provisional while a record is `evidence-collecting` or `registry-candidate`. It becomes permanent at `registry-accepted`. The identifier and text fallback are portable. A rendered glyph is optional and must not carry undefined semantic information.
 
-See the [experimental interchange prototype](docs/interchange-prototype.md) for a runnable demonstration using the four current records.
+See the [experimental interchange prototype](docs/interchange-prototype.md) for a runnable demonstration using all six current records.
 
 ## What this is not
 
