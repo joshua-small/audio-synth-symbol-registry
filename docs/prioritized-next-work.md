@@ -32,19 +32,13 @@ The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.
 
 This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record. If a score reaches a threshold, report the unmet floors and blockers and open a separate Human Review question only if promotion is actually recommended.
 
-### 3. Exercise six-record interchange workflows
-
-Extend repository-owned examples to cover a mix-note exchange, issue report, structured metadata, accessible output, and shelf/pass distinctions. Measure round-trip ID preservation, fallback behavior, verbosity, discoverability, unknown IDs, absent assets, speech/text mismatch, character count, and model-specific token count where reproducible.
-
-Keep the resolver experimental and repository-local. Do not promise a stable payload, add PUA assignments, publish a font, deploy telemetry, or claim external adoption.
-
-### 4. Prepare a blinded six-way study package after geometry lock
+### 3. Prepare a blinded six-way study package after geometry lock
 
 Once the owner explicitly locks the six geometries, bind the locked hashes to the existing opaque-token packaging and protocol inputs. If revisions are requested, implement, review, and obtain a later explicit lock before binding any revised hash. Verify shelf/pass negative controls and two-prong affected-side recognition without gain-sign priming.
 
 Geometry lock is the dependency, not authorization for `study-ready`, recruitment, incentives, launch, artwork acceptance, or publication. Those remain separate gates.
 
-### 5. Maintain adjacent-path research without outreach
+### 4. Maintain adjacent-path research without outreach
 
 Keep the registry as the shared semantic source for later AES, ISO/IEC, SMuFL, Unicode, font, emoji, and future-family decisions. Refresh mutable primary guidance only when a bounded internal decision needs it. Continue to treat Unicode as `HOLD` and emoji as out of the active path on current evidence.
 
@@ -52,6 +46,7 @@ No external contact, submission, endorsement request, fork publication, new sema
 
 ## Completed or superseded queue items
 
+- Six-record interchange workflow exercise: completed in Issue #69 with repository-owned fixtures, deterministic tests, character counts, and explicit discovery and unknown-ID limitations; no token count was claimed without a pinned model/tokenizer.
 - Four-record reassessment and evidence lifecycle: completed through PRs #47 and #62; the current six-record snapshot is authoritative.
 - Recognition-study infrastructure: completed through PRs #31 and #40, with SVG validation/render QA completed in PR #46.
 - Earlier representation, historical, terminology, vendor, education, journalism, and community spikes: incorporated through PRs #24, #42, #44, #47, and #51 through #54.

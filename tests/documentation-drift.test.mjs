@@ -18,7 +18,7 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   const records = await Promise.all(symbolFiles.filter((file) => file.endsWith(".json"))
     .map((file) => readJson(`registry/symbols/${file}`)));
   const reassessmentSection = roadmap.split("### 2. Maintain the six-record assessment lifecycle")[1]
-    ?.split("### 3. Exercise six-record interchange workflows")[0] ?? "";
+    ?.split("### 3. Prepare a blinded six-way study package after geometry lock")[0] ?? "";
 
   for (const record of records) {
     assert.ok(prototype.includes(`| \`${record.id}\``), `prototype omits ${record.id}`);

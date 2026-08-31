@@ -1,0 +1,9 @@
+{
+  "example": "issue report",
+  "non_normative": true,
+  "summary": "Band controls rendered without accessible names.",
+  "items": [
+    { "id": "asr:filter.band-pass", "observed": "asset missing", "expected": "text and speech remain available" },
+    { "id": "asr:filter.band-stop", "observed": "asset missing", "expected": "text and speech remain available" }
+  ]
+}

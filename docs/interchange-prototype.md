@@ -67,6 +67,8 @@ npm run interchange -- --asset-map ./asset-map.json asr:filter.low-pass
 
 Unknown IDs, malformed asset maps, missing option values, and unsupported formats fail explicitly. No glyph substitution is attempted.
 
+The [six-record workflow exercise](interchange-workflow-exercise.md) applies the resolver to non-normative mix-note, issue-report, structured-metadata, accessible-output, and partial-asset examples. It records measured behavior and limitations without proposing a stable protocol.
+
 ## Boundaries
 
 - No PUA value or Unicode lookalike is canonical interchange.
