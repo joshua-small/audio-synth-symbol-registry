@@ -1,6 +1,6 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T18:24:06-07:00. This synthesis supersedes the historical [0.2.2 status synthesis](current-evidence-status-0.2.2.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-31T16:20:00-07:00. This synthesis supersedes the historical [0.2.1 status synthesis](current-evidence-status-0.2.1.md), which in turn superseded the [0.2.0 synthesis](current-evidence-status-0.2.0.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
 
 ## Current artifacts
 
@@ -8,8 +8,8 @@ Status as of 2026-08-31T18:24:06-07:00. This synthesis supersedes the historical
 | --- | --- | --- |
 | Registry and evidence ledger | 0.2.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
-| Assessments | 0.3.1, format 0.2.0 | `registry/assessments/registry-0.2.2-2026-08-31.json` |
-| Derived analyses | 0.2.3, format 0.1.0 | `evidence/derived-analyses.json` |
+| Assessments | 0.3.0, format 0.2.0 | `registry/assessments/registry-0.2.0-2026-08-31.json` |
+| Derived analyses | 0.2.2, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.5.0 | `package.json` |
 
 ## Current records
@@ -22,10 +22,10 @@ All six records remain `evidence-collecting`:
 | `asr:filter.low-pass` | 14/20 | Alias boundary and visual convergence |
 | `asr:filter.band-pass` | 13/20 | Independent target use and visual convergence |
 | `asr:filter.band-stop` | 10/20 | Notch boundary, fallback support, and visual convergence |
-| `asr:filter.low-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
-| `asr:filter.high-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
+| `asr:filter.low-shelf` | 14/20 | Visual convergence, six-way recognition, and shelving alias disposition |
+| `asr:filter.high-shelf` | 14/20 | Visual convergence, six-way recognition, and shelving alias disposition |
 
-Scores are readiness diagnostics, not status promotion. DA-009 mechanically raises each shelf overlap-audit dimension from 0 to 3 and each total from 14 to 17. Both shelf records still fail the visual-convergence floor and retain material research questions. DA-010 does not change the text/accessibility score: it preserves one qualifying new friction artifact per shelf and adequate-prose counterevidence, leaving the project's three-independent-source safeguard open. The four earlier records are reproduced unchanged in the new six-record snapshot.
+Scores are readiness diagnostics, not status promotion. The shelf records meet the numerical candidate threshold but fail required dimension floors and retain material blockers. The scores come from the registry 0.2.0 assessment and predate DA-009 and DA-010; no score movement is inferred from completing either analysis. The four earlier records retain their independently reviewed 0.1.4 assessment conclusions inside the six-record snapshot.
 
 ## Evidence synthesis
 
@@ -49,19 +49,19 @@ Derived reports DA-001 through DA-010 organize and constrain the direct evidence
 
 ## Next evidence work
 
-1. Prepare a blinded six-way recognition comparison using original candidates, without recruitment until separately authorized.
-2. Continue the bounded search for independently authored, record-specific plain-text friction and portable shelf-symbol use.
+1. Reassess the shelf overlap and text-friction dimensions against DA-009 and DA-010 in a new immutable assessment without assuming score or status movement.
+2. Prepare a blinded six-way recognition comparison using original candidates, without recruitment until separately authorized.
 3. Test shelf/pass confusability and whether the two-prong topology communicates affected side without gain-sign priming.
 4. Run a dedicated terminology review before moving shelving forms from related terms into aliases.
 5. Continue searching for independently authored portable shelf-glyph use and real-world text-friction workarounds.
 
-## Agent Report - 2026-08-31T18:24:06-07:00
+## Agent Report - 2026-08-31T16:20:00-07:00
 
 - Report status: completed
-- Scope: patch-level reassessment synthesis for all six live records after the shelf overlap audit and shelf text-friction search.
+- Scope: patch-level update of the six-record evidence-status synthesis for registry 0.2.2 after the shelf overlap audit and shelf text-friction search.
 - Evidence: EV-001 through EV-084 as represented in the current ledger, including the overlap inputs EV-070 through EV-073 and friction inputs EV-080 through EV-084.
 - Derived inputs: DA-001 through DA-005 and DA-007 through DA-010; none is counted as independent evidence.
-- Result: DA-009 raises each shelf overlap score from 0 to 3 and total from 14 to 17; DA-010 leaves the three-source friction safeguard open. All six statuses remain `evidence-collecting`.
-- Limitations: no semantic, alias, identifier, artwork, study, status, outreach, release, or external-position change.
-- Validation: `npm test` passed 86/86 tests; registry validation reported six records, five assessment sets, and 62 evidence sources at registry 0.2.2; `git diff --check` passed.
-- Independent review: passed after adverse review removed stale overlap-audit-absent blockers and added a regression guard against their recurrence.
+- Result: only EV-083 qualifies as a new workaround case for each shelf record, so both per-record three-source safeguards remain open and all six record statuses remain unchanged.
+- Limitations: no reassessment, recognition result, artwork decision, status promotion, outreach, or external-position change.
+- Validation: `npm test` passed 85/85 tests; registry validation reported six records, four assessment sets, and 62 evidence sources at registry 0.2.2; `git diff --check` passed.
+- Independent review: passed after adverse review corrected qualification inflation, source locators, query reproducibility, immutable derived-analysis provenance, documentation drift, and report metadata.

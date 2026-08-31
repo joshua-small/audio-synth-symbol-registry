@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.2",
+  "registry_version": "0.2.3",
   "artifacts": [
     {
       "id": "DA-001",
@@ -463,7 +463,7 @@
       "id": "DA-006",
       "version": "0.2.2",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.2.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T16:20:00-07:00",
       "content_sha256": "5d21c86e34efb1238f24df85431b458afa29391e2627ea3bd3771681e4a745d7",
@@ -599,6 +599,33 @@
       "scope": "Bounded per-record search for low-shelf and high-shelf ambiguous, lossy, image-dependent, or other workaround-dependent text communication.",
       "limitations": [
         "The English-language sample is not a census; this search does not clear the per-record numerical safeguard, and clearing it in future would not itself establish portable-glyph practice or Unicode readiness."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.3",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T18:24:06-07:00",
+      "content_sha256": "c3c657a1ce8b6ce2338dc4a76dfcad72cfd226b43b5c42f2750e4f38f3602b1e",
+      "input_evidence_ids": [
+        "EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013", "EV-014", "EV-015", "EV-016", "EV-017", "EV-018", "EV-019", "EV-020", "EV-021", "EV-022", "EV-023", "EV-024", "EV-025", "EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032", "EV-033", "EV-034", "EV-035", "EV-036", "EV-037", "EV-038", "EV-039", "EV-050", "EV-051", "EV-052", "EV-053", "EV-054", "EV-055", "EV-056", "EV-057", "EV-060", "EV-061", "EV-062", "EV-063", "EV-064", "EV-065", "EV-070", "EV-071", "EV-072", "EV-073", "EV-080", "EV-081", "EV-082", "EV-083", "EV-084"
+      ],
+      "input_artifact_refs": [
+        { "artifact_id": "DA-001", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-002", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-003", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-004", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-005", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-007", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-008", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-009", "artifact_version": "0.1.0" },
+        { "artifact_id": "DA-010", "artifact_version": "0.1.0" }
+      ],
+      "scope": "Post-evidence six-record status synthesis after mechanical shelf overlap reassessment, without semantic or status movement.",
+      "limitations": [
+        "The shelf plain-text-friction safeguard remains open, and the reassessment does not establish recognition, artwork acceptance, external support, or Unicode readiness."
       ]
     }
   ]
