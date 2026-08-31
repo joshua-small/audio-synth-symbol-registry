@@ -230,3 +230,15 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Revise one or more geometries before locking; retain four members; use Fork B; or use a three-prong/baseline-bearing shelf form.
 - Consequences: The six exact files listed in `artwork/study-locks/six-member-compact-a.json` may be bound to opaque-token study-package inputs. Smooth two-prong Fork A remains selected; Fork B and three-prong/baseline-bearing forms remain excluded. This decision does not mark artwork `study-ready` or accepted; authorize recruitment, incentives, launch, publication, release, or external outreach; promote any record; or change a Unicode or external-standard position.
 - Revisit trigger: Any locked SVG byte changes, review finds a material defect, or recognition evidence contradicts the selected family.
+
+## D-020: Private construction-validation instance
+
+- Date: 2026-08-31T07:37:38-07:00
+- Status: Authorized and completed
+- Owner: @joshua-small
+- Decision: Authorize one private, non-operational construction-validation instance against exact repository commit `8ee4680d62c00e1c768eea2830f53cd6096c3c8f`. Permit a cryptographically random private seed, a local blinded package, hash and leakage checks, verification of all 12 randomized forms, static rendering, and accessibility-boundary inspection.
+- Evidence: Owner authorization in interactive project chat responding to HR-002 on Issue #28; commitment-only findings in [`docs/studies/construction-validation-2026-08-31.md`](studies/construction-validation-2026-08-31.md).
+- Counterevidence or objections: The construction package has no participant-facing runtime. Keyboard, focus, zoom, error, resume, submission, HTTP metadata, and browser accessibility-tree behavior therefore remain untested. Static validation does not establish human recognition or artwork acceptance.
+- Alternatives considered: Stop after fixture tests; expose the private package for review; or treat construction checks as sufficient for `study-ready` status. The first supplies weaker exact-instance evidence, and the latter two would violate the approved boundary.
+- Consequences: The private seed, answer key, source-to-token mappings, and answer-bearing package remain outside git and GitHub. Only cryptographic commitments and non-sensitive aggregate results are recorded. No `study-ready` status, participant access, recruitment, privacy or consent terms, retention, incentives or spending, launch, publication, artwork acceptance, release, outreach, or standards action is authorized.
+- Revisit trigger: A new construction instance is requested, any committed input changes, a commitment cannot be reproduced from the retained private material, or a separately authorized offline runtime exposes a material defect.
