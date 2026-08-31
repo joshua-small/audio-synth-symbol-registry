@@ -1,115 +1,78 @@
 # Prioritized next work
 
-Status as of 2026-08-29, after work merged through PR #24. This queue converts remaining evidence and prototype gaps into bounded work packages. It does not authorize status promotion, artwork selection, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-08-30T17:56:00-07:00, after work merged through PR #63. This queue covers all six live records and separates routine work from unresolved Human Review gates. It does not authorize status promotion, artwork lock or acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-## Queue
+## Current dependency map
 
-### 1. Reassess against evidence ledger 0.1.3
+| Lane | State | Dependency or next action |
+| --- | --- | --- |
+| Provisional shelf records | Completed in [PR #62](https://github.com/joshua-small/audio-synth-symbol-registry/pull/62) | Preserve six `evidence-collecting` records and D-017 boundaries. |
+| Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
+| Shelf text-friction search | In progress in [Issue #60](https://github.com/joshua-small/audio-synth-symbol-registry/issues/60) | Preserve negative and excluded findings; do not claim the threshold unless the record-specific evidence satisfies it. |
+| Six-member draft artwork | Human Review blocked in [Issue #58](https://github.com/joshua-small/audio-synth-symbol-registry/issues/58) and draft [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Await explicit geometry lock or revision; lock does not authorize study-ready status, recruitment, launch, acceptance, or publication. |
+| Study-stimulus infrastructure | Routine infrastructure completed; umbrella [Issue #28](https://github.com/joshua-small/audio-synth-symbol-registry/issues/28) remains open | Preserve completed PR #31 and PR #46 work; remaining candidate and study actions follow the existing gates. |
+| Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
-**Question:** How do the band-stop/notch boundary evidence, historical manual sample, and completed overlap audit affect the four records under the adopted rubric?
+## Active queue
 
-**Deliverables:**
+### 1. Complete the shelf text-friction lane
 
-- One immutable assessment snapshot keyed to evidence ledger 0.1.3.
-- Per-dimension citations and explicit dispositions for new evidence.
-- A comparison with the 0.1.1 snapshot that distinguishes score movement from status movement.
+Finish the bounded text-friction search with reproducible locators, explicit exclusions, direct-versus-derived evidence separation, and independent review. A negative text-friction result is valid and must not be upgraded to satisfy an attractive hypothesis.
 
-**Bounds and completion test:**
+Completion requires the lane to be based on the current six-record registry and merged shelf overlap evidence, pass the complete repository test suite, carry timestamped Agent Reports, and merge without changing semantics, aliases, identifiers, statuses, artwork, or external positions.
 
-- Do not change semantics, names, aliases, IDs, or record status in the assessment PR.
-- Do not transfer notch evidence to band-stop unless an existing durable decision permits the exact claim.
-- Complete when all citations validate, arithmetic is reproducible, and an independent reviewer verifies the rubric application.
-- If a score reaches a promotion threshold, report it as a separate possible Human Review item; do not promote within this package.
+### 2. Reassess all six records after the evidence lanes merge
 
-### 2. Prepare recognition-study infrastructure
+Create one immutable assessment snapshot against the resulting registry/evidence version. Apply the adopted rubric to `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`; cite each new evidence disposition and compare it with the current snapshot.
 
-**Question:** Can the adopted protocol be made reproducible before any visual stimulus or participant decision is requested?
+This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record. If a score reaches a threshold, report the unmet floors and blockers and open a separate Human Review question only if promotion is actually recommended.
 
-**Deliverables:**
+### 3. Exercise six-record interchange workflows
 
-- Versioned study-instrument text using opaque stimulus tokens.
-- Machine-readable response, exclusion, scoring-key, and aggregate-result schemas or templates.
-- Analysis tooling and synthetic fixtures for Wilson intervals, confusion matrices, scorer agreement, exclusions, and threshold classification.
-- A preregistration checklist that identifies the exact later Human Review inputs.
+Extend repository-owned examples to cover a mix-note exchange, issue report, structured metadata, accessible output, and shelf/pass distinctions. Measure round-trip ID preservation, fallback behavior, verbosity, discoverability, unknown IDs, absent assets, speech/text mismatch, character count, and model-specific token count where reproducible.
 
-**Bounds and completion test:**
+Keep the resolver experimental and repository-local. Do not promise a stable payload, add PUA assignments, publish a font, deploy telemetry, or claim external adoption.
 
-- Use synthetic data only.
-- Do not create, select, lock, or describe canonical geometry in this package.
-- Do not recruit participants, publish a participant call, choose incentives, or launch a study.
-- Complete when deterministic fixtures cover strong-support, revise, inconclusive, and invalid-input paths and an independent reviewer can reproduce the results.
+### 4. Prepare a blinded six-way study package after geometry lock
 
-This package is routine preparation. The existing Human Review gate remains at artwork/stimulus approval and study recruitment or launch.
+Once the owner explicitly locks the six geometries, bind the locked hashes to the existing opaque-token packaging and protocol inputs. If revisions are requested, implement, review, and obtain a later explicit lock before binding any revised hash. Verify shelf/pass negative controls and two-prong affected-side recognition without gain-sign priming.
 
-### 3. Run a per-record text-friction follow-up
+Geometry lock is the dependency, not authorization for `study-ready`, recruitment, incentives, launch, artwork acceptance, or publication. Those remain separate gates.
 
-**Question:** Can band-pass and band-stop each obtain record-specific examples of ambiguous, lossy, image-dependent, or custom-font-dependent text communication?
+### 5. Maintain adjacent-path research without outreach
 
-**Deliverables:**
+Keep the registry as the shared semantic source for later AES, ISO/IEC, SMuFL, Unicode, font, emoji, and future-family decisions. Refresh mutable primary guidance only when a bounded internal decision needs it. Continue to treat Unicode as `HOLD` and emoji as out of the active path on current evidence.
 
-- A bounded query log covering manufacturer support, education, journalism, issue trackers, and user communities.
-- Direct artifacts assigned to a record only when the artifact supports that record's semantics.
-- Negative findings and excluded false matches, especially notch-only artifacts that cannot be assigned to band-stop.
+No external contact, submission, endorsement request, fork publication, new semantic family, or project position is authorized by this lane.
 
-**Bounds and completion test:**
+## Completed or superseded queue items
 
-- Time-box the pass and report a negative result honestly.
-- Do not count UI presence, ordinary abbreviations, or a graph alone as a workaround.
-- Complete when each candidate is reproducible and independently reviewed, whether or not the three-example threshold is met.
+- Four-record reassessment and evidence lifecycle: completed through PRs #47 and #62; the current six-record snapshot is authoritative.
+- Recognition-study infrastructure: completed through PRs #31 and #40, with SVG validation/render QA completed in PR #46.
+- Earlier representation, historical, terminology, vendor, education, journalism, and community spikes: incorporated through PRs #24, #42, #44, #47, and #51 through #54.
+- Synergistic application mapping: completed in [PR #32](https://github.com/joshua-small/audio-synth-symbol-registry/pull/32); future external action remains gated.
+- The obsolete four-record evidence-status [PR #15](https://github.com/joshua-small/audio-synth-symbol-registry/pull/15) was closed without merge as superseded by `docs/current-evidence-status.md`.
 
-### 4. Exercise the interchange prototype
+## Human Review boundaries
 
-**Question:** Does the experimental `asr:`-ID resolver reduce ambiguity in realistic repository-owned text workflows?
+The summary below highlights project-specific gates and does not replace or narrow the complete gate list in [AGENTS.md](../AGENTS.md). Pause when work reaches any AGENTS.md gate, including:
 
-**Deliverables:**
+- selecting, revising, or locking study geometry;
+- marking artwork `study-ready` or `accepted`;
+- authorizing participant recruitment, incentives, privacy/consent terms, study launch, or publication;
+- changing scope, semantics, canonical names, aliases, identifiers, or record status;
+- adopting an external position or contacting a standards body, vendor, font project, educator, journalist, or user community;
+- publishing a release, declaring a protocol stable, or creating a compatibility promise.
+- changing licensing, contributor agreements, copyright, trademarks, third-party reuse, governance, security boundaries, credentials, spending, destructive actions, or account access;
+- resolving materially ambiguous, undocumented, contradicted, or unresolved behavior affecting semantics or interoperability.
 
-- Small examples for a mix-note exchange, an issue report, structured metadata, and accessible rendering.
-- Tests for round-trip ID preservation and fallback behavior.
-- A failure log covering verbosity, discoverability, unknown IDs, asset absence, and speech/text mismatch.
+After a gate is resolved, record the authorization and continue under D-014 until the next real gate.
 
-**Bounds and completion test:**
+## Agent Report - 2026-08-30T17:56:00-07:00
 
-- Keep the prototype experimental and repository-local.
-- Do not declare its JSON shape, asset references, CLI, or output formats stable.
-- Do not add PUA assignments, a font, canonical artwork, telemetry, or external deployment.
-- Complete when examples are executable, tests pass, and findings are separated from adoption claims.
-
-### 5. Map synergistic future paths
-
-**Question:** Which adjacent paths could reuse the registry's evidence without conflating their acceptance rules?
-
-**Deliverables:**
-
-- A comparison of Unicode symbol encoding, ISO/IEC or AES industry standardization, emoji suitability, SMuFL or icon-community collaboration, open-source font work, and expansion to other industry-specific glyph families.
-- For each path: governing body or community, current authoritative guidance, required evidence, likely contribution artifact, rights constraints, outreach gate, and stop condition.
-- A recommended sequencing map that preserves the registry as the shared semantic source.
-
-**Bounds and completion test:**
-
-- Research only: no contact, submission, endorsement request, fork publication, or project position.
-- Prefer current primary guidance and date every mutable source check.
-- Keep future symbol families outside the initial four-record scope.
-- Complete when each path has a source-backed entry, explicit non-equivalences, and independent review.
-
-## Deferred Human Review inputs
-
-No current queue item needs an immediate owner decision. Pause later when work reaches one of these existing gates:
-
-- selecting or locking study geometry;
-- authorizing participant recruitment, incentives, privacy/consent terms, or study launch;
-- changing semantics, aliases, identifiers, status, or accepted artwork;
-- adopting an external position or contacting a standards body, vendor, font project, or community;
-- publishing a release or declaring a protocol stable.
-
-## Agent Report - 2026-08-29T23:21:04-07:00
-
-- Scope: converted the post-PR-24 gaps into five ordered, independently reviewable work packages.
-- Prioritization: placed evidence-corpus reassessment first, non-gated study infrastructure second, record-specific text-friction research third, prototype exercises fourth, and broader opportunity mapping fifth.
-- Guardrails: separated routine preparation from later artwork, recruitment, outreach, promotion, compatibility, and publication gates.
-- References: [current evidence status](current-evidence-status.md), [acceptance rubric](acceptance-rubric.md), [artwork criteria](artwork-criteria.md), [recognition-study protocol](recognition-study-protocol.md), [plain-text workaround search](plain-text-workaround-search.md), [Unicode overlap audit](unicode-overlap-audit.md), and [interchange prototype](interchange-prototype.md).
-- Validation: repository tests and independent review are required before merge.
-- Report status: completed
-- Completion PR: [PR #29 retrospective completion report](https://github.com/joshua-small/audio-synth-symbol-registry/pull/29#issuecomment-5467218776)
-- Merge commit: [`e7d8eb164fae0d70f2c470ce52063ee8f5510d15`](https://github.com/joshua-small/audio-synth-symbol-registry/commit/e7d8eb164fae0d70f2c470ce52063ee8f5510d15)
-- Validation result: passed; 24/24 tests, `git diff --check`, and GitHub Actions run 64 passed.
-- Independent review result: passed with no blockers.
+- Report status: in-progress
+- Scope: replaced the post-PR-24 four-record queue with a six-record dependency map and current backlog.
+- Evidence: reconciled `docs/current-evidence-status.md`, registry metadata 0.2.1, D-016, D-017, Issues #28 and #58 through #60, and PRs #15, #49, #61, #62, and #63.
+- Hygiene: records PR #15 as superseded, preserves PR #49 as a retained draft comparator, preserves Issue #28 as the study-infrastructure umbrella, and leaves the shelf evidence and artwork lanes open at their actual dependencies.
+- Limitations: this document does not complete the open research PRs, alter assessments, resolve geometry, or authorize any gated action.
+- Validation: full repository tests, diff checks, and independent adverse review are required before merge.
