@@ -42,6 +42,8 @@ Tooling 0.4.0 adds semantic validation for numeric-offset capture timestamps, in
 
 Registry 0.2.0 adds the provisional low-shelf and high-shelf records. Schema 0.4.0 adds their two sign-agnostic affected-side representation concepts while retaining the existing record shape. Assessments 0.3.0 adds an immutable six-record current snapshot. Derived analyses 0.2.0 adds the superseding six-record status synthesis while preserving the earlier synthesis at its immutable historical path. Tooling 0.5.0 extends the registry-driven interchange prototype and its tests to resolve the two new records; it does not add artwork or change canonical identity rules.
 
+Assessments 0.3.1 adds an immutable post-evidence six-record snapshot using the unchanged 0.2.0 assessment format. Derived analyses 0.2.3 adds the corresponding current-status synthesis. Registry data remains 0.2.2 because the reassessment adds no ledger entry or live-record change.
+
 ## Compatibility rules
 
 - MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.

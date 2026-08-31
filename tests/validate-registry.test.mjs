@@ -315,7 +315,7 @@ for (const [assessmentMutationFixture, expectedFailure] of invalidAssessmentMuta
 test("preserves historical assessments when a newer snapshot is appended", () => {
   const result = runValidator({ assessmentMutationFixture: "newer-historical-snapshot.json" });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /Validated 6 registry record\(s\), 4 assessment set\(s\)/);
+  assert.match(result.stdout, /Validated 6 registry record\(s\), 5 assessment set\(s\)/);
 });
 
 test("rejects a duplicate derived-analysis ID-version pair", () => {

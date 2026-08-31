@@ -1,6 +1,8 @@
 # Prioritized next work
 
-Status as of 2026-08-30T17:56:00-07:00, after work merged through PR #63. This queue covers all six live records and separates routine work from unresolved Human Review gates. It does not authorize status promotion, artwork lock or acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-08-31T18:24:06-07:00, after the post-evidence six-record reassessment. This queue covers all six live records and separates routine work from unresolved Human Review gates. It does not authorize status promotion, artwork lock or acceptance, participant recruitment, publication, outreach, or a standards submission.
+
+The current queue is aligned with registry metadata 0.2.2.
 
 ## Current dependency map
 
@@ -8,22 +10,25 @@ Status as of 2026-08-30T17:56:00-07:00, after work merged through PR #63. This q
 | --- | --- | --- |
 | Provisional shelf records | Completed in [PR #62](https://github.com/joshua-small/audio-synth-symbol-registry/pull/62) | Preserve six `evidence-collecting` records and D-017 boundaries. |
 | Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
-| Shelf text-friction search | In progress in [Issue #60](https://github.com/joshua-small/audio-synth-symbol-registry/issues/60) | Preserve negative and excluded findings; do not claim the threshold unless the record-specific evidence satisfies it. |
+| Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
+| Six-record reassessment | Completed in Issue #64 | Preserve the 17/20 shelf diagnostics and all six `evidence-collecting` statuses until new evidence warrants another assessment. |
 | Six-member draft artwork | Human Review blocked in [Issue #58](https://github.com/joshua-small/audio-synth-symbol-registry/issues/58) and draft [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Await explicit geometry lock or revision; lock does not authorize study-ready status, recruitment, launch, acceptance, or publication. |
 | Study-stimulus infrastructure | Routine infrastructure completed; umbrella [Issue #28](https://github.com/joshua-small/audio-synth-symbol-registry/issues/28) remains open | Preserve completed PR #31 and PR #46 work; remaining candidate and study actions follow the existing gates. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
 
-### 1. Complete the shelf text-friction lane
+### 1. Continue shelf text-friction evidence collection
 
-Finish the bounded text-friction search with reproducible locators, explicit exclusions, direct-versus-derived evidence separation, and independent review. A negative text-friction result is valid and must not be upgraded to satisfy an attractive hypothesis.
+Search for additional independently sourced record-specific cases while preserving DA-010's exclusions. A negative result is valid and must not be upgraded to satisfy an attractive hypothesis.
 
 Completion requires the lane to be based on the current six-record registry and merged shelf overlap evidence, pass the complete repository test suite, carry timestamped Agent Reports, and merge without changing semantics, aliases, identifiers, statuses, artwork, or external positions.
 
-### 2. Reassess all six records after the evidence lanes merge
+### 2. Maintain the six-record assessment lifecycle
 
-Create one immutable assessment snapshot against the resulting registry/evidence version. Apply the adopted rubric to `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`; cite each new evidence disposition and compare it with the current snapshot.
+Create another immutable assessment only after material new evidence lands. Apply the adopted rubric to all six records and compare it with the current snapshot.
+
+The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`.
 
 This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record. If a score reaches a threshold, report the unmet floors and blockers and open a separate Human Review question only if promotion is actually recommended.
 
