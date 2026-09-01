@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T20:45:43-07:00. This synthesis supersedes the historical [0.2.7 status synthesis](current-evidence-status-0.2.7.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-31T20:35:06-07:00. This synthesis supersedes the historical [0.2.6 status synthesis](current-evidence-status-0.2.6.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.7 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.6 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.2, format 0.2.0 | `registry/assessments/registry-0.2.3-2026-08-31.json`; material EV-120, EV-130, and EV-131 await mechanical reassessment |
-| Derived analyses | 0.2.8, format 0.1.0 | `evidence/derived-analyses.json` |
+| Derived analyses | 0.2.7, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.7.0 | `package.json` |
 
 ## Current records
@@ -44,13 +44,11 @@ Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101
 - EV-122 documents versioned Iconify packaging of FontAudio. It is source-dependent ecosystem evidence and is not counted as another independent implementation.
 - EV-130 explicitly expands band-stop filter to `BSF` and calls it band reject, while internally contradicting itself about whether the response is necessarily an extremely narrow Notch or the broader wide response.
 - EV-131 independently expands Band-Stop Filter to `BSF` in a university course and supplies an axis-bearing teaching diagram; it is terminology support, not an axis-less target implementation or portable-text case.
-- EV-140 documents a public low-shelf and high-shelf identification failure in which missing vendor documentation forced cross-product visual comparison.
-- EV-141 documents a current vendor-manual copy-and-label defect that calls low-shelf choices and controls high-shelf items.
 - EV-054/EV-100 count as one Image-Line independence group, and EV-005/EV-101 count as one DSSSP group. URLs and revisits do not multiply independent sources.
 - Image-Line's mixed `Notch` and `Band stop` wording is product-local and does not resolve the cross-domain D-011/DA-004 boundary.
 - EV-110 through EV-118 and DA-013 map the current SEW proposal path. They confirm that independent character usage, community-level stability, and public plain-text interchange need remain the controlling Unicode blockers even if downstream technical proposal artifacts are completed.
 
-Derived reports DA-001 through DA-010 and DA-012 through DA-016 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 found no portable independent text use for any active concept. DA-015 closes the specifically named second-render and drafted-fallback provenance gaps without inferring assessment or lifecycle movement. DA-016 finds bounded recurring public communication friction only for low shelf under its conservative internal threshold; it does not establish portable character use, encoding necessity, or Unicode eligibility. Unicode remains `HOLD`.
+Derived reports DA-001 through DA-010 and DA-012 through DA-015 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 found no portable independent text use for any active concept. DA-015 closes the specifically named second-render and drafted-fallback provenance gaps without inferring assessment or lifecycle movement. Unicode remains `HOLD`.
 
 ## Current position
 
@@ -113,14 +111,3 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-016 organize and con
 - Limitations: no semantic, alias, identifier, artwork, assessment, score, study, status, outreach, release, or external-position change; terminology provenance does not prove common audio-chat use or portable interchange.
 - Validation: exact current substantive worktree passed `npm test` 112/112, registry validation for six records, six assessment sets, and 78 evidence sources at registry 0.2.6, Agent Report hygiene, digest reconciliation, and `git diff --check`.
 - Independent review: APPROVE on exact current substantive worktree based on `01b5c1f266a21724a96dbee39b674c8fd8e2ab2`; the reviewer independently reproduced all Ardour and AAST digests, confirmed source independence and temporal provenance, verified the EV-130 contradiction and roadmap/version history, and found no Notch transfer or lifecycle change. The approval-report-only annotation is permitted by that verdict.
-
-## Agent Report - 2026-08-31T20:45:43-07:00
-
-- Report status: in progress pending exact-head validation and re-review.
-- Scope: bounded public communication-failure casebook across all six live records; assessments and all six live records remain unchanged.
-- Evidence: EV-140 and EV-141, reusing EV-121 without duplication; one additional response-drawing exchange is preserved as inspected exclusion rather than registered evidence.
-- Derived inputs: DA-010, DA-013, and DA-016; none is counted as independent evidence.
-- Result: low shelf alone meets the casebook's conservative recurrence threshold with three publisher/author-independent cases and multiple failure classes; high shelf has two cases, high-pass, low-pass, and band-pass one each, and band-stop zero because Notch remains excluded.
-- Limitations: the casebook is not a prevalence estimate and establishes neither portable character use nor Unicode eligibility; no semantic, alias, identifier, artwork, assessment, score, study, status, outreach, release, or external-position change is implied; Unicode remains `HOLD`.
-- Validation: exact current substantive worktree passed `npm test` 112/112 and `git diff --check`; registry validation reported six records, six assessment sets, and 80 evidence sources at registry 0.2.7, and Agent Report hygiene passed.
-- Independent review: APPROVE at exact substantive head `10c6bee29f94de25a3b8f940c6b39fe64ca5d660` on base `694f015dcf2cf96e754306078fa253320a5d4d0c`; the reviewer verified sequential versions, immutable status hashes and dependencies, DA-016 and EV inputs, threshold arithmetic, source independence, exclusions, Unicode HOLD, unchanged live records, and 112/112 tests. This approval-report-only annotation is permitted by that verdict.

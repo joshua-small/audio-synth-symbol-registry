@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.7",
+  "registry_version": "0.2.8",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1293,7 +1293,7 @@
       "id": "DA-006",
       "version": "0.2.7",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.7.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T20:35:06-07:00",
       "content_sha256": "8efa2abbd38c605ad1860a524f28cb2332e784fb2969859073a9cee53b5d5b3d",
@@ -1314,6 +1314,61 @@
       "scope": "Superseding six-record status synthesis after the band-stop render and terminology evidence spike, preserving the prior complete synthesis by reference and making no assessment, semantic, alias, artwork, or status movement.",
       "limitations": [
         "The second-render and terminology-provenance gaps are evidence-complete only for mechanical reassessment; the band-stop/Notch boundary, common audio plain-text usage, recognition, artwork rights, and lifecycle requirements remain open."
+      ]
+    },
+    {
+      "id": "DA-016",
+      "version": "0.1.0",
+      "title": "Six-concept communication-failure casebook",
+      "path": "evidence/reports/2026-09-01-communication-failure-casebook.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-08-31T20:21:58-07:00",
+      "content_sha256": "8dc75b550178092d0c9e344065bc5077e18c06d851d57d6dc687cad86ed4965a",
+      "input_evidence_ids": [
+        "EV-121",
+        "EV-140",
+        "EV-141"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Bounded independent public casebook of image attachment, labeling requests, undocumented symbols, cross-product lookup, and documentation mislabeling across the six active filter-response concepts.",
+      "limitations": [
+        "The search is not a prevalence estimate, low shelf alone meets the casebook's conservative recurrence threshold, no hand-drawn compact glyph used as a plain-text substitute or failed text-only exchange was recovered, and no case establishes portable character use or Unicode eligibility."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.8",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T20:45:43-07:00",
+      "content_sha256": "cdba788f20de3565e462f62531a985d2b785a11b8c15471c6025e754a560e30e",
+      "input_evidence_ids": [
+        "EV-140",
+        "EV-141"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.7"
+        },
+        {
+          "artifact_id": "DA-016",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the communication-failure casebook, preserving the prior complete synthesis by reference and making no assessment, semantic, alias, artwork, or status movement.",
+      "limitations": [
+        "The low-shelf recurrence result is bounded communication-friction evidence, not a prevalence estimate, portable character use finding, encoding necessity claim, or Unicode eligibility determination; all formal safeguards remain in force."
       ]
     }
   ]
