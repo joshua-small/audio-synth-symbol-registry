@@ -44,6 +44,8 @@ Registry 0.2.0 adds the provisional low-shelf and high-shelf records. Schema 0.4
 
 Assessments 0.3.1 adds an immutable post-evidence six-record snapshot using the unchanged 0.2.0 assessment format. Derived analyses 0.2.3 adds the corresponding current-status synthesis. Registry data remains 0.2.2 because the reassessment adds no ledger entry or live-record change.
 
+Registry 0.2.3 adds EV-100 and EV-101 through a patch-level target-use evidence reinspection without changing a live record. Assessments 0.3.2 adds an immutable six-record snapshot using unchanged format 0.2.0; the four original records are mechanically reassessed and both shelf assessments are reproduced unchanged. Derived analyses 0.2.4 adds DA-012 and the superseding current-status synthesis. No semantic, alias, identifier, artwork, status, schema, tooling, or release change is implied.
+
 Tooling 0.6.0 adds backwards-compatible package schema 0.2.0 for exact binding of the six locked draft hashes, deterministic blind-derivative construction, six-way choice/control validation, and private provenance commitments. Package schema 0.1.0 remains readable. This does not bump or release artwork: artwork remains 0.0.0, unpublished, noncanonical, and draft.
 
 Tooling 0.7.0 adds a private, offline, synthetic-only participant-surface harness and deterministic private scoring-key/export validation. It does not change either study-package schema, authorize participant use, or alter registry or artwork versions.

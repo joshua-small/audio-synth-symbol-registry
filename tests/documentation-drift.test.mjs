@@ -31,6 +31,10 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.doesNotMatch(status, /Current records:\*\* all four|ledger version 0\.1\.3/);
   assert.ok(status.includes("| `asr:filter.low-shelf` | 17/20 |"));
   assert.ok(status.includes("| `asr:filter.high-shelf` | 17/20 |"));
+  assert.ok(status.includes("| `asr:filter.high-pass` | 18/20 |"));
+  assert.ok(status.includes("| `asr:filter.low-pass` | 18/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-pass` | 18/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-stop` | 12/20 |"));
   assert.doesNotMatch(status, /shelf records?[^\n]*14\/20/i);
   assert.doesNotMatch(status, /predate DA-009|overlap audit is pending/i);
   assert.match(status, /three-independent-source safeguard open/i);
@@ -41,7 +45,7 @@ test("current prototype, evidence status, and roadmap cover every live record", 
 test("current assessment selects the post-shelf evidence snapshot", async () => {
   const metadata = await readJson("registry/registry-metadata.json");
   assert.equal(metadata.artifacts.assessments.current_snapshot,
-    "registry/assessments/registry-0.2.2-2026-08-31.json");
+    "registry/assessments/registry-0.2.3-2026-08-31.json");
   const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
   assert.equal(snapshot.assessments.length, 6);
   const byId = new Map(snapshot.assessments.map((assessment) => [assessment.record_id, assessment]));
@@ -52,6 +56,14 @@ test("current assessment selects the post-shelf evidence snapshot", async () => 
     assert.match(byId.get(id).result.rationale, /three-source safeguard/);
     assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /overlap audit is absent|overlap audit is pending/i);
   }
+  assert.equal(byId.get("asr:filter.high-pass").total_score, 18);
+  assert.equal(byId.get("asr:filter.low-pass").total_score, 18);
+  assert.equal(byId.get("asr:filter.band-pass").total_score, 18);
+  assert.equal(byId.get("asr:filter.band-stop").total_score, 12);
+  assert.equal(byId.get("asr:filter.band-pass").result.eligible, true);
+  assert.equal(byId.get("asr:filter.band-pass").result.recommended_status, "registry-candidate");
+  assert.equal(byId.get("asr:filter.band-pass").status_at_assessment, "evidence-collecting");
+  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /DSSSP Notch is conservatively excluded/);
 });
 
 test("font strategy preserves the unencoded HOLD boundary", async () => {

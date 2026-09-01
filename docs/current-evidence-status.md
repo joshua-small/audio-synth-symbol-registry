@@ -1,16 +1,16 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T18:24:06-07:00. This synthesis supersedes the historical [0.2.2 status synthesis](current-evidence-status-0.2.2.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-31T20:00:07-07:00. This synthesis supersedes the historical [0.2.3 status synthesis](current-evidence-status-0.2.3.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.3 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
-| Assessments | 0.3.1, format 0.2.0 | `registry/assessments/registry-0.2.2-2026-08-31.json` |
-| Derived analyses | 0.2.3, format 0.1.0 | `evidence/derived-analyses.json` |
-| Tooling | 0.5.0 | `package.json` |
+| Assessments | 0.3.2, format 0.2.0 | `registry/assessments/registry-0.2.3-2026-08-31.json` |
+| Derived analyses | 0.2.4, format 0.1.0 | `evidence/derived-analyses.json` |
+| Tooling | 0.7.0 | `package.json` |
 
 ## Current records
 
@@ -18,14 +18,14 @@ All six records remain `evidence-collecting`:
 
 | ID | Score | Principal blockers |
 | --- | ---: | --- |
-| `asr:filter.high-pass` | 14/20 | Alias boundary and visual convergence |
-| `asr:filter.low-pass` | 14/20 | Alias boundary and visual convergence |
-| `asr:filter.band-pass` | 13/20 | Independent target use and visual convergence |
-| `asr:filter.band-stop` | 10/20 | Notch boundary, fallback support, and visual convergence |
+| `asr:filter.high-pass` | 18/20 | Material `Low Cut` alias boundary |
+| `asr:filter.low-pass` | 18/20 | Material `High Cut` alias boundary |
+| `asr:filter.band-pass` | 18/20 | Candidate-eligible after independent review; live status intentionally unchanged by this spike |
+| `asr:filter.band-stop` | 12/20 | Notch boundary, `BSF` fallback support, and missing second target implementation |
 | `asr:filter.low-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
 | `asr:filter.high-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
 
-Scores are readiness diagnostics, not status promotion. DA-009 mechanically raises each shelf overlap-audit dimension from 0 to 3 and each total from 14 to 17. Both shelf records still fail the visual-convergence floor and retain material research questions. DA-010 does not change the text/accessibility score: it preserves one qualifying new friction artifact per shelf and adequate-prose counterevidence, leaving the project's three-independent-source safeguard open. The four earlier records are reproduced unchanged in the new six-record snapshot.
+Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101 close real target-use gaps: high-pass and low-pass now have three qualifying independent axis-less implementations; band-pass has two; band-stop has one explicitly labeled implementation. High-pass and low-pass still fail the semantic floor because their cut-name boundaries remain material. Band-stop still fails the total, semantic, text, and visual floors. Band-pass clears the numerical and dimension floors and passed independent adverse review, so its assessment recommends `registry-candidate`; its live status remains unchanged because this bounded spike performs no lifecycle mutation. The shelf assessments remain unchanged at 17/20 and retain their existing blockers and three-independent-source safeguard open.
 
 ## Evidence synthesis
 
@@ -37,8 +37,12 @@ Scores are readiness diagnostics, not status promotion. DA-009 mechanically rais
 - No sampled source establishes `LS`, `HS`, `LSF`, or `HSF` as a portable fallback. Full `LOW SHELF` and `HIGH SHELF` fallbacks avoid that overclaim.
 - EV-070 through EV-073 and DA-009 establish a bounded, reproducible shelf-specific Unicode and standards overlap audit. It found no semantic equivalent, while identifying phonetic `SHELF` false positives and representative fork, routing, mathematical, bracket, and OCR near-miss families.
 - EV-080 through EV-084 document additional shelf communication cases, but only EV-083 qualifies under the project's existing record-specific friction rule; neither shelf record reaches three independent examples.
+- EV-100 directly documents Image-Line's axis-less high-pass, low-pass, band-pass, and `Band stop` type selectors while keeping filter order separate.
+- EV-101 directly documents DSSSP's high-pass, low-pass, and band-pass custom-font components at an immutable commit. Its separate Notch component is excluded from band-stop evidence.
+- EV-054/EV-100 count as one Image-Line independence group, and EV-005/EV-101 count as one DSSSP group. URLs and revisits do not multiply independent sources.
+- Image-Line's mixed `Notch` and `Band stop` wording is product-local and does not resolve the cross-domain D-011/DA-004 boundary.
 
-Derived reports DA-001 through DA-010 organize and constrain the direct evidence. They are not additional independent sources and are not double-counted in assessment scores.
+Derived reports DA-001 through DA-012 organize and constrain the direct evidence. They are not additional independent sources and are not double-counted in assessment scores.
 
 ## Current position
 
@@ -49,19 +53,19 @@ Derived reports DA-001 through DA-010 organize and constrain the direct evidence
 
 ## Next evidence work
 
-1. Prepare a blinded six-way recognition comparison using original candidates, without recruitment until separately authorized.
-2. Continue the bounded search for independently authored, record-specific plain-text friction and portable shelf-symbol use.
-3. Test shelf/pass confusability and whether the two-prong topology communicates affected side without gain-sign priming.
-4. Run a dedicated terminology review before moving shelving forms from related terms into aliases.
-5. Continue searching for independently authored portable shelf-glyph use and real-world text-friction workarounds.
+1. Resolve the `Low Cut`/high-pass and `High Cut`/low-pass alias boundaries without presuming universal exactness.
+2. Seek a second independently labeled band-stop target implementation without borrowing Notch-only evidence.
+3. Ground or replace the drafted `BSF` fallback through independent non-UI evidence; do not infer it from `BPF` or `BEF`.
+4. Continue the bounded search for independently authored, record-specific plain-text friction and portable symbol use.
+5. Use internal recognition validation to test six-way discrimination; do not infer industry adoption from original study artwork.
 
-## Agent Report - 2026-08-31T18:24:06-07:00
+## Agent Report - 2026-08-31T20:00:07-07:00
 
 - Report status: completed
-- Scope: patch-level reassessment synthesis for all six live records after the shelf overlap audit and shelf text-friction search.
-- Evidence: EV-001 through EV-084 as represented in the current ledger, including the overlap inputs EV-070 through EV-073 and friction inputs EV-080 through EV-084.
-- Derived inputs: DA-001 through DA-005 and DA-007 through DA-010; none is counted as independent evidence.
-- Result: DA-009 raises each shelf overlap score from 0 to 3 and total from 14 to 17; DA-010 leaves the three-source friction safeguard open. All six statuses remain `evidence-collecting`.
+- Scope: patch-level evidence and reassessment synthesis for all six live records after the four-record target-use spike.
+- Evidence: EV-001 through EV-101 as represented in the sparse ledger ID ranges, especially EV-100 and EV-101 for direct target use.
+- Derived inputs: DA-001 through DA-012 as applicable; none is counted as independent evidence.
+- Result: high-pass 18/20, low-pass 18/20, band-pass 18/20, band-stop 12/20, and both shelves 17/20. All six statuses remain `evidence-collecting`.
 - Limitations: no semantic, alias, identifier, artwork, study, status, outreach, release, or external-position change.
-- Validation: `npm test` passed 86/86 tests; registry validation reported six records, five assessment sets, and 62 evidence sources at registry 0.2.2; `git diff --check` passed.
-- Independent review: passed after adverse review removed stale overlap-audit-absent blockers and added a regression guard against their recurrence.
+- Validation: post-rebase `npm test` passed 111/111 tests; validation reported six records, six assessment sets, and 64 evidence sources at registry 0.2.3; Agent Report hygiene and `git diff --check` passed.
+- Independent review: APPROVE at exact head `779ad90`; the reviewer independently reproduced the Image-Line checksum, inspected DSSSP and Ableton at the cited locators, verified independence and score arithmetic, and found no blocker or required correction.
