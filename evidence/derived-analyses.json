@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.12",
+  "registry_version": "0.2.13",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1631,10 +1631,10 @@
         ]
       },
       {
-        "id": "DA-006",
-        "version": "0.2.12",
-        "title": "Current evidence-status synthesis",
-        "path": "docs/current-evidence-status.md",
+      "id": "DA-006",
+      "version": "0.2.12",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status-0.2.12.md",
         "kind": "status-synthesis",
         "produced_at": "2026-08-31T21:38:59-07:00",
         "content_sha256": "b6ca32b7794d9f71e4e3e0f1b1df619b5290752f26471a381f401582f872cb04",
@@ -1666,6 +1666,71 @@
           "Text/accessibility and visual-convergence gaps remain open; Notch-only implementations, glyphs, and usage remain excluded without explicit source-local mapping or contrast.",
           "The private font proof and the dossier establish neither independent character use nor Unicode eligibility; Unicode remains HOLD."
         ]
-      }
+      },
+    {
+      "id": "DA-018",
+      "version": "0.1.0",
+      "title": "Pass/cut alias-equivalence dossier",
+      "path": "evidence/reports/2026-08-31-pass-cut-alias-equivalence.md",
+      "kind": "boundary-analysis",
+      "produced_at": "2026-08-31T21:42:00-07:00",
+      "content_sha256": "1017ed845693471d805a2e5a915636770a7fdd3d3babd00edbd162a1f0820089",
+      "input_evidence_ids": [
+        "EV-150",
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-017",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Adverse cross-lane assessment of Low Cut as a high-pass alias and High Cut as a low-pass alias, separating response-class retrieval from implementation and arbitrary-phrase equivalence.",
+      "limitations": [
+        "The purposive English-language corpus is not market-weighted, and publisher repetition is collapsed rather than treated as independent support.",
+        "The finding supports bounded audio-domain alias lookup, not equality of filter order, slope, Q, resonance, phase, cutoff convention, parameters, presets, or every product feature bearing a cut label.",
+        "This analysis changes no live semantic record; its recommendation requires separate D-021 semantic review."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.13",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T22:08:00-07:00",
+      "content_sha256": "b3e1d27b5733acd56d910fd1c5c97f865cf992b9c0de1458ce6f42dea5819e94",
+      "input_evidence_ids": [
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.12"
+        },
+        {
+          "artifact_id": "DA-018",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the pass/cut alias-equivalence dossier, preserving private font-proof validation and the Band-stop/Notch dossier without semantic, alias, artwork, assessment, or status movement.",
+      "limitations": [
+        "The bounded alias recommendation does not itself change a live record and does not establish implementation equivalence, portable character use, encoding necessity, or Unicode eligibility.",
+        "The Band-stop controlled-polysemy recommendation remains pending its separate reassessment, and Notch-only evidence remains excluded under DA-020.",
+        "The private font proof and all three dossiers establish neither independent character use nor Unicode eligibility; Unicode remains HOLD."
+      ]
+    }
   ]
 }

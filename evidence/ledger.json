@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.10",
+  "ledger_version": "0.2.11",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -2085,6 +2085,215 @@
             "limitations": "The page is mutable, and one implementation's API does not establish universal label behavior."
           }
         }
+      },
+    {
+      "id": "EV-160",
+      "type": "vendor-documentation",
+      "publisher": "Steinberg Media Technologies GmbH",
+      "title": "UltraShaper EQ documentation",
+      "url": "https://www.steinberg.help/r/nuendo/nuendoplugref/15.0/en/_shared/topics/plug_ref/ultra_shaper_r.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "EQ > Slope parameter",
+      "direct_observation": "The Nuendo 15 documentation describes the ends of one slope control as a low-pass (high-cut) slope and a high-pass (low-cut) slope.",
+      "interpretation": "The paired parentheticals support both inverse audio-domain aliases at response-class level, not universal equality of order, slope, phase, resonance, cutoff convention, or control behavior.",
+      "rights_note": "Linked public vendor documentation only; no page content, screenshot, artwork, or implementation is retained or claimed as reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": "Nuendo UltraShaper",
+        "product_version": "15.0",
+        "exact_locator": "EQ section, Slope parameter, sentences beginning 'Turning the control to the left' and 'Turning the control to the right'",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public vendor page was lawfully inspected; only metadata and factual observations are recorded.",
+          "limitations": "The mutable JavaScript-delivered page is not archived, and its direct HTTP shell omits the rendered article text."
+        }
       }
+    },
+    {
+      "id": "EV-161",
+      "type": "vendor-documentation",
+      "publisher": "Apple Inc.",
+      "title": "Legacy Single-Band EQs in Logic Pro for Mac",
+      "url": "https://support.apple.com/en-mz/guide/logicpro/lgce4d884293/mac",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Opening filter list; High Cut and Low Cut parameters; High Pass and Low Pass parameters",
+      "direct_observation": "Apple assigns High Cut and Low Pass to attenuation above the selected frequency and Low Cut and High Pass to attenuation below it, but exposes Cut and Pass as separate legacy plug-in families. Cut supplies frequency; Pass additionally supplies order and smoothing.",
+      "interpretation": "The inverse labels identify the same affected side and broad response direction but are not universally substitutable implementation names. A registry alias can support concept retrieval without promising parameter, transfer-function, or preset equivalence.",
+      "rights_note": "Linked public vendor documentation only; no page content, screenshot, artwork, or implementation is retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": "Logic Pro",
+        "product_version": "12.3 guide route",
+        "exact_locator": "Opening filter list; High Cut and Low Cut parameters; High Pass and Low Pass parameters",
+        "stable_fragment": "lgce4d884293",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "e9af0e30fa99222d12e4f0120026f19338584fed76f74f0d7717325721ac1dd2",
+            "scope": "Raw public HTML response bytes from the cited Apple Support route on 2026-08-31"
+          },
+          "rights_basis": "The public vendor page was lawfully inspected; only metadata and a response checksum are retained.",
+          "limitations": "The page is mutable and includes dynamic site markup; the checksum cannot reconstruct unavailable bytes or prove earlier wording."
+        }
+      }
+    },
+    {
+      "id": "EV-162",
+      "type": "vendor-documentation",
+      "publisher": "Steinberg Media Technologies GmbH",
+      "title": "HALion Spectral Oscillator Filter tab",
+      "url": "https://www.steinberg.help/r/halion/7.1/en/halion/topics/editing_zones/zone_editor_spectral_osc_filter_tab_r.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Low Cut parameter",
+      "direct_observation": "HALion 7.1 says this Low Cut does not work like a classic fixed-cutoff filter; it removes the low frequencies occupying a selected percentage of the sample's overall spectral energy.",
+      "interpretation": "This directly defeats a rule that every parameter named Low Cut is an exact high-pass implementation. Context and documented behavior remain necessary even though the ordinary filter-type alias is established.",
+      "rights_note": "Linked public vendor documentation only; no page content, screenshot, artwork, or implementation is retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": "HALion",
+        "product_version": "7.1",
+        "exact_locator": "Spectral Oscillator Filter tab, Low Cut parameter description",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public vendor page was lawfully inspected; only metadata and factual observations are recorded.",
+          "limitations": "The mutable JavaScript-delivered page is not archived, and its direct HTTP shell omits the rendered article text."
+        }
+      }
+    },
+    {
+      "id": "EV-163",
+      "type": "education",
+      "publisher": "Icon Collective",
+      "title": "What Are the Different Types of EQ and Filters?",
+      "url": "https://www.iconcollective.edu/types-of-eq",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Low Cut Filter; High Cut Filter; High Shelf Filter",
+      "direct_observation": "The lesson says a low cut removes frequencies below a cutoff and is also known as a high pass, while a high cut removes frequencies above a cutoff and is also known as a low pass. It separately contrasts high shelf with high cut.",
+      "interpretation": "This independently supports both inverse aliases in audio production without collapsing shelves into pass filters. Its simplified removal wording is not a transfer-function specification for practical finite-order filters.",
+      "rights_note": "Linked public education page only; no page content, graph, screenshot, or artwork is retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Headings 'Low Cut Filter', 'High Cut Filter', and 'High Shelf Filter'",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "0f2002e3037afeee7bdbba6c57f592a22328803e8c3e4b0a1c12f6d2147fa45a",
+            "scope": "Raw public HTML response bytes from the cited lesson on 2026-08-31"
+          },
+          "rights_basis": "The public education page was lawfully inspected; only metadata and a response checksum are retained.",
+          "limitations": "The page is mutable, the checksum includes dynamic markup, and the project retains no source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-164",
+      "type": "education",
+      "publisher": "Stanford Exploration Project",
+      "title": "The basic low-cut filter",
+      "url": "https://sepwww.stanford.edu/sep/prof/gee/ajt/paper_html/node15.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Opening explanation and causal filter construction",
+      "direct_observation": "The chapter calls its causal operation a lowcut filter (highpass filter), then analyzes that highpass response and its rolloff construction.",
+      "interpretation": "This engineering-education source supports lowcut/highpass equivalence at response-class level while demonstrating that implementation details remain separate. It supplies no high-cut/low-pass claim.",
+      "rights_note": "Linked public university-hosted education page only; no text, equations, images, or implementation are retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Opening paragraphs and the sentence 'We make our causal lowcut filter (highpass filter)'",
+        "stable_fragment": "ajt_eqn:lowcut",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "a7e1abbd0d26062582263671292f99ed4224a0ebbf1acd93d97d23e821978a83",
+            "scope": "Raw public HTML response bytes from the cited Stanford page on 2026-08-31"
+          },
+          "rights_basis": "The public page was lawfully inspected; only metadata and a response checksum are retained.",
+          "limitations": "The page is mutable, no source bytes are retained, and no exact publication date was established."
+        }
+      }
+    },
+    {
+      "id": "EV-165",
+      "type": "historical-vendor-documentation",
+      "publisher": "Sound Devices, LLC",
+      "title": "744T User Guide and Technical Information",
+      "url": "https://www.csun.edu/sites/default/files/RECORDER-Sound-Devices-744t_en.pdf",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Front-panel item 25; Setup Menu items 21-24; PDF pages 9 and 70-71 (1-based)",
+      "direct_observation": "The firmware 2.67 guide labels the input function as a high-pass (low-cut) filter, says it reduces sensitivity to low frequencies, and provides high-pass frequency/slope choices while menu labels read Low Cut and Low Cut Frequency.",
+      "interpretation": "This historical recorder manual treats Low Cut and High-Pass as two names for one function and varies capitalization and hyphenation without behavior change. It supplies no high-cut/low-pass evidence.",
+      "rights_note": "Linked public manual only; no PDF page, diagram, text, or artwork is retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": "Sound Devices 744T",
+        "product_version": "firmware revision 2.67 guide",
+        "exact_locator": "Front-panel item 25; Setup Menu items 21-24; PDF pages 9 and 70-71 (1-based)",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "cd48fb47b6e68c25c7febe3ab7ca3d580d9e36adc643c05c0c72a4d3a695a2ff",
+            "scope": "Raw public PDF response bytes from the CSUN-hosted Sound Devices manual on 2026-08-31"
+          },
+          "rights_basis": "The public manual was lawfully inspected; only metadata and a checksum are retained and no redistribution right is claimed.",
+          "limitations": "The PDF is not retained or redistributed; the university-hosted URL is not publisher-controlled, and no exact publication date was established."
+        }
+      }
+    },
+    {
+      "id": "EV-166",
+      "type": "engineering-reference",
+      "publisher": "ToneShiftEQ contributors",
+      "title": "ToneShiftEQ cut/pass implementation at commit 64e3e318ae5337d985dd91887a9a783b15fb3d12",
+      "url": "https://github.com/brummer10/ToneShiftEQ/tree/64e3e318ae5337d985dd91887a9a783b15fb3d12",
+      "publication_date": "2026-08-21",
+      "accessed_on": "2026-08-31",
+      "location": "Technical.md; Manual.md Global Filters; EQ12/Engine/Biquad.h setLowCut and setHighCut",
+      "direct_observation": "The technical document calls Low Cut and High Cut dedicated high-pass and low-pass stages. The manual defines their affected sides, and code binds setLowCut to HighPass and setHighCut to LowPass.",
+      "interpretation": "This independent open-source implementation supplies direct bidirectional label-to-algorithm evidence. It supports response-class aliases but cannot generalize one implementation's Q or topology.",
+      "rights_note": "The public repository was inspected at an immutable commit; no source file or code is copied into this repository and no endorsement is claimed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:37:00-07:00",
+        "product": "ToneShiftEQ",
+        "product_version": "Git commit 64e3e318ae5337d985dd91887a9a783b15fb3d12",
+        "exact_locator": "Technical.md lines 61-65 and 116-119; Manual.md lines 203-224; EQ12/Engine/Biquad.h setLowCut/setHighCut",
+        "stable_fragment": "Git commit 64e3e318ae5337d985dd91887a9a783b15fb3d12",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "ad72d4bf4df438a180f8e2da9f753929600942a989b71b0cde09d3cb183ee38b",
+            "scope": "Concatenation in lexical path order of EQ12/Engine/Biquad.h (sha256 6ebd66d5ac31da10d5715b62f00e5d31799a760b95f87ec3e2a492cffaec9298), Manual.md (sha256 809dc5b4e940e364e325f13d7cd48fa58efed2982b21527b1aef5ec4b5bdd9b5), and Technical.md (sha256 205590d8e6171a156c580470809d868bbe53c1b7cd7b23629d8a2099ce1802ce) at the pinned commit"
+          },
+          "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata and digests are retained.",
+          "limitations": "The digest is an evidence commitment, not redistribution or endorsement; one codebase cannot establish universal naming or implementation identity."
+        }
+      }
+    }
   ]
 }
