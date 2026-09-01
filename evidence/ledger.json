@@ -1,6 +1,6 @@
 {
-  "ledger_version": "0.2.6",
-  "accessed_on": "2026-08-31",
+  "ledger_version": "0.2.7",
+  "accessed_on": "2026-09-01",
   "sources": [
     {
       "id": "EV-001",
@@ -1653,6 +1653,68 @@
           },
           "rights_basis": "The public university course PDF was lawfully inspected; the project records only metadata and a checksum and claims no redistribution right.",
           "limitations": "The project does not retain or redistribute the PDF. The query-based asset URL may change; the checksum cannot reconstruct unavailable bytes, and the URL suggests 2019 but no exact publication date was established from the document."
+        }
+      }
+    },
+    {
+      "id": "EV-140",
+      "type": "community-discussion",
+      "publisher": "Audio Science Review; Malaj",
+      "title": "RME ADI-2 FS Version 2 DAC and Headphone Amp Review - undocumented filter symbols",
+      "url": "https://www.audiosciencereview.com/forum/index.php?threads/rme-adi-2-fs-version-2-dac-and-headphone-amp-review.13379/post-964155",
+      "publication_date": "2021-11-06",
+      "accessed_on": "2026-09-01",
+      "location": "Post 964155 (#1,704) by Malaj on page 86",
+      "direct_observation": "The user states that low shelf, peak, and high shelf filters are not listed in the RME manual, that the information was absent after reading the manual and following RME's video, and that the symbols could instead be identified by comparing them with another application's symbols.",
+      "interpretation": "This is a symbol-only documentation gap requiring cross-product visual comparison for low shelf and high shelf. It is not evidence that the two products use identical geometry universally, and the same forum post counts once for publisher and author independence.",
+      "rights_note": "Public discussion is linked and summarized; no forum content, product screenshot, or vendor artwork is redistributed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:21:58-07:00",
+        "product": "Audio Science Review forum",
+        "product_version": null,
+        "exact_locator": "Thread 13379; post 964155; displayed as #1,704; author Malaj; timestamp Nov 6, 2021 at 8:04 AM",
+        "stable_fragment": "post-964155",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "6f72edd164e5e3b8d25c2b9386b6df12770ad5683592f5de15eaabd3f29848d1",
+            "scope": "Response bytes from the public page-86 thread URL during inspection"
+          },
+          "rights_basis": "The public forum page was lawfully inspected; only a response digest and evidence metadata are retained.",
+          "limitations": "The page is mutable, the digest covers surrounding thread content, and the project does not retain or redistribute source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-141",
+      "type": "vendor-documentation",
+      "publisher": "Universal Audio",
+      "title": "Neve 1084 Preamp & EQ Manual - Low Frequency labeling defect",
+      "url": "https://help.uaudio.com/hc/en-us/articles/33536643185556-Neve-1084-Preamp-EQ-Manual",
+      "publication_date": "2026-02-05",
+      "accessed_on": "2026-09-01",
+      "location": "Low Band > Low Frequency; compare with High Band > High Frequency",
+      "direct_observation": "The Low Frequency subsection first identifies a low shelving frequency, then calls the 35 Hz through 220 Hz choices 'high shelving frequencies' and instructs the reader to click a 'high shelving symbol' at the 'high shelf knobs.' The parallel High Frequency subsection uses that high-shelf language consistently for the actual high band.",
+      "interpretation": "This is a current vendor-documentation copy-and-label failure in the low-shelf control instructions. It demonstrates terminology and symbol-reference friction, but it does not prove that an encoded glyph would have prevented the error or that the vendor endorses this project's form.",
+      "rights_note": "Public vendor documentation is linked and summarized; no product artwork or page content is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:21:58-07:00",
+        "product": "UAD Neve 1084 Preamp & EQ",
+        "product_version": "v260205",
+        "exact_locator": "Low Band > Low Frequency, sentences following the frequency list; compare High Band > High Frequency",
+        "stable_fragment": "33536643185556-Neve-1084-Preamp-EQ-Manual",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "31f6596d04153ccb235f5cf32e91d5be611beb22899c297859f4e8d20dc89be5",
+            "scope": "Response bytes from the public manual URL during inspection"
+          },
+          "rights_basis": "The public vendor documentation was lawfully inspected; only a response digest and evidence metadata are retained.",
+          "limitations": "The page is mutable, the digest includes dynamic page markup, and the error may be corrected without notice."
         }
       }
     }
