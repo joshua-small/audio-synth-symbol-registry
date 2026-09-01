@@ -72,6 +72,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible { outline: .25
 .confidence label { text-align: center; border: 1px solid #bcc6cf; border-radius: .35rem; }
 .endpoints { display: flex; justify-content: space-between; gap: 1rem; font-size: .88rem; }
 .export { overflow-wrap: anywhere; min-height: 14rem; }
+#receipt { overflow-wrap: anywhere; }
 @media (forced-colors: active) { .card, button, textarea, .choice { border-color: CanvasText; } }
 @media (max-width: 24rem) { :root { font-size: 100%; } .confidence { grid-template-columns: 1fr; } .confidence label { text-align: left; } }
 `;
