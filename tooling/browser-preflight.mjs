@@ -346,7 +346,11 @@ async function runScenario(browser, htmlUrl, scenario) {
     });
   });
   const response = await page.goto(allowedUrl, { waitUntil: 'load' });
-  if (response !== null) fail("local file navigation unexpectedly returned a network response");
+  if (
+    response === null
+    || response.url() !== allowedUrl
+    || response.request().resourceType() !== 'document'
+  ) fail("local file navigation did not return the exact requested local document");
   const runtime_executed = await page.locator('#phase-title').evaluate((element) => element.textContent === 'Unprompted meaning');
   if (!runtime_executed) fail("the CSP-authorized harness runtime did not execute");
 
