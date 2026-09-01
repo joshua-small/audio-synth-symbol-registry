@@ -13,16 +13,16 @@ The current queue is aligned with registry metadata 0.4.2.
 | Portable-text and interchange need | DA-024 reviewed and merged; Unicode `HOLD` unchanged | Preserve its negative portable-glyph finding, direct friction, and successful text/interchange counteroptions. |
 | Shelf topology and overlap | Incorporated through DA-019 and DA-021 | Preserve affected-side two-prong topology, semantic orientation, polarity/context exclusions, and exact-geometry boundary. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
-| Six-record reassessment | Implemented in assessment artifact 0.3.5; exact-head adverse review pending | Verify the immutable 20/20 HP, 20/20 LP, 20/20 BP, 18/20 BS, and 19/20 shelf snapshot without moving lifecycle states. |
-| Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
-| Study-stimulus infrastructure | Offline harness validation completed in [PR #77](https://github.com/joshua-small/audio-synth-symbol-registry/pull/77) | Preserve opaque packaging and exact hashes; park operational work unless the owner resumes empirical recognition work, then require real-browser validation before separate recruitment, data-plan, and launch gates. |
-| Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
+| Six-record reassessment | Implemented and exact-head reviewed in assessment artifact 0.3.5 through [PR #100](https://github.com/joshua-small/audio-synth-symbol-registry/pull/100) | Preserve the immutable 20/20 HP, 20/20 LP, 20/20 BP, 18/20 BS, and 19/20 shelf snapshot until material new evidence or a material record change lands. |
+| Six-member draft artwork | Geometry lock integrated in [PR #72](https://github.com/joshua-small/audio-synth-symbol-registry/pull/72), which superseded closed PR #61 | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
+| Study-stimulus infrastructure | Offline harness validation completed in [PR #77](https://github.com/joshua-small/audio-synth-symbol-registry/pull/77); Issue #28 is closed | Preserve opaque packaging and exact hashes; park operational work unless the owner resumes empirical recognition work, then require real-browser validation before separate recruitment, data-plan, and launch gates. |
+| Monoline-linear artwork | Historical draft comparator from [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49), superseded by the approved `compact-a` geometry lock integrated in PR #72 | Retain only as historical comparison evidence; do not infer selection, canonical status, or a second live geometry lane. |
 
 ## Active queue
 
-### 1. Review the evidence-triggered reassessment
+### 1. Preserve the reviewed evidence-triggered reassessment
 
-Adversely review assessment artifact 0.3.5, its arithmetic, source-group accounting, evidence-to-dimension mapping, DA-020 Notch admission rule, DA-023 score application, DA-025 shelf terminology disposition, exact digests, version sequence, and protected trees.
+Assessment artifact 0.3.5 passed exact-head adverse review in PR #100. Preserve its arithmetic, source-group accounting, evidence-to-dimension mapping, DA-020 Notch admission rule, DA-023 score application, DA-025 shelf terminology disposition, exact digests, version sequence, and protected trees.
 
 Do not clear either isolated-recognition blocker, move a shelf by score alone, infer unrestricted BR/BRF or Notch equivalence, or infer implementation, parameter, topology, glyph, abbreviation, fragment, or product-local pass-term equivalence.
 

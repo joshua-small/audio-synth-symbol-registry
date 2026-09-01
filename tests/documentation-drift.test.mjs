@@ -8,11 +8,17 @@ const readJson = async (relativePath) => JSON.parse(await readFile(path.join(roo
 const readText = async (relativePath) => readFile(path.join(root, relativePath), "utf8");
 
 test("current prototype, evidence status, and roadmap cover every live record", async () => {
-  const [metadata, prototype, status, roadmap, symbolFiles] = await Promise.all([
+  const [metadata, packageManifest, readme, prototype, status, roadmap, skeleton, blockerMap,
+    decisions, symbolFiles] = await Promise.all([
     readJson("registry/registry-metadata.json"),
+    readJson("package.json"),
+    readText("README.md"),
     readText("docs/interchange-prototype.md"),
     readText("docs/current-evidence-status.md"),
     readText("docs/prioritized-next-work.md"),
+    readText("docs/internal-unicode-proposal-skeleton.md"),
+    readText("docs/unicode-proposal-critical-path-audit.md"),
+    readText("docs/decision-log.md"),
     import("node:fs/promises").then(({ readdir }) => readdir(path.join(root, "registry/symbols"))),
   ]);
   const records = await Promise.all(symbolFiles.filter((file) => file.endsWith(".json"))
@@ -41,6 +47,38 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.match(status, /high-shelf[^\n]*high shelving filter[^\n]*resolved as bounded alias[^\n]*isolated distinction from low pass is the sole material blocker/i);
   assert.doesNotMatch(roadmap, /Status as of 2026-08-29, after work merged through PR #24|initial four-record scope|affect the four records/);
   assert.ok(roadmap.includes(`registry metadata ${metadata.artifacts.registry.version}`));
+
+  assert.equal(packageManifest.version, metadata.artifacts.tooling.version);
+  assert.ok(readme.includes(`Tooling release: **${packageManifest.version}**`));
+  assert.ok(status.includes(`| Tooling | ${packageManifest.version} | \`package.json\` |`));
+  const validationResult = status.match(/`npm test` passed (\d+)\/(\d+)/);
+  assert.ok(validationResult, "current status omits the completed npm test result");
+  assert.equal(validationResult[1], validationResult[2], "current status records an incomplete test run");
+  assert.match(status, /Exact-head independent adverse review is complete\./);
+
+  assert.match(roadmap, /exact-head reviewed in assessment artifact 0\.3\.5 through \[PR #100\]/);
+  assert.doesNotMatch(roadmap, /assessment artifact 0\.3\.5; exact-head adverse review pending|Adversely review assessment artifact 0\.3\.5/);
+  assert.match(roadmap, /Issue #28 is closed/);
+  assert.match(roadmap, /PR #49[\s\S]*superseded by the approved `compact-a` geometry lock integrated in PR #72/);
+  assert.match(roadmap, /closed PR #61/);
+
+  for (const [id, reviewedHead, pull] of [
+    ["D-026", "8fc5a70e9adbf38240339c363c6f26a8a695c265", 99],
+    ["D-027", "be3304cb37e4247065b2dbb94b4f86f23b248189", 100],
+    ["D-028", "d015e5ae6e4ea5a4f6657620d90f85ad8bc7b2d6", 102],
+  ]) {
+    const section = decisions.split(`## ${id}:`)[1]?.split("\n## D-")[0] ?? "";
+    assert.match(section, /Status: Accepted subject to exact-head independent adverse review/);
+    assert.match(section, new RegExp(`${reviewedHead}[\\s\\S]*PR #${pull}`));
+  }
+
+  assert.doesNotMatch(blockerMap, /Run its property simulations|build a private proof font/i);
+  assert.match(blockerMap, /bounded abstract mixed-direction, line-break, normalization, orientation, and accessibility simulations/);
+  assert.match(blockerMap, /private, cmap-free proof font[\s\S]*complete/);
+  assert.doesNotMatch(skeleton, /\[UNMET\] mixed-direction behavior|\[UNMET\] line breaking and adjacent|\[UNMET\] normalization and sequence analysis|\[UNMET\] accessibility behavior and text fallback/);
+  assert.match(skeleton, /\[PARTIAL - PRIVATE PROOF PASSED\][^\n]*bidi-neutral/);
+  assert.match(skeleton, /\[PARTIAL - PRIVATE PROOF PASSED\][^\n]*abstract identity-normalization/);
+  assert.match(skeleton, /Unicode critical-path audit[^\n]*DA-013 v0\.2\.2/);
 });
 
 test("current assessment selects the evidence-triggered six-record snapshot", async () => {

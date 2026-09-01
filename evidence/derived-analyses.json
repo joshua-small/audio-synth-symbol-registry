@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.22",
+  "registry_version": "0.2.23",
   "artifacts": [
     {
       "id": "DA-001",
@@ -2469,7 +2469,7 @@
       "id": "DA-013",
       "version": "0.2.1",
       "title": "Unicode proposal critical-path audit",
-      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "path": "docs/unicode-proposal-critical-path-audit-0.2.1.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T01:44:51-07:00",
       "content_sha256": "ae9f1b2a4c23a115e0c12657522ec8e1e4382af7bee826490f4401dfda77b0d3",
@@ -2508,6 +2508,44 @@
       "scope": "Synchronizes the internal Unicode blocker map to assessment artifact 0.3.5 while preserving independent character use, public plain-text need, community support, registry acceptance, and external authorization as open.",
       "limitations": [
         "Higher registry-readiness scores do not establish Unicode eligibility, portable character use, encoding necessity, or community support.",
+        "Unicode remains HOLD; no proposal, outreach, submission, code point, font publication, artwork acceptance, or external action is authorized."
+      ]
+    },
+    {
+      "id": "DA-013",
+      "version": "0.2.2",
+      "title": "Unicode proposal critical-path audit",
+      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T03:04:13-07:00",
+      "content_sha256": "f3bd61adddf806af61d6378eea0b7813881f6679cc0d8fb4baf40e4d56e96029",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-100",
+        "EV-120",
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.2.1"
+        }
+      ],
+      "scope": "Docs-only patch synchronizing the internal Unicode blocker map with the completed private property simulations and cmap-free font proof while preserving all proposal blockers and Unicode HOLD.",
+      "limitations": [
+        "Private abstract-token simulations and a cmap-free proof font do not establish Unicode conformance, character eligibility, portable usage, encoding need, or community support.",
         "Unicode remains HOLD; no proposal, outreach, submission, code point, font publication, artwork acceptance, or external action is authorized."
       ]
     },
@@ -2631,7 +2669,7 @@
       "id": "DA-006",
       "version": "0.2.22",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.22.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T02:11:15-07:00",
       "content_sha256": "d51b6975a76aa7e5f4a2777b856c9cd0157e299e560ff0f6fbce78f7fe0310dc",
@@ -2663,6 +2701,44 @@
       "limitations": [
         "Semantic continuity does not establish graphic descent, exact contour inheritance, global prevalence, portable character use, encoding necessity, artwork acceptance, or Unicode eligibility.",
         "No live record, alias, question, assessment, score, status, artwork, geometry, schema, tooling, font, PUA, release, outreach, or external posture changes; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.23",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T03:04:13-07:00",
+      "content_sha256": "227c2ea695981d0ee2358c3a1f60bf247e1d5b6c957714d9c5fd6d1fbfbbc288",
+      "input_evidence_ids": [
+        "EV-210",
+        "EV-211",
+        "EV-212",
+        "EV-213",
+        "EV-214",
+        "EV-215",
+        "EV-216",
+        "EV-217",
+        "EV-218",
+        "EV-219",
+        "EV-220",
+        "EV-221"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.22"
+        },
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.2.2"
+        }
+      ],
+      "scope": "Docs-only patch synchronizing current tooling, validation, completed-review, and protected-boundary facts while preserving the six-record evidence conclusions and Unicode HOLD.",
+      "limitations": [
+        "Documentation synchronization does not establish portable character use, encoding necessity, artwork acceptance, or Unicode eligibility.",
+        "No live record, alias, question, assessment, score, status, artwork, geometry, schema, tooling functionality, font, PUA, release, outreach, or external posture changes; Unicode remains HOLD."
       ]
     }
   ]

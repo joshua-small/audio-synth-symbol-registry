@@ -146,16 +146,16 @@ Registry canonical names and spoken labels are evidence-management fields, not a
 
 The internal [character-properties and font strategy](character-properties-font-strategy.md) records one testable hypothesis for all six: `General_Category=So`, `Canonical_Combining_Class=0`, `Bidi_Class=ON`, `Bidi_Mirrored=N`, `East_Asian_Width=N`, `Line_Break=AL`, `Script=Common`, with no case, numeric value, decomposition, joining, combining, math, identifier, emoji, or variation-sequence behavior.
 
-`[PARTIAL - NOT PROPOSAL DATA]` These values remain provisional until simulation, analogue review, names/repertoire resolution, and character eligibility are complete. UnicodeData-style rows cannot be written without names and code points and are intentionally absent.
+`[PARTIAL - NOT PROPOSAL DATA]` Bounded private abstract-token simulation is complete, but these values remain provisional until analogue review, broader conformance testing, names/repertoire resolution, and character eligibility are complete. UnicodeData-style rows cannot be written without names and code points and are intentionally absent.
 
 Property validation slots:
 
-- `[UNMET]` mixed-direction behavior and fixed internal orientation under UAX #9;
-- `[UNMET]` line breaking and adjacent punctuation/numerals under UAX #14;
-- `[UNMET]` normalization and sequence analysis after the non-duplication argument;
-- `[UNMET]` accessibility behavior and text fallback expectations;
+- `[PARTIAL - PRIVATE PROOF PASSED]` six bounded bidi-neutral expectations preserve fixed internal orientation; broader UAX #9 conformance remains open;
+- `[PARTIAL - PRIVATE PROOF PASSED]` six bounded `AL`/number/space line-break expectations pass; broader UAX #14 conformance remains open;
+- `[PARTIAL - PRIVATE PROOF PASSED]` 24 abstract identity-normalization expectations pass; encoded-sequence and Unicode normalization analysis remain open;
+- `[PARTIAL - PRIVATE PROOF PASSED]` registry text and spoken fallbacks pass the private checks; proposal-level accessibility review remains open;
 - `[UNMET]` collation/order rationale;
-- `[UNMET]` confirmation that no member needs a distinct property profile.
+- `[PARTIAL - PRIVATE PROOF PASSED]` one shared profile passes the bounded cases for all six tokens; broader analogue review may still identify a distinct need.
 
 ## 6. Existing characters, sequences, and confusables - partial
 
@@ -202,7 +202,7 @@ Required before an external package:
 - `[UNMET]` OpenType name IDs 0, 8, 9, 13, and 14 as applicable;
 - `[PARTIAL - PRIVATE PROOF ONLY]` deterministic transform, metrics, contour, raster, and reproducibility records; independent platform rasterizers and a publication-licensed proposal font remain unmet;
 - `[UNMET]` valid committee-appropriate mapping after legitimate assignment strategy exists;
-- `[UNMET]` tested fallback, baseline, advance, small-size rendering, bidi, line wrap, normalization, and accessibility behavior;
+- `[PARTIAL - PRIVATE PROOF PASSED]` fallback metadata, advance, small-size rendering, bounded bidi, line-break, abstract normalization, and accessibility expectations; baseline, independent render stacks, and broader conformance remain unmet;
 - `[UNMET]` no unexpected color, emoji, GSUB ligature, variation, joining, math, or identifier behavior.
 
 ## 9. Why adjacent mechanisms are not automatic substitutes - incomplete rationale
@@ -255,8 +255,8 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.22) | EV-001 through EV-221 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. Band-stop is 18/20 after DA-023; both shelves remain 19/20 with isolated shelf/pass recognition as their sole material blocker. DA-026 adds status-neutral historical evidence and no portable glyph finding. |
-| Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013 v0.2.0) | EV-110-EV-118 plus DA-024 inputs | Three central criteria remain controlling; direct/adverse text evidence does not clear character use or encoding need. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.23) | EV-001 through EV-221 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. Band-stop is 18/20 after DA-023; both shelves remain 19/20 with isolated shelf/pass recognition as their sole material blocker. DA-026 adds status-neutral historical evidence and no portable glyph finding. |
+| Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013 v0.2.2) | EV-110-EV-118 plus DA-024 inputs | Three central criteria remain controlling; direct/adverse text evidence does not clear character use or encoding need. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
 | Independent character-like use | [Independent-use spike](../evidence/reports/2026-08-31-independent-character-use-spike.md) (DA-014); [Band-stop dossier](../evidence/reports/2026-08-31-band-stop-text-and-third-render-dossier.md) (DA-023); [portable-text corpus](../evidence/reports/2026-09-01-portable-text-and-interchange-need-corpus.md) (DA-024) | EV-025, EV-100, EV-101, EV-120-EV-122, EV-150, EV-200-EV-209, enriched EV-032 | Compact/project-local implementation, derivative icon assets, contextual prose, and successful text protocols exist; portable response-glyph use remains absent. |

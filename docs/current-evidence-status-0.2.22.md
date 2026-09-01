@@ -1,6 +1,6 @@
 # Current Evidence Status
 
-Status as of 2026-09-01T03:04:13-07:00. This synthesis supersedes the historical [0.2.22 status synthesis](current-evidence-status-0.2.22.md). It preserves the status-neutral evolutionary-history corpus DA-026 and synchronizes current tooling and review facts without changing any live semantic record, alias, question, assessment, score, lifecycle status, artwork, or external posture.
+Status as of 2026-09-01T02:11:15-07:00. This synthesis supersedes the historical [0.2.21 status synthesis](current-evidence-status-0.2.21.md). It adds the status-neutral evolutionary-history corpus DA-026 without changing any live semantic record, alias, question, assessment, score, lifecycle status, artwork, or external posture.
 
 ## Current artifacts
 
@@ -9,8 +9,8 @@ Status as of 2026-09-01T03:04:13-07:00. This synthesis supersedes the historical
 | Registry and evidence ledger | 0.4.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.5, format 0.2.0 | `registry/assessments/registry-0.4.1-2026-09-01.json` |
-| Derived analyses | 0.2.23, format 0.1.0 | `evidence/derived-analyses.json` |
-| Tooling | 0.9.0 | `package.json` |
+| Derived analyses | 0.2.22, format 0.1.0 | `evidence/derived-analyses.json` |
+| Tooling | 0.8.0 | `package.json` |
 
 ## Current records
 
@@ -67,14 +67,13 @@ DA-026 also preserves a negative result: it found no independently used portable
 4. Preserve the `registry-accepted` Human Review gate and batch it with a complete external-package review if that stage is reached.
 5. Keep Unicode `HOLD` until every formal non-go condition is cleared and the owner separately authorizes external action.
 
-## Agent Report - 2026-09-01T03:04:13-07:00
+## Agent Report - 2026-09-01T02:11:15-07:00
 
-- Report status: status-neutral evolutionary-history evidence dossier merged after exact-head independent adverse review; current artifact and validation facts synchronized through tooling 0.9.0.
+- Report status: status-neutral evolutionary-history evidence dossier implemented and frozen for exact-head independent adverse review; publication remains pending.
 - Finding: semantic continuity is long-lived, while one unbroken graphic genealogy, exact contour inheritance, universal standardization, and portable character use remain unproven.
 - Boundaries: shelf affected side remains separate from gain polarity; contextual graphs remain distinct from standalone selectors; DA-020 Notch non-transfer remains controlling.
-- Versions: registry/evidence 0.4.2 and derived analyses 0.2.23; assessments remain 0.3.5 with format 0.2.0, schema 0.4.0, and tooling 0.9.0.
+- Versions: registry/evidence 0.4.2 and derived analyses 0.2.22; assessments remain 0.3.5 with format 0.2.0, schema 0.4.0, and tooling 0.8.0.
 - Protected state: live records and aliases, questions, assessments, scores, status values, artwork, geometry, schema, tooling, font, PUA, registry-accepted gate, Unicode `HOLD`, and external posture remain unchanged.
 - Limitations: the sample is purposive, editorially framed, English-heavy, archive-dependent, and not a market-share or global-prevalence study. Bell 1923 remains an acquisition lead only.
-- Validation: `npm test` passed 124/124 after validating six records, nine assessment sets, 136 evidence sources, registry/evidence 0.4.2, assessments 0.3.5, schema 0.4.0, tooling 0.9.0, derived analyses 0.2.23, registered source and artifact digests, documentation drift, Agent Report hygiene, and protected private study, font, and icon-package boundaries. Exact-head independent adverse review is complete.
+- Validation: `npm test` passed 120/120 after validating six records, nine assessment sets, 136 evidence sources, registry/evidence 0.4.2, assessments 0.3.5, schema 0.4.0, tooling 0.8.0, derived analyses 0.2.22, registered source and artifact digests, documentation drift, Agent Report hygiene, and protected private study/font boundaries. Exact-head independent adverse review remains pending.
 - Independent adverse review - 2026-09-01T02:30:26-07:00: `APPROVE` exact substantive head `1598fa5b1b5905553d1ffe8f2a8d1ccc76c15575` (tree `1464be7473cf7ab057367fcf3fd9f2d9cf2f098b`) with no blocker. This approval-report-only annotation changes no reviewed substance.
-- Current-state hygiene review - 2026-09-01T03:16:07-07:00: `APPROVE` exact substantive head `2ce7119c99993ccd7e7d90a7e5652ad5c845a506` (tree `50ec112e2080330c4c852b4be6498277cd2e3457`) after an independent 124/124 run, immutable-predecessor digest checks, tracker verification, protected-tree comparison, and Unicode `HOLD` confirmation. This approval-report-only annotation changes no reviewed conclusion.
