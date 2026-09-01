@@ -18,5 +18,9 @@ jobs:
         with:
           node-version: 24
           cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
       - run: npm ci
+      - run: pip install --require-hashes -r tooling/private-font-proof/requirements.lock.txt
       - run: npm test

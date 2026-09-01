@@ -1,6 +1,6 @@
 {
   "name": "audio-synth-symbol-registry",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "description": "Evidence-led open registry for audio and synthesis symbols.",
   "type": "module",
@@ -12,6 +12,7 @@
     "svg:validate": "node tooling/validate-study-svg.mjs",
     "svg:qa": "node tooling/render-svg-qa.mjs",
     "interchange": "node tooling/interchange-prototype.mjs",
+    "font:private-proof": "node tooling/private-font-proof/validate-private-font-proof.mjs",
     "validate": "node tooling/validate-registry.mjs",
     "test": "npm run validate && npm run report:hygiene && node --test tests/*.test.mjs"
   },

@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.10",
+  "registry_version": "0.2.11",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1504,7 +1504,7 @@
         "id": "DA-006",
         "version": "0.2.10",
         "title": "Current evidence-status synthesis",
-        "path": "docs/current-evidence-status.md",
+        "path": "docs/current-evidence-status-0.2.10.md",
         "kind": "status-synthesis",
       "produced_at": "2026-08-31T21:21:47-07:00",
       "content_sha256": "aceba91ff6d6f32c0826600d628017f7c32d7117a8481a9d45d55d9d3b08ee91",
@@ -1545,6 +1545,37 @@
           "The low-shelf recurrence result is bounded communication-friction evidence, not portable character use or encoding necessity.",
           "Band-stop retains the material Notch boundary and excludes every Notch-only implementation.",
           "Band-pass candidate status leaves its identifier provisional and does not imply registry acceptance, artwork acceptance, or Unicode readiness; Unicode remains HOLD."
+        ]
+      },
+      {
+        "id": "DA-006",
+        "version": "0.2.11",
+        "title": "Current evidence-status synthesis",
+        "path": "docs/current-evidence-status.md",
+        "kind": "status-synthesis",
+        "produced_at": "2026-08-31T21:34:25-07:00",
+        "content_sha256": "564d01a2882c496ad105d8a1fe1422167269a02d9cc631d9ed1ee8f3951232b8",
+        "input_evidence_ids": [
+          "EV-120",
+          "EV-121",
+          "EV-130",
+          "EV-131",
+          "EV-140",
+          "EV-141",
+          "EV-150",
+          "EV-151"
+        ],
+        "input_artifact_refs": [
+          {
+            "artifact_id": "DA-006",
+            "artifact_version": "0.2.10"
+          }
+        ],
+        "scope": "Superseding six-record status synthesis after private unencoded font-proof validation, preserving the merged reassessment and band-pass candidate transition without semantic, artwork, assessment, or status movement.",
+        "limitations": [
+          "The proof is internal technical validation rather than independent usage evidence and cannot increase source-independence counts.",
+          "One rendering stack and serialized fontTools lookup/draw inspection do not establish multi-platform rendering, HarfBuzz behavior, font publication readiness, character use, or Unicode eligibility.",
+          "Generated proof artifacts remain private; Unicode remains HOLD."
         ]
       }
   ]

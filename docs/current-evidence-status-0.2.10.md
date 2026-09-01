@@ -1,6 +1,6 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T21:34:25-07:00. This synthesis supersedes the historical [0.2.10 status synthesis](current-evidence-status-0.2.10.md). It preserves the six-record reassessment and independently reviewed D-021 band-pass candidate transition, then records the private unencoded font-proof validation. No artwork, study, font publication, or external action is authorized.
+Status as of 2026-08-31T21:21:44-07:00. This synthesis supersedes the historical [0.2.9 status synthesis](current-evidence-status-0.2.9.md). It reports the mechanical reassessment of all six records after EV-120 through EV-151 and DA-014 through DA-017 and the independently reviewed D-021 candidate transition. No artwork, study, or external action is authorized.
 
 ## Current artifacts
 
@@ -9,8 +9,8 @@ Status as of 2026-08-31T21:34:25-07:00. This synthesis supersedes the historical
 | Registry and evidence ledger | 0.2.9 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.3, format 0.2.0 | `registry/assessments/registry-0.2.9-2026-08-31.json`; independent adverse review passed |
-| Derived analyses | 0.2.11, format 0.1.0 | `evidence/derived-analyses.json` |
-| Tooling | 0.8.0 | `package.json` |
+| Derived analyses | 0.2.10, format 0.1.0 | `evidence/derived-analyses.json` |
+| Tooling | 0.7.0 | `package.json` |
 
 ## Current records
 
@@ -52,15 +52,13 @@ The reassessment reproduces each score from direct ledger sources and counts pub
 - Image-Line's mixed `Notch` and `Band stop` wording is product-local and does not resolve the cross-domain D-011/DA-004 boundary.
 - EV-110 through EV-118 and DA-013 map the current SEW proposal path. They confirm that independent character usage, community-level stability, and public plain-text interchange need remain the controlling Unicode blockers even if downstream technical proposal artifacts are completed.
 - DA-017 finds that the six concepts form a durable, coherent semantic response taxonomy across manufacturers, decades, education, standards-adjacent APIs, and open-source implementation. It explicitly does not establish universal standalone drawing identity or character use.
-- The [private unencoded font proof](private-unencoded-font-proof-2026-08-31.md) demonstrates deterministic cmap-free construction from the six exact locked source hashes, registry-derived glyph names/GIDs, bounded property simulation, and 60 threshold-bounded rendering comparisons. It is internal validation rather than independent usage evidence and allocates no code point or PUA value.
 
-Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 establishes Ardour's direct project-local implementation while finding no portable independent text use. DA-015 closes the band-stop second-render and BSF-provenance gaps while preserving Notch exclusion. DA-016 finds bounded recurring public communication friction only for low shelf. DA-017 establishes semantic-taxonomy coherence but not universal form stability. The private proof report is internal technical validation and likewise adds no independent usage source. Unicode remains `HOLD`.
+Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 establishes Ardour's direct project-local implementation while finding no portable independent text use. DA-015 closes the band-stop second-render and BSF-provenance gaps while preserving Notch exclusion. DA-016 finds bounded recurring public communication friction only for low shelf. DA-017 establishes semantic-taxonomy coherence but not universal form stability. Unicode remains `HOLD`.
 
 ## Current position
 
 - Registry and ASCII interchange work: `GO`.
 - Six-member evidence and recognition research: `GO` within existing study and artwork gates.
-- Private unencoded font feasibility: completed internally; generated artifacts remain private and unpublished.
 - Accepted artwork, `study-ready` designation, and recruitment: not authorized.
 - Formal Unicode proposal: `HOLD`. No submission has been made.
 
@@ -71,7 +69,7 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 3. Continue the bounded search for independently published, record-specific plain-text friction and portable symbol use, especially high shelf and band-stop.
 4. Use internal recognition validation to test six-way discrimination; do not infer industry adoption from original study artwork.
 5. Prepare a rights inventory for independently authored usage images.
-6. Preserve the provisional property and private proof findings while completing names, ordering, and cross-references. Add HarfBuzz and independent platform-rasterizer checks only if they materially support a later external package; do not treat font feasibility as a substitute for usage evidence.
+6. Run the merged provisional property simulations and complete names, ordering, cross-references, and rendering work; do not treat properties or a private font proof as substitutes for usage evidence.
 
 ## Agent Report - 2026-08-31T20:00:07-07:00
 
@@ -152,14 +150,3 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 - Boundaries: the candidate identifier remains provisional. No semantic field, identifier, alias, fallback, speech label, visible geometry, artwork status, study authority, outreach, release, or external-position change. Unicode remains `HOLD`.
 - Validation: the exact transitioned worktree passed `npm test` 113/113, registry validation for six records, seven assessment sets, and 82 evidence sources at registry 0.2.9, Agent Report hygiene, all 27 derived-artifact digests, proposal-skeleton drift coverage, and `git diff --check`. Exact committed-head confirmation is pending.
 - Independent review: APPROVE at exact pre-transition head `18c328037dcd0e1342398613ffae411ed7c6bc7e`; the reviewer independently fetched Ardour and DSSSP, reproduced all six scores and source groups, verified Notch exclusion and shelf conservatism, reconciled every derived digest, and confirmed the D-021 candidate boundary. Exact-final-head confirmation is pending.
-
-## Agent Report - 2026-08-31T21:34:25-07:00
-
-- Report status: internal validation and adverse review complete; PR CI pending.
-- Scope: sequential status synthesis after the private unencoded six-glyph font proof, preserving the merged PR #88 scores and band-pass candidate status.
-- Internal inputs: the exact six hashes in lock `six-member-compact-a-2026-08-30`, the provisional property profile, and private deterministic font/raster/TTX outputs; no generated output is committed or counted as independent evidence.
-- Result: a deterministic cmap-free font proof addressed only by six registry-derived glyph names/GIDs passed private construction, serialized lookup/draw/metric inspection, bounded property simulation, and 60 target-size/theme similarity comparisons. Tooling advances to 0.8.0; record semantics, scores, statuses, and Unicode `HOLD` do not change.
-- Boundaries: no code point or PUA value, accepted/canonical artwork, proposal font, font publication/license selection, participant action, outreach, submission, release, or external commitment.
-- Preserved objections: one librsvg/sharp rendering stack; no HarfBuzz runtime or independent platform rasterizer; font feasibility establishes neither character usage nor encoding need.
-- Validation: the integrated worktree passed `npm test` 117/117, two byte-identical private builds, 60/60 rendering comparisons, six serialized direct-glyph inspections, six bounded bidi-neutral cases, six executable line-break cases, registry validation, Agent Report hygiene, and `git diff --check`.
-- Independent review: APPROVE at exact substantive head `2b2c992ad37a07d3f5812868416f2a79b49d6f2b`; the reviewer independently passed 117/117 tests, confirmed all 24 bounded abstract normalization checks, reproduced the font and TTX commitments and 60/60 comparisons, verified non-tautological serialized glyph inspection and exact table/instruction enforcement, and found no geometry, publication, status, or Unicode-boundary change. This approval-report-only annotation does not alter the reviewed implementation.
