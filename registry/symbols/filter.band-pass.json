@@ -2,7 +2,7 @@
   "schema_version": "0.4.0",
   "id": "asr:filter.band-pass",
   "name": "Band-pass filter",
-  "status": "evidence-collecting",
+  "status": "registry-candidate",
   "semantics": {
     "category": "filter-response",
     "definition": "A filter response that passes a bounded band of frequencies and attenuates frequencies below and above that band.",
@@ -41,7 +41,7 @@
   "open_questions": [
     {
       "question": "Which audio-product families expose band-pass as a compact standalone filter mode?",
-      "status": "open"
+      "status": "resolved"
     }
   ],
   "notes": [
