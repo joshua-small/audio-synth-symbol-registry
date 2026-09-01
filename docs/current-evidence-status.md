@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T22:46:13-07:00. This synthesis supersedes the historical [0.2.15 status synthesis](current-evidence-status-0.2.15.md). It records the mechanical six-record reassessment after DA-018 through DA-021 and the D-021-delegated candidate transitions for high-pass, low-pass, and band-stop.
+Status as of 2026-08-31T23:55:22-07:00. This synthesis supersedes the historical [0.2.16 status synthesis](current-evidence-status-0.2.16.md). It preserves the merged six-record reassessment and adds the evidence-only shelf/shelving terminology disposition from DA-022 without changing any live semantic record, assessment, score, or status.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.3.1 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.3.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
-| Assessments | 0.3.4, format 0.2.0 | `registry/assessments/registry-0.3.1-2026-08-31.json`; exact-head independent adverse review pending |
-| Derived analyses | 0.2.16, format 0.1.0 | `evidence/derived-analyses.json` |
+| Assessments | 0.3.4, format 0.2.0 | `registry/assessments/registry-0.3.1-2026-08-31.json` |
+| Derived analyses | 0.2.17, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.8.0 | `package.json` |
 
 ## Current records
@@ -35,7 +35,9 @@ DA-020 and DA-021 resolve the Band-stop/Notch material blocker through controlle
 
 DA-019 and DA-021 establish three independent implementations of the axis-free, sign-agnostic, affected-side two-prong shelf topology. Affected-side orientation is semantic: low shelf forks left and high shelf forks right. Arbitrary rotation or mirroring that changes the forked side is not equivalent. Axes, baselines, color, parameter values, slope, interaction state, exact proportions, path curvature, whitespace, line weight, and endpoint placement remain excluded from semantic identity. Shelf visual convergence rises from 1 to 3, but exact shelving-term treatment and isolated six-way shelf/pass recognition remain material, so both records remain `evidence-collecting` at 19/20.
 
-All assessment claims preserve the counterevidence and exclusions in DA-018, DA-019, DA-020, and DA-021. Derived analyses organize direct ledger evidence but are not counted as additional independent sources.
+DA-022 finds that `low shelving filter` and `high shelving filter` are established exact response-class aliases for `Low-shelf filter` and `High-shelf filter`. Apple and MathWorks each provide direct within-document equivalence; Steinberg and immutable FFmpeg documentation independently corroborate the morphology, and W3C supports the underlying lowShelf/highShelf taxonomy. The finding is bounded: it carries no gain-sign, parameter, topology, implementation, or glyph equivalence, and it excludes plain `shelving filter`, shorter grammatical fragments, broad bass/treble terms, pass-colliding product enums, and abbreviations. This evidence-only publication does not mutate either shelf record or resolve its live open question; a separate exact-head semantic disposition is required.
+
+All assessment claims preserve the counterevidence and exclusions in DA-018 through DA-022. Derived analyses organize direct ledger evidence but are not counted as additional independent sources.
 
 ## Current position
 
@@ -47,20 +49,20 @@ All assessment claims preserve the counterevidence and exclusions in DA-018, DA-
 
 ## Next work
 
-1. Complete exact-head independent adverse review of the new immutable assessment, arithmetic, evidence independence, blocker dispositions, and the three D-021 candidate transitions.
-2. Continue a dedicated adverse shelf/shelving terminology review and private isolated six-way recognition validation; neither is satisfied by topology convergence alone.
-3. Seek a third independent explicit axis-less Band-stop/Band-reject implementation and portable text-friction evidence without borrowing Notch-only sources.
-4. Preserve the `registry-accepted` Human Review gate and batch it with review of a complete external submission package if that stage is reached.
-5. Keep Unicode `HOLD` until every formal non-go condition in the acceptance rubric is cleared and the owner separately authorizes external action.
+1. Complete exact-head independent adverse review of DA-022, its source captures, independence accounting, morphology boundary, exclusions, and registered digest.
+2. If approved, perform a separate semantic disposition for the two full shelving-filter aliases, then mechanically reassess the shelf terminology blocker without conflating it with isolated recognition.
+3. Continue private isolated six-way recognition validation; lexical evidence and topology convergence do not satisfy that blocker.
+4. Seek a third independent explicit axis-less Band-stop/Band-reject implementation and portable text-friction evidence without borrowing Notch-only sources.
+5. Preserve the `registry-accepted` Human Review gate and batch it with review of a complete external submission package if that stage is reached.
+6. Keep Unicode `HOLD` until every formal non-go condition in the acceptance rubric is cleared and the owner separately authorizes external action.
 
-## Agent Report - 2026-08-31T22:46:13-07:00
+## Agent Report - 2026-08-31T23:55:22-07:00
 
-- Report status: substantive assessment/status implementation complete and frozen for exact-head independent adverse review; publication remains pending.
-- Scope: publish a new immutable six-record assessment using unchanged format 0.2.0, apply score changes supported by DA-018 through DA-021, and perform D-021-delegated candidate transitions for high-pass, low-pass, and band-stop.
-- Result: target scores are 20, 20, 20, 16, 19, and 19; the four pass/stop records are candidates, while both shelves remain evidence-collecting with material shelving-term and isolated-recognition blockers.
-- Preserved adverse boundaries: pass/cut response-class limits and product-documentation override; Notch controlled polysemy and non-transferability; polarity-specific, contextual, and exact-contour shelf exclusions; portable-text and Unicode non-go findings.
-- Protected boundaries: no `registry-accepted` promotion, permanent identifier, Unicode-position, artwork, visible geometry, alias-array, schema, tooling, font, PUA, study-operation, release, publication, outreach, or external-authority change. Unicode remains `HOLD`.
-- Versions: registry 0.3.1, assessments 0.3.4 with format 0.2.0, and derived analyses 0.2.16; schema 0.4.0 and tooling 0.8.0 remain unchanged.
-- Validation: `npm test` passed 117/117 after validating six records, eight append-only assessment sets, 106 evidence sources, registry 0.3.1, assessments 0.3.4, schema 0.4.0, tooling 0.8.0, current-assessment selection, threshold arithmetic, source and derived-artifact provenance, registered digests, blocker/status consistency, documentation drift, and Agent Report hygiene. Historical DA-006 v0.2.15 and DA-003 v0.1.0 reproduce byte-for-byte from the merged base; protected artwork, geometry locks, schema, tooling, font-proof tooling, PUA posture, and external-position files are unchanged. `git diff --check` passed.
-- Independent review: the first adverse pass on exact head `bec99b9bbd6e8e056c5f2037ca668ac116001cd2` found one downstream-coherence blocker only: the internal Unicode skeleton still described unrestricted pass/cut equivalence as unresolved. The stale sentence now explicitly rejects unrestricted equivalence and preserves only the bounded response-class relationship and product-documentation override. Exact corrected-head confirmation remains pending; no score, lifecycle state, semantic record, or protected boundary changed.
-- Exact corrected-head review: `APPROVE` on `0d11126ded88aedab9efde367b4f7b7b875d5b75` with no remaining blocker. The reviewer confirmed the sole downstream sentence now matches DA-018 and DA-021, all 117 tests pass, registered hashes reconcile, and no score, lifecycle, artwork, geometry, schema, tooling, font, PUA, Unicode, or external-action boundary changed. This approval-report-only annotation supersedes the earlier pending-review wording without changing the reviewed substance.
+- Report status: shelf/shelving evidence dossier serialized and frozen for exact-head independent adverse review; the semantic recommendation is not applied.
+- Scope: add EV-190 through EV-197 and DA-022, preserving direct within-document equivalence, source independence, morphology versus orthography, and product-specific adverse boundaries.
+- Result: the full phrases `low shelving filter` and `high shelving filter` are supported as bounded response-class aliases, while shorter fragments, broad region words, product-local pass enums, collision-prone compounds, and abbreviations remain excluded.
+- Preserved state: scores remain 20, 20, 20, 16, 19, and 19; the four pass/stop records remain candidates and both shelves remain evidence-collecting with their live terminology and isolated-recognition questions unchanged.
+- Protected boundaries: no live alias, related term, question, canonical field, identifier, assessment, score, status, artwork, geometry, font, PUA, Unicode position, release, publication, outreach, or external-authority change. Unicode remains `HOLD`.
+- Versions: registry/evidence 0.3.2 and derived analyses 0.2.17; assessments remain 0.3.4 with format 0.2.0, schema 0.4.0, and tooling 0.8.0.
+- Validation: `npm test` passed 117/117 after validating six records, eight assessment sets, 114 evidence sources, registry 0.3.2, assessments 0.3.4, schema 0.4.0, tooling 0.8.0, registered source and derived-artifact digests, documentation drift, protected study/font boundaries, and Agent Report hygiene. `git diff --check` passed.
+- Independent review: `REQUEST CHANGES` on exact head `4bd7cfe7ecd69198c691ca0d6077c3cbf53f789a` for the EV-193 commit date and one claim exceeding pinned `doc/filters.texi`. Both defects were narrowly corrected, and exact corrected head `f6f94e11e0f57b1b3d743fe341552cb0f29705ce` received `APPROVE` with no remaining blocker. This approval annotation changes no reviewed substance.

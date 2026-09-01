@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.3.1",
+  "ledger_version": "0.3.2",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -2509,6 +2509,238 @@
           },
           "rights_basis": "Lawful public inspection with metadata and digests only.",
           "limitations": "The static capture does not expose a shelf glyph and is retained as an exclusion. The help-page HTML injects per-request CSP nonces and CSRF tokens, so its dynamic raw bytes are metadata-only and intentionally not checksum-pinned."
+        }
+      }
+    },
+    {
+      "id": "EV-190",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "ChromaVerb Output EQ in Logic Pro for iPad",
+      "url": "https://support.apple.com/guide/logicpro-ipad/output-eq-lpip1f7156c0/ipados",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "ChromaVerb Output EQ parameters; Low Shelf and High Shelf control bullets",
+      "direct_observation": "The page labels controls Low Shelf and High Shelf and, within the same bullets, identifies them as the low shelving filter and a high shelving filter. Separate frequency, gain, and Q controls preserve filter-side identity across signed level changes.",
+      "interpretation": "This is direct within-document equivalence between the shelf noun labels and shelving modifier phrases at response-class level. It does not establish implementation, parameter, topology, or glyph equivalence.",
+      "rights_note": "Linked public vendor documentation only; no page text, interface, screenshot, curve, or artwork is retained, copied, traced, or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "Logic Pro for iPad ChromaVerb",
+        "product_version": null,
+        "exact_locator": "ChromaVerb Output EQ parameters > Low Shelf On/Off button and High Shelf On/Off button",
+        "stable_fragment": "lpip1f7156c0",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "c8b0ebbdc96ae64ecc70f88dbeda076100ca7153929ccb808c48b06085bf3391",
+            "scope": "HTML response bytes from the public Apple Support URL"
+          },
+          "rights_basis": "The public documentation was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The mutable response includes site chrome and remains hosted outside project control. The digest detects byte identity only and is not an archive or reuse license."
+        }
+      }
+    },
+    {
+      "id": "EV-191",
+      "type": "engineering-reference",
+      "publisher": "MathWorks",
+      "title": "designShelvingEQ documentation",
+      "url": "https://www.mathworks.com/help/audio/ref/designshelvingeq.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Description and Low-Shelf/High-Shelf example headings",
+      "direct_observation": "The same API page says the default call designs a low-shelf equalizer and the typed call selects a low-shelving or high-shelving equalizer. Its headings and examples use Low-Shelf and High-Shelf while gain, slope, cutoff, and type remain separate inputs.",
+      "interpretation": "This is direct within-document morphological equivalence between shelf and shelving for the low and high response classes. It does not make equalizer and filter globally interchangeable nouns or equate implementations.",
+      "rights_note": "Linked public engineering documentation only; no page text, example code, plot, response, or artwork is retained or copied.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "MATLAB Audio Toolbox designShelvingEQ",
+        "product_version": null,
+        "exact_locator": "Description paragraphs for default and typed forms; Filter Audio Using Low-Shelf Equalizer; Design High-Shelf Equalizer; Design Low-Shelf Equalizer",
+        "stable_fragment": "designshelvingeq.html",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public documentation was lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The unversioned mutable page and site chrome remain outside project control. Repeated raw responses changed at the same URL during validation, so no misleading response digest is retained."
+        }
+      }
+    },
+    {
+      "id": "EV-192",
+      "type": "vendor-documentation",
+      "publisher": "Steinberg Media Technologies GmbH",
+      "title": "RoomWorks input-filter documentation",
+      "url": "https://www.steinberg.help/r/cubase-artist/cubaseplugref/15.0/en/_shared/topics/plug_ref/roomworks_r.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Input Filters; Low Frequency, High Frequency, Low Gain, and High Gain",
+      "direct_observation": "The Cubase Artist 15 RoomWorks page uses the exact hyphenated phrases low-shelving filter and high-shelving filter. Separate Low Gain and High Gain controls provide boost or attenuation.",
+      "interpretation": "This independently corroborates shelving as the modifier for the same affected-side response classes and shows that gain sign is not lexical identity. It does not establish one algorithm or glyph.",
+      "rights_note": "Linked public vendor documentation only; no page content, interface, image, response, or artwork is retained or copied.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "Cubase Artist RoomWorks",
+        "product_version": "15.0",
+        "exact_locator": "Input Filters > Low Frequency, High Frequency, Low Gain, High Gain",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public vendor documentation was lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The rendered page is mutable and remains outside project control. Repeated raw responses changed at the same URL during validation, so no misleading response digest is retained."
+        }
+      }
+    },
+    {
+      "id": "EV-193",
+      "type": "engineering-reference",
+      "publisher": "FFmpeg contributors",
+      "title": "FFmpeg shelf-filter documentation at commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/b1f564bda248dbe8ac37cb743966fdd7ee4b490c/doc/filters.texi",
+      "publication_date": "2026-08-31",
+      "accessed_on": "2026-08-31",
+      "location": "doc/filters.texi sections bass,lowshelf and treble,highshelf",
+      "direct_observation": "The immutable documentation has sections named bass, lowshelf and treble, highshelf. Each section describes a two-pole shelving filter and documents signed gain plus shelf-transition parameters.",
+      "interpretation": "The source independently connects the lowshelf and highshelf names to the shelving-filter family. Bass and treble are paired section terms in this source and remain too broad for unrestricted global aliases.",
+      "rights_note": "The public repository was inspected at an immutable commit; no documentation or implementation source is copied into this repository and no endorsement is claimed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "FFmpeg audio filters",
+        "product_version": "Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+        "exact_locator": "doc/filters.texi sections `bass, lowshelf` and `treble, highshelf`",
+        "stable_fragment": "Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "d9a184d6f9ee7e3563dfa5271afb1251d3871ffddbc96b7f594fae3a6935defc",
+            "scope": "Raw bytes of doc/filters.texi at Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c"
+          },
+          "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata and a digest are retained.",
+          "limitations": "The digest is an evidence commitment, not redistribution, endorsement, or proof that broad bass and treble words transfer beyond this implementation."
+        }
+      }
+    },
+    {
+      "id": "EV-194",
+      "type": "standards-reference",
+      "publisher": "W3C Audio Working Group",
+      "title": "Audio EQ Cookbook Working Group Note",
+      "url": "https://www.w3.org/TR/2021/NOTE-audio-eq-cookbook-20210608/",
+      "publication_date": "2021-06-08",
+      "accessed_on": "2026-08-31",
+      "location": "Biquad Filter Formulae; lowShelf and highShelf",
+      "direct_observation": "The dated Working Group Note names separate lowShelf and highShelf biquad formula families and parameterizes their responses.",
+      "interpretation": "This independently supports the shelf noun and the two affected-side taxonomy. It does not itself use low shelving filter, prescribe presentation, or prove exact morphology or character need.",
+      "rights_note": "Linked public W3C publication only; no formula, specification prose, plot, or artwork is copied into this repository.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "Audio EQ Cookbook",
+        "product_version": "Working Group Note 2021-06-08",
+        "exact_locator": "Biquad Filter Formulae entries lowShelf and highShelf",
+        "stable_fragment": "Dated W3C publication route /TR/2021/NOTE-audio-eq-cookbook-20210608/",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "a40b10461566fc0fd7e2911b847750b8c3a90034c46c2f9562f23489ee7704d8",
+            "scope": "HTML response bytes from the dated W3C publication URL"
+          },
+          "rights_basis": "The dated public W3C publication was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "A Working Group Note is not a W3C Recommendation and does not imply W3C member endorsement, presentation standardization, or Unicode suitability."
+        }
+      }
+    },
+    {
+      "id": "EV-195",
+      "type": "engineering-reference",
+      "publisher": "MathWorks",
+      "title": "shelvingFilter System object documentation",
+      "url": "https://www.mathworks.com/help/audio/ref/shelvingfilter-system-object.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Description and FilterType property",
+      "direct_observation": "The generic shelvingFilter object boosts or cuts above or below cutoff, but its product-local FilterType values are lowpass and highpass rather than low shelf and high shelf.",
+      "interpretation": "This is adverse evidence against unrestricted alias transfer: lowpass and highpass can be shelf-side enum values in one API but name distinct pass-filter response classes in the registry.",
+      "rights_note": "Linked public engineering documentation only; no page text, example code, plot, response, or artwork is retained or copied.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "MATLAB Audio Toolbox shelvingFilter",
+        "product_version": null,
+        "exact_locator": "Description; Properties > FilterType",
+        "stable_fragment": "shelvingfilter-system-object.html",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public documentation was lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The unversioned mutable page remains outside project control, and repeated raw responses changed during validation. Product enum names must not be generalized beyond their documented scope."
+        }
+      }
+    },
+    {
+      "id": "EV-196",
+      "type": "engineering-reference",
+      "publisher": "JUCE contributors",
+      "title": "JUCE dsp IIR Coefficients shelf factories",
+      "url": "https://docs.juce.com/master/structjuce_1_1dsp_1_1IIR_1_1Coefficients.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "makeLowShelf and makeHighShelf descriptions",
+      "direct_observation": "The callable names are makeLowShelf and makeHighShelf, while their prose descriptions say low-pass shelf filter and high-pass shelf filter with variable Q and gain.",
+      "interpretation": "The inserted pass wording is framework-local and collision-prone relative to the separate pass-filter records. It is adverse evidence against inferring every longer compound as a global alias.",
+      "rights_note": "Linked public API documentation only; no page text, source code, formulas, plots, or artwork are retained or copied.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:02-07:00",
+        "product": "JUCE dsp IIR Coefficients",
+        "product_version": null,
+        "exact_locator": "makeLowShelf and makeHighShelf API entries",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "9b374297feedb61ba3fbfe2872d7ebd28114112047e823a399bf2d25115751b0",
+            "scope": "HTML response bytes from the public JUCE documentation URL"
+          },
+          "rights_basis": "The public documentation was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The master documentation route is mutable and unversioned; its wording does not establish broad pass/shelf equivalence or implementation identity."
+        }
+      }
+    },
+    {
+      "id": "EV-197",
+      "type": "vendor-documentation",
+      "publisher": "Steinberg Media Technologies GmbH",
+      "title": "EQ-P1A documentation",
+      "url": "https://www.steinberg.help/r/cubase-pro/cubaseplugref/15.0/en/_shared/topics/plug_ref/eq-p1a_r.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Low Boost, Low Attenuate, High Boost, and High Attenuate controls",
+      "direct_observation": "The product documents low shelving boost and attenuation paths, a high peak boost path, and high shelving attenuation. Polarity and affected side are distributed across distinct controls and response families.",
+      "interpretation": "The shelving wording survives a product-specific topology that is not one symmetrical low/high biquad pair. Lexical response-class equivalence therefore cannot promise topology, polarity controls, or algorithm identity.",
+      "rights_note": "Linked public vendor documentation only; no page content, interface, image, response, or artwork is retained or copied.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:51:37-07:00",
+        "product": "Cubase Pro EQ-P1A",
+        "product_version": "15.0",
+        "exact_locator": "Low Boost, Low Attenuate, Low Boost/Attenuate Frequency, High Boost, and High Attenuate entries",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public vendor documentation was lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The rendered page is mutable and outside project control, and repeated raw responses changed during validation. One product topology cannot define all shelf implementations."
         }
       }
     }

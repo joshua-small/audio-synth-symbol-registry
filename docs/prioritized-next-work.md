@@ -2,7 +2,7 @@
 
 Status as of 2026-08-31T22:46:13-07:00, after the six-record reassessment and D-021-delegated candidate transitions. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.3.1.
+The current queue is aligned with registry metadata 0.3.2.
 
 ## Current dependency map
 
