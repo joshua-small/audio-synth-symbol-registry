@@ -1,6 +1,6 @@
 # Prioritized next work
 
-Status as of 2026-08-31T18:24:06-07:00, after the post-evidence six-record reassessment. This queue covers all six live records and separates routine work from unresolved Human Review gates. It does not authorize status promotion, artwork lock or acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-08-31T19:27:18-07:00, after the post-evidence six-record reassessment and D-021 standing delegation. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
 The current queue is aligned with registry metadata 0.2.2.
 
@@ -12,8 +12,8 @@ The current queue is aligned with registry metadata 0.2.2.
 | Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
 | Six-record reassessment | Completed in Issue #64 | Preserve the 17/20 shelf diagnostics and all six `evidence-collecting` statuses until new evidence warrants another assessment. |
-| Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Bind only the exact lock-manifest hashes to blinded package inputs; study-ready status, recruitment, launch, acceptance, publication, release, and outreach remain unauthorized. |
-| Study-stimulus infrastructure | Locked six-way construction binding implemented under [Issue #71](https://github.com/joshua-small/audio-synth-symbol-registry/issues/71) | Preserve opaque packaging and exact hashes; study-ready status and every operational study action remain gated. |
+| Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
+| Study-stimulus infrastructure | Construction validation completed in [PR #74](https://github.com/joshua-small/audio-synth-symbol-registry/pull/74) | Build and validate the D-022 private offline synthetic-response harness; preserve opaque packaging and exact hashes. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
@@ -30,13 +30,13 @@ Create another immutable assessment only after material new evidence lands. Appl
 
 The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`.
 
-This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record. If a score reaches a threshold, report the unmet floors and blockers and open a separate Human Review question only if promotion is actually recommended.
+This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record without satisfying the rubric. If a score reaches a threshold, report the unmet floors and blockers. Agents may promote to `registry-candidate` after the required independent review. Promotion to `registry-accepted` remains Human Review because it makes the identifier permanent, but that question should normally be batched into review of the complete external submission package instead of interrupting earlier work.
 
-### 3. Review construction package before any operational study work
+### 3. Validate the private offline participant harness
 
-The six hashes in `artwork/study-locks/six-member-compact-a.json` are bound to opaque-token packaging and protocol inputs. Any geometry revision requires a new explicit lock before replacement. The next action is an independent prelaunch leakage, rendering, accessibility, and protocol review followed by a separate Human Review question for `study-ready` status.
+The six hashes in `artwork/study-locks/six-member-compact-a.json` are bound to opaque-token packaging and protocol inputs. D-022 authorizes a private, offline, non-operational harness using synthetic responses only. The harness must collect all six free-text responses before exposing class labels and must exercise leakage, rendering, accessibility, keyboard, zoom, validation-error, resume, and submission behavior.
 
-Geometry lock is the dependency, not authorization for `study-ready`, recruitment, incentives, launch, artwork acceptance, or publication. Those remain separate gates.
+After independent adverse review and passing validation, agents may record an internal `study-ready` decision under D-021. This does not authorize recruitment, real participant access, privacy or consent commitments, incentives, launch, artwork acceptance, publication, release, outreach, or any other external action.
 
 ### 4. Maintain adjacent-path research without outreach
 
@@ -57,10 +57,11 @@ No external contact, submission, endorsement request, fork publication, new sema
 
 The summary below highlights project-specific gates and does not replace or narrow the complete gate list in [AGENTS.md](../AGENTS.md). Pause when work reaches any AGENTS.md gate, including:
 
-- selecting, revising, or locking study geometry;
-- marking artwork `study-ready` or `accepted`;
+- any intentional change to visible glyph geometry or family design;
+- activating a new semantic family or expanding the active six-concept repertoire;
+- marking artwork `accepted` or promoting a record to `registry-accepted`;
 - authorizing participant recruitment, incentives, privacy/consent terms, study launch, or publication;
-- changing scope, semantics, canonical names, aliases, identifiers, or record status;
+- making a materially ambiguous semantic, canonical-name, alias, identifier, or status decision that independent agent review cannot resolve safely;
 - adopting an external position or contacting a standards body, vendor, font project, educator, journalist, or user community;
 - publishing a release, declaring a protocol stable, or creating a compatibility promise.
 - changing licensing, contributor agreements, copyright, trademarks, third-party reuse, governance, security boundaries, credentials, spending, destructive actions, or account access;

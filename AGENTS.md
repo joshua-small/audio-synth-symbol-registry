@@ -25,15 +25,25 @@ Do not create a release or tag, change the compatibility policy, redefine a stab
 
 ## Human review gates
 
-Create a Human Review section in the pull request and pause merge only when work requires a decision about:
+Joshua has delegated technical, methodological, accessibility, evidence, packaging, internal-validation, and internal study-readiness decisions to agents. Within the currently authorized six-concept filter repertoire, agents must resolve those decisions through documented independent review and continue without a Human Review prompt. This includes private/offline harness design, study sequencing, validation criteria, internal readiness labels, and other non-operational study preparation. Agents may research future scope autonomously, but activating a new semantic family or expanding the active repertoire remains a Human Review decision.
 
-- Registry scope, a new semantic family, canonical identifier, canonical name, alias that changes semantic interpretation, or status promotion to `registry-accepted`
-- Unicode, ISO, IEC, AES, SMuFL, vendor, community, or other external-standard position, outreach, submission, endorsement, or attribution claim
-- Licensing, contributor agreement, copyright, trademark, or reuse of third-party material
-- Public release, publication, governance change, security boundary, credentials, spending, destructive action, or account access
-- Ambiguous, undocumented, contradicted, or unresolved behavior that materially affects semantics or interoperability
+Create a Human Review section in the pull request and pause merge only when work requires:
+
+- Human visual judgment for any intentional change to visible glyph geometry or family design; byte-only, metadata-only, or demonstrably rendering-invariant maintenance is excluded
+- Artwork acceptance or designation as canonical reference artwork
+- Activation of a new semantic family or expansion of the active six-concept repertoire
+- Promotion to `registry-accepted`, which makes a provisional identifier permanent; normally defer and batch this decision into review of the complete external submission package instead of interrupting earlier work
+- Review and authorization of the complete external submission before it is sent
+- Participant recruitment, study launch, or access by real participants
+- External outreach, submission, endorsement, or an attribution claim involving Unicode, ISO, IEC, AES, SMuFL, a vendor, a community, or another outside party
+- Public release or publication
+- Spending, incentives, licensing, contributor agreements, copyright, trademark, legal commitments, privacy or consent commitments, or reuse of third-party material
+- Governance changes, security boundaries, credentials, account access, or destructive actions
+- A nondelegable owner decision or a materially ambiguous decision that independent agent review cannot resolve safely
 
 Routine evidence additions, typo corrections, tests, tools, documentation, and backwards-compatible schema work do not require human approval unless they trigger a gate above.
+
+Do not split internal work into serial Human Review prompts merely because a conservative next step can be described as a separate authorization. If it remains private, reversible, non-operational, and inside the delegated categories, document the decision and adverse review in the pull request and decision log, then proceed.
 
 ## Pull request protocol
 

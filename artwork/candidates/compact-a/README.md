@@ -31,6 +31,6 @@ Each SVG has a matching declaration in `provenance/`. Exact source and render ha
 
 The `review/` directory contains deterministic light- and dark-background renders at 16, 20, 24, 32, and 64 px for all six members, plus a labeled contact sheet. These artifacts establish renderability, not recognizability, neutrality, study readiness, or acceptance.
 
-## Human Review
+## Review boundary
 
-The six exact geometries are locked for blinded study-package construction only. Any SVG byte change invalidates its recorded hash and requires a new geometry lock before replacement. Separate Human Review remains required for `study-ready` status, recruitment, incentives, study launch, artwork acceptance, publication, release, and external outreach.
+The six exact geometries are locked for blinded study-package construction only. Any SVG byte change invalidates its recorded hash and requires a new geometry lock before replacement. D-021 delegates a later internal `study-ready` designation to documented independent agent review. Human Review remains required for any intentional visible geometry or family-design change, recruitment, incentives, study launch, artwork acceptance, publication, release, and external outreach.
