@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.5",
+  "registry_version": "0.2.6",
   "artifacts": [
     {
       "id": "DA-001",
@@ -949,7 +949,7 @@
       "id": "DA-006",
       "version": "0.2.5",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.5.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T20:15:37-07:00",
       "content_sha256": "d171ea4cfeb628b29316e99926e884bf522fbc79361ec3f0b405acd91ded94ff",
@@ -1078,6 +1078,185 @@
       "limitations": [
         "Band-pass lifecycle remains unchanged despite numerical eligibility; high-pass and low-pass retain material alias blockers, band-stop retains the Notch and fallback blockers, and all formal Unicode safeguards remain in force.",
         "The Unicode HOLD remains active; current guidance evidence does not establish independent character use, community-level form stability, or public plain-text interchange need."
+      ]
+    },
+    {
+      "id": "DA-014",
+      "version": "0.1.0",
+      "title": "Independent character-like use and plain-text need spike",
+      "path": "evidence/reports/2026-08-31-independent-character-use-spike.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-08-31T20:13:41-07:00",
+      "content_sha256": "e615473480a6faf5e0c3d6eab2edea4afb9f7e3bb7ded9caba31e4ccf555d40b",
+      "input_evidence_ids": [
+        "EV-005",
+        "EV-021",
+        "EV-022",
+        "EV-025",
+        "EV-083",
+        "EV-101",
+        "EV-120",
+        "EV-121",
+        "EV-122"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-001",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-012",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Bounded public search for independent character-like implementations, portable plain-text interchange, and image, prose, ASCII, PUA, custom-font, or icon-package workarounds across the six active filter-response concepts.",
+      "limitations": [
+        "The search is not a market census; mutable or authentication-gated results were excluded where they could not be reproduced, derivative icon packaging is not counted as independent adoption, and no portable character use was found."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.6",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T20:20:26-07:00",
+      "content_sha256": "5beac2873bbe7ac41778d9b47c654f7c7f520a78fa80f00399f7c3eb39c3cab8",
+      "input_evidence_ids": [
+        "EV-001",
+        "EV-002",
+        "EV-003",
+        "EV-004",
+        "EV-005",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-014",
+        "EV-015",
+        "EV-016",
+        "EV-017",
+        "EV-018",
+        "EV-019",
+        "EV-020",
+        "EV-021",
+        "EV-022",
+        "EV-023",
+        "EV-024",
+        "EV-025",
+        "EV-026",
+        "EV-027",
+        "EV-028",
+        "EV-029",
+        "EV-030",
+        "EV-031",
+        "EV-032",
+        "EV-033",
+        "EV-034",
+        "EV-035",
+        "EV-036",
+        "EV-037",
+        "EV-038",
+        "EV-039",
+        "EV-050",
+        "EV-051",
+        "EV-052",
+        "EV-053",
+        "EV-054",
+        "EV-055",
+        "EV-056",
+        "EV-057",
+        "EV-060",
+        "EV-061",
+        "EV-062",
+        "EV-063",
+        "EV-064",
+        "EV-065",
+        "EV-070",
+        "EV-071",
+        "EV-072",
+        "EV-073",
+        "EV-080",
+        "EV-081",
+        "EV-082",
+        "EV-083",
+        "EV-084",
+        "EV-100",
+        "EV-101",
+        "EV-110",
+        "EV-111",
+        "EV-112",
+        "EV-113",
+        "EV-114",
+        "EV-115",
+        "EV-116",
+        "EV-117",
+        "EV-118",
+        "EV-120",
+        "EV-121",
+        "EV-122"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-001",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-002",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-004",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-005",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-007",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-008",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-009",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-012",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-014",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the independent character-like use and plain-text need spike, preserving the Unicode guidance audit and making no assessment, semantic, alias, artwork, or status movement.",
+      "limitations": [
+        "No portable independent text use was recovered; icon-font implementation and image/prose friction do not establish encoding necessity, and all formal Unicode safeguards remain in force."
       ]
     }
   ]

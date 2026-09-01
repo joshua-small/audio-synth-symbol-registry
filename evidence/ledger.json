@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.4",
+  "ledger_version": "0.2.5",
   "accessed_on": "2026-08-31",
   "sources": [
     {
@@ -1506,6 +1506,95 @@
           },
           "rights_basis": "The official public page was lawfully inspected; only a digest and metadata are recorded.",
           "limitations": "The archive is mutable and a term search cannot exclude differently named or document-only prior decisions."
+        }
+      }
+    },
+    {
+      "id": "EV-120",
+      "type": "open-source-icon-font",
+      "publisher": "Ardour",
+      "title": "Ardour Toolkit filter icon font at commit ab29bbbe64050732f3f71145a99b607942d094f6",
+      "url": "https://github.com/Ardour/ardour/tree/ab29bbbe64050732f3f71145a99b607942d094f6/share/web_surfaces/builtin/mixer/toolkit/styles/fonts",
+      "publication_date": "2026-08-30",
+      "accessed_on": "2026-08-31",
+      "location": "Toolkit.css, Toolkit.html, and Toolkit.svg in share/web_surfaces/builtin/mixer/toolkit/styles/fonts",
+      "direct_observation": "The pinned stylesheet maps highpass, lowpass, highshelf, lowshelf, bandpass, bandreject, and notch classes to the ordinary ASCII slots t through z in a bundled Toolkit font. The companion SVG contains separately named outlines for those seven forms, including distinct Band Reject and Notch members.",
+      "interpretation": "This is a direct character-like implementation spanning all six active concepts, including an explicit band-reject member. It is project-local UI font machinery rather than portable text: the raw ASCII letters do not carry the filter semantics without Ardour's stylesheet and bundled font, and no user interchange of those letters was observed.",
+      "rights_note": "Evidence inspection of a public GPL-licensed repository at an immutable commit. No font, outline, source file, or artwork is copied into this repository or claimed as project reference artwork.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:13:41-07:00",
+        "product": "Ardour Toolkit",
+        "product_version": null,
+        "exact_locator": "Git commit ab29bbbe64050732f3f71145a99b607942d094f6; Toolkit.css, Toolkit.html, and Toolkit.svg",
+        "stable_fragment": "Git commit ab29bbbe64050732f3f71145a99b607942d094f6",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "2263a00e221e3fd64cf800495b03451a5d916ca05fbdf59fa594235a84a993d3",
+            "scope": "Raw bytes of Toolkit.css at Git commit ab29bbbe64050732f3f71145a99b607942d094f6; companion Toolkit.html and Toolkit.svg digests are recorded in DA-014"
+          },
+          "rights_basis": "The public GPL-licensed repository was lawfully inspected at an immutable Git commit; only evidence metadata and checksums are retained.",
+          "limitations": "The checksum covers the semantic stylesheet mapping, not the companion outline bytes. The report records separate companion digests. Repository availability remains outside project control."
+        }
+      }
+    },
+    {
+      "id": "EV-121",
+      "type": "community-discussion",
+      "publisher": "Reddit r/VoiceMeeter",
+      "title": "Can someone please provide labels for the EQ Types?",
+      "url": "https://www.reddit.com/r/VoiceMeeter/comments/1ms7xvf/can_someone_please_provide_labels_for_the_eq_types/",
+      "publication_date": "2025-08-16",
+      "accessed_on": "2026-08-31",
+      "location": "Image-only initial post, first displayed numbered reply, and requester's acknowledgment",
+      "direct_observation": "The initial request asks for labels for pictured EQ types without naming them in text. A reply provides a numbered prose key including Band-pass, High-cut / Low-pass, Low-cut / High-pass, Low shelf, and High shelf, and the requester confirms that the answer was useful. The reply also lists Notch separately.",
+      "interpretation": "This is public image-dependent identification friction for five active concepts and a successful prose-label workaround. It is not standalone-glyph or portable-text use. The separate Notch answer is not transferred to band-stop because the unresolved semantic boundary remains in force.",
+      "rights_note": "Linked public community discussion only. No post image, avatar, or extended user text is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:13:41-07:00",
+        "product": "VoiceMeeter",
+        "product_version": null,
+        "exact_locator": "Initial image-only post, first displayed numbered reply, and requester's acknowledgment",
+        "stable_fragment": "Reddit post ID 1ms7xvf",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
+          "limitations": "Reddit content and the attached image are mutable; no source bytes were retained. One discussion is not a population measure, and its prose workaround weakens any claim that a character is necessary."
+        }
+      }
+    },
+    {
+      "id": "EV-122",
+      "type": "open-source-icon-font",
+      "publisher": "Iconify",
+      "title": "FontAudio icon set in Iconify JSON format version 1.2.1",
+      "url": "https://www.npmjs.com/package/@iconify-json/fad/v/1.2.1",
+      "publication_date": "2024-12-16",
+      "accessed_on": "2026-08-31",
+      "location": "Package metadata and icons.json entries for filter-bandpass, filter-highpass, filter-lowpass, filter-notch, filter-shelving-hi, and filter-shelving-lo",
+      "direct_observation": "The versioned package distributes FontAudio outlines as machine-readable Iconify JSON with semantic filter icon names. Its published package metadata identifies FontAudio as the source icon set and CC-BY-4.0 as the license.",
+      "interpretation": "This demonstrates cross-tool asset packaging and semantic icon naming, not independent character use or plain-text interchange. Because it derives from FontAudio already recorded in EV-025, it is not counted as an independent implementation. Its Notch member is not band-stop evidence.",
+      "rights_note": "Public package metadata and tarball were inspected. No icon outline or package content is redistributed by this project.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:13:41-07:00",
+        "product": "@iconify-json/fad",
+        "product_version": "1.2.1",
+        "exact_locator": "npm package version 1.2.1; icons.json named filter entries",
+        "stable_fragment": "npm version 1.2.1; tarball SRI sha512-WW6rGT3TzzhWBP+zE3nM8bPYKML16NhmX2VlEe6sz7KCJH3zen20TVuTsUR0gDXo99fBGyxud1NMkW/JdcAtHg==",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "57c81970a54f3f0a64bc9fea5921cf7ca98b965d7a1d9ecef585f8bfbe23e05e",
+            "scope": "Raw icons.json bytes from @iconify-json/fad version 1.2.1"
+          },
+          "rights_basis": "The public CC-BY-4.0 package was lawfully inspected; only evidence metadata and a checksum are retained.",
+          "limitations": "This is a derivative package of FontAudio and therefore cannot establish source independence. The checksum cannot reconstruct unavailable package bytes."
         }
       }
     }
