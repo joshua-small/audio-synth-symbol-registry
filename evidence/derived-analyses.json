@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.6",
+  "registry_version": "0.2.7",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1122,7 +1122,7 @@
       "id": "DA-006",
       "version": "0.2.6",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.6.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T20:20:26-07:00",
       "content_sha256": "5beac2873bbe7ac41778d9b47c654f7c7f520a78fa80f00399f7c3eb39c3cab8",
@@ -1257,6 +1257,63 @@
       "scope": "Superseding six-record status synthesis after the independent character-like use and plain-text need spike, preserving the Unicode guidance audit and making no assessment, semantic, alias, artwork, or status movement.",
       "limitations": [
         "No portable independent text use was recovered; icon-font implementation and image/prose friction do not establish encoding necessity, and all formal Unicode safeguards remain in force."
+      ]
+    },
+    {
+      "id": "DA-015",
+      "version": "0.1.0",
+      "title": "Band-stop render and alias evidence spike",
+      "path": "evidence/reports/2026-08-31-band-stop-render-and-alias-spike.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-08-31T20:34:00-07:00",
+      "content_sha256": "80e04c7ea0a311985056de24a1a94c10c83f488f636c2bc4f0d07b975085f2fa",
+      "input_evidence_ids": [
+        "EV-030",
+        "EV-100",
+        "EV-120",
+        "EV-130",
+        "EV-131"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-004",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-014",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Bounded search for a second direct axis-less band-stop or band-reject implementation and independent provenance for the existing BSF and band reject terms, with Notch-only evidence excluded.",
+      "limitations": [
+        "Two implementations are not a market census or artwork license; engineering abbreviation support does not establish common audio-professional plain-text use; the band-stop/Notch boundary remains unresolved."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.7",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T20:35:06-07:00",
+      "content_sha256": "8efa2abbd38c605ad1860a524f28cb2332e784fb2969859073a9cee53b5d5b3d",
+      "input_evidence_ids": [
+        "EV-130",
+        "EV-131"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.6"
+        },
+        {
+          "artifact_id": "DA-015",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the band-stop render and terminology evidence spike, preserving the prior complete synthesis by reference and making no assessment, semantic, alias, artwork, or status movement.",
+      "limitations": [
+        "The second-render and terminology-provenance gaps are evidence-complete only for mechanical reassessment; the band-stop/Notch boundary, common audio plain-text usage, recognition, artwork rights, and lifecycle requirements remain open."
       ]
     }
   ]

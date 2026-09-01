@@ -50,6 +50,8 @@ Registry 0.2.4 adds EV-110 through EV-118 through a current Unicode proposal-gui
 
 Registry 0.2.5 adds EV-120 through EV-122 through a patch-level independent-use evidence spike. Derived analyses 0.2.6 preserves the prior 0.2.5 status synthesis at its immutable historical path, adds DA-014 with its reproducible query log, exclusions, source-independence treatment, and negative portable-text result, and adds the combined superseding current-status synthesis as DA-006 0.2.6. No semantic, alias, identifier, artwork, assessment, status, schema, tooling, Unicode position, or release change is implied.
 
+Registry 0.2.6 adds EV-130 and EV-131 through a patch-level band-stop render and alias evidence spike. Derived analyses 0.2.7 preserves the prior 0.2.6 status synthesis at its immutable historical path, adds DA-015 with explicit Notch exclusion and counterevidence, and adds the combined superseding current-status synthesis as DA-006 0.2.7. No semantic, alias, identifier, artwork, assessment, status, schema, tooling, Unicode position, or release change is implied.
+
 Tooling 0.6.0 adds backwards-compatible package schema 0.2.0 for exact binding of the six locked draft hashes, deterministic blind-derivative construction, six-way choice/control validation, and private provenance commitments. Package schema 0.1.0 remains readable. This does not bump or release artwork: artwork remains 0.0.0, unpublished, noncanonical, and draft.
 
 Tooling 0.7.0 adds a private, offline, synthetic-only participant-surface harness and deterministic private scoring-key/export validation. It does not change either study-package schema, authorize participant use, or alter registry or artwork versions.

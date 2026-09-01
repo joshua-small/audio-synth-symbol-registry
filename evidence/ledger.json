@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.5",
+  "ledger_version": "0.2.6",
   "accessed_on": "2026-08-31",
   "sources": [
     {
@@ -1595,6 +1595,64 @@
           },
           "rights_basis": "The public CC-BY-4.0 package was lawfully inspected; only evidence metadata and a checksum are retained.",
           "limitations": "This is a derivative package of FontAudio and therefore cannot establish source independence. The checksum cannot reconstruct unavailable package bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-130",
+      "type": "education",
+      "publisher": "AspenCore Electronics Tutorials",
+      "title": "Band Stop Filter Design is an Active Notch Filter",
+      "url": "https://www.electronics-tutorials.ws/filter/band-stop-filter.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Opening explanation; Band Stop Filter Frequency Response; Band Stop Filter Tutorial Summary",
+      "direct_observation": "The tutorial introduces the term as 'band stop filter, (BSF)' and says band stop is also known as band reject. Its opening calls Band Stop a Notch Filter with an extremely narrow stop band, but its body and summary instead distinguish a wide band-stop or band-reject response from a narrow, highly attenuated notch response. It illustrates band-stop response with an axis-bearing graph.",
+      "interpretation": "The explicit expansions directly ground BSF and band reject as names for band-stop. The page is internally inconsistent about the band-stop/Notch boundary, so it cannot independently support one universal boundary model. Its graph is educational context, not an axis-less target implementation, standalone character, portable plain-text practice, or reusable project artwork.",
+      "rights_note": "Linked public education page only. No page content, graph, circuit, image, or artwork is copied, retained in the repository, traced, or claimed as reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:11:02-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Opening explanation beginning 'The band stop filter, (BSF)'; Band Stop Filter Frequency Response; tutorial summary",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public education page was lawfully inspected; only source metadata is recorded and no redistribution right is claimed.",
+          "limitations": "The mutable response includes dynamic site chrome and produced different byte digests on reinspection. The project retains no source bytes, and no exact publication date was established."
+        }
+      }
+    },
+    {
+      "id": "EV-131",
+      "type": "education",
+      "publisher": "Arab Academy for Science, Technology & Maritime Transport",
+      "title": "EC 339 Electronics 2: Active Filters, Lecture 14",
+      "url": "https://aast.edu/pheed/staffadminview/pdf_retreive.php?stafftype=staffcourses&url=66_14555_EC339_2019_1__1_1_EC339-Lecture+14.pdf",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Slide footer numbers 2 and 15; PDF pages 1 and 13 (1-based)",
+      "direct_observation": "The lecture outline lists Low-Pass Filter (LPF), High-Pass Filter (HPF), Band-Pass Filter (BPF), and Band-Stop Filter (BSF). Its concluding filter section is again titled 'Band-Stop Filter (BSF)' and supplies an axis-bearing frequency-response teaching diagram.",
+      "interpretation": "This independently published university course source grounds BSF as an education-domain abbreviation expanded directly from Band-Stop Filter. The axis-bearing teaching diagram supports the response concept but is not an axis-less target implementation, standalone character, portable text-use case, or source of reusable artwork. Original individual authorship was not established.",
+      "rights_note": "Linked public university course PDF only. No slide, graph, circuit, PDF content, or artwork is copied, retained in the repository, traced, or claimed as reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T20:11:02-07:00",
+        "product": "EC 339 Electronics 2",
+        "product_version": null,
+        "exact_locator": "Slide footer number 2 outline and footer number 15 Band-Stop Filter (BSF) section; PDF pages 1 and 13 (1-based)",
+        "stable_fragment": "Course asset 66_14555_EC339_2019_1__1_1_EC339-Lecture 14.pdf",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "a1423b2caa79559659fbead1321085e01d5de0ee1ac0b89b0f00513f899837fe",
+            "scope": "Raw public PDF response bytes as accessed from the AAST course asset endpoint on 2026-08-31"
+          },
+          "rights_basis": "The public university course PDF was lawfully inspected; the project records only metadata and a checksum and claims no redistribution right.",
+          "limitations": "The project does not retain or redistribute the PDF. The query-based asset URL may change; the checksum cannot reconstruct unavailable bytes, and the URL suggests 2019 but no exact publication date was established from the document."
         }
       }
     }
