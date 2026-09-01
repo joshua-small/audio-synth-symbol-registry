@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.3",
+  "ledger_version": "0.2.4",
   "accessed_on": "2026-08-31",
   "sources": [
     {
@@ -1231,6 +1231,281 @@
           "checksum": null,
           "rights_basis": "The public MIT-licensed repository was inspected at an immutable Git commit; only evidence metadata and source locators are recorded here.",
           "limitations": "The project does not retain or redistribute the implementation files. Repository availability remains outside project control; the cited commit supports exact reinspection while available."
+        }
+      }
+    },
+    {
+      "id": "EV-110",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium, Script Encoding Working Group",
+      "title": "Submission Guidelines and Process",
+      "url": "https://sew.unicode.org/guidelines",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Proposal Guidelines, Eligibility, Criteria, What to Include, Character Properties, ISO/IEC 10646 Summary Form, Fonts, and Legal and Licensing Requirements",
+      "direct_observation": "The current SEW guidance requires proposals to establish character eligibility and non-duplication, and identifies usage by an independent community, repertoire stability, and public plain-text interchange need as three basic criteria. It also requires proposal content, character properties, an ISO/IEC 10646 summary form, a suitably licensed font before recommendation to UTC, and Unicode CLAs for authors and the submitter.",
+      "interpretation": "This is the controlling current process map for a possible non-emoji proposal. Meeting a project rubric or demonstrating useful interface graphics does not substitute for the three basic criteria.",
+      "rights_note": "Official public guidance is linked and summarized; no Unicode graphics or page content is redistributed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "SEW Submission Guidelines and Process",
+        "product_version": null,
+        "exact_locator": "Sections: Proposal Guidelines and Legal & Licensing Requirements",
+        "stable_fragment": "guidelines",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The official public guidance was lawfully inspected; only source metadata is recorded.",
+          "limitations": "The page is mutable and consecutive fetches produced different response-byte digests, consistent with dynamic markup. The project records exact section locators but retains no source bytes and does not claim a stable content checksum."
+        }
+      }
+    },
+    {
+      "id": "EV-111",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Criteria for Encoding Symbols",
+      "url": "https://www.unicode.org/pending/symbol-guidelines.html",
+      "publication_date": "1999",
+      "accessed_on": "2026-08-31",
+      "location": "Symbols and plain text; strengthening and weakening criteria; symbol fallacy; completion; instability; perceived usefulness",
+      "direct_observation": "The symbol criteria distinguish semantic content from customary direct use in text, favor searchable and processable symbols with defined communities and semantics, warn against incomplete repertoires and rapidly changing forms, and state that perceived usefulness alone is not a reason to encode.",
+      "interpretation": "This older approved position is supplementary guidance, not a replacement for the current SEW criteria. It directly frames the project's principal adverse case: familiar audio icons may remain graphics unless customary character-like interchange or compelling machine-processable need is demonstrated.",
+      "rights_note": "Official public guidance is linked and summarized; no Unicode artwork is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Criteria for Encoding Symbols",
+        "product_version": null,
+        "exact_locator": "Entire single-page criteria document, especially sections at anchors for plain text, symbol fallacy, instability, and perceived usefulness",
+        "stable_fragment": "symbol-guidelines.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "b51c61467bd624599d34497ac0422275dcce8d2edfd4a581f107f5ea25004bc7",
+            "scope": "Response bytes from https://www.unicode.org/pending/symbol-guidelines.html"
+          },
+          "rights_basis": "The official public guidance was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The page states that its 1999 criteria have been refined in practice; current SEW guidance controls where they differ."
+        }
+      }
+    },
+    {
+      "id": "EV-112",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Submitting Successful Character and Script Proposals",
+      "url": "https://www.unicode.org/faq/char_proposal.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Eligibility, process, document evidence, properties, behavior, organization, and follow-up questions",
+      "direct_observation": "The FAQ requires verification against existing, pipeline, and rejected characters; asks for evidence images showing characters in use with captions and identified sources; calls for a concrete glyph, name, properties, and block proposal; and lists rendering, directionality, collation, casing, segmentation, and special behavior as applicable topics. It states that substantive evidence must be included in the archived proposal rather than supplied only through links.",
+      "interpretation": "The repository's linked evidence ledger is useful preparation but is not yet a submission evidence appendix. A future proposal needs self-contained, reviewable usage figures and a concrete technical character model.",
+      "rights_note": "Official public FAQ content is linked and summarized; no proposal image or page content is redistributed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Unicode Character Proposal FAQ",
+        "product_version": null,
+        "exact_locator": "Questions on eligibility, required contents, properties, behavior, organization, and follow-up",
+        "stable_fragment": "char_proposal.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "167429a30962b7717a66ef70c0e140e50b3a571f9fae1de7ba24a5f603b37c5d",
+            "scope": "Response bytes from https://www.unicode.org/faq/char_proposal.html"
+          },
+          "rights_basis": "The official public FAQ was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The page is mutable and the digest may change for non-substantive markup updates; the project retains no source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-113",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Unicode Properties in Character Proposals",
+      "url": "https://www.unicode.org/pending/properties.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Basic information, General Category and other properties, line breaking, collation, identifiers, and bidirectional text",
+      "direct_observation": "The properties guidance calls for names and identity information, UnicodeData-style core properties, line-breaking and operator behavior, collation, identifier disposition, and bidirectional behavior. It recommends comparison with existing characters whose behavior is analogous.",
+      "interpretation": "Registry semantics and speech labels do not themselves constitute a Unicode property proposal. A proposal-ready six-character property model and behavioral rationale are required before a submission package can be technically reviewed.",
+      "rights_note": "Official public guidance is linked and summarized.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Unicode Properties in Character Proposals",
+        "product_version": null,
+        "exact_locator": "Sections from Basic Information through Special Considerations for Bidirectional Text",
+        "stable_fragment": "properties.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "1bd568af7eaa61f144519192f6ce460481eca601c76dd3d9252adb47484e94f4",
+            "scope": "Response bytes from https://www.unicode.org/pending/properties.html"
+          },
+          "rights_basis": "The official public guidance was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The page is mutable and the project retains no source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-114",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Font Submission Policy",
+      "url": "https://www.unicode.org/policies/font_policy.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Acceptable licenses and font-file submission metadata",
+      "direct_observation": "The policy lists OFL 1.0 or 1.1 as preferred font licenses and also accepts MIT, Apache-2.0, the Unicode Font License, or an applicable Unicode CLA. It requires ownership, provenance, copyright, designer, manufacturer, and license information in specified OpenType name IDs.",
+      "interpretation": "The project's original CC0 SVGs are useful design inputs but are not the licensed font artifact required before SEW can recommend a proposal to UTC. Font construction, licensing, and metadata are a separate implementation lane and a reserved legal decision.",
+      "rights_note": "Official public policy is linked and summarized; no font or policy content is redistributed.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Unicode Font Submission Policy",
+        "product_version": null,
+        "exact_locator": "Entire policy, especially Acceptable Licenses and Submission Instructions",
+        "stable_fragment": "font_policy.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "76f1e54bc62d4feae1d28eda775f0e55788f339436eefa0c67e901c0a6d64e48",
+            "scope": "Response bytes from https://www.unicode.org/policies/font_policy.html"
+          },
+          "rights_basis": "The official public policy was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The policy is mutable and the project retains no source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-115",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Emoji and Pictographs FAQ",
+      "url": "https://www.unicode.org/faq/emoji_dingbats.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Questions distinguishing non-emoji pictographs and interface icons from emoji",
+      "direct_observation": "The FAQ states that non-emoji pictographic proposals must demonstrate plain-text use enabling public data interchange. It further states that interface icons require a strong plain-text interchange argument to be separately encoded as symbols.",
+      "interpretation": "The active filter repertoire follows the non-emoji character path. Vendor interface prevalence is relevant background but cannot by itself satisfy eligibility.",
+      "rights_note": "Official public FAQ content is linked and summarized; no artwork is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Emoji and Pictographs FAQ",
+        "product_version": null,
+        "exact_locator": "Questions: non-emoji pictographic characters and interface icons",
+        "stable_fragment": "emoji_dingbats.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "584c7c4b77064d4f36bbbd83566fce07bb6668bd4f60611749e2bcedd1f7eff6",
+            "scope": "Response bytes from https://www.unicode.org/faq/emoji_dingbats.html"
+          },
+          "rights_basis": "The official public FAQ was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The page is mutable and the project retains no source bytes."
+        }
+      }
+    },
+    {
+      "id": "EV-116",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Proposal Summary Form",
+      "url": "https://www.unicode.org/L2/summary.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "ISO/IEC JTC 1/SC 2/WG 2 Proposal Summary Form landing page",
+      "direct_observation": "The page identifies the ISO/IEC 10646 proposal summary form required for non-emoji character and script proposals and supplies editable templates.",
+      "interpretation": "Unicode and ISO/IEC 10646 intake are coordinated; the project does not need a separate competing repertoire theory, but a future submission package must include the standardized summary information.",
+      "rights_note": "Official form landing-page metadata is linked and summarized; no form is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "ISO/IEC 10646 Proposal Summary Form",
+        "product_version": null,
+        "exact_locator": "Landing page and listed form formats",
+        "stable_fragment": "summary.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "64ac28f65ea67b67dd9c72dbb2d0ed8efa55b81faea2aa1d9fc6ae16e2968e5c",
+            "scope": "Response bytes from https://www.unicode.org/L2/summary.html"
+          },
+          "rights_basis": "The official public landing page was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The project has not filled, signed, or submitted the form."
+        }
+      }
+    },
+    {
+      "id": "EV-117",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Proposed New Characters: The Pipeline",
+      "url": "https://www.unicode.org/alloc/Pipeline.html",
+      "publication_date": "2026-08-04",
+      "accessed_on": "2026-08-31",
+      "location": "Whole page bounded case-insensitive search for the six filter names and close terminology",
+      "direct_observation": "A bounded text search found no occurrence of high-pass, low-pass, band-pass, band-stop, low-shelf, high-shelf, audio filter, or frequency response in the current pipeline page.",
+      "interpretation": "No obvious pipeline duplicate was found under the target English terms. This is a necessary preliminary check, not proof that no differently named or semantically adjacent proposal exists.",
+      "rights_note": "Official public pipeline text is mechanically searched and summarized; no chart artwork is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Unicode Pipeline",
+        "product_version": "2026-08-04",
+        "exact_locator": "Current Pipeline page; bounded normalized-text term search",
+        "stable_fragment": "Pipeline.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "084f0ed0e8a41cb9dc20f2d25c2bad1abed4bee0a3292de02e9d4036ae143b80",
+            "scope": "Response bytes from https://www.unicode.org/alloc/Pipeline.html"
+          },
+          "rights_basis": "The official public page was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The pipeline is mutable and a term search cannot exclude differently named or document-only proposals."
+        }
+      }
+    },
+    {
+      "id": "EV-118",
+      "type": "unicode-reference",
+      "publisher": "Unicode Consortium",
+      "title": "Archive of Notices of Non-Approval",
+      "url": "https://www.unicode.org/alloc/nonapprovals.html",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Whole page bounded case-insensitive search for the six filter names and close terminology",
+      "direct_observation": "A bounded text search found no occurrence of high-pass, low-pass, band-pass, band-stop, low-shelf, high-shelf, audio filter, or frequency response in the current non-approval archive page.",
+      "interpretation": "No obvious prior non-approval was found under the target English terms. The result is not an exhaustive search of every UTC, WG2, or SEW document or alternate terminology.",
+      "rights_note": "Official public archive text is mechanically searched and summarized; no document content is reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:40:44-07:00",
+        "product": "Unicode Notices of Non-Approval",
+        "product_version": null,
+        "exact_locator": "Current non-approval archive page; bounded normalized-text term search",
+        "stable_fragment": "nonapprovals.html",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "5c923a81df1aa883fff3e13cea119cb7e0e44c44501b7f861493f0f41d63b498",
+            "scope": "Response bytes from https://www.unicode.org/alloc/nonapprovals.html"
+          },
+          "rights_basis": "The official public page was lawfully inspected; only a digest and metadata are recorded.",
+          "limitations": "The archive is mutable and a term search cannot exclude differently named or document-only prior decisions."
         }
       }
     }

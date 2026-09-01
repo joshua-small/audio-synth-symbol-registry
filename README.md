@@ -4,9 +4,9 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 ## Status
 
-Registry release: **0.2.3**\
+Registry release: **0.2.4**\
 Schema release: **0.4.0**\
-Tooling release: **0.5.0**\
+Tooling release: **0.7.0**\
 Artwork release: **not yet published**  
 Standards status: **Unicode preparatory research only. No submission has been made.**
 
@@ -72,12 +72,14 @@ See [LICENSES.md](LICENSES.md). Registry data and original neutral SVGs are CC0-
 
 ## Standards path
 
-The project will build a public evidence corpus before deciding whether to make a preliminary inquiry to Unicode's Symbol and Emoji Subcommittee. The unresolved question is whether this repertoire represents stable plain-text communication needs rather than primarily UI graphics.
+The project will build a public evidence corpus before preparing any external submission to Unicode's Script Encoding Working Group. The unresolved question is whether this repertoire represents stable characters needed for public plain-text interchange rather than primarily UI graphics.
 
 - [Unicode character proposal FAQ](https://www.unicode.org/faq/char_proposal.html)
-- [Unicode Symbol and Emoji Subcommittee guidelines](https://sew.unicode.org/guidelines)
+- [Unicode Script Encoding Working Group guidelines](https://sew.unicode.org/guidelines)
 - [Unicode symbol submission guidance](https://unicode.org/pending/symbol-guidelines.html)
 - [Unicode pipeline](https://www.unicode.org/alloc/Pipeline.html)
+
+See the [Unicode proposal critical-path audit](docs/unicode-proposal-critical-path-audit.md) for the current requirements map, evidence gaps, and internal work priorities. Formal proposal status remains `HOLD`.
 
 Adjacent communities and projects:
 

@@ -1,0 +1,143 @@
+# Unicode proposal critical-path audit
+
+Status as of 2026-08-31T20:15:37-07:00, refreshed after repository commit `415eb56e4ecbb87092eb4566d46d8a3941b41235`. This is an internal readiness map for the approved six-concept filter repertoire. It does not propose characters, select code points, accept artwork, contact an external party, or change the formal Unicode position from `HOLD`.
+
+## Executive conclusion
+
+The project is not ready to prepare a formal character proposal. Its strongest evidence establishes six useful and historically durable audio-filter semantics, widespread graphical use in products and education, and an implementation gap served today by labels, images, custom fonts, and project-specific interchange IDs. Its weakest evidence is the evidence the current Unicode Script Encoding Working Group (SEW) puts at the center of eligibility: use of the proposed items as characters by an independent community, stability of the proposed character repertoire and forms, and need for public interchange in plain text.
+
+This distinction is decisive. Current Unicode guidance explicitly separates an icon's semantic content from customary direct use in text. The project's machine-readable registry and LLM-efficient communication theory are credible benefits, but they are project-authored demonstrations and future-use arguments. They are not yet independently observed character usage or demonstrated public interchange demand.
+
+The `HOLD` is therefore substantive, not procedural. Technical proposal materials such as names, properties, a font, usage figures, and the ISO/IEC summary form can be prepared internally, but none of them repairs the principal usage-and-interchange gap.
+
+## Controlling guidance
+
+The current process source is the [SEW Submission Guidelines and Process](https://sew.unicode.org/guidelines) (EV-110). It states three basic criteria:
+
+1. usage by a community independent of the creator;
+2. stability of the proposed repertoire and characters; and
+3. need for public interchange in plain text.
+
+The [Character Proposal FAQ](https://www.unicode.org/faq/char_proposal.html) (EV-112), [Unicode property guidance](https://www.unicode.org/pending/properties.html) (EV-113), [font policy](https://www.unicode.org/policies/font_policy.html) (EV-114), and [ISO/IEC proposal-summary page](https://www.unicode.org/L2/summary.html) (EV-116) define submission contents and implementation obligations. The [symbol criteria](https://www.unicode.org/pending/symbol-guidelines.html) (EV-111) remain useful supplementary guidance, but the page itself says that practice has refined the 1999 criteria and points authors to the current proposal guidance.
+
+The [Emoji and Pictographs FAQ](https://www.unicode.org/faq/emoji_dingbats.html) (EV-115) confirms the route choice: non-emoji pictographic symbols and interface icons require a strong plain-text interchange case. Emoji popularity criteria are not a substitute.
+
+## Requirement map
+
+`Met` means the repository contains evidence adequate for the narrow requirement. `Partial` means relevant work exists but does not yet satisfy the proposal burden. `Open` means the necessary artifact or evidence is absent. These are project judgments, not decisions by Unicode.
+
+| Requirement | Source requirement | Current project evidence | Status | Remaining gap |
+| --- | --- | --- | --- | --- |
+| Character eligibility | Each addition must be a character rather than merely a glyph, abbreviation, ligature, or graphic. | The registry defines six machine-processable semantic identities and canonical ASCII IDs. Vendor and education sources predominantly show labels, controls, graphs, or UI icons. | Open | Demonstrate that each proposed item functions as a character in text or a text-backed notational system, not only as a useful graphic selected through higher-level UI. |
+| Non-duplication | Check existing characters, sequences, pipeline items, and prior non-approvals; explain rejected equivalents. | DA-005 and DA-009 find no Unicode 17 semantic equivalent and record visual near misses and failed sequences. EV-117 and EV-118 find no obvious current pipeline or non-approval match under bounded English terms. | Partial | Refresh at submission time; search the UTC/WG2 document register and alternate terminology more broadly; reconcile any later pipeline changes. Code-point selection itself may remain open for the committees. |
+| Demonstrated usage | The characters must already be in use by an independent community. | Independent sources establish all six filter concepts and many graphical representations. EV-100 documents axis-less high-pass, low-pass, band-pass, and explicitly labeled band-stop selectors. EV-101 documents custom-font high-pass, low-pass, and band-pass components at an immutable commit. DA-012 constrains how those sources count. | Open | Identify independently authored use of each target identity as a portable character or stable legacy-encoded glyph. Product UI selectors and a product-local custom font establish implementation use, but do not by themselves meet the SEW character-use criterion. |
+| Stability | The proposed repertoire and characters must be stable and not in active development. | The six semantic concepts have long histories. D-016 fixes the research repertoire; D-019 locks exact study geometry. | Open | Show community-level repertoire stability and an established range of glyphic variation. A project lock is reversible research governance, not proof that independently used character forms are settled. The band-stop/notch boundary and shelf visual convergence remain open. |
+| Public plain-text interchange need | Encoding must be needed for public interchange of information in plain text. | DA-001 and DA-010 document workaround classes and limited record-specific friction. Project interchange exercises show machine-readable benefits. Joshua's original hand-drawn mix-message use case is directly relevant first-person motivation. | Open | Obtain independent, record-specific cases where images, drawings, custom encodings, or verbose substitutes are required because text cannot carry the identity; show search, indexing, round-trip, accessibility, or processing failures that character encoding would solve. Current shelf safeguards remain uncleared, and no sampled source uses a target glyph as portable plain text. |
+| Repertoire completeness and boundaries | Incomplete non-notational repertoires are weak; the proposed set must have a compelling scope and stable exclusions. | The active six cover the basic pass/stop and shelf response family. The registry records boundaries, related terms, future scope, and rejected signed shelf variants. | Partial | Defend why these six form a coherent encodable class while bell/peak, all-pass, tilt, crossover, comb, resonance, and other audio icons are excluded or deferred. Resolve whether band-stop includes notch and whether shelf gain sign is rendering state rather than character identity. |
+| Semantic distinctiveness | Proposed characters need well-defined identities distinguishable from existing and proposed characters. | Registry definitions distinguish the six functions. DA-005 and DA-009 document semantic non-equivalence with existing Unicode characters. | Partial | Complete six-way recognition and adverse-confusable testing; test shelf/pass, band-pass/arc, band-stop/union, and routing/fork confusion. Recognition of project artwork supports legibility but cannot establish pre-existing character usage. |
+| Visual-confusable comparison | A proposal must compare visually similar existing characters. | DA-005 and DA-009 identify mathematical, arrow, technical, box-drawing, bracket, OCR, routing, and fork-like near misses. | Partial | Produce proposal-quality comparative figures across representative fonts and explain minimum distinguishing features. Keep this separate from UTS #39's encoded-string confusable scope. |
+| Proposed names and ordering | A proposal needs concrete names and preferred ordering; alternate names should be discussed. | Registry canonical names, aliases, fallbacks, speech labels, and six IDs exist. | Open | Draft immutable Unicode character names, annotations/cross-references, and repertoire order. Registry names are not automatically suitable Unicode names. Reconcile high-pass/low-cut, low-pass/high-cut, band-stop/notch, and shelf/shelving terminology without creating duplicate identities. |
+| Character properties and behavior | At minimum, UnicodeData-style properties are required, plus applicable rendering, directionality, segmentation, collation, casing, line-break, identifier, and special behavior. | The [character-properties and internal font-proof strategy](character-properties-font-strategy.md) supplies a uniform provisional `So/0/ON/N/AL` model, `Script=Common`, `East_Asian_Width=N`, and explicit normalization, identifier, bidi, and rendering hypotheses. | Partial | Run its property simulations and mixed-direction tests; revisit any failed analogue; integrate proposal-ready values only after usage evidence confirms the character model. The strategy intentionally leaves immutable names and ordering open. |
+| Glyph and rendering model | The proposal must show the requested glyph and explain any special shaping behavior. | Original, neutral, editable six-member SVG study geometry exists and is hash-locked. It is draft, unpublished, and noncanonical. | Partial | Define the acceptable glyphic variation and minimum rendering requirements without making stroke details semantic. Determine whether the axis-less forms remain identifiable at text sizes and in multiple font styles. Artwork acceptance remains a Human Review gate. |
+| Evidence images | Supporting evidence should be incorporated into the archived proposal as clearly identified, captioned images showing characters in use, rather than supplied only as links. | The ledger has detailed citations and rights notes, but deliberately does not copy vendor or standards artwork. Original contact sheets show project designs, not independent usage. | Open | Build a rights-reviewed evidence-figure inventory. For every figure, record source, date, locator, what is being demonstrated, redaction/crop treatment, and the legal basis for inclusion in a permanently archived public proposal. Do not treat permission to inspect as permission to republish. |
+| Font and implementation path | SEW requires a suitably licensed font before it recommends a proposal to UTC. | No font is published. The internal strategy defines a purpose-built, unencoded, no-PUA proof addressed by glyph name or ID. Original SVGs are CC0; repository policy anticipates OFL-1.1 or another explicit font license. | Partial | Validate the private proof strategy only if it supports internal review; a proposal font still requires accepted geometry, a human-selected license, required OpenType provenance/name metadata, and committee-appropriate mapping. Font feasibility does not repair the usage gap. |
+| ISO/IEC 10646 relationship | A proposal must include the standardized WG2 proposal summary information. Unicode and ISO/IEC 10646 repertoire work is coordinated. | EV-071, EV-073, and DA-009 document synchronization and adjacent standards. EV-116 identifies the required form. | Partial | Fill a draft summary only when the repertoire, names, properties, font, and evidence are mature. Do not pursue separate contradictory Unicode and ISO/IEC character identities. External submission remains reserved. |
+| Proposal document and bibliography | A single, self-contained PDF needs a clear request, background, modern sources, comparisons, properties, bibliography, authorship, date, and page identification. | The registry, decision log, reports, and provenance are strong source material. No submission document exists. | Open | Assemble only after the eligibility evidence is credible. A polished PDF produced earlier would risk disguising the critical evidence gap as a formatting gap. |
+| Authorship, CLA, and IP | Submitter and all significant proposal authors must have applicable Unicode CLAs; potential IP claimants must be identified. The font needs an accepted license. | Repository licenses and original-artwork provenance are explicit. No Unicode CLA or submission authorship determination is recorded. | Open, reserved | Human review must decide authorship, contributor/IP representations, CLA execution, evidence-image legal basis, and font license before submission. Agent assistance does not authorize legal representations. |
+
+## Six-concept evidence disposition
+
+| Concept | Semantic history and independent use | Character-like or portable glyph use | Principal proposal-specific blocker |
+| --- | --- | --- | --- |
+| `asr:filter.high-pass` | Strong | Three qualifying independent axis-less implementations, including one custom-font workaround; no portable target character | Establish independent portable character use and the exact `low cut` relationship. |
+| `asr:filter.low-pass` | Strong | Three qualifying independent axis-less implementations, including one custom-font workaround; no portable target character | Establish independent portable character use and the exact `high cut` relationship. |
+| `asr:filter.band-pass` | Strong | Two qualifying independent axis-less implementations, including one custom-font workaround; no portable target character | Establish independent portable character use and distinction from arcs/intersection-like characters. |
+| `asr:filter.band-stop` | Strong broad concept | One explicitly labeled axis-less implementation; no portable target character | Resolve notch breadth/identity, fallback evidence, obtain a second qualifying target implementation, and test union-like confusion. |
+| `asr:filter.low-shelf` | Strong sign-agnostic affected-side semantics | Compact product selectors exist; no shared portable fork character | Establish stable community geometry, independent text friction/character use, shelf/pass distinction, and shelving-term disposition. |
+| `asr:filter.high-shelf` | Strong sign-agnostic affected-side semantics | Compact product selectors exist; no shared portable fork character | Establish stable community geometry, independent text friction/character use, shelf/pass distinction, and shelving-term disposition. |
+
+No concept currently clears the central proposal criteria merely because its registry assessment score is high. The assessment rubric measures internal record readiness and expressly does not assert Unicode eligibility.
+
+## Unicode requirements versus project safeguards
+
+The following safeguards are useful project policy, not published Unicode thresholds:
+
+- the project's three-independent-source plain-text-friction safeguard;
+- its 20-point registry assessment rubric and dimension floors;
+- `evidence-collecting`, `registry-candidate`, and `registry-accepted` statuses;
+- the 14-day public-review requirement for registry acceptance;
+- six-way blinded recognition thresholds and study sequencing;
+- exact SVG hash locks and the exclusion of three-prong shelf variants;
+- canonical `asr:` IDs and ASCII fallbacks;
+- the rule that third-party artwork is never copied or traced into project artwork.
+
+Clearing these safeguards may make the evidence more credible, but does not compel Unicode acceptance. Conversely, Unicode does not publish a rule requiring exactly three friction examples, a registry score, or this project's study protocol. A future proposal must argue the current SEW criteria directly.
+
+The project's stricter rights boundary also differs from the Unicode FAQ's request for embedded usage images. That is not a contradiction: it means the evidence-figure lane needs an explicit, human-reviewed legal basis rather than silently importing images.
+
+## Highest-value internal evidence lanes
+
+### P0: Character-use and interchange corpus
+
+Run a reproducible search aimed specifically at character behavior, not general familiarity. Search technical email/list archives, issue trackers, source code, preset formats, documentation tables, patch sheets, text-mode displays, icon-font mappings, custom encodings, and community exchanges for each of the six identities. Preserve negative results and distinguish:
+
+- a text label naming a filter;
+- a graphical UI control;
+- a contextual response graph;
+- a stable glyph accessed through a legacy or custom encoding;
+- a glyph used inline with text or numbers;
+- a glyph whose identity is searched, indexed, parsed, copied, or round-tripped.
+
+This lane has the greatest decision value because it can either supply the missing eligibility evidence or show that the Unicode route should remain indefinitely secondary to registry/font/markup interoperability.
+
+### P0: Independent interchange-failure casebook
+
+Collect independently authored cases where participants could not convey one of the six identities through ordinary text and resorted to drawing, screenshots, attachments, improvised character sequences, custom fonts, or ambiguous abbreviations. Record the actual lost distinction and whether an existing phrase or structured ID solved it adequately. Project-authored examples may test workflows but must remain separate from independent demand evidence.
+
+### P1: Repertoire-boundary and stability dossier
+
+Turn the historical, vendor, education, and community corpus into a decade-spanning per-concept matrix of identity, terminology, representation class, and variation. The goal is not to average vendor artwork into a new design. It is to determine whether a stable abstract character survives graphical variation and whether the six-item boundary is defensible.
+
+### P1: Evidence-figure rights inventory
+
+Identify the strongest independently authored usage figures now, but do not place them in a proposal. Record ownership, publication context, exact crop, proposed caption, what criterion each figure supports, and the candidate legal or permission path. Escalate only the actual licensing/legal choices for Human Review.
+
+### P1: Complete the technical character model
+
+The provisional property and no-PUA font-proof strategy is complete. Run its property simulations, then prepare nonbinding candidate names, cross-references, ordering, block analogues, and minimum rendering distinctions. This can expose hidden semantic problems cheaply, but it should not be mistaken for closing the usage gap.
+
+### P2: Font proof of implementation
+
+After the property and glyph-variation model stabilizes, build a private proof font with explicit noncanonical mapping and automated metadata/rendering checks. It can validate production feasibility and proposal-chart rendering. It cannot create evidence that the community already uses the characters.
+
+### P2: Full prior-document search and submission skeleton
+
+Expand the bounded pipeline/non-approval check into the UTC and WG2 document registers, then maintain a proposal skeleton that points to evidence artifacts without presenting itself as a submission. Assemble the self-contained PDF only after the P0 evidence supports eligibility.
+
+## Decision rule
+
+Keep Unicode at `HOLD` until the evidence supports all three current SEW criteria for every proposed character or supports a principled smaller repertoire. In particular, do not advance because the technical worksheet, font, or proposal layout is complete.
+
+A reasonable internal `GO` threshold for preparing the complete external-submission package is:
+
+1. independent character-like usage by a community and compelling public plain-text interchange evidence for each included item;
+2. a stable and defensible repertoire with resolved semantic boundaries;
+3. documented existing-character, sequence, pipeline, prior-document, and confusable review;
+4. proposal-ready names, properties, behavior, ordering, and rendering model;
+5. a suitably licensed font and rights-reviewed self-contained evidence figures; and
+6. independent adverse review finding no material overclaim.
+
+Review and authorization of that complete package, its legal representations, and any submission remain Human Review gates.
+
+## Agent Report - 2026-08-31T20:15:37-07:00
+
+- Report status: completed; exact-head re-review approved after corrections
+- Scope: mapped current authoritative Unicode non-emoji proposal requirements and the six-concept repository's remaining gaps without changing the external position.
+- Exact refreshed main base: `415eb56e4ecbb87092eb4566d46d8a3941b41235`
+- Primary guidance: EV-110 through EV-118, all official Unicode or SEW sources with timestamped captures; EV-110 uses metadata-only capture because its dynamic response bytes were not reproducible.
+- Project evidence reviewed: all six registry records; current assessments and evidence synthesis; EV-100/EV-101 and DA-012 target-use findings; the merged band-pass readiness package; D-001 through D-022; DA-001 through DA-010; artwork metadata, provenance policy, licensing policy, study locks, offline-harness result, and the merged character-properties/font-proof strategy.
+- Result: the controlling blockers are independent character usage, public plain-text interchange need, and community-level stability. Property and no-PUA font-proof strategies are partially prepared internally; proposal-ready names, test results, font artifact and license, evidence figures, ISO/IEC form, and document construction remain open downstream technical or legal work.
+- Guardrails: no outreach, submission, participant action, proposal status, record status, identifier, alias, artwork, code-point, property, font, licensing, or external-position change.
+- Limitations: the bounded pipeline and non-approval term searches do not cover every UTC/WG2 document or alternate name; restricted standards databases were not reopened; no legal conclusion is offered about third-party evidence figures or AI-assisted authorship under the Unicode CLA.
+- Validation: exact-current-main `npm test` passed 112/112 tests; registry validation, Agent Report hygiene, and `git diff --check` passed. GitHub Actions remain pending.
+- Independent review: the post-rebase adverse review required sequential version provenance, reconciliation with EV-100/EV-101 and DA-012, and removal of a stale technical-model queue item. Exact substantive head `cce30890e8da55b735899d9a273fabce9929607e` passed re-review after all corrections, with only this approval-report delta requested for confirmation.
