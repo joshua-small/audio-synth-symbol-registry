@@ -102,7 +102,7 @@ test("repository records commitments and tooling but tracks no generated font pr
     readFile(path.join(root, "registry/registry-metadata.json"), "utf8").then(JSON.parse),
     execFileAsync("git", ["ls-files"], { cwd: root }).then(({ stdout }) => stdout.split("\n")),
   ]);
-  assert.equal(packageJson.version, "0.9.0");
+  assert.equal(packageJson.version, "0.10.0");
   assert.equal(metadata.artifacts.tooling.version, packageJson.version);
   assert.match(report, /no `cmap`/);
   assert.match(report, /no PUA or code point/);

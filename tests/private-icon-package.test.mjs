@@ -126,7 +126,7 @@ test("repository tracks only generator, schema, tests, and readiness documentati
     readFile(path.join(root, "docs/private-icon-package-readiness-2026-09-01.md"), "utf8"),
   ]);
   const tracked = stdout.split("\n");
-  assert.equal(packageJson.version, "0.9.0");
+  assert.equal(packageJson.version, "0.10.0");
   assert.equal(metadata.artifacts.tooling.version, packageJson.version);
   assert.match(report, /PRIVATE INTERNAL/);
   assert.match(report, /no Unicode, SMuFL, or Private Use Area code point/);
