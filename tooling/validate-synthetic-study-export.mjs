@@ -38,6 +38,7 @@ export function buildPrivateScoringKey(answerKey) {
     };
   }).sort((left, right) => left.opaque_stimulus_token.localeCompare(right.opaque_stimulus_token));
   if (new Set(rows.map(({ opaque_stimulus_token }) => opaque_stimulus_token)).size !== 6) fail("answer-key tokens must be unique");
+  if (new Set(rows.map(({ record_id }) => record_id)).size !== CHOICE_BY_RECORD.size) fail("answer key must cover each supported record exactly once");
   const key = { scoring_key_schema_version: "0.1.0", rows };
   return { key, sha256: sha256(stableJson(key)) };
 }
@@ -66,10 +67,12 @@ export function validateSyntheticExport(result, answerKey, instrument) {
     if (row.unknown === hasText || (row.unknown && row.response_text !== null)) fail("free-text rows require exactly one of response text or unknown");
   }
   const canonicalChoices = instrument.forced_choices?.map(({ id }) => id);
-  if (!Array.isArray(canonicalChoices) || canonicalChoices.length !== 8 || new Set(canonicalChoices).size !== 8) fail("instrument forced choices are invalid");
+  const expectedChoices = new Set([...CHOICE_BY_RECORD.values(), "none", "unknown"]);
+  if (!Array.isArray(canonicalChoices) || canonicalChoices.length !== expectedChoices.size || new Set(canonicalChoices).size !== expectedChoices.size
+    || canonicalChoices.some((id) => !expectedChoices.has(id))) fail("instrument forced choices are invalid");
   for (const row of result.forced_choice) {
     const offered = form.choice_order_by_stimulus?.[row.opaque_stimulus_token];
-    if (!Array.isArray(offered) || offered.length !== 8 || offered.some((id, index) => row.displayed_choice_order?.[index] !== id)
+    if (!Array.isArray(offered) || offered.length !== 8 || row.displayed_choice_order?.length !== 8 || offered.some((id, index) => row.displayed_choice_order[index] !== id)
       || !canonicalChoices.includes(row.forced_choice_id) || !offered.includes(row.forced_choice_id)) {
       fail("forced-choice row differs from the offered form");
     }

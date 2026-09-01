@@ -124,6 +124,7 @@ test("private scoring-key commitment and synthetic analysis remain deterministic
     (copy) => { copy.forced_choice[0].forced_choice_id = "bogus"; },
     (copy) => { copy.forced_choice[0].confidence = 999; },
     (copy) => { copy.forced_choice[0].displayed_choice_order = ["bogus"]; },
+    (copy) => { copy.forced_choice[0].displayed_choice_order.push("bogus"); },
     (copy) => { copy.free_text[0].unknown = true; },
     (copy) => { copy.contamination = { flag: "invalid", note: null }; },
     (copy) => { copy.contamination = { flag: "no", note: "not allowed" }; },
