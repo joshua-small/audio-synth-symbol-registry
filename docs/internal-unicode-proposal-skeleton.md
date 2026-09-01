@@ -56,6 +56,7 @@ Current compact-a SVGs are owner-approved for internal study construction and ha
 - `[UNMET]` Show why every included identity is encoded atomically and why parameters remain higher-level data.
 - `[UNMET]` Decide whether evidence supports all six characters, a smaller repertoire, or no character proposal.
 - `[PARTIAL]` Preserve the bounded `low cut`/high-pass and `high cut`/low-pass response-class relationships without implying implementation equivalence.
+- `[PARTIAL]` Preserve `low shelving filter`/low-shelf and `high shelving filter`/high-shelf only as bounded response-class aliases under DA-025. Shelf/shelving morphology is explicit; shorter fragments, product-local pass enums, pass-shelf compounds, signed operations, parameters, topology, implementation, and glyph identity do not transfer. Explicit product documentation overrides generic alias lookup.
 - `[PARTIAL]` Preserve Band-stop/Band-reject as the broad class and the narrower/context-dependent `notch` term as related-only unless a source explicitly maps or contrasts it.
 - `[UNMET]` Decide names-list annotations, cross-references, and ordering after names and repertoire are technically reviewed.
 - `[UNMET]` Demonstrate that shelf boost/cut orientation is glyphic or parametric context rather than a character split; current semantics exclude signed gain.
@@ -254,7 +255,7 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.19) | EV-001 through EV-209 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. DA-023's Band-stop score recommendation remains unapplied, and DA-024 changes no score. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.20) | EV-001 through EV-209 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. DA-025 applies only two bounded shelf aliases; assessment scores, isolated-recognition blockers, and DA-023's Band-stop recommendation remain unchanged. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013 v0.2.0) | EV-110-EV-118 plus DA-024 inputs | Three central criteria remain controlling; direct/adverse text evidence does not clear character use or encoding need. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
