@@ -28,28 +28,44 @@
   },
   "evidence": [
     {
-      "source_id": "EV-002",
-      "claim": "Documents a notch response selector in the EQ Eight interface.",
+      "source_id": "EV-120",
+      "claim": "Documents independent project-local Band Reject and Notch icon-font members without treating the two modes as interchangeable.",
       "scope": "product-ui"
     },
     {
       "source_id": "EV-003",
       "claim": "Defines and illustrates band-stop or notch filtering as a frequency-response concept.",
       "scope": "education"
+    },
+    {
+      "source_id": "EV-130",
+      "claim": "Documents a second direct broad Band Reject target rendering independently from Notch.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-180",
+      "claim": "Defines Notch as a narrow, high-Q Band-stop specialization without supplying a universal naming threshold.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-186",
+      "claim": "Preserves adverse product evidence that Band Stop and Notch can be exact source-local labels.",
+      "scope": "product-ui"
     }
   ],
   "confidence": {
-    "level": "low",
-    "rationale": "Band-stop semantics are stable, but the source corpus must determine whether notch is treated as an exact synonym or a distinct high-Q case."
+    "level": "medium",
+    "rationale": "The broad Band-stop/Band-reject class is stable. Notch terminology is controlled as context-dependent related-term polysemy, while portable glyph interchange and a third explicit broad target rendering remain unproved."
   },
   "open_questions": [
     {
       "question": "Does the source corpus establish notch filter as a distinct semantic category rather than a narrow band-stop case?",
-      "status": "open"
+      "status": "resolved"
     }
   ],
   "notes": [
-    "Notch filter is a provisional related term, not an accepted alias.",
+    "Notch filter is a context-dependent related term, commonly a narrow or high-Q member but sometimes an exact source-local synonym; no universal numeric Q or bandwidth boundary is asserted.",
+    "Notch-only evidence does not transfer to Band-stop unless its own source explicitly maps or contrasts the terms, and only the mapped or contrasted claim transfers.",
     "The ASCII identifier is provisional until registry-accepted."
   ]
 }

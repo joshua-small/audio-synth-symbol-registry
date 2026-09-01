@@ -38,20 +38,38 @@
       "source_id": "EV-004",
       "claim": "Provides related low-pass terminology and circuit-diagram symbols, not the target compact audio glyph.",
       "scope": "standards"
+    },
+    {
+      "source_id": "EV-160",
+      "claim": "Explicitly pairs low-pass with High Cut while leaving implementation details product-specific.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-161",
+      "claim": "Documents matching one-sided response direction and an adverse product boundary between legacy Cut and Pass families.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-166",
+      "claim": "Binds a High Cut filter-type label to a low-pass implementation while preserving project-local parameters.",
+      "scope": "product-ui"
     }
   ],
   "confidence": {
     "level": "medium",
-    "rationale": "Terminology and response semantics are well established, but compact cross-vendor glyph convergence and plain-text use require further corpus evidence."
+    "rationale": "Low-pass semantics, bounded High Cut response-class aliasing, and compact cross-vendor convergence are well established; portable glyph interchange remains unproved."
   },
   "open_questions": [
     {
       "question": "Is high cut consistently interchangeable with low-pass in the source corpus?",
-      "status": "open"
+      "status": "resolved"
     }
   ],
   "notes": [
     "The ASCII identifier is provisional until registry-accepted.",
-    "The representative glyph is a concept, not vendor artwork."
+    "The representative glyph is a concept, not vendor artwork.",
+    "High cut is an alias only when it names an audio EQ or filter response class with the low-pass affected sides; it does not assert equal order, slope, Q, resonance, phase, cutoff convention, parameters, presets, algorithms, or product behavior.",
+    "When product documentation explicitly assigns a different or nonclassic operation, that documentation overrides alias lookup.",
+    "Arbitrary phrases such as cut the highs, high-frequency cut, high cut amount, and high cut-off frequency are not aliases. Whole-label lookup may fold ASCII case and treat a space and hyphen as orthographic variants without matching substrings or high cutoff."
   ]
 }

@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T22:23:49-07:00. This synthesis supersedes the historical [0.2.14 status synthesis](current-evidence-status-0.2.14.md). It applies the independently reviewed semantic recommendations from DA-018, DA-019, and DA-020 to the five affected live records without changing an assessment, lifecycle status, alias array, artwork, study state, or external position.
+Status as of 2026-08-31T22:14:43-07:00. This synthesis supersedes the historical [0.2.13 status synthesis](current-evidence-status-0.2.13.md). It preserves the private unencoded font-proof validation, Band-stop/Notch dossier, and pass/cut alias-equivalence dossier, then incorporates the evidence-only shelf-fork form-stability spike without changing an assessment, live record, artwork, study state, or external position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.3.0 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.12 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.3, format 0.2.0 | `registry/assessments/registry-0.2.9-2026-08-31.json`; independent adverse review passed |
-| Derived analyses | 0.2.15, format 0.1.0 | `evidence/derived-analyses.json` |
+| Derived analyses | 0.2.14, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.8.0 | `package.json` |
 
 ## Current records
@@ -18,18 +18,18 @@ Band-pass is `registry-candidate`; the other five records remain `evidence-colle
 
 | ID | Score | Principal blockers |
 | --- | ---: | --- |
-| `asr:filter.high-pass` | 18/20 | Bounded `Low Cut` response-class alias is resolved in the live record; reassessment pending |
-| `asr:filter.low-pass` | 18/20 | Bounded `High Cut` response-class alias is resolved in the live record; reassessment pending |
+| `asr:filter.high-pass` | 18/20 | Bounded `Low Cut` alias recommendation awaits separate semantic review |
+| `asr:filter.low-pass` | 18/20 | Bounded `High Cut` alias recommendation awaits separate semantic review |
 | `asr:filter.band-pass` | 20/20 | `registry-candidate`; no candidate blocker or material question remains |
-| `asr:filter.band-stop` | 15/20 | Controlled Notch polysemy is resolved in the live record; reassessment pending; text and third-render gaps remain |
-| `asr:filter.low-shelf` | 17/20 | Topology and affected-side orientation are resolved; reassessment pending; isolated recognition and shelving-term disposition remain open; bounded friction threshold now met |
-| `asr:filter.high-shelf` | 17/20 | Topology and affected-side orientation are resolved; reassessment pending; isolated recognition and shelving-term disposition remain open; open friction safeguard |
+| `asr:filter.band-stop` | 15/20 | Current snapshot retains the material Notch boundary; DA-020 recommends resolving it by controlled-polysemy policy in a separate reassessment |
+| `asr:filter.low-shelf` | 17/20 | Pending mechanical incorporation of newly established topology convergence; six-way recognition and shelving-term disposition remain open; bounded friction threshold now met |
+| `asr:filter.high-shelf` | 17/20 | Pending mechanical incorporation of newly established topology convergence; six-way recognition and shelving-term disposition remain open; open friction safeguard |
 
-Scores remain those of the immutable 0.3.3 assessment snapshot and must not be read as a reassessment of the changed records. DA-021 applies the stable containment rule from DA-020: Band-stop remains canonical, Notch remains context-dependent and commonly narrower, and Notch-only evidence remains non-transferable unless its own source explicitly maps or contrasts the broad concept.
+Scores remain those of the immutable 0.3.3 assessment snapshot. DA-020 does not preempt the next assessment. It finds that the broad Band-stop/Band-reject semantic nucleus is stable even though `Notch` varies among narrow subtype, exact product/API synonym, response feature, and implementation-local mode. The stable containment rule is to keep Band-stop canonical, treat Notch as context-dependent and commonly narrower, and exclude Notch-only evidence unless its own source explicitly maps or contrasts the broad concept.
 
-DA-021 also applies DA-018's bounded `Low Cut` -> high-pass and `High Cut` -> low-pass response-class rule. It directly rejects universal implementation and arbitrary-phrase equivalence. The existing alias arrays remain unchanged; the record questions and contextual boundaries are now explicit.
+DA-018 likewise does not preempt a semantic review or assessment. It supports `Low Cut` -> high-pass and `High Cut` -> low-pass as bounded audio filter-type response-class aliases while directly rejecting universal implementation and arbitrary-phrase equivalence. The current aliases and live records remain unchanged.
 
-For shelves, DA-021 applies DA-019's finding that EV-170 through EV-172 establish three independent Apple, Ableton, and Avid implementations of the mirrored, axis-free, sign-agnostic affected-side two-prong topology with signed gain handled separately. The live topology and shelf-overlap questions are resolved, while exact locked contours and proportions remain original project implementation. Exact shelving-term treatment and isolated recognition remain material and open.
+DA-019 does not preempt a shelf reassessment. EV-170 through EV-172 establish three independent Apple, Ableton, and Avid implementations of the mirrored, axis-free, sign-agnostic affected-side two-prong shelf topology with signed gain handled separately. This resolves the topology-existence question, while exact locked contours and proportions remain original project implementation and isolated recognition remains unproved.
 
 ## New evidence and recommendations
 
@@ -45,11 +45,11 @@ For shelves, DA-021 applies DA-019's finding that EV-170 through EV-172 establis
 - Apple EV-161 and Steinberg HALion EV-162 directly show why a response-class alias cannot promise identical parameters or universal product behavior.
 - EV-170 through EV-172 establish cross-vendor shelf-fork topology convergence; EV-173 and EV-174 preserve polarity-bearing and polarity-dependent counterexamples; EV-175 and EV-176 are excluded from exact-form counting.
 
-DA-021 applies DA-020's controlled-polysemy policy to the live Band-stop record while preserving contradictory naming as an interoperability caution. `Notch` remains outside exact aliases, and no Notch-only implementation, glyph, or usage transfers without an explicit source-local mapping or contrast. Any score, blocker, eligibility, or status consequence remains for the next mechanical assessment.
+DA-020 recommends that the next mechanical Band-stop reassessment raise semantic stability from 2 to 3 and close the material Notch blocker by policy, while preserving contradictory naming as non-material interoperability caution. `Notch` should remain outside exact aliases, and no Notch-only implementation, glyph, or usage should transfer without an explicit source-local mapping or contrast.
 
-DA-021 completes DA-018's separate D-021 semantic review and retains the existing inverse cut aliases with an explicit audio filter-type boundary. Order, slope, Q/resonance, phase, cutoff convention, parameter, preset, algorithm, and product-feature equivalence remain excluded. When product documentation explicitly assigns a different or nonclassic operation, that documentation overrides alias lookup. Capitalization and space/hyphen variation are orthographic lookup normalization, not additional aliases; `low cutoff` and arbitrary phrases such as `cut the lows` do not transfer.
+DA-018 recommends a separate D-021 semantic review that retains the existing inverse cut aliases with an explicit audio filter-type boundary. Order, slope, Q/resonance, phase, cutoff convention, parameter, and preset equivalence remain excluded. Capitalization and space/hyphen variation are orthographic lookup normalization, not additional aliases; `low cutoff` and arbitrary phrases such as `cut the lows` do not transfer.
 
-DA-021 records DA-019's topology and affected-side orientation in both shelf records. Affected-side orientation is semantic: low shelf forks on the low-frequency left side and high shelf forks on the high-frequency right side; arbitrary rotation or mirroring that changes the forked side is not equivalent. Axes, baselines, color, parameter values, slope, interaction state, exact proportions, path curvature, whitespace, line weight, and endpoint placement remain excluded from semantic identity. This does not establish a future score before reassessment, isolated recognition, portable text use, identical artwork, reuse rights, or Unicode eligibility.
+DA-019 supports a future visual-convergence score 3 only after a mechanical assessment explicitly verifies record-level exclusions for axes, color, parameter values, slope, orientation changes, interaction state, and exact proportions. It does not establish portable text use, identical artwork, reuse rights, or Unicode eligibility.
 
 The remaining gaps are unaffected:
 
@@ -69,29 +69,12 @@ The [private unencoded font proof](private-unencoded-font-proof-2026-08-31.md) r
 
 ## Next evidence work
 
-1. Publish a new immutable six-record assessment against DA-018 through DA-021, preserving source independence, contradictory evidence, and every unresolved material question.
-2. Evaluate only D-021-delegated `registry-candidate` transitions supported by that assessment and independent adverse review; do not infer `registry-accepted` or external readiness.
+1. Mechanically reassess `asr:filter.band-stop` against DA-020 without adding a Notch alias, borrowing Notch-only evidence, or presuming lifecycle movement.
+2. Apply independent D-021 semantic review to DA-018's bounded pass/cut recommendation without changing canonical names, IDs, fallbacks, status, artwork, or Unicode position.
 3. Seek a third independent explicit axis-less Band-stop/Band-reject implementation and independently published portable text-friction evidence.
 4. Continue private six-way recognition validation without treating original study artwork as industry adoption.
-5. Resolve the exact shelf/shelving related-term boundary through a dedicated adverse terminology review.
-6. Preserve the private proof findings without treating font feasibility as a substitute for independent character use or Unicode eligibility.
-
-## Agent Report - 2026-08-31T22:23:49-07:00
-
-- Report status: substantive implementation complete; exact-head independent adverse review and CI remain pending.
-- Scope: apply DA-018, DA-019, and DA-020 through DA-021 to bounded live-record semantics without score or status movement.
-- Result: inverse cut aliases are response-class aliases only; Notch is controlled related-term polysemy; shelf topology and affected-side orientation are independently established while exact form, shelving aliases, and isolated recognition remain unresolved.
-- Versions: registry 0.3.0 and derived analyses 0.2.15; assessments remain 0.3.3, schema 0.4.0, tooling 0.8.0, and artwork unpublished.
-- Boundaries: alias arrays, canonical names, definitions, identifiers, fallbacks, speech labels, Unicode fields, visible geometry, artwork, font, assessment data, lifecycle statuses, and external authority are unchanged. Unicode remains `HOLD`.
-- Validation: `npm test` passed 117/117 after validating six records, seven assessment sets, 106 evidence sources, registry 0.3.0, assessments 0.3.3, schema 0.4.0, tooling 0.8.0, every registered derived digest, documentation drift, and Agent Report hygiene. `git diff --check` passed.
-
-## Agent Report - 2026-08-31T22:37:23-07:00
-
-- Report status: approved for publication and merge after approval-only annotation.
-- Independent adverse review: APPROVE on exact corrected head `97971f8d804c0169a7dffedb38c2a2db1979a561`, based on original main `cf711c1e147dced320ff8df47c5fc108b72d45b6`.
-- Corrections verified: affected-side orientation is semantic and arbitrary rotation or mirroring that changes the forked side is non-equivalent; explicit nonclassic product documentation overrides pass/cut alias lookup.
-- Protected boundaries: immutable DA-019, assessments, statuses, alias arrays, canonical fields, Unicode fields, artwork, schema, and tooling remain unchanged.
-- Annotation boundary: this section and the matching DA-021 report annotation are review metadata only; registered DA-021 and DA-006 hashes are reconciled afterward. No substantive record or decision text changes.
+5. Preserve the private proof findings without treating font feasibility as a substitute for independent character use or Unicode eligibility.
+6. Mechanically reassess both shelf records against DA-019 while preserving six-way recognition, exact-artwork, interchange, and Unicode blockers.
 
 ## Agent Report - 2026-08-31T22:14:43-07:00
 
