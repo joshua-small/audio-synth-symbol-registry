@@ -57,7 +57,10 @@ async function executableFile(path) {
 }
 
 function descriptorKey(descriptor) {
-  return `${descriptor.tag}:${descriptor.type}:${descriptor.role}:${descriptor.tab_index}:${descriptor.ordinal}`;
+  const sequenceIdentity = descriptor.type === 'radio' && descriptor.radio_group_ordinal !== null
+    ? `radio-group-${descriptor.radio_group_ordinal}`
+    : descriptor.ordinal;
+  return `${descriptor.tag}:${descriptor.type}:${descriptor.role}:${descriptor.tab_index}:${sequenceIdentity}`;
 }
 
 async function activeElementObservation(page, unfocusedStyles) {
@@ -66,6 +69,9 @@ async function activeElementObservation(page, unfocusedStyles) {
     if (!(element instanceof HTMLElement)) return null;
     const focusables = [...document.querySelectorAll('a[href], button, input, select, textarea, [tabindex]')]
       .filter((candidate) => candidate instanceof HTMLElement && !candidate.hidden && !candidate.hasAttribute('disabled'));
+    const radioGroupKeys = [...new Set(focusables
+      .filter((candidate) => candidate instanceof HTMLInputElement && candidate.type === 'radio' && candidate.name)
+      .map((candidate) => `${candidate.form ? [...document.forms].indexOf(candidate.form) : -1}:${candidate.name}`))];
     const style = getComputedStyle(element);
     const outlineWidth = Number.parseFloat(style.outlineWidth) || 0;
     const outlineVisible = style.outlineStyle !== 'none' && outlineWidth > 0 && style.outlineColor !== 'transparent';
@@ -77,6 +83,9 @@ async function activeElementObservation(page, unfocusedStyles) {
         role: element.getAttribute('role') || 'implicit',
         tab_index: element.tabIndex,
         ordinal: focusables.indexOf(element),
+        radio_group_ordinal: element instanceof HTMLInputElement && element.type === 'radio' && element.name
+          ? radioGroupKeys.indexOf(`${element.form ? [...document.forms].indexOf(element.form) : -1}:${element.name}`)
+          : null,
       },
       focus_indicator: {
         focus_visible_match: element.matches(':focus-visible'),
@@ -116,6 +125,7 @@ async function expectedTabOrder(page, direction) {
       if (!radioGroups.has(key)) radioGroups.set(key, []);
       radioGroups.get(key).push(element);
     }
+    const radioGroupKeys = [...radioGroups.keys()];
     const retained = eligible.filter((element) => {
       if (!(element instanceof HTMLInputElement) || element.type !== 'radio' || !element.name) return true;
       const formOrdinal = element.form ? [...document.forms].indexOf(element.form) : -1;
@@ -135,6 +145,9 @@ async function expectedTabOrder(page, direction) {
       role: element.getAttribute('role') || 'implicit',
       tab_index: element.tabIndex,
       ordinal: all.indexOf(element),
+      radio_group_ordinal: element instanceof HTMLInputElement && element.type === 'radio' && element.name
+        ? radioGroupKeys.indexOf(`${element.form ? [...document.forms].indexOf(element.form) : -1}:${element.name}`)
+        : null,
     }));
   }, direction);
 }
