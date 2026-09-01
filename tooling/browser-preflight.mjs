@@ -139,7 +139,7 @@ async function expectedTabOrder(page, direction) {
   }, direction);
 }
 
-async function keyboardCycle(page, key, unfocusedStyles, start) {
+async function keyboardCycle(page, key, unfocusedStyles, start, expectedStopCount) {
   if (start === 'phase-title') await page.locator('#phase-title').focus();
   else {
     await page.evaluate(() => {
@@ -155,9 +155,8 @@ async function keyboardCycle(page, key, unfocusedStyles, start) {
   }
   const observations = [];
   const seen = new Set();
-  for (let index = 0; index < 64; index += 1) {
+  for (let index = 0; index < expectedStopCount; index += 1) {
     await page.keyboard.press(key);
-    if (start === 'reverse-sentinel' && await page.evaluate(() => document.activeElement?.id === 'browser-preflight-reverse-sentinel')) break;
     const observation = await activeElementObservation(page, unfocusedStyles);
     if (!observation) fail(`keyboard navigation produced no active element after ${key}`);
     const identity = descriptorKey(observation.descriptor);
@@ -177,8 +176,8 @@ async function keyboardAudit(page) {
     expectedTabOrder(page, 'reverse'),
   ]);
   if (expectedForward.length === 0 || expectedReverse.length === 0) fail("phase exposes no expected keyboard controls");
-  const forward = await keyboardCycle(page, 'Tab', unfocusedStyles, 'phase-title');
-  const reverse = await keyboardCycle(page, 'Shift+Tab', unfocusedStyles, 'reverse-sentinel');
+  const forward = await keyboardCycle(page, 'Tab', unfocusedStyles, 'phase-title', expectedForward.length);
+  const reverse = await keyboardCycle(page, 'Shift+Tab', unfocusedStyles, 'reverse-sentinel', expectedReverse.length);
   const forwardInteractive = forward.filter(({ descriptor }) => descriptor.ordinal >= 0 && descriptor.tab_index >= 0);
   const reverseInteractive = reverse.filter(({ descriptor }) => descriptor.ordinal >= 0 && descriptor.tab_index >= 0);
   if (forwardInteractive.length === 0 || reverseInteractive.length === 0) fail("Tab and Shift+Tab must each reach an interactive control");
