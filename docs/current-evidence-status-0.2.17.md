@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-09-01T00:19:18-07:00. This synthesis supersedes the historical [0.2.17 status synthesis](current-evidence-status-0.2.17.md). It preserves the merged six-record reassessment and shelf/shelving terminology dossier, then adds the evidence-only Band-stop text-use and third-render disposition from DA-023 without changing any live semantic record, assessment, score, or status.
+Status as of 2026-08-31T23:55:22-07:00. This synthesis supersedes the historical [0.2.16 status synthesis](current-evidence-status-0.2.16.md). It preserves the merged six-record reassessment and adds the evidence-only shelf/shelving terminology disposition from DA-022 without changing any live semantic record, assessment, score, or status.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.3.3 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.3.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.4, format 0.2.0 | `registry/assessments/registry-0.3.1-2026-08-31.json` |
-| Derived analyses | 0.2.18, format 0.1.0 | `evidence/derived-analyses.json` |
+| Derived analyses | 0.2.17, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.8.0 | `package.json` |
 
 ## Current records
@@ -37,9 +37,7 @@ DA-019 and DA-021 establish three independent implementations of the axis-free, 
 
 DA-022 finds that `low shelving filter` and `high shelving filter` are established exact response-class aliases for `Low-shelf filter` and `High-shelf filter`. Apple and MathWorks each provide direct within-document equivalence; Steinberg and immutable FFmpeg documentation independently corroborate the morphology, and W3C supports the underlying lowShelf/highShelf taxonomy. The finding is bounded: it carries no gain-sign, parameter, topology, implementation, or glyph equivalence, and it excludes plain `shelving filter`, shorter grammatical fragments, broad bass/treble terms, pass-colliding product enums, and abbreviations. This evidence-only publication does not mutate either shelf record or resolve its live open question; a separate exact-head semantic disposition is required.
 
-DA-023 establishes a third independent explicit axis-less broad-class Band-reject rendering in Bitwig Phase-4, alongside Image-Line EV-100 and Ardour EV-120. Enriched EV-032 directly uses the full canonical Band-Stop name in non-UI KVR prose; EV-201 corroborates Band-reject and source-local contextual BR within the same KVR group. Sound On Sound EV-202 and EV-203 form one independent trade-media group using Band-reject and locally expanded BR, with Apple EV-204 as vendor-documentation corroboration. The evidence supports a later mechanical recommendation to raise Band-stop text/accessibility from 2 to 3 and visual convergence from 2 to 3, producing 18/20, but this evidence-only publication does not apply those scores. The current immutable assessment remains 16/20 and `registry-candidate`. BR and BRF remain context-dependent observations outside unrestricted aliases; BSF, the speech label, and the DA-020 Notch transfer rule remain unchanged. No reviewed source uses the response glyph as portable text.
-
-All assessment claims preserve the counterevidence and exclusions in DA-018 through DA-023. Derived analyses organize direct ledger evidence but are not counted as additional independent sources.
+All assessment claims preserve the counterevidence and exclusions in DA-018 through DA-022. Derived analyses organize direct ledger evidence but are not counted as additional independent sources.
 
 ## Current position
 
@@ -51,21 +49,20 @@ All assessment claims preserve the counterevidence and exclusions in DA-018 thro
 
 ## Next work
 
-1. Complete exact-head independent adverse review of DA-023, its source captures, independence accounting, negative searches, DA-020 admission rule, and registered digest.
-2. After approval, perform a separate mechanical Band-stop reassessment of the recommended text 3 and visual 3 scores without mutating fallbacks, aliases, semantics, or Notch transfer rules.
-3. Perform the separately scoped semantic disposition for the two full shelving-filter aliases, then mechanically reassess the shelf terminology blocker without conflating it with isolated recognition.
-4. Continue private isolated six-way recognition validation; lexical evidence and topology convergence do not satisfy that blocker.
+1. Complete exact-head independent adverse review of DA-022, its source captures, independence accounting, morphology boundary, exclusions, and registered digest.
+2. If approved, perform a separate semantic disposition for the two full shelving-filter aliases, then mechanically reassess the shelf terminology blocker without conflating it with isolated recognition.
+3. Continue private isolated six-way recognition validation; lexical evidence and topology convergence do not satisfy that blocker.
+4. Seek a third independent explicit axis-less Band-stop/Band-reject implementation and portable text-friction evidence without borrowing Notch-only sources.
 5. Preserve the `registry-accepted` Human Review gate and batch it with review of a complete external submission package if that stage is reached.
 6. Keep Unicode `HOLD` until every formal non-go condition in the acceptance rubric is cleared and the owner separately authorizes external action.
 
-## Agent Report - 2026-09-01T00:19:18-07:00
+## Agent Report - 2026-08-31T23:55:22-07:00
 
-- Report status: Band-stop evidence dossier serialized for exact-head independent adverse review; its score recommendation is not applied.
-- Scope: add EV-200 through EV-204, enrich existing EV-032 without duplicating its source, and register DA-023 under the controlling DA-020 admission rule.
-- Result: Bitwig supplies the third independent broad-class axis-less render; KVR and Sound On Sound supply independent non-UI audio prose, and Apple corroborates explicit BR labeling.
-- Recommendation only: later Band-stop text/accessibility 2 -> 3, visual convergence 2 -> 3, and total 16 -> 18. The immutable current assessment remains 16/20 and `registry-candidate`.
-- Negative result: no portable response-glyph text use, common audio-chat BSF corpus, independent drawing-required Band-stop case, or qualifying SIR/EasyEffects third form was established.
-- Preserved state: scores remain 20, 20, 20, 16, 19, and 19; statuses, records, DA-020, aliases, BSF fallback, speech, artwork, geometry, font, PUA, Unicode `HOLD`, and external posture remain unchanged.
-- Versions: registry/evidence 0.3.3 and derived analyses 0.2.18; assessments remain 0.3.4 with format 0.2.0, schema 0.4.0, and tooling 0.8.0.
-- Validation: `npm test` passed 117/117 after validating six records, eight assessment sets, 119 evidence sources, registry 0.3.3, assessments 0.3.4, schema 0.4.0, tooling 0.8.0, registered source and derived-artifact digests, documentation drift, protected study/font boundaries, and Agent Report hygiene. `git diff --check` and explicit capture/protected-path checks passed.
-- Independent review: corrected exact head `ce13a95e6758af79cff1c7e5deb88d0018e5ef80` received `APPROVE` with no remaining blocker after exact text-provenance, publisher-collapse, hash, and protected-boundary review. This approval annotation changes no reviewed substance.
+- Report status: shelf/shelving evidence dossier serialized and frozen for exact-head independent adverse review; the semantic recommendation is not applied.
+- Scope: add EV-190 through EV-197 and DA-022, preserving direct within-document equivalence, source independence, morphology versus orthography, and product-specific adverse boundaries.
+- Result: the full phrases `low shelving filter` and `high shelving filter` are supported as bounded response-class aliases, while shorter fragments, broad region words, product-local pass enums, collision-prone compounds, and abbreviations remain excluded.
+- Preserved state: scores remain 20, 20, 20, 16, 19, and 19; the four pass/stop records remain candidates and both shelves remain evidence-collecting with their live terminology and isolated-recognition questions unchanged.
+- Protected boundaries: no live alias, related term, question, canonical field, identifier, assessment, score, status, artwork, geometry, font, PUA, Unicode position, release, publication, outreach, or external-authority change. Unicode remains `HOLD`.
+- Versions: registry/evidence 0.3.2 and derived analyses 0.2.17; assessments remain 0.3.4 with format 0.2.0, schema 0.4.0, and tooling 0.8.0.
+- Validation: `npm test` passed 117/117 after validating six records, eight assessment sets, 114 evidence sources, registry 0.3.2, assessments 0.3.4, schema 0.4.0, tooling 0.8.0, registered source and derived-artifact digests, documentation drift, protected study/font boundaries, and Agent Report hygiene. `git diff --check` passed.
+- Independent review: `REQUEST CHANGES` on exact head `4bd7cfe7ecd69198c691ca0d6077c3cbf53f789a` for the EV-193 commit date and one claim exceeding pinned `doc/filters.texi`. Both defects were narrowly corrected, and exact corrected head `f6f94e11e0f57b1b3d743fe341552cb0f29705ce` received `APPROVE` with no remaining blocker. This approval annotation changes no reviewed substance.

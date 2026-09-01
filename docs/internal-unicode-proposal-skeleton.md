@@ -71,8 +71,9 @@ Relevant but insufficient evidence:
 - EV-100 documents axis-less product selectors for high-pass, low-pass, band-pass, and band-stop.
 - EV-101 documents project-local custom-font components for high-pass, low-pass, and band-pass.
 - EV-120 documents one project-local icon font with mappings for all six active concepts, including separate Band Reject and Notch members.
+- EV-200 documents a third independent product-local axis-less Band-reject selector, while EV-201 through EV-204 document contextual audio text rather than response-glyph text.
 - EV-122 documents derivative ecosystem packaging and is not another independent implementation.
-- DA-012 and DA-014 constrain those findings: product selectors and local font mappings demonstrate compact implementation, not portable character use.
+- DA-012, DA-014, and DA-023 constrain those findings: product selectors and local font mappings demonstrate compact implementation, and contextual BR prose demonstrates terminology use, not portable response-glyph use.
 
 Needed evidence slot for each proposed character:
 
@@ -89,6 +90,8 @@ Needed evidence slot for each proposed character:
 `[PARTIAL - SEMANTICS YES; CHARACTER FORMS NO]`
 
 DA-017 establishes a durable six-way semantic taxonomy across manufacturers, decades, education, APIs, and implementations. It also preserves the adverse conclusion that vendors vary labels and drawings, and that stable taxonomy is not stable character identity. The study-locked original glyph family is suitable only for internal recognition work.
+
+DA-023 establishes three independent broad-class axis-less Band-stop/Band-reject implementations at primitive level, but only for that record and only with explicit exclusions for axes, parameters, slope, color, orientation, interaction state, exact contour, common lineage, authorship, and reuse rights. It does not establish a six-member character-form repertoire or portable glyph use.
 
 Needed evidence:
 
@@ -248,11 +251,11 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.17) | EV-001 through EV-197 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. DA-022 supports bounded shelf/shelving response-class terminology but adds no independent character-use source. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.18) | EV-001 through EV-204 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. DA-023 recommends later Band-stop text 3, visual 3, and total 18/20 without applying them. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013) | EV-110-EV-118 | Three central criteria remain controlling. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
-| Independent character-like use | [Independent-use spike](../evidence/reports/2026-08-31-independent-character-use-spike.md) (DA-014) | EV-100, EV-101, EV-120-EV-122 | Compact/project-local implementation exists; portable character use absent. |
+| Independent character-like use | [Independent-use spike](../evidence/reports/2026-08-31-independent-character-use-spike.md) (DA-014); [Band-stop dossier](../evidence/reports/2026-08-31-band-stop-text-and-third-render-dossier.md) (DA-023) | EV-100, EV-101, EV-120-EV-122, EV-200-EV-204, enriched EV-032 | Compact/project-local implementation and contextual Band-stop/Band-reject prose exist; portable response-glyph use remains absent. |
 | Plain-text friction | [Workaround search](plain-text-workaround-search.md) (DA-001); [shelf spike](../evidence/reports/2026-08-31-shelf-plain-text-friction.md) (DA-010); [casebook](../evidence/reports/2026-09-01-communication-failure-casebook.md) (DA-016) | EV-080-EV-084, EV-121, EV-140, EV-141 | Bounded friction exists; encoding need unproved. |
 | Names/properties/font | [Property/font strategy](character-properties-font-strategy.md); [private proof](private-unencoded-font-proof-2026-08-31.md) | EV-110, EV-113, EV-114 | Provisional shared property hypothesis and private unencoded proof; no character names, code points, publication license, or proposal font. |
 | Artwork | [Study lock](../artwork/study-locks/six-member-compact-a.json); [artwork criteria](artwork-criteria.md) | Repository-authored provenance only | Internal geometry lock; no canonical/proposal artwork acceptance. |
