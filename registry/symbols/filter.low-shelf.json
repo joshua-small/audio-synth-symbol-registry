@@ -6,9 +6,10 @@
   "semantics": {
     "category": "filter-response",
     "definition": "A filter response that applies a signed gain difference to the low-frequency side of a transition region relative to the high-frequency side, with both sides approaching plateaus.",
-    "aliases": [],
+    "aliases": [
+      "low shelving filter"
+    ],
     "related_terms": [
-      "low shelving filter",
       "low shelving"
     ],
     "text_fallback": "LOW SHELF",
@@ -88,6 +89,46 @@
       "source_id": "EV-174",
       "claim": "Preserves a polarity-dependent single-curve shelf implementation as counterevidence to universal form.",
       "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-190",
+      "claim": "Directly maps Low Shelf controls to the low shelving filter response class while gain and Q remain separate parameters.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-191",
+      "claim": "Uses low-shelf and low-shelving forms within one API operation while gain, slope, cutoff, and type remain separate inputs.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-192",
+      "claim": "Independently uses the exact low-shelving filter phrase with separate gain control.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-193",
+      "claim": "Connects the lowshelf machine name to a two-pole shelving-filter class without establishing global bass or concatenated-token aliases.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-194",
+      "claim": "Independently confirms the parameterized lowShelf response family without proving the shelving morphology by itself.",
+      "scope": "standards"
+    },
+    {
+      "source_id": "EV-195",
+      "claim": "Preserves a product-local lowpass enum for shelf-side selection as adverse evidence against global pass-term transfer.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-196",
+      "claim": "Preserves the collision-prone framework phrase low-pass shelf filter as product-local wording outside exact aliases.",
+      "scope": "terminology"
+    },
+    {
+      "source_id": "EV-197",
+      "claim": "Shows polarity- and topology-specific low shelving controls that defeat implementation equivalence while preserving response-class terminology.",
+      "scope": "product-ui"
     }
   ],
   "confidence": {
@@ -96,8 +137,8 @@
   },
   "open_questions": [
     {
-      "question": "Should low shelving filter become an exact alias rather than a related term?",
-      "status": "open"
+      "question": "Is low shelving filter an exact alias at the bounded response-class level documented by DA-022?",
+      "status": "resolved"
     },
     {
       "question": "Do independent compact implementations converge on a reproducible sign-agnostic low-shelf primitive?",
@@ -117,6 +158,10 @@
     "Boost versus attenuation, gain sign and amount, plateau placement, slope, order, Q, resonance, overshoot, implementation, and UI context are excluded from semantic identity.",
     "Low cut is not an alias; it collides with the existing high-pass terminology boundary.",
     "LS, LSF, bass shelf, and signed boost/cut names are not adopted as aliases or fallbacks.",
+    "Low shelving filter is an exact alias only for the low-shelf response class; it carries no gain-sign, parameter, topology, control, implementation, algorithm, or glyph equivalence.",
+    "Shelf versus shelving is a morphological relationship, not an orthographic variant. Whole-label lookup may fold ASCII case and normalize one internal ASCII space or attributive hyphen without adding duplicate aliases; concatenated or camel-case tokens are not inferred.",
+    "Low shelving remains a related fragment. Plain shelving filter, plain shelf filter, bass, lowpass, low-pass shelf filter, LS, LSC, and signed boost/cut names remain outside exact global aliases.",
+    "Explicit product documentation overrides generic alias lookup when it assigns a different, narrower, compound, polarity-specific, or otherwise product-local operation.",
     "The independently established topology forks on the low-frequency left side and converges toward the unaffected right side; signed gain remains separate.",
     "Affected-side orientation is semantic: the low-shelf form forks on the low-frequency left side. Arbitrary rotation or mirroring that changes the forked side is not equivalent.",
     "Axes, baselines, parameter values, slope, color, interaction state, exact proportions, path curvature, whitespace, line weight, and endpoint placement are not semantic identity.",

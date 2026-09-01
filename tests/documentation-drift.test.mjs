@@ -37,8 +37,8 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.ok(status.includes("| `asr:filter.band-stop` | 16/20 |"));
   assert.doesNotMatch(status, /shelf records?[^\n]*14\/20/i);
   assert.doesNotMatch(status, /predate DA-009|overlap audit is pending/i);
-  assert.match(status, /low-shelf[^\n]*shelving-term disposition and isolated distinction from high pass remain material/i);
-  assert.match(status, /high-shelf[^\n]*shelving-term disposition and isolated distinction from low pass remain material/i);
+  assert.match(status, /low-shelf[^\n]*low shelving filter[^\n]*bounded alias[^\n]*isolated distinction from high pass remains material/i);
+  assert.match(status, /high-shelf[^\n]*high shelving filter[^\n]*bounded alias[^\n]*isolated distinction from low pass remains material/i);
   assert.doesNotMatch(roadmap, /Status as of 2026-08-29, after work merged through PR #24|initial four-record scope|affect the four records/);
   assert.ok(roadmap.includes(`registry metadata ${metadata.artifacts.registry.version}`));
 });
@@ -73,6 +73,27 @@ test("current assessment selects the post-disposition six-record snapshot", asyn
     assert.equal(byId.get(id).status_at_assessment, "registry-candidate");
   }
   assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /no Notch-only evidence transfers/);
+});
+
+test("shelf shelving aliases remain bounded and preserve isolated recognition", async () => {
+  for (const [file, alias, related, adjacent] of [
+    ["filter.low-shelf.json", "low shelving filter", "low shelving", "high-pass"],
+    ["filter.high-shelf.json", "high shelving filter", "high shelving", "low-pass"],
+  ]) {
+    const record = await readJson(`registry/symbols/${file}`);
+    assert.deepEqual(record.semantics.aliases, [alias]);
+    assert.deepEqual(record.semantics.related_terms, [related]);
+    assert.ok(record.open_questions.some(({ question, status }) =>
+      question.includes(alias) && status === "resolved"));
+    assert.ok(record.open_questions.some(({ question, status }) =>
+      question.toLowerCase().includes(`isolated use reliably distinguish`) &&
+      question.toLowerCase().includes(adjacent) && status === "open"));
+    const notes = record.notes.join("\n");
+    assert.match(notes, /response class/i);
+    assert.match(notes, /morphological relationship, not an orthographic variant/i);
+    assert.match(notes, /Explicit product documentation overrides generic alias lookup/i);
+    assert.match(notes, /concatenated or camel-case tokens are not inferred/i);
+  }
 });
 
 test("font strategy preserves the unencoded HOLD boundary", async () => {

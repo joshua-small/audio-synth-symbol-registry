@@ -1,16 +1,16 @@
 # Prioritized next work
 
-Status as of 2026-09-01T00:53:06-07:00, after the six-record reassessment, shelf/shelving terminology dossier, Band-stop text-use and third-render dossier, and portable-text/interchange-need corpus. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-09-01T01:22:37-07:00, after the bounded shelf/shelving semantic disposition. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.3.4.
+The current queue is aligned with registry metadata 0.4.0.
 
 ## Current dependency map
 
 | Lane | State | Dependency or next action |
 | --- | --- | --- |
-| Provisional shelf records | 19/20 and `evidence-collecting` | DA-022 supports two bounded shelving-filter aliases without applying them; resolve that semantic disposition and isolated shelf/pass recognition separately. |
-| Band-stop evidence | 16/20 and `registry-candidate` | DA-023 recommends later text 3 and visual 3 for 18/20; complete exact-head review, then reassess separately without changing DA-020 or text fallbacks. |
-| Portable-text and interchange need | DA-024 serialized; Unicode `HOLD` unchanged | Complete exact-head adverse review of direct/adverse classification, derivative-lineage collapse, record gaps, negative searches, and source digests. |
+| Provisional shelf records | 19/20 and `evidence-collecting` | DA-025 applies the two bounded shelving-filter aliases; independently review, then reassess only the terminology consequence while preserving isolated recognition. |
+| Band-stop evidence | 16/20 and `registry-candidate` | DA-023 recommends later text 3 and visual 3 for 18/20; reassess separately without changing DA-020 or text fallbacks. |
+| Portable-text and interchange need | DA-024 reviewed and merged; Unicode `HOLD` unchanged | Preserve its negative portable-glyph finding, direct friction, and successful text/interchange counteroptions. |
 | Shelf topology and overlap | Incorporated through DA-019 and DA-021 | Preserve affected-side two-prong topology, semantic orientation, polarity/context exclusions, and exact-geometry boundary. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
 | Six-record reassessment | Implemented and reviewed in assessment artifact 0.3.4 | Preserve the immutable 20/20 HP, 20/20 LP, 20/20 BP, 16/20 BS, and 19/20 shelf baseline until separately reviewed evidence or semantic changes justify another snapshot. |
@@ -20,11 +20,11 @@ The current queue is aligned with registry metadata 0.3.4.
 
 ## Active queue
 
-### 1. Resolve remaining shelf material questions
+### 1. Review the shelf semantic disposition
 
-Apply DA-022's bounded shelf/shelving recommendation only through a separate exact-head semantic disposition, and continue private isolated six-way shelf/pass recognition validation. Preserve DA-019's distinction between established topology and unproved isolated recognition. A negative result is valid and must not be upgraded to satisfy an attractive hypothesis.
+Adversely review DA-025's two exact aliases, morphology/orthography distinction, full exclusion list, product-documentation override, record question changes, version sequence, and protected trees. Continue private isolated six-way shelf/pass recognition validation separately. Preserve DA-019's distinction between established topology and unproved isolated recognition.
 
-Completion requires direct evidence sufficient to resolve both material questions, complete validation, timestamped Agent Reports, and independent adverse review. Any visible geometry change, participant operation, or candidate-to-accepted transition remains separately gated.
+After approval, create a separate immutable assessment snapshot only if a mechanical reassessment is warranted. Do not rewrite the current assessment, clear the isolated-recognition blocker, move either shelf by score alone, or infer implementation, parameter, topology, glyph, abbreviation, fragment, or product-local pass-term equivalence.
 
 ### 1.5. Review and reassess the Band-stop evidence recommendation
 
@@ -32,9 +32,9 @@ Complete exact-head adverse review of EV-200 through EV-204, enriched EV-032, an
 
 If approved, create a separate immutable assessment snapshot that mechanically tests visual convergence 2 -> 3, text/accessibility 2 -> 3, and total 16 -> 18. Do not infer unrestricted BR/BRF aliases, replace BSF, change speech, transfer Notch-only evidence, modify geometry, or treat score 18 as registry acceptance or Unicode eligibility.
 
-### 1.75. Review the portable-text and interchange-need corpus
+### 1.75. Preserve the portable-text and interchange-need corpus
 
-Complete exact-head adverse review of EV-205 through EV-209 and DA-024. Reproduce the five source digests and verify the direct-versus-adverse taxonomy, Equalizer APO protocol collision, EasyEffects parser and locale causation, REAPER accessibility counterexample, FFmpeg/Web Audio machine names, FontAudio/Iconify derivative collapse, Notch non-transfer, LLM tokenization caveat, negative searches, and all six record-level gap findings.
+DA-024's exact-head review is complete. Preserve its direct-versus-adverse taxonomy, Equalizer APO protocol collision, EasyEffects parser and locale causation, REAPER accessibility counterexample, FFmpeg/Web Audio machine names, FontAudio/Iconify derivative collapse, Notch non-transfer, LLM tokenization caveat, negative searches, and all six record-level gap findings.
 
 Do not convert bounded friction into encoding need, count project-authored demonstrations as independent demand, mutate an assessment or record, allocate a PUA or code point, publish a font, change geometry, or relax Unicode `HOLD`.
 

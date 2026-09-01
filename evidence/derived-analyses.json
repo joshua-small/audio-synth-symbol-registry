@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.19",
+  "registry_version": "0.2.20",
   "artifacts": [
     {
       "id": "DA-001",
@@ -2287,7 +2287,7 @@
       "id": "DA-006",
       "version": "0.2.19",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.19.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T00:53:06-07:00",
       "content_sha256": "f2d9d654a1abf0097cb6e1a8e06b90e0414031bba88e1bc795a983c8b72aa4d4",
@@ -2353,6 +2353,70 @@
       "limitations": [
         "The bounded corpus and negative searches are not a prevalence study, and no legal conclusion is offered about evidence figures, font licensing, CLAs, authorship, or external submission.",
         "Independent character use and character-specific public plain-text need remain open for every record; LLM token efficiency is only a model-specific hypothesis and no external action is authorized."
+      ]
+    },
+    {
+      "id": "DA-025",
+      "version": "0.1.0",
+      "title": "Shelf/shelving semantic disposition",
+      "path": "evidence/reports/2026-09-01-shelf-shelving-semantic-disposition.md",
+      "kind": "boundary-analysis",
+      "produced_at": "2026-09-01T01:22:37-07:00",
+      "content_sha256": "d562287f08e4ec3c4d5e9fef6522f52bc980781cdc31a0512d6a65fe1ff8cf21",
+      "input_evidence_ids": [
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-022",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Applies the two complete shelf/shelving phrases as bounded response-class aliases, separates morphology from whole-label orthographic normalization, and preserves product-specific and isolated-recognition boundaries without reassessment or lifecycle movement.",
+      "limitations": [
+        "The aliases transfer no gain sign, parameter, topology, control, implementation, algorithm, or glyph identity; shorter fragments, side-less terms, broad region names, pass collisions, product enums, abbreviations, and signed operations remain excluded.",
+        "The current immutable assessment and 19/20 scores remain unchanged, both isolated shelf/pass recognition questions remain open, and Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.20",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T01:22:37-07:00",
+      "content_sha256": "6a34b40be5a41a8f3352580cbdda5f76ef3399b84dee0850c37c549227246eba",
+      "input_evidence_ids": [
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.19"
+        },
+        {
+          "artifact_id": "DA-025",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after applying DA-022's two bounded shelf/shelving aliases through DA-025 without reassessment, score movement, lifecycle movement, artwork change, or external action.",
+      "limitations": [
+        "The immutable current assessment remains 19/20 for both shelves and retains its historical terminology and isolated-recognition blockers; a separate reassessment is required for any score or eligibility consequence.",
+        "Lexical response-class equivalence does not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
       ]
     }
   ]
