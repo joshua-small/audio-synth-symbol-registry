@@ -206,7 +206,7 @@ test("rejects a ledger version that differs from metadata", () => {
 test("rejects a README registry release that differs from metadata", () => {
   const result = runValidator({ readmeRegistryVersion: "0.1.0" });
   assert.equal(result.status, 1, result.stdout);
-  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.4\.1/);
+  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.4\.2/);
 });
 
 const invalidLedgerMutations = [

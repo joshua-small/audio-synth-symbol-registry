@@ -143,6 +143,30 @@ test("portable-text dossier preserves direct and adverse evidence under Unicode 
   assert.doesNotMatch(dossier, /Unicode status: `GO`|formal Unicode proposal: `GO`/i);
 });
 
+test("evolutionary-history dossier separates semantics, graphics, and source families", async () => {
+  const [ledger, derived, dossier, status] = await Promise.all([
+    readJson("evidence/ledger.json"),
+    readJson("evidence/derived-analyses.json"),
+    readText("evidence/reports/2026-09-01-evolutionary-history-corpus-v2.md"),
+    readText("docs/current-evidence-status.md"),
+  ]);
+  const byId = new Map(ledger.sources.map((source) => [source.id, source]));
+  for (let number = 210; number <= 221; number += 1) {
+    assert.ok(byId.has(`EV-${number}`), `evolutionary-history source missing EV-${number}`);
+  }
+  assert.ok(derived.artifacts.some(({ id, version }) => id === "DA-026" && version === "0.1.0"));
+  assert.equal(byId.get("EV-212").source_capture.preservation.mode, "metadata-only");
+  assert.equal(byId.get("EV-221").source_capture.preservation.mode, "metadata-only");
+  assert.match(dossier, /not a market-share estimate, user census, sales ranking, or proof/i);
+  assert.match(dossier, /Semantic continuity is strong and long-lived\. Graphic continuity is episodic/i);
+  assert.match(dossier, /no reviewed source documents that design step/i);
+  assert.match(dossier, /low shelf and high shelf identify the affected frequency side/i);
+  assert.match(dossier, /Bell 1923 remains an acquisition lead/i);
+  assert.match(dossier, /no independently used portable target response glyph/i);
+  assert.match(status, /not one unbroken graphic lineage/i);
+  assert.match(status, /Formal Unicode proposal: `HOLD`/);
+});
+
 test("internal Unicode skeleton remains visibly non-submittable and covers all live records", async () => {
   const [metadata, skeleton, symbolFiles] = await Promise.all([
     readJson("registry/registry-metadata.json"),

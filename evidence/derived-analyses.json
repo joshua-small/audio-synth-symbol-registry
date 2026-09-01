@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.21",
+  "registry_version": "0.2.22",
   "artifacts": [
     {
       "id": "DA-001",
@@ -2515,7 +2515,7 @@
       "id": "DA-006",
       "version": "0.2.21",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.21.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T01:44:51-07:00",
       "content_sha256": "c7a83eae2c8875bedb3f21e8e9bf2e49ffdb52b2b63e73c992cded745e9e95b6",
@@ -2563,6 +2563,106 @@
       "limitations": [
         "The reassessment changes no live semantic record, alias, lifecycle status, artwork, geometry, schema, tooling, font, PUA, release, or external posture; every asr identifier remains provisional.",
         "Registry readiness does not establish portable character use, encoding necessity, artwork acceptance, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-026",
+      "version": "0.1.0",
+      "title": "Six-filter evolutionary-history corpus v2",
+      "path": "evidence/reports/2026-09-01-evolutionary-history-corpus-v2.md",
+      "kind": "historical-analysis",
+      "produced_at": "2026-09-01T02:11:15-07:00",
+      "content_sha256": "fb8e7ab78782bd289a5a0b38e58b8bd392bfeae87e7bb5c258553428f0429b3c",
+      "input_evidence_ids": [
+        "EV-210",
+        "EV-211",
+        "EV-212",
+        "EV-213",
+        "EV-214",
+        "EV-215",
+        "EV-216",
+        "EV-217",
+        "EV-218",
+        "EV-219",
+        "EV-220",
+        "EV-221"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-002",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.2.2"
+        },
+        {
+          "artifact_id": "DA-007",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-008",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-018",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-019",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-020",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-024",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Extends the six-filter history across a transparent current-DAW editorial frame, early engineering, synth and broadcast documentation, representative decade snapshots, education, trade media, and community discussion while separating semantic continuity from graphic genealogy and collapsing derivative source families.",
+      "limitations": [
+        "The purposive corpus is English-heavy, geographically incomplete, archive-dependent, and not a market-share, global-prevalence, earliest-use, or complete-genealogy study; Bell System 1923 remains an acquisition lead rather than evidence.",
+        "The corpus finds no portable target response glyph and changes no semantics, alias, question, assessment, score, status, artwork, geometry, schema, tooling, font, PUA, Unicode position, release, outreach, or external posture; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.22",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T02:11:15-07:00",
+      "content_sha256": "d51b6975a76aa7e5f4a2777b856c9cd0157e299e560ff0f6fbce78f7fe0310dc",
+      "input_evidence_ids": [
+        "EV-210",
+        "EV-211",
+        "EV-212",
+        "EV-213",
+        "EV-214",
+        "EV-215",
+        "EV-216",
+        "EV-217",
+        "EV-218",
+        "EV-219",
+        "EV-220",
+        "EV-221"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.21"
+        },
+        {
+          "artifact_id": "DA-026",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding status synthesis after the status-neutral evolutionary-history corpus, preserving current six-record assessments, lifecycle state, semantic boundaries, protected implementation trees, external posture, and Unicode HOLD.",
+      "limitations": [
+        "Semantic continuity does not establish graphic descent, exact contour inheritance, global prevalence, portable character use, encoding necessity, artwork acceptance, or Unicode eligibility.",
+        "No live record, alias, question, assessment, score, status, artwork, geometry, schema, tooling, font, PUA, release, outreach, or external posture changes; Unicode remains HOLD."
       ]
     }
   ]
