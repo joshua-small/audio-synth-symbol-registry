@@ -33,19 +33,20 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.ok(status.includes("| `asr:filter.high-shelf` | 17/20 |"));
   assert.ok(status.includes("| `asr:filter.high-pass` | 18/20 |"));
   assert.ok(status.includes("| `asr:filter.low-pass` | 18/20 |"));
-  assert.ok(status.includes("| `asr:filter.band-pass` | 18/20 |"));
-  assert.ok(status.includes("| `asr:filter.band-stop` | 12/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-pass` | 20/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-stop` | 15/20 |"));
   assert.doesNotMatch(status, /shelf records?[^\n]*14\/20/i);
   assert.doesNotMatch(status, /predate DA-009|overlap audit is pending/i);
-  assert.match(status, /three-independent-source safeguard open/i);
+  assert.match(status, /low-shelf[^\n]*bounded friction threshold now met/i);
+  assert.match(status, /high-shelf[^\n]*open friction safeguard/i);
   assert.doesNotMatch(roadmap, /Status as of 2026-08-29, after work merged through PR #24|initial four-record scope|affect the four records/);
   assert.ok(roadmap.includes(`registry metadata ${metadata.artifacts.registry.version}`));
 });
 
-test("current assessment selects the post-shelf evidence snapshot", async () => {
+test("current assessment selects the post-corpus reassessment snapshot", async () => {
   const metadata = await readJson("registry/registry-metadata.json");
   assert.equal(metadata.artifacts.assessments.current_snapshot,
-    "registry/assessments/registry-0.2.3-2026-08-31.json");
+    "registry/assessments/registry-0.2.9-2026-08-31.json");
   const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
   assert.equal(snapshot.assessments.length, 6);
   const byId = new Map(snapshot.assessments.map((assessment) => [assessment.record_id, assessment]));
@@ -53,17 +54,18 @@ test("current assessment selects the post-shelf evidence snapshot", async () => 
     assert.equal(byId.get(id).dimensions.overlap_audit.score, 3);
     assert.equal(byId.get(id).total_score, 17);
     assert.equal(byId.get(id).result.recommended_status, "evidence-collecting");
-    assert.match(byId.get(id).result.rationale, /three-source safeguard/);
     assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /overlap audit is absent|overlap audit is pending/i);
   }
+  assert.match(byId.get("asr:filter.low-shelf").result.rationale, /closes the bounded low-shelf recurrence threshold/i);
+  assert.match(byId.get("asr:filter.high-shelf").result.rationale, /below its bounded three-case recurrence threshold/i);
   assert.equal(byId.get("asr:filter.high-pass").total_score, 18);
   assert.equal(byId.get("asr:filter.low-pass").total_score, 18);
-  assert.equal(byId.get("asr:filter.band-pass").total_score, 18);
-  assert.equal(byId.get("asr:filter.band-stop").total_score, 12);
+  assert.equal(byId.get("asr:filter.band-pass").total_score, 20);
+  assert.equal(byId.get("asr:filter.band-stop").total_score, 15);
   assert.equal(byId.get("asr:filter.band-pass").result.eligible, true);
   assert.equal(byId.get("asr:filter.band-pass").result.recommended_status, "registry-candidate");
-  assert.equal(byId.get("asr:filter.band-pass").status_at_assessment, "evidence-collecting");
-  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /DSSSP Notch is conservatively excluded/);
+  assert.equal(byId.get("asr:filter.band-pass").status_at_assessment, "registry-candidate");
+  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /every Notch-only source remain excluded/);
 });
 
 test("font strategy preserves the unencoded HOLD boundary", async () => {
@@ -84,7 +86,8 @@ test("font strategy preserves the unencoded HOLD boundary", async () => {
 });
 
 test("internal Unicode skeleton remains visibly non-submittable and covers all live records", async () => {
-  const [skeleton, symbolFiles] = await Promise.all([
+  const [metadata, skeleton, symbolFiles] = await Promise.all([
+    readJson("registry/registry-metadata.json"),
     readText("docs/internal-unicode-proposal-skeleton.md"),
     import("node:fs/promises").then(({ readdir }) => readdir(path.join(root, "registry/symbols"))),
   ]);
@@ -105,10 +108,12 @@ test("internal Unicode skeleton remains visibly non-submittable and covers all l
   assert.match(skeleton, /no Unicode proposal has been submitted/i);
   assert.match(skeleton, /No third-party image is embedded/i);
   assert.match(skeleton, /DA-014 found no portable independent character use/i);
+  assert.match(skeleton, new RegExp(`DA-006 v${metadata.artifacts.derived_analyses.version.replaceAll(".", "\\.")}`));
+  assert.match(skeleton, /Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`\./);
   assert.doesNotMatch(skeleton, /U\+[0-9A-F]{4,6}\s+(?:AUDIO|FILTER)/i);
 });
 
-test("band-pass candidate-readiness package remains status-neutral and assessment-backed", async () => {
+test("band-pass candidate promotion remains assessment-backed and provisional", async () => {
   const [metadata, record, readiness] = await Promise.all([
     readJson("registry/registry-metadata.json"),
     readJson("registry/symbols/filter.band-pass.json"),
@@ -117,12 +122,12 @@ test("band-pass candidate-readiness package remains status-neutral and assessmen
   const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
   const assessment = snapshot.assessments.find(({ record_id: id }) => id === record.id);
 
-  assert.equal(record.status, "evidence-collecting");
+  assert.equal(record.status, "registry-candidate");
   assert.equal(record.id, "asr:filter.band-pass");
   assert.equal(record.semantics.text_fallback, "BPF");
   assert.equal(record.semantics.spoken_label, "band-pass filter");
-  assert.equal(assessment.status_at_assessment, "evidence-collecting");
-  assert.equal(assessment.total_score, 18);
+  assert.equal(assessment.status_at_assessment, "registry-candidate");
+  assert.equal(assessment.total_score, 20);
   assert.equal(assessment.result.recommended_status, "registry-candidate");
   assert.equal(assessment.result.eligible, true);
   assert.equal(assessment.hard_blockers.length, 0);

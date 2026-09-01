@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.9",
+  "registry_version": "0.2.10",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1470,7 +1470,7 @@
         "id": "DA-006",
         "version": "0.2.9",
         "title": "Current evidence-status synthesis",
-        "path": "docs/current-evidence-status.md",
+        "path": "docs/current-evidence-status-0.2.9.md",
         "kind": "status-synthesis",
         "produced_at": "2026-08-31T20:55:21-07:00",
       "content_sha256": "df0cda08e8bd7795c594733eba2f938aa8da365b91bde642fcf8fed6a0b8e9c8",
@@ -1498,6 +1498,53 @@
         "limitations": [
           "The low-shelf recurrence result is bounded communication-friction evidence, not a prevalence estimate, portable character use finding, encoding necessity claim, or Unicode eligibility determination; all formal safeguards remain in force.",
           "DA-017 supports the coherence of the six semantic classes but does not establish universal glyph forms, independent character use, or Unicode eligibility."
+        ]
+      },
+      {
+        "id": "DA-006",
+        "version": "0.2.10",
+        "title": "Current evidence-status synthesis",
+        "path": "docs/current-evidence-status.md",
+        "kind": "status-synthesis",
+      "produced_at": "2026-08-31T21:21:47-07:00",
+      "content_sha256": "aceba91ff6d6f32c0826600d628017f7c32d7117a8481a9d45d55d9d3b08ee91",
+        "input_evidence_ids": [
+          "EV-120",
+          "EV-121",
+          "EV-130",
+          "EV-131",
+          "EV-140",
+          "EV-141",
+          "EV-150",
+          "EV-151"
+        ],
+        "input_artifact_refs": [
+          {
+            "artifact_id": "DA-006",
+            "artifact_version": "0.2.9"
+          },
+          {
+            "artifact_id": "DA-014",
+            "artifact_version": "0.1.0"
+          },
+          {
+            "artifact_id": "DA-015",
+            "artifact_version": "0.1.0"
+          },
+          {
+            "artifact_id": "DA-016",
+            "artifact_version": "0.1.0"
+          },
+          {
+            "artifact_id": "DA-017",
+            "artifact_version": "0.1.0"
+          }
+        ],
+        "scope": "Superseding six-record status synthesis after mechanical reassessment of EV-120 through EV-151 and the independently reviewed D-021 band-pass registry-candidate transition.",
+        "limitations": [
+          "The low-shelf recurrence result is bounded communication-friction evidence, not portable character use or encoding necessity.",
+          "Band-stop retains the material Notch boundary and excludes every Notch-only implementation.",
+          "Band-pass candidate status leaves its identifier provisional and does not imply registry acceptance, artwork acceptance, or Unicode readiness; Unicode remains HOLD."
         ]
       }
   ]

@@ -1,0 +1,2155 @@
+{
+  "assessment_set_version": "0.2.0",
+  "assessed_at": "2026-08-31T21:21:44-07:00",
+  "assessment_scope": "Current snapshot for all six filter-response records at registry 0.2.9 after mechanical reassessment of EV-120 through EV-151 and DA-014 through DA-017, independent adverse review, and the D-021-delegated band-pass registry-candidate transition. No semantic field, identifier, alias, artwork, or Unicode-position change.",
+  "assessments": [
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.high-pass",
+      "assessed_at": "2026-08-31T21:15:01-07:00",
+      "status_at_assessment": "evidence-collecting",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 and EV-018 establish high-pass semantics, while current vendor usage documents both High-pass and Low Cut treatments. DA-003 shows that Low Cut is used for high-pass behavior but does not establish exact equivalence in every intended context; EV-024 preserves terminology divergence. DA-017 and EV-150/EV-151 independently reinforce the stable response class but preserve the unresolved inverse cut-name boundary, so the score does not move.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-018",
+            "EV-024",
+            "EV-150",
+            "EV-151"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Supports the observed High-pass and Low Cut terminology treatments without resolving a universal exact-alias rule.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the stable high-pass semantic nucleus while preserving the unresolved inverse cut-name boundary.",
+              "input_evidence_ids_used": [
+                "EV-003",
+                "EV-006",
+                "EV-007",
+                "EV-013",
+                "EV-018",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ],
+          "limitations": [
+            "The exact Low Cut alias boundary remains material and open."
+          ]
+        },
+        "independent_usage": {
+          "score": 4,
+          "basis": "EV-002, EV-100, and EV-101 directly document four independent axis-less target implementations, now including Ardour EV-120. Independent vendor, implementation, education, trade-media, and community sources exceed five groups across at least three sectors.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies current vendor representations and prevents contextual controls from being over-counted as axis-less target implementations.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Image-Line and DSSSP as independent target implementations while preserving publisher-group counting.",
+              "input_evidence_ids_used": [
+                "EV-002",
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Ardour as an additional direct project-local high-pass icon-font implementation without treating its ASCII backing slot as portable text.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "The broad usage corpus does not resolve whether Low Cut is universally exact, nor does implementation use establish portable text interchange."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 3,
+          "basis": "High-pass filter and HPF are independently and unambiguously used in non-UI education, documentation, and trade prose, grounding the canonical term, fallback, and speech label even though no response glyph is portable plain text.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018",
+            "EV-019"
+          ],
+          "limitations": [
+            "EV-023 records user confusion between high-pass and low-pass names; score 3 means actual source use is unambiguous, not that every reader is error-free."
+          ]
+        },
+        "visual_convergence": {
+          "score": 3,
+          "basis": "Ableton EV-002, Image-Line EV-100, and DSSSP EV-101 independently converge on an axis-less monotonic high-pass primitive while differing in curvature, continuation treatment, plateau length, and stroke weight. Ardour EV-120 supplies a fourth independently published axis-less member; the dimension was already at its maximum.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-034",
+            "EV-035",
+            "EV-036",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies historical evidence as labeled, axis-bearing, or embedded context rather than standalone glyph lineage.",
+              "input_evidence_ids_used": [
+                "EV-034",
+                "EV-035",
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Shows current visual evidence remains contextual and heterogeneous.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Documents three qualifying high-pass implementations and their primitive-level convergence and divergences.",
+              "input_evidence_ids_used": [
+                "EV-002",
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds Ardour's independently published axis-less high-pass member while preserving outline and portability limitations.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Convergence does not establish identical outlines, portable Unicode use, artwork reuse rights, or the exact Low Cut alias boundary."
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-005 reproducibly audits Unicode 17 semantic candidates, visual near-misses, plausible sequences, and IEC 60617 terminology using the registered primary inputs, and records explicit non-equivalence and exclusions.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-005",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the complete reproducible overlap and confusability audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039"
+              ]
+            }
+          ],
+          "limitations": [
+            "The audit excludes later Unicode versions, restricted IEC sheets, IEC 60417, ISO 7000, and font-by-font behavior."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "Every cited ledger source has a rights note, no third-party artwork is imported, and the repository publishes no claimed reference artwork asset.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-024",
+            "EV-034",
+            "EV-035",
+            "EV-036",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-100",
+            "EV-101",
+            "EV-120",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 18,
+      "counterevidence": [
+        {
+          "description": "Current and historical sources often communicate the concept with text, axes, or rich UI context rather than a standalone glyph.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-034",
+            "EV-035",
+            "EV-036"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves negative historical findings.",
+              "input_evidence_ids_used": [
+                "EV-034",
+                "EV-035",
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves current representation heterogeneity.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Family-level text workarounds do not establish the project's three-example per-record Unicode safeguard.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-005",
+            "EV-021",
+            "EV-022",
+            "EV-025"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-001",
+              "artifact_version": "0.1.0",
+              "claim": "Records the bounded plain-text and workaround search result.",
+              "input_evidence_ids_used": [
+                "EV-005",
+                "EV-021",
+                "EV-022",
+                "EV-025"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Low Cut is an exact alias of high-pass filter across the intended corpus.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-024"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Documents divergent terminology treatments without resolving universal equivalence.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "material-ambiguity",
+          "description": "The exact alias boundary between High-pass filter and Low Cut remains unresolved.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-024"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Supports retaining the unresolved alias boundary as a blocker.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Semantic stability score is below 3.",
+          "A material alias question and hard blocker remain open."
+        ],
+        "rationale": "The score rises from 14 to 18 because three independent axis-less target implementations satisfy maximal usage and visual-convergence evidence. The unresolved Low Cut alias boundary keeps semantic stability below the candidate floor and blocks promotion. Ardour adds another direct implementation and DA-017 strengthens repertoire stability, but neither resolves the material inverse cut-name boundary; the score and eligibility therefore remain unchanged."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    },
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.low-pass",
+      "assessed_at": "2026-08-31T21:15:02-07:00",
+      "status_at_assessment": "evidence-collecting",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "EV-003 and EV-018 establish low-pass semantics, while current vendor usage documents Low-pass and High Cut treatments. DA-003 does not establish exact equivalence in every intended context; EV-024 preserves terminology divergence. DA-017 and EV-150/EV-151 independently reinforce the stable response class but preserve the unresolved inverse cut-name boundary, so the score does not move.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-018",
+            "EV-024",
+            "EV-150",
+            "EV-151"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Supports the observed Low-pass and High Cut treatments without resolving a universal exact-alias rule.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the stable low-pass semantic nucleus while preserving the unresolved inverse cut-name boundary.",
+              "input_evidence_ids_used": [
+                "EV-003",
+                "EV-006",
+                "EV-007",
+                "EV-013",
+                "EV-018",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ],
+          "limitations": [
+            "The exact High Cut alias boundary remains material and open."
+          ]
+        },
+        "independent_usage": {
+          "score": 4,
+          "basis": "EV-002, EV-100, and EV-101 directly document four independent axis-less target implementations, now including Ardour EV-120. Independent vendor, implementation, education, trade-media, and community sources exceed five groups across at least three sectors.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Prevents contextual controls from being over-counted as axis-less target implementations.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Image-Line and DSSSP as independent target implementations while preserving publisher-group counting.",
+              "input_evidence_ids_used": [
+                "EV-002",
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Ardour as an additional direct project-local low-pass icon-font implementation without treating its ASCII backing slot as portable text.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "The broad usage corpus does not resolve whether High Cut is universally exact, nor does implementation use establish portable text interchange."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 3,
+          "basis": "Low-pass filter and LPF are independently and unambiguously used in non-UI education, documentation, and trade prose, grounding the canonical term, fallback, and speech label.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018",
+            "EV-019"
+          ],
+          "limitations": [
+            "EV-023 records name confusion; score 3 describes source usage, not universal error-free recognition."
+          ]
+        },
+        "visual_convergence": {
+          "score": 3,
+          "basis": "Ableton EV-002, Image-Line EV-100, and DSSSP EV-101 independently converge on an axis-less monotonic low-pass primitive while differing in curvature, continuation treatment, plateau length, and stroke weight. Ardour EV-120 supplies a fourth independently published axis-less member; the dimension was already at its maximum.",
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-034",
+            "EV-035",
+            "EV-036",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies historical low-pass evidence as graph or display context.",
+              "input_evidence_ids_used": [
+                "EV-034",
+                "EV-035",
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Shows current visual evidence remains contextual and heterogeneous.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Documents three qualifying low-pass implementations and their primitive-level convergence and divergences.",
+              "input_evidence_ids_used": [
+                "EV-002",
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds Ardour's independently published axis-less low-pass member while preserving outline and portability limitations.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Convergence does not establish identical outlines, portable Unicode use, artwork reuse rights, or the exact High Cut alias boundary."
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-005 reproducibly audits Unicode 17 semantic candidates, visual near-misses, plausible sequences, and IEC 60617 terminology with explicit non-equivalence and exclusions.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-005",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the complete reproducible overlap and confusability audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039"
+              ]
+            }
+          ],
+          "limitations": [
+            "The documented audit exclusions remain."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "Every cited source has a rights note, no third-party artwork is imported, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-002",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-018",
+            "EV-019",
+            "EV-024",
+            "EV-034",
+            "EV-035",
+            "EV-036",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-100",
+            "EV-101",
+            "EV-120",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 18,
+      "counterevidence": [
+        {
+          "description": "Current and historical sources often use text, axes, or rich UI context rather than a standalone glyph.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-034",
+            "EV-035",
+            "EV-036"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves historical contextual findings.",
+              "input_evidence_ids_used": [
+                "EV-034",
+                "EV-035",
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves current representation heterogeneity.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Family-level workarounds do not satisfy the per-record Unicode safeguard.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-005",
+            "EV-021",
+            "EV-022",
+            "EV-025"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-001",
+              "artifact_version": "0.1.0",
+              "claim": "Records the bounded workaround search result.",
+              "input_evidence_ids_used": [
+                "EV-005",
+                "EV-021",
+                "EV-022",
+                "EV-025"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether High Cut is an exact alias of low-pass filter across the intended corpus.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-024"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Documents divergent terminology treatments without resolving equivalence.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "material-ambiguity",
+          "description": "The exact alias boundary between Low-pass filter and High Cut remains unresolved.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-002",
+            "EV-006",
+            "EV-007",
+            "EV-013",
+            "EV-024"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Supports retaining the unresolved alias boundary as a blocker.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-013"
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Semantic stability score is below 3.",
+          "A material alias question and hard blocker remain open."
+        ],
+        "rationale": "The score rises from 14 to 18 because three independent axis-less target implementations satisfy maximal usage and visual-convergence evidence. The unresolved High Cut alias boundary keeps semantic stability below the candidate floor and blocks promotion. Ardour adds another direct implementation and DA-017 strengthens repertoire stability, but neither resolves the material inverse cut-name boundary; the score and eligibility therefore remain unchanged."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    },
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.band-pass",
+      "assessed_at": "2026-08-31T21:21:45-07:00",
+      "status_at_assessment": "registry-candidate",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 4,
+          "basis": "Independent education, vendor, historical, standards-adjacent, and implementation sources consistently establish the bounded passing-band definition, scope, Band-pass/band pass/BPF treatments, fallback, and speech label. DA-017 survived adverse review with no material band-pass ambiguity; implementation-specific width, gain, slope, and order remain nonsemantic parameters.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-008",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-036",
+            "EV-006",
+            "EV-007",
+            "EV-150",
+            "EV-151"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Corroborates stable Band Pass, bandpass, BP, and BPF treatments across current vendors.",
+              "input_evidence_ids_used": [
+                "EV-008",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms a stable bounded passing-band nucleus, repertoire boundary, parameter exclusions, canonical terminology, BPF fallback, and no material semantic ambiguity after adverse review.",
+              "input_evidence_ids_used": [
+                "EV-003",
+                "EV-006",
+                "EV-007",
+                "EV-008",
+                "EV-009",
+                "EV-013",
+                "EV-018",
+                "EV-036",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ],
+          "limitations": [
+            "Semantic score 4 does not imply one mandatory glyph contour or portable character use."
+          ]
+        },
+        "independent_usage": {
+          "score": 4,
+          "basis": "Image-Line EV-100, DSSSP EV-101, and Ardour EV-120 directly document three independent axis-less target implementations. Together with independent vendor, education, historical, and manufacturer-education sources, the corpus exceeds five groups across at least three sectors.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-036",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies EV-036 as an embedded contextual display.",
+              "input_evidence_ids_used": [
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Prevents current selectors and graphs from being over-counted as standalone axis-less target uses.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies two independent band-pass target implementations and preserves source-group counting.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Ardour as a third independently published direct axis-less band-pass implementation without treating its ASCII backing slot as portable text.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Implementation use does not establish portable text interchange or a mandatory exact outline."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 3,
+          "basis": "Band-pass filter and BPF are unambiguously used outside one product UI in education and historical vendor documentation, grounding the fallback and speech label.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018",
+            "EV-036"
+          ],
+          "limitations": [
+            "This does not demonstrate glyph-based plain-text interchange."
+          ]
+        },
+        "visual_convergence": {
+          "score": 3,
+          "basis": "Image-Line EV-100, DSSSP EV-101, and Ardour EV-120 independently converge on an axis-less centered passing-region primitive with both outer sides attenuated. Width, curvature, shoulder and continuation treatment, stroke weight, and implementation machinery diverge and remain nonsemantic.",
+          "evidence_ids": [
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-036",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the historical contextual-display limitation.",
+              "input_evidence_ids_used": [
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies current vendor visual evidence without asserting axis-less convergence.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Documents two qualifying band-pass implementations, convergence, and divergences.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds Ardour's independently published axis-less centered passing-region member and preserves the custom-font/non-portability limitation.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Three qualifying implementations support primitive-level score 3, not a mandatory exact outline, portable Unicode use, adoption estimate, or artwork reuse right."
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-005 supplies a reproducible semantic-equivalent, visual-confusable, sequence, and adjacent-standard audit with non-equivalence dispositions.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-005",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the complete overlap audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039"
+              ]
+            }
+          ],
+          "limitations": [
+            "The documented audit exclusions remain."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "Every cited source has a rights note, no third-party artwork is imported, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-007",
+            "EV-008",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-036",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-100",
+            "EV-101",
+            "EV-120",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 20,
+      "counterevidence": [
+        {
+          "description": "Earlier sampled sources use contextual selectors, graphs, abbreviations, and embedded displays rather than a standalone axis-less glyph. EV-100, EV-101, and EV-120 now establish three direct axis-less target uses, resolving target existence and the three-implementation convergence level while preserving broader representation heterogeneity and no portable text use.",
+          "status": "resolved",
+          "material": false,
+          "evidence_ids": [
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-036",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-002",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves historical contextual evidence.",
+              "input_evidence_ids_used": [
+                "EV-036"
+              ]
+            },
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the earlier sampled representation heterogeneity and the prior absence of qualifying standalone use.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Resolves the earlier target-existence counterevidence with two direct implementations while retaining heterogeneity as a nonmaterial limitation.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds the third direct implementation while preserving the finding that project-local font slots are not portable character use.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [],
+      "hard_blockers": [],
+      "result": {
+        "recommended_status": "registry-candidate",
+        "eligible": true,
+        "failed_requirements": [],
+        "rationale": "The score rises from 18 to 20 because DA-017 supports semantic score 4 after adverse review and Ardour EV-120 supplies the third independent axis-less implementation required for visual score 3. Every candidate floor passes, no hard blocker or material question is open, and independent adverse review approved the source grouping, arithmetic, boundaries, and D-021 delegation. The reversible registry-candidate transition is therefore complete; the identifier remains provisional and Unicode remains HOLD."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    },
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.band-stop",
+      "assessed_at": "2026-08-31T21:15:04-07:00",
+      "status_at_assessment": "evidence-collecting",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 2,
+          "basis": "Band-stop and band-reject semantics are independently established, and DA-017 confirms a stable rejected-band nucleus. DA-004, EV-130, EV-150, and EV-151 preserve concurrent narrow-subtype, exact-synonym, response-region, and implementation-local Notch treatments with no universal Q or bandwidth boundary, so semantic score remains 2.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018",
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-100",
+            "EV-120",
+            "EV-130",
+            "EV-131",
+            "EV-150",
+            "EV-151"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Establishes that Notch remains a context-dependent related term rather than a universally exact alias.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            },
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Grounds Band Reject and BSF while preserving EV-130's internal contradiction and excluding Ardour's separate Notch member.",
+              "input_evidence_ids_used": [
+                "EV-030",
+                "EV-120",
+                "EV-130",
+                "EV-131"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms a stable rejected-band nucleus but retains Notch as a commonly narrower or context-dependent related term rather than an exact alias.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032",
+                "EV-100",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ],
+          "limitations": [
+            "Notch remains a provisional related term and the material boundary remains open."
+          ]
+        },
+        "independent_usage": {
+          "score": 3,
+          "basis": "Image-Line EV-100 and Ardour EV-120 independently bind axis-less centered rejected-band forms to Band stop/Band Reject, while EV-003 and EV-130/EV-131 supply independent semantic and terminology sources across vendor, implementation, and education sectors. DSSSP EV-101 remains excluded because it implements Notch only.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-100",
+            "EV-101",
+            "EV-120",
+            "EV-130",
+            "EV-131"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Documents Notch and Band-Eliminate representation treatments without proving a band-stop target glyph.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Prevents borrowing Notch implementations as exact band-stop uses.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Counts the explicit Image-Line Band stop selector and excludes DSSSP Notch from band-stop use.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Verifies Image-Line and Ardour as independent Band stop/Band Reject target implementations and keeps Ardour's separate Notch member excluded.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Two target implementations plus independent semantic sources satisfy score 3, but Notch-only sources are not transferred and portable text use remains unestablished."
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 2,
+          "basis": "Band-stop filter and the BSF fallback are directly grounded by independent education sources EV-130 and EV-131; EV-030, EV-120, and EV-130 ground band reject as an established related name. The canonical fallback and speech label distinguish the broad record from the unresolved Notch term.",
+          "evidence_ids": [
+            "EV-003",
+            "EV-018",
+            "EV-030",
+            "EV-120",
+            "EV-130",
+            "EV-131"
+          ],
+          "limitations": [
+            "Score 2 grounds the fallback and speech label; it does not establish common audio-chat use, portable glyph interchange, or exact equivalence with Notch."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Verifies two independent direct expansions of BSF and established Band Reject terminology without claiming common audio-chat usage.",
+              "input_evidence_ids_used": [
+                "EV-030",
+                "EV-120",
+                "EV-130",
+                "EV-131"
+              ]
+            }
+          ]
+        },
+        "visual_convergence": {
+          "score": 2,
+          "basis": "Image-Line EV-100 and Ardour EV-120 independently converge on an axis-less centered rejected-band primitive. Curvature, apparent width, stroke construction, and product context diverge; Ardour's separately labeled narrower Notch form and all other Notch-only evidence are excluded.",
+          "evidence_ids": [
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-100",
+            "EV-101",
+            "EV-120"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-003",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies current Notch and Band-Eliminate representations as contextual or semantically non-transferable.",
+              "input_evidence_ids_used": [
+                "EV-006",
+                "EV-007",
+                "EV-009",
+                "EV-013"
+              ]
+            },
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Explains why Notch visual evidence cannot establish band-stop convergence.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            },
+            {
+              "artifact_id": "DA-012",
+              "artifact_version": "0.1.0",
+              "claim": "Documents one qualifying band-stop target rendering and preserves the Notch exclusion.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-101"
+              ]
+            },
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Verifies two independent axis-less centered rejection forms directly labeled Band stop/Band Reject and explicitly excludes Ardour's separately labeled Notch form.",
+              "input_evidence_ids_used": [
+                "EV-100",
+                "EV-120"
+              ]
+            }
+          ],
+          "limitations": [
+            "Two implementations satisfy score 2 but do not establish a third implementation, universal width, exact artwork, reuse rights, or portable character use."
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-005 supplies a reproducible semantic-equivalent, visual-confusable, sequence, and adjacent-standard audit, including a separate disposition for the unresolved Notch boundary.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-005",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the complete overlap audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039"
+              ]
+            }
+          ],
+          "limitations": [
+            "The overlap audit does not resolve the Notch semantic boundary."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "Every cited source has a rights note, no third-party artwork is imported, and no reference artwork asset is published.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-003",
+            "EV-004",
+            "EV-006",
+            "EV-007",
+            "EV-009",
+            "EV-013",
+            "EV-018",
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-100",
+            "EV-101",
+            "EV-120",
+            "EV-130",
+            "EV-131",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 15,
+      "counterevidence": [
+        {
+          "description": "Authoritative and community sources materially disagree on whether Notch is an exact alias, narrow subtype, central response region, or product mode.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves all conflicting boundary usages and the absence of a universal threshold.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether Notch filter should remain only a related narrow-band case or can be an exact alias in a future interoperable scope.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-130",
+            "EV-150",
+            "EV-151",
+            "EV-100",
+            "EV-120",
+            "EV-131"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Demonstrates that the reviewed corpus cannot settle one universal relationship.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            },
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the contradiction and Notch exclusion while closing only the render and terminology gaps.",
+              "input_evidence_ids_used": [
+                "EV-030",
+                "EV-120",
+                "EV-130",
+                "EV-131"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the rejected-band nucleus without resolving the cross-domain Notch boundary.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032",
+                "EV-100",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ]
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "material-ambiguity",
+          "description": "The interoperable semantic boundary between Band-stop and Notch remains unresolved.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-026",
+            "EV-027",
+            "EV-028",
+            "EV-029",
+            "EV-030",
+            "EV-031",
+            "EV-032",
+            "EV-130",
+            "EV-150",
+            "EV-151",
+            "EV-100",
+            "EV-120",
+            "EV-131"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-004",
+              "artifact_version": "0.1.0",
+              "claim": "Supports retaining the boundary as a hard blocker.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032"
+              ]
+            },
+            {
+              "artifact_id": "DA-015",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the contradiction and Notch exclusion while closing only the render and terminology gaps.",
+              "input_evidence_ids_used": [
+                "EV-030",
+                "EV-120",
+                "EV-130",
+                "EV-131"
+              ]
+            },
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the rejected-band nucleus without resolving the cross-domain Notch boundary.",
+              "input_evidence_ids_used": [
+                "EV-026",
+                "EV-027",
+                "EV-028",
+                "EV-029",
+                "EV-030",
+                "EV-031",
+                "EV-032",
+                "EV-100",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Semantic stability score is below 3.",
+          "A material Notch boundary and hard blocker remain open."
+        ],
+        "rationale": "The score rises from 12 to 15: Image-Line EV-100 plus Ardour EV-120 satisfy independent usage score 3 and visual score 2, while EV-130/EV-131 ground BSF for text/accessibility score 2. EV-130's contradiction and DA-017 preserve the material band-stop/Notch boundary, so the record remains ineligible. Ardour's separate Notch member and every Notch-only source remain excluded."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    },
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.low-shelf",
+      "assessed_at": "2026-08-31T21:15:05-07:00",
+      "status_at_assessment": "evidence-collecting",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 3,
+          "basis": "Independent product, implementation, historical, education, trade, and community sources support a sign-agnostic low-frequency-side shelf concept. Exact alias treatment for low shelving filter remains open. EV-150/EV-151 and DA-017 reinforce the sign-agnostic affected-side nucleus and separate signed gain, but the exact shelving-term alias question remains open, so score 3 is unchanged.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-053",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-063",
+            "EV-064",
+            "EV-065",
+            "EV-052",
+            "EV-054",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": [
+            "Hybrid implementations and the shelf-versus-shelving alias disposition prevent a maximal score."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the sign-agnostic low-frequency-side shelf nucleus and separate signed gain while preserving the unresolved shelving-term alias question.",
+              "input_evidence_ids_used": [
+                "EV-050",
+                "EV-051",
+                "EV-052",
+                "EV-053",
+                "EV-054",
+                "EV-057",
+                "EV-060",
+                "EV-061",
+                "EV-063",
+                "EV-064",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ]
+        },
+        "independent_usage": {
+          "score": 4,
+          "basis": "Multiple independent organizations and authors use low shelf as a filter type across product documentation, an implementation specification, education, trade media, historical documentation, and community discussion. Project reports summarize these sources but are not counted as additional evidence. Ardour EV-120 adds a direct independent project-local icon-font implementation; the dimension was already at its maximum.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-065",
+            "EV-120"
+          ],
+          "limitations": [
+            "Broad semantic usage does not establish portable glyph usage or one common contour."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Ardour as a direct project-local low-shelf icon-font implementation without treating its ASCII backing slot as portable text.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 3,
+          "basis": "The full term low shelf is independently used in education, trade, product, and community prose, supporting LOW SHELF and low-shelf filter without relying on unsupported abbreviations. DA-016 now finds recurring low-shelf communication friction under its bounded three-case threshold; the dimension was already at its maximum and the finding is not portable character use.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-060",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-065",
+            "EV-121",
+            "EV-140",
+            "EV-141"
+          ],
+          "limitations": [
+            "LS and LSF are not established as portable, unambiguous fallbacks."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-016",
+              "artifact_version": "0.1.0",
+              "claim": "Finds three independent low-shelf communication-friction cases across multiple failure classes, while expressly not establishing portable character use or encoding necessity.",
+              "input_evidence_ids_used": [
+                "EV-121",
+                "EV-140",
+                "EV-141"
+              ]
+            }
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-052 and EV-054 document compact type selectors, and Ardour EV-120 directly implements an axis-less low-shelf outline. Ardour's single-polarity stepped response does not converge on the record's sign-agnostic affected-side primitive, so cross-implementation visual convergence remains unestablished.",
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-120"
+          ],
+          "limitations": [
+            "Multiple compact implementations establish target existence but not a reproducible sign-agnostic primitive, six-way recognition, portable character use, or artwork reuse rights."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds one independently published axis-less low-shelf outline but does not establish a shared sign-agnostic affected-side topology.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-009 reproducibly audits Unicode 17 semantic candidates, lexical false positives, representative smooth-fork visual near-misses, plausible sequences, and ISO/IEC 10646, SMuFL, IEC, and AES adjacency. It records explicit non-equivalence and bounded exclusions for both shelf records.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-070",
+            "EV-071",
+            "EV-072",
+            "EV-073"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-009",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the reproducible shelf-specific semantic-equivalent, visual-confusable, sequence, adjacent-standard, and exclusion audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039",
+                "EV-070",
+                "EV-071",
+                "EV-072",
+                "EV-073"
+              ]
+            }
+          ],
+          "limitations": [
+            "Restricted standards content, exhaustive IEC 60417 and ISO 7000 searching, subscriber-only AES material, font-by-font rendering, and participant recognition remain outside the audit."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited ledger entries record rights limitations, no third-party artwork is imported, and no shelf artwork is accepted or published by this record.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-065",
+            "EV-120",
+            "EV-121",
+            "EV-140",
+            "EV-150",
+            "EV-151",
+            "EV-141"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 17,
+      "counterevidence": [
+        {
+          "description": "Curve orientation alone can describe either low-side boost or high-side attenuation, so the affected side is not recoverable from every unlabelled curve.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-064"
+          ]
+        },
+        {
+          "description": "Reviewed product, educational, trade, and community sources frequently use labels, controls, contextual curves, or prose rather than a portable standalone shelf glyph.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-053",
+            "EV-055",
+            "EV-056",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-065"
+          ]
+        },
+        {
+          "description": "The earlier bounded shelf-specific search found one qualifying artifact, while DA-016 now finds three independent low-shelf communication-friction cases across multiple failure classes. This closes only the casebook's bounded recurrence threshold; no portable shelf character, shared PUA mapping, or independent plain-text glyph use was established.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-065",
+            "EV-080",
+            "EV-081",
+            "EV-083",
+            "EV-084",
+            "EV-121",
+            "EV-140",
+            "EV-141"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-010",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the conservative per-record qualification result and excluded findings; the project's three-independent-source friction safeguard remains open.",
+              "input_evidence_ids_used": [
+                "EV-080",
+                "EV-081",
+                "EV-083",
+                "EV-084"
+              ]
+            },
+            {
+              "artifact_id": "DA-016",
+              "artifact_version": "0.1.0",
+              "claim": "Closes the bounded three-case low-shelf friction threshold without establishing portable character use, encoding necessity, or visual convergence.",
+              "input_evidence_ids_used": [
+                "EV-121",
+                "EV-140",
+                "EV-141"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether low shelving filter is an exact alias or should remain a related term.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-051",
+            "EV-055",
+            "EV-061"
+          ]
+        },
+        {
+          "description": "Whether independent compact implementations converge on a sign-agnostic affected-side primitive distinguishable from high pass.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-064",
+            "EV-065",
+            "EV-120"
+          ]
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "undefined-visual-semantics",
+          "description": "Cross-vendor compact glyph convergence and six-way shelf/pass recognition are not established.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-064",
+            "EV-065",
+            "EV-120"
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Visual convergence score is below 2.",
+          "Material topology, target-rendering, and shelving-term questions remain open."
+        ],
+        "rationale": "The score remains 17. Ardour EV-120 adds direct character-like implementation evidence but not convergence on the sign-agnostic affected-side primitive. DA-016 closes the bounded low-shelf recurrence threshold with three independent friction cases, while DA-017 strengthens repertoire coherence; neither resolves the visual, recognition, or shelving-term blockers."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    },
+    {
+      "assessment_version": "0.2.0",
+      "record_id": "asr:filter.high-shelf",
+      "assessed_at": "2026-08-31T21:15:06-07:00",
+      "status_at_assessment": "evidence-collecting",
+      "dimensions": {
+        "semantic_stability": {
+          "score": 3,
+          "basis": "Independent product, implementation, historical, education, and trade sources support a sign-agnostic high-frequency-side shelf concept. Exact alias treatment for high shelving filter remains open. EV-150/EV-151 and DA-017 reinforce the sign-agnostic affected-side nucleus and separate signed gain, but the exact shelving-term alias question remains open, so score 3 is unchanged.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-053",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-063",
+            "EV-064",
+            "EV-052",
+            "EV-054",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": [
+            "Hybrid implementations and the shelf-versus-shelving alias disposition prevent a maximal score."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-017",
+              "artifact_version": "0.1.0",
+              "claim": "Confirms the sign-agnostic high-frequency-side shelf nucleus and separate signed gain while preserving the unresolved shelving-term alias question.",
+              "input_evidence_ids_used": [
+                "EV-050",
+                "EV-051",
+                "EV-052",
+                "EV-053",
+                "EV-054",
+                "EV-057",
+                "EV-060",
+                "EV-061",
+                "EV-063",
+                "EV-064",
+                "EV-150",
+                "EV-151"
+              ]
+            }
+          ]
+        },
+        "independent_usage": {
+          "score": 4,
+          "basis": "Multiple independent organizations and authors use high shelf as a filter type across product documentation, an implementation specification, education, trade media, and historical documentation. Project reports summarize these sources but are not counted as additional evidence. Ardour EV-120 adds a direct independent project-local icon-font implementation; the dimension was already at its maximum.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-120"
+          ],
+          "limitations": [
+            "Broad semantic usage does not establish portable glyph usage or one common contour."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Classifies Ardour as a direct project-local high-shelf icon-font implementation without treating its ASCII backing slot as portable text.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ]
+        },
+        "text_and_accessibility": {
+          "score": 3,
+          "basis": "The full term high shelf is independently used in education, trade, and product prose, supporting HIGH SHELF and high-shelf filter without relying on unsupported abbreviations. DA-016 finds two high-shelf friction cases, below its bounded recurrence threshold; the dimension was already at its maximum.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-060",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-121",
+            "EV-140"
+          ],
+          "limitations": [
+            "HS and HSF are not established as portable, unambiguous fallbacks."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-016",
+              "artifact_version": "0.1.0",
+              "claim": "Finds two independent high-shelf communication-friction cases, below the casebook's three-case threshold, while preserving successful prose workarounds.",
+              "input_evidence_ids_used": [
+                "EV-121",
+                "EV-140"
+              ]
+            }
+          ]
+        },
+        "visual_convergence": {
+          "score": 1,
+          "basis": "EV-052 and EV-054 document compact type selectors, and Ardour EV-120 directly implements an axis-less high-shelf outline. Ardour's single-polarity stepped response does not converge on the record's sign-agnostic affected-side primitive, so cross-implementation visual convergence remains unestablished.",
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-120"
+          ],
+          "limitations": [
+            "Multiple compact implementations establish target existence but not a reproducible sign-agnostic primitive, six-way recognition, portable character use, or artwork reuse rights."
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-014",
+              "artifact_version": "0.1.0",
+              "claim": "Adds one independently published axis-less high-shelf outline but does not establish a shared sign-agnostic affected-side topology.",
+              "input_evidence_ids_used": [
+                "EV-120"
+              ]
+            }
+          ]
+        },
+        "overlap_audit": {
+          "score": 3,
+          "basis": "DA-009 reproducibly audits Unicode 17 semantic candidates, lexical false positives, representative smooth-fork visual near-misses, plausible sequences, and ISO/IEC 10646, SMuFL, IEC, and AES adjacency. It records explicit non-equivalence and bounded exclusions for both shelf records.",
+          "evidence_ids": [
+            "EV-001",
+            "EV-004",
+            "EV-037",
+            "EV-038",
+            "EV-039",
+            "EV-070",
+            "EV-071",
+            "EV-072",
+            "EV-073"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-009",
+              "artifact_version": "0.1.0",
+              "claim": "Supplies the reproducible shelf-specific semantic-equivalent, visual-confusable, sequence, adjacent-standard, and exclusion audit required for score 3.",
+              "input_evidence_ids_used": [
+                "EV-001",
+                "EV-004",
+                "EV-037",
+                "EV-038",
+                "EV-039",
+                "EV-070",
+                "EV-071",
+                "EV-072",
+                "EV-073"
+              ]
+            }
+          ],
+          "limitations": [
+            "Restricted standards content, exhaustive IEC 60417 and ISO 7000 searching, subscriber-only AES material, font-by-font rendering, and participant recognition remain outside the audit."
+          ]
+        },
+        "legal_provenance": {
+          "score": 3,
+          "basis": "All cited ledger entries record rights limitations, no third-party artwork is imported, and no shelf artwork is accepted or published by this record.",
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-052",
+            "EV-053",
+            "EV-054",
+            "EV-057",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064",
+            "EV-120",
+            "EV-121",
+            "EV-140",
+            "EV-150",
+            "EV-151"
+          ],
+          "limitations": []
+        }
+      },
+      "total_score": 17,
+      "counterevidence": [
+        {
+          "description": "Curve orientation alone can describe either low-side boost or high-side attenuation, so the affected side is not recoverable from every unlabelled curve.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-064"
+          ]
+        },
+        {
+          "description": "Reviewed product, educational, and trade sources frequently use labels, controls, contextual curves, or prose rather than a portable standalone shelf glyph.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-050",
+            "EV-051",
+            "EV-053",
+            "EV-055",
+            "EV-056",
+            "EV-060",
+            "EV-061",
+            "EV-062",
+            "EV-063",
+            "EV-064"
+          ]
+        },
+        {
+          "description": "DA-016 finds two independent high-shelf communication-friction cases, below its three-case recurrence threshold. Adequate prose remains counterevidence, and no portable shelf character, shared PUA mapping, or independent plain-text glyph use was established.",
+          "status": "open",
+          "material": false,
+          "evidence_ids": [
+            "EV-082",
+            "EV-083",
+            "EV-084",
+            "EV-121",
+            "EV-140"
+          ],
+          "artifact_refs": [
+            {
+              "artifact_id": "DA-010",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the conservative per-record qualification result and excluded findings; the project's three-independent-source friction safeguard remains open.",
+              "input_evidence_ids_used": [
+                "EV-082",
+                "EV-083",
+                "EV-084"
+              ]
+            },
+            {
+              "artifact_id": "DA-016",
+              "artifact_version": "0.1.0",
+              "claim": "Preserves the two-case high-shelf result below the bounded recurrence threshold.",
+              "input_evidence_ids_used": [
+                "EV-121",
+                "EV-140"
+              ]
+            }
+          ]
+        }
+      ],
+      "material_open_questions": [
+        {
+          "description": "Whether high shelving filter is an exact alias or should remain a related term.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-051",
+            "EV-055",
+            "EV-061"
+          ]
+        },
+        {
+          "description": "Whether independent compact implementations converge on a sign-agnostic affected-side primitive distinguishable from low pass.",
+          "status": "open",
+          "material": true,
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-064",
+            "EV-120"
+          ]
+        }
+      ],
+      "hard_blockers": [
+        {
+          "code": "undefined-visual-semantics",
+          "description": "Cross-vendor compact glyph convergence and six-way shelf/pass recognition are not established.",
+          "status": "open",
+          "evidence_ids": [
+            "EV-052",
+            "EV-054",
+            "EV-064",
+            "EV-120"
+          ]
+        }
+      ],
+      "result": {
+        "recommended_status": "evidence-collecting",
+        "eligible": false,
+        "failed_requirements": [
+          "Visual convergence score is below 2.",
+          "Material topology, target-rendering, and shelving-term questions remain open.",
+          "The project's three-independent-source plain-text-friction safeguard remains open."
+        ],
+        "rationale": "The score remains 17. Ardour EV-120 adds direct character-like implementation evidence but not convergence on the sign-agnostic affected-side primitive. DA-016 leaves high shelf below its bounded three-case recurrence threshold, and DA-017 strengthens repertoire coherence without resolving the visual, recognition, or shelving-term blockers."
+      },
+      "review": {
+        "independent_agent_review": "passed",
+        "public_review_days": 0,
+        "public_review_reference": null
+      },
+      "human_review": {
+        "required": false,
+        "authorization_status": "not-required",
+        "authorization_reference": null
+      }
+    }
+  ]
+}
