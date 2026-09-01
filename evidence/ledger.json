@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.2",
+  "ledger_version": "0.2.3",
   "accessed_on": "2026-08-31",
   "sources": [
     {
@@ -1173,6 +1173,64 @@
           "checksum": null,
           "rights_basis": "Public community discussion was observed and linked; no redistribution permission is claimed.",
           "limitations": "Reddit content and outbound images are mutable; no source bytes were retained, and adequate prose weakens any claim that a glyph is universally necessary."
+        }
+      }
+    },
+    {
+      "id": "EV-100",
+      "type": "vendor-documentation",
+      "publisher": "Image-Line",
+      "title": "FL Studio Manual: Fruity Parametric EQ 2 pass and rejection selector reinspection",
+      "url": "https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/plugins/Fruity%20Parametric%20EQ%202.htm",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Parameters > Band Type & Filter Slope Selectors; official annotated interface image; Band Token Type menu",
+      "direct_observation": "The manual states that the upper selector section shows Band Type shapes and separately lists Low Pass, Band Pass, High Pass, and Notch. Its official annotated interface image shows axis-less response shapes in that selector row and an open Type menu labeling the selected rejected-band member Band stop. Filter slope is represented separately by dots below each shape, and the menu also separates Type from Order.",
+      "interpretation": "This directly documents one product implementation of compact axis-less high-pass, low-pass, band-pass, and Band stop selectors while showing that slope/order is separate state. The page's mixed Notch and Band stop wording establishes only product-local treatment; it does not resolve the cross-domain band-stop/notch boundary, portable text use, cross-vendor convergence by itself, or permission to reuse the graphics.",
+      "rights_note": "Linked public vendor documentation only. No Image-Line interface, image, selector shape, page content, or artwork is copied, retained in the repository, traced, or claimed as reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:42:19-07:00",
+        "product": "FL Studio Fruity Parametric EQ 2",
+        "product_version": null,
+        "exact_locator": "Parameters > 1. Band Type & Filter Slope Selectors; official image img_plug/plugin_fx_FruityParametricEQ2.png; open Band 7 Type menu",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "c46f4c9cbe314750094d2be7f7c86ee1775ade8d7b02318bb8e3adca83bf747e",
+            "scope": "Raw bytes of the public official PNG at /fl-studio-learning/fl-studio-online-manual/html/img_plug/plugin_fx_FruityParametricEQ2.png as accessed on 2026-08-31"
+          },
+          "rights_basis": "The public vendor manual and its ordinary public image resource were lawfully inspected; the project records only metadata and a checksum and claims no redistribution right.",
+          "limitations": "The project does not retain or redistribute the image. The mutable manual and image path may change; the checksum cannot reconstruct unavailable bytes and no product version was established."
+        }
+      }
+    },
+    {
+      "id": "EV-101",
+      "type": "open-source-icon-font",
+      "publisher": "NumberOneBot",
+      "title": "DSSSP FilterIcon implementation at commit 860b8918957668c07e1403c1658057bba3c200ec",
+      "url": "https://github.com/NumberOneBot/dsssp/tree/860b8918957668c07e1403c1658057bba3c200ec/src/components/FilterIcon",
+      "publication_date": "2026-08-13",
+      "accessed_on": "2026-08-31",
+      "location": "src/components/FilterIcon/FilterIcon.tsx; src/components/FilterIcon/FilterIcon.stories.ts; src/utils.ts; src/icons/font/dsssp.svg; src/icons/font.css",
+      "direct_observation": "The FilterIcon component renders named HighPassIcon, LowPassIcon, and BandPassIcon components through a bundled custom font. The pinned utility maps HIGHPASS variants to U+E906, LOWPASS variants to U+E904, and BANDPASS to U+E900; the font outlines are axis-less high-pass, low-pass, and centered pass-band response forms. The same implementation maps NOTCH separately to U+E907. Internal SVG glyph-name metadata for several pass and shelf code points is inconsistent with the application mapping, so the component and utility mapping, not those internal names, define observed use.",
+      "interpretation": "This is a direct, independently implemented target use for high-pass, low-pass, and band-pass. It is also a custom-font and Private Use Area workaround rather than portable Unicode interchange. The Notch component is excluded from band-stop evidence because a product-local notch implementation cannot cross the unresolved semantic boundary.",
+      "rights_note": "Evidence inspection of a public MIT-licensed repository at an immutable commit. No font, outline, component code, or artwork is copied into this repository or claimed as project reference artwork.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T19:42:19-07:00",
+        "product": "DSSSP",
+        "product_version": null,
+        "exact_locator": "Git commit 860b8918957668c07e1403c1658057bba3c200ec; FilterIcon.tsx, FilterIcon.stories.ts, utils.ts, font.css, and font/dsssp.svg",
+        "stable_fragment": "Git commit 860b8918957668c07e1403c1658057bba3c200ec",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public MIT-licensed repository was inspected at an immutable Git commit; only evidence metadata and source locators are recorded here.",
+          "limitations": "The project does not retain or redistribute the implementation files. Repository availability remains outside project control; the cited commit supports exact reinspection while available."
         }
       }
     }

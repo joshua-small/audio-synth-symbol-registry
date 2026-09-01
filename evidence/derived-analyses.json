@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.3",
+  "registry_version": "0.2.4",
   "artifacts": [
     {
       "id": "DA-001",
@@ -605,27 +605,266 @@
       "id": "DA-006",
       "version": "0.2.3",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.3.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T18:24:06-07:00",
       "content_sha256": "c3c657a1ce8b6ce2338dc4a76dfcad72cfd226b43b5c42f2750e4f38f3602b1e",
       "input_evidence_ids": [
-        "EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007", "EV-008", "EV-009", "EV-010", "EV-011", "EV-012", "EV-013", "EV-014", "EV-015", "EV-016", "EV-017", "EV-018", "EV-019", "EV-020", "EV-021", "EV-022", "EV-023", "EV-024", "EV-025", "EV-026", "EV-027", "EV-028", "EV-029", "EV-030", "EV-031", "EV-032", "EV-033", "EV-034", "EV-035", "EV-036", "EV-037", "EV-038", "EV-039", "EV-050", "EV-051", "EV-052", "EV-053", "EV-054", "EV-055", "EV-056", "EV-057", "EV-060", "EV-061", "EV-062", "EV-063", "EV-064", "EV-065", "EV-070", "EV-071", "EV-072", "EV-073", "EV-080", "EV-081", "EV-082", "EV-083", "EV-084"
+        "EV-001",
+        "EV-002",
+        "EV-003",
+        "EV-004",
+        "EV-005",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-014",
+        "EV-015",
+        "EV-016",
+        "EV-017",
+        "EV-018",
+        "EV-019",
+        "EV-020",
+        "EV-021",
+        "EV-022",
+        "EV-023",
+        "EV-024",
+        "EV-025",
+        "EV-026",
+        "EV-027",
+        "EV-028",
+        "EV-029",
+        "EV-030",
+        "EV-031",
+        "EV-032",
+        "EV-033",
+        "EV-034",
+        "EV-035",
+        "EV-036",
+        "EV-037",
+        "EV-038",
+        "EV-039",
+        "EV-050",
+        "EV-051",
+        "EV-052",
+        "EV-053",
+        "EV-054",
+        "EV-055",
+        "EV-056",
+        "EV-057",
+        "EV-060",
+        "EV-061",
+        "EV-062",
+        "EV-063",
+        "EV-064",
+        "EV-065",
+        "EV-070",
+        "EV-071",
+        "EV-072",
+        "EV-073",
+        "EV-080",
+        "EV-081",
+        "EV-082",
+        "EV-083",
+        "EV-084"
       ],
       "input_artifact_refs": [
-        { "artifact_id": "DA-001", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-002", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-003", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-004", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-005", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-007", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-008", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-009", "artifact_version": "0.1.0" },
-        { "artifact_id": "DA-010", "artifact_version": "0.1.0" }
+        {
+          "artifact_id": "DA-001",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-002",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-004",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-005",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-007",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-008",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-009",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        }
       ],
       "scope": "Post-evidence six-record status synthesis after mechanical shelf overlap reassessment, without semantic or status movement.",
       "limitations": [
         "The shelf plain-text-friction safeguard remains open, and the reassessment does not establish recognition, artwork acceptance, external support, or Unicode readiness."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.4",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T20:00:07-07:00",
+      "content_sha256": "3aa922d01f64cedc1a8e9a74e0bfc2c8248f4139b877e205c5e947293511d220",
+      "input_evidence_ids": [
+        "EV-001",
+        "EV-002",
+        "EV-003",
+        "EV-004",
+        "EV-005",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-014",
+        "EV-015",
+        "EV-016",
+        "EV-017",
+        "EV-018",
+        "EV-019",
+        "EV-020",
+        "EV-021",
+        "EV-022",
+        "EV-023",
+        "EV-024",
+        "EV-025",
+        "EV-026",
+        "EV-027",
+        "EV-028",
+        "EV-029",
+        "EV-030",
+        "EV-031",
+        "EV-032",
+        "EV-033",
+        "EV-034",
+        "EV-035",
+        "EV-036",
+        "EV-037",
+        "EV-038",
+        "EV-039",
+        "EV-050",
+        "EV-051",
+        "EV-052",
+        "EV-053",
+        "EV-054",
+        "EV-055",
+        "EV-056",
+        "EV-057",
+        "EV-060",
+        "EV-061",
+        "EV-062",
+        "EV-063",
+        "EV-064",
+        "EV-065",
+        "EV-070",
+        "EV-071",
+        "EV-072",
+        "EV-073",
+        "EV-080",
+        "EV-081",
+        "EV-082",
+        "EV-083",
+        "EV-084",
+        "EV-100",
+        "EV-101"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-001",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-002",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-004",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-005",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-007",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-008",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-009",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-012",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Six-record status synthesis after the four-record target-use evidence spike and mechanical reassessment, without semantic, alias, artwork, or status movement.",
+      "limitations": [
+        "Band-pass lifecycle remains unchanged despite numerical eligibility; high-pass and low-pass retain material alias blockers, band-stop retains the Notch and fallback blockers, and all formal Unicode safeguards remain in force."
+      ]
+    },
+    {
+      "id": "DA-012",
+      "version": "0.1.0",
+      "title": "Four-record target-use evidence spike",
+      "path": "evidence/reports/2026-08-31-four-record-target-use-spike.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-08-31T19:42:19-07:00",
+      "content_sha256": "8a296244a4a113078559ab0e545cd863101fb4587529c35b6be15098b663942f",
+      "input_evidence_ids": [
+        "EV-002",
+        "EV-005",
+        "EV-054",
+        "EV-100",
+        "EV-101"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-004",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Bounded audit and primary-source reinspection for target-use and visual-convergence gaps in the four original filter-response records.",
+      "limitations": [
+        "The two-source spike is not a market census, imports no third-party artwork, excludes Notch from band-stop unless a source explicitly binds the broader concept, and changes no semantics, aliases, artwork, status, or external position."
       ]
     }
   ]
