@@ -82,3 +82,44 @@ test("font strategy preserves the unencoded HOLD boundary", async () => {
   assert.match(fontStrategy, /glyph name or glyph ID/i);
   assert.match(fontStrategy, /font proves renderability rather than encoding need/i);
 });
+
+test("band-pass candidate-readiness package remains status-neutral and assessment-backed", async () => {
+  const [metadata, record, readiness] = await Promise.all([
+    readJson("registry/registry-metadata.json"),
+    readJson("registry/symbols/filter.band-pass.json"),
+    readText("docs/band-pass-registry-candidate-readiness.md"),
+  ]);
+  const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
+  const assessment = snapshot.assessments.find(({ record_id: id }) => id === record.id);
+
+  assert.equal(record.status, "evidence-collecting");
+  assert.equal(record.id, "asr:filter.band-pass");
+  assert.equal(record.semantics.text_fallback, "BPF");
+  assert.equal(record.semantics.spoken_label, "band-pass filter");
+  assert.equal(assessment.status_at_assessment, "evidence-collecting");
+  assert.equal(assessment.total_score, 18);
+  assert.equal(assessment.result.recommended_status, "registry-candidate");
+  assert.equal(assessment.result.eligible, true);
+  assert.equal(assessment.hard_blockers.length, 0);
+  assert.equal(assessment.material_open_questions.length, 0);
+  assert.equal(assessment.review.independent_agent_review, "passed");
+
+  for (const [dimension, floor] of Object.entries({
+    semantic_stability: 3,
+    independent_usage: 2,
+    text_and_accessibility: 2,
+    visual_convergence: 2,
+    overlap_audit: 2,
+    legal_provenance: 2,
+  })) {
+    assert.ok(assessment.dimensions[dimension].score >= floor,
+      `${dimension} no longer clears its candidate floor`);
+  }
+
+  assert.match(readiness, /D-021 explicitly delegates `registry-candidate` promotion/);
+  assert.match(readiness, /EV-100 and EV-101/);
+  assert.match(readiness, /DA-002, DA-003, DA-005, and DA-012[\s\S]*never counted as new\nindependent sources/);
+  assert.match(readiness, /does not itself promote the record/);
+  assert.match(readiness, /formal Unicode non-go remains active/);
+  assert.match(readiness, /Proposed batched owner decision/);
+});
