@@ -1,36 +1,36 @@
 # Prioritized next work
 
-Status as of 2026-08-31T20:35:06-07:00, after the band-stop render and terminology spike and the completed D-022 offline-harness validation. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-08-31T22:46:13-07:00, after the six-record reassessment and D-021-delegated candidate transitions. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.3.0.
+The current queue is aligned with registry metadata 0.3.1.
 
 ## Current dependency map
 
 | Lane | State | Dependency or next action |
 | --- | --- | --- |
-| Provisional shelf records | Completed in [PR #62](https://github.com/joshua-small/audio-synth-symbol-registry/pull/62) | Preserve six `evidence-collecting` records and D-017 boundaries. |
-| Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
+| Provisional shelf records | 19/20 and `evidence-collecting` | Resolve shelving-term and isolated shelf/pass recognition questions without treating score alone as promotion authority. |
+| Shelf topology and overlap | Incorporated through DA-019 and DA-021 | Preserve affected-side two-prong topology, semantic orientation, polarity/context exclusions, and exact-geometry boundary. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
-| Six-record reassessment | Targeted band-stop update pending | Mechanically reassess band-stop against material EV-120, EV-130, and EV-131 without borrowing Notch-only evidence; preserve all live statuses unless the rubric and review support movement. |
+| Six-record reassessment | Implemented in assessment artifact 0.3.4; exact-head review pending | Verify 20/20 HP, 20/20 LP, unchanged 20/20 BP, 16/20 BS, and 19/20 shelves; preserve every DA-018 through DA-021 adverse boundary. |
 | Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
 | Study-stimulus infrastructure | Offline harness validation completed in [PR #77](https://github.com/joshua-small/audio-synth-symbol-registry/pull/77) | Preserve opaque packaging and exact hashes; park operational work unless the owner resumes empirical recognition work, then require real-browser validation before separate recruitment, data-plan, and launch gates. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
 
-### 1. Continue shelf text-friction evidence collection
+### 1. Resolve remaining shelf material questions
 
-Search for additional independently sourced record-specific cases while preserving DA-010's exclusions. A negative result is valid and must not be upgraded to satisfy an attractive hypothesis.
+Run a dedicated adverse shelf/shelving terminology review and continue private isolated six-way shelf/pass recognition validation. Preserve DA-019's distinction between established topology and unproved isolated recognition. A negative result is valid and must not be upgraded to satisfy an attractive hypothesis.
 
-Completion requires the lane to be based on the current six-record registry and merged shelf overlap evidence, pass the complete repository test suite, carry timestamped Agent Reports, and merge without changing semantics, aliases, identifiers, statuses, artwork, or external positions.
+Completion requires direct evidence sufficient to resolve both material questions, complete validation, timestamped Agent Reports, and independent adverse review. Any visible geometry change, participant operation, or candidate-to-accepted transition remains separately gated.
 
 ### 2. Maintain the six-record assessment lifecycle
 
-Create another immutable assessment only after material new evidence lands. Apply the adopted rubric to all six records and compare it with the current snapshot.
+Treat `registry/assessments/registry-0.3.1-2026-08-31.json` as the current immutable six-record snapshot after exact-head review. Create another snapshot only after material new evidence or a material record change lands, and compare it with this baseline.
 
 The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`.
 
-This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record without satisfying the rubric. If a score reaches a threshold, report the unmet floors and blockers. Agents may promote to `registry-candidate` after the required independent review. Promotion to `registry-accepted` remains Human Review because it makes the identifier permanent, but that question should normally be batched into review of the complete external submission package instead of interrupting earlier work.
+Do not transfer Notch-only evidence to band-stop without explicit source-local mapping or contrast, infer unrestricted aliases from related terms, count derived analyses as independent evidence, or promote a shelf while its material questions remain open. Agents may manage reversible `registry-candidate` status after required independent review. Promotion to `registry-accepted` remains Human Review because it makes the identifier permanent, and should normally be batched into review of the complete external submission package.
 
 ### 3. Preserve the validated offline harness boundary
 

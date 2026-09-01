@@ -1,7 +1,5 @@
 # Current Representation Matrix
 
-Status as of 2026-08-31T22:46:13-07:00. This version preserves the original EV-006 through EV-013 matrix below and adds the current disposition from later direct evidence and DA-018 through DA-021. The immutable original is [version 0.1.0](current-representation-matrix-0.1.0.md).
-
 ## Purpose and scope
 
 This matrix compares how the current vendor sources already recorded as EV-006 through EV-013 represent the four initial filter-response semantics. It separates terminology from visual treatment so that cross-vendor semantic convergence is not mistaken for convergence on a standalone glyph.
@@ -50,21 +48,6 @@ The matrix therefore supports two claims at different strengths:
 
 1. The response semantics and several compact textual abbreviations recur across independent products and vendors.
 2. The current corpus does not yet establish one cross-vendor, context-free graphic vocabulary or ordinary plain-text glyph practice.
-
-## Current disposition after later evidence
-
-The original eight-source matrix remains accurate for its bounded 2026-08-29 source pass, but it is no longer the complete target-rendering corpus. Later evidence adds independent axis-less implementations for the pass, band-pass, and band-stop forms, plus three-vendor convergence on the shelf pair's affected-side two-prong topology.
-
-| Record | Current representation finding | Lifecycle result |
-| --- | --- | --- |
-| High-pass | At least three independent axis-less monotonic implementations converge; `Low Cut` is a bounded response-class alias only | 20/20, `registry-candidate` |
-| Low-pass | At least three independent axis-less monotonic implementations converge; `High Cut` is a bounded response-class alias only | 20/20, `registry-candidate` |
-| Band-pass | At least three independent axis-less centered-pass implementations converge | 20/20, `registry-candidate` |
-| Band-stop | Two independent explicit Band-stop/Band-reject implementations converge; Notch-only forms remain non-transferable without source-local mapping or contrast | 16/20, `registry-candidate` |
-| Low shelf | Three independent implementations converge on an axis-free, sign-agnostic topology forked on the low-frequency left side | 19/20, `evidence-collecting` |
-| High shelf | Three independent implementations converge on an axis-free, sign-agnostic topology forked on the high-frequency right side | 19/20, `evidence-collecting` |
-
-Affected-side orientation is semantic for the shelf pair; arbitrary rotation or mirroring that changes the forked side is not equivalent. The convergence claim excludes polarity-specific alternatives, contextual graphs and controls, axes, baselines, parameters, interaction state, and exact contour or proportions. It does not establish isolated shelf/pass recognition, portable text use, reuse rights, Unicode eligibility, or standard-master status for project-authored geometry.
 
 ## Limitations and next checks
 

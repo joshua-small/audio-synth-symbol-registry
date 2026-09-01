@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.15",
+  "registry_version": "0.2.16",
   "artifacts": [
     {
       "id": "DA-001",
@@ -47,7 +47,7 @@
       "id": "DA-003",
       "version": "0.1.0",
       "title": "Current representation matrix",
-      "path": "docs/current-representation-matrix.md",
+      "path": "docs/current-representation-matrix-0.1.0.md",
       "kind": "corpus-analysis",
       "produced_at": "2026-08-29T22:51:42-07:00",
       "content_sha256": "00c6bdfdf827d4fbea8ae524fef36ddab765003ca60b38837fc7551d64e19f98",
@@ -1847,7 +1847,7 @@
       "id": "DA-006",
       "version": "0.2.15",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.15.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T22:23:49-07:00",
       "content_sha256": "fea141910257376b74035cf623dbc6dfa5ae88c468c9162e3472b77301d56db8",
@@ -1891,6 +1891,138 @@
       "limitations": [
         "The current immutable scores and statuses remain unchanged pending a separate mechanical reassessment and exact-head independent review.",
         "Resolved semantic and topology questions do not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.16",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T22:46:13-07:00",
+      "content_sha256": "9ae7a2cf1298a7117c959c7ce31761147916cc9673fd9f7621afb4c24ce76942",
+      "input_evidence_ids": [
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166",
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176",
+        "EV-180",
+        "EV-181",
+        "EV-182",
+        "EV-183",
+        "EV-184",
+        "EV-185",
+        "EV-186",
+        "EV-187",
+        "EV-188",
+        "EV-189"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.15"
+        },
+        {
+          "artifact_id": "DA-021",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after mechanical reassessment of DA-018 through DA-021 and D-021-delegated candidate transitions for high-pass, low-pass, and band-stop.",
+      "limitations": [
+        "Candidate status remains reversible and every identifier remains provisional; registry-accepted promotion remains a Human Review gate.",
+        "The reassessment does not establish isolated shelf recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-003",
+      "version": "0.2.0",
+      "title": "Current representation matrix",
+      "path": "docs/current-representation-matrix.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-08-31T22:46:13-07:00",
+      "content_sha256": "1e2c3005b4f4e9a82878544bc19f4cdd05a237292918f19b2443d5c285d2f020",
+      "input_evidence_ids": [
+        "EV-002",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-100",
+        "EV-101",
+        "EV-120",
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166",
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176",
+        "EV-180",
+        "EV-181",
+        "EV-182",
+        "EV-183",
+        "EV-184",
+        "EV-185",
+        "EV-186",
+        "EV-187",
+        "EV-188",
+        "EV-189"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-012",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-014",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-018",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-019",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-020",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-021",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Preserves the original eight-vendor representation matrix and adds current six-record target-rendering, semantic-boundary, and lifecycle dispositions from later direct evidence.",
+      "limitations": [
+        "The accumulated source set is purposive rather than market-weighted and does not establish ordinary portable text use.",
+        "Shelf topology convergence does not establish isolated recognition or exact contour, and Notch-only forms remain non-transferable without explicit source-local mapping or contrast."
       ]
     }
   ]

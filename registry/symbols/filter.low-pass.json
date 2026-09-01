@@ -2,7 +2,7 @@
   "schema_version": "0.4.0",
   "id": "asr:filter.low-pass",
   "name": "Low-pass filter",
-  "status": "evidence-collecting",
+  "status": "registry-candidate",
   "semantics": {
     "category": "filter-response",
     "definition": "A filter response that passes frequencies below a cutoff region and attenuates frequencies above it.",

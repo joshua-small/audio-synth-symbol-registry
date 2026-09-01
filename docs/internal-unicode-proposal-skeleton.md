@@ -55,8 +55,8 @@ Current compact-a SVGs are owner-approved for internal study construction and ha
 
 - `[UNMET]` Show why every included identity is encoded atomically and why parameters remain higher-level data.
 - `[UNMET]` Decide whether evidence supports all six characters, a smaller repertoire, or no character proposal.
-- `[UNMET]` Resolve unrestricted `low cut`/high-pass and `high cut`/low-pass name relationships.
-- `[UNMET]` Resolve the proposal treatment of `band reject`, `BSF`, and the narrower/context-dependent `notch` term without collapsing distinct identities.
+- `[PARTIAL]` Preserve the bounded `low cut`/high-pass and `high cut`/low-pass response-class relationships without implying implementation equivalence.
+- `[PARTIAL]` Preserve Band-stop/Band-reject as the broad class and the narrower/context-dependent `notch` term as related-only unless a source explicitly maps or contrasts it.
 - `[UNMET]` Decide names-list annotations, cross-references, and ordering after names and repertoire are technically reviewed.
 - `[UNMET]` Demonstrate that shelf boost/cut orientation is glyphic or parametric context rather than a character split; current semantics exclude signed gain.
 
@@ -95,7 +95,7 @@ Needed evidence:
 - `[UNMET]` independently observed visual conventions sufficient to define acceptable glyphic variation for each identity;
 - `[UNMET]` six-way recognition and adverse-confusable results, without using recognition of original project artwork as proof of pre-existing usage;
 - `[UNMET]` rationale for including or excluding axis-bearing forms;
-- `[UNMET]` evidence-backed boundaries for band-stop versus notch and pass versus cut terminology;
+- `[PARTIAL]` retain the evidence-backed band-stop/Notch and pass/cut boundaries while determining whether they support a proposal repertoire;
 - `[UNMET]` community validation that the repertoire is neither arbitrary nor missing inseparable members.
 
 ### 3.3 Need for public interchange in plain text
@@ -227,7 +227,7 @@ Current internal disposition, subject to evidence:
 - Retain axis-bearing drawings as explanatory variants, not separately encoded identities, unless future evidence supports a distinct character need.
 - Retain the two-prong shelf fork only as current original study geometry; reject the three-prong/baseline-bearing shelf alternative from active research under D-016/D-019.
 - Preserve `notch` as related and commonly narrower/context-dependent rather than silently making it identical to band-stop.
-- Preserve unrestricted pass/cut alias equivalence as unresolved.
+- Reject unrestricted pass/cut alias equivalence; preserve only the bounded response-class relationships and product-documentation override.
 - Preserve no-encoding, registry-only, font/icon, markup, SMuFL-extension, and industry-metadata outcomes as legitimate alternatives.
 
 `[UNMET]` Each rejection needs proposal-ready evidence and direct comparison if the project ever advances; project preference alone is insufficient.
@@ -248,7 +248,7 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.15) | EV-001 through EV-189 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof and DA-018 through DA-021 add no independent character-use source. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.16) | EV-001 through EV-189 in sparse ledger ranges | High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`. The reassessment and private proof add no independent character-use source. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013) | EV-110-EV-118 | Three central criteria remain controlling. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
