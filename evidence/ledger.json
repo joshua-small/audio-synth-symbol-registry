@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.9",
+  "ledger_version": "0.2.10",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -1777,6 +1777,312 @@
             },
             "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata and digests are recorded. No reuse right is claimed under either JUCE module license.",
             "limitations": "The combined digest is an evidence commitment, not a redistribution. JUCE APIs establish implementation semantics, not historical priority, glyph form, or Unicode eligibility."
+          }
+        }
+      },
+      {
+        "id": "EV-180",
+        "type": "engineering-reference",
+        "publisher": "SciPy community",
+        "title": "SciPy 1.18.0 Manual: scipy.signal.iirnotch",
+        "url": "https://docs.scipy.org/doc/scipy-1.18.0/reference/generated/scipy.signal.iirnotch.html",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Function description and Q parameter definition",
+        "direct_observation": "The versioned API reference defines a Notch filter as a narrow-bandwidth, high-Q Band-stop filter and defines Q as center frequency divided by the -3 dB bandwidth.",
+        "interpretation": "This is authoritative implementation evidence for Notch as a narrow specialization of the broad Band-stop class. It supplies no universal Q threshold at which the label must change.",
+        "rights_note": "Public project documentation was inspected; no source, plot, or example is copied or redistributed.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "SciPy",
+          "product_version": "1.18.0",
+          "exact_locator": "scipy.signal.iirnotch description and Q parameter",
+          "stable_fragment": "Versioned /doc/scipy-1.18.0/ route",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "cb9195ea12ddb9de9547f66b09249462752309224ed0791cbe8775cbf2ed4225",
+              "scope": "HTML response bytes from the versioned SciPy documentation URL"
+            },
+            "rights_basis": "The public documentation was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The digest commits to the served HTML including site chrome; documentation hosting remains outside project control."
+          }
+        }
+      },
+      {
+        "id": "EV-181",
+        "type": "engineering-reference",
+        "publisher": "SciPy community",
+        "title": "SciPy 1.18.0 Manual: scipy.signal.butter",
+        "url": "https://docs.scipy.org/doc/scipy-1.18.0/reference/generated/scipy.signal.butter.html",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Wn and btype parameter definitions; Bandstop Butterworth Filter example",
+        "direct_observation": "The general Butterworth API exposes a separately named bandstop design whose two-element critical-frequency input defines the rejected range.",
+        "interpretation": "Within the same implementation ecosystem as EV-180, a general two-edge Band-stop operation is distinct from the specialized center-frequency-plus-Q Notch constructor.",
+        "rights_note": "Public project documentation was inspected; no source, plot, or example is copied or redistributed.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "SciPy",
+          "product_version": "1.18.0",
+          "exact_locator": "scipy.signal.butter Wn and btype parameters; Bandstop Butterworth Filter example",
+          "stable_fragment": "Versioned /doc/scipy-1.18.0/ route",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "f93253676282068332221316b147ce9c1003492c61dab80368ffdbc3ff6b718c",
+              "scope": "HTML response bytes from the versioned SciPy documentation URL"
+            },
+            "rights_basis": "The public documentation was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The API distinction is implementation-local and does not establish universal terminology."
+          }
+        }
+      },
+      {
+        "id": "EV-182",
+        "type": "education",
+        "publisher": "Analog Devices",
+        "title": "ADALM2000 Activity: The Band-Stop or Notch Filter",
+        "url": "https://www.analog.com/en/resources/analog-dialogue/studentzone/studentzone-june-2024.html",
+        "publication_date": "2024",
+        "accessed_on": "2026-08-31",
+        "location": "Objective and band-stop/notch filter discussion",
+        "direct_observation": "The university lab defines Band-stop or Band-reject using lower and upper cutoff frequencies, relates Q to stopband width in the presented circuit, and says a narrow-band Band-stop filter is commonly called a Notch filter.",
+        "interpretation": "This independently supports the broad-class/narrow-subtype model. Its Q examples describe the lab circuit and are not a universal lexical cutoff.",
+        "rights_note": "Linked education page only; no circuit, plot, equation, image, or text is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "ADALM2000",
+          "product_version": null,
+          "exact_locator": "June 2024 StudentZone activity, Objective and band-stop/notch filter explanation",
+          "stable_fragment": "studentzone-june-2024",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "7100d2e0ca74ed877677211ddb568ed5301424d1c790e3649f14bd0fc33b6c32",
+              "scope": "HTML response bytes from the public Analog Devices activity URL"
+            },
+            "rights_basis": "The public education page was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The page is mutable, and circuit-specific Q discussion cannot be generalized into a cross-domain naming threshold."
+          }
+        }
+      },
+      {
+        "id": "EV-183",
+        "type": "education",
+        "publisher": "Harvey Mudd College",
+        "title": "The Twin-T notch (band-stop) filter",
+        "url": "https://pages.hmc.edu/ruye/e84/lectures/ActiveFilters/node4.html",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Opening passive Twin-T derivation and active-filter follow-up",
+        "direct_observation": "The lecture calls the Twin-T network both a Band-stop and a Notch filter while calculating Q = 0.25 and a bandwidth four times the notch frequency before discussing a narrower active version.",
+        "interpretation": "This is direct adverse evidence against any universal rule that the word Notch requires high Q or a narrow stopband.",
+        "rights_note": "Linked university lecture only; no circuit, equation, plot, image, or text is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": null,
+          "product_version": null,
+          "exact_locator": "Opening passive Twin-T derivation through the active-filter introduction",
+          "stable_fragment": "ActiveFilters/node4.html",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "fee20b2adaf96f5063f23176baaae387856504195fa1449f93e9fae22467a747",
+              "scope": "HTML response bytes from the public Harvey Mudd College lecture URL"
+            },
+            "rights_basis": "The public lecture was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "One circuit lecture cannot establish universal audio-community usage or a broad target glyph."
+          }
+        }
+      },
+      {
+        "id": "EV-184",
+        "type": "vendor-documentation",
+        "publisher": "Audacity Team",
+        "title": "Audacity Manual Glossary",
+        "url": "https://manual.audacityteam.org/man/glossary.html",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Band-stop filter and Notch filter glossary entries",
+        "direct_observation": "The glossary defines Band-stop/Band-rejection as attenuating a specified range, defines Notch as a narrow-stopband high-Q Band-stop, and separately describes Band-cut as finite attenuation of a band.",
+        "interpretation": "The user-facing taxonomy supports a broad Band-stop canonical concept, Notch as a narrow related subtype, and exclusion of ordinary finite-depth bell cuts.",
+        "rights_note": "Linked project documentation only; no manual content or artwork is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "Audacity",
+          "product_version": null,
+          "exact_locator": "Glossary rows Band-stop filter and Notch filter",
+          "stable_fragment": "man/glossary.html",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "4672adbe1d618f920c4c10980e3b2397d38868e7635f4bf459db6ce06123641c",
+              "scope": "HTML response bytes from the public Audacity manual URL"
+            },
+            "rights_basis": "The public manual was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The glossary is mutable and not a standards-body definition."
+          }
+        }
+      },
+      {
+        "id": "EV-185",
+        "type": "community-discussion",
+        "publisher": "Audacity Forum",
+        "title": "notch filter effect",
+        "url": "https://forum.audacityteam.org/t/notch-filter-effect/28834",
+        "publication_date": "2013-03-13",
+        "accessed_on": "2026-08-31",
+        "location": "Topic opening workflow and post 14 by user steve",
+        "direct_observation": "The discussion distinguishes Audacity's very narrow Notch effect from a separately supplied broader Band Stop plug-in for a user's requested one-octave removal workflow.",
+        "interpretation": "This is operational audio-user evidence that the labels can imply materially different widths. It is not authority for a universal engineering definition.",
+        "rights_note": "Linked community discussion only; user content is summarized and not reproduced.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "Audacity",
+          "product_version": null,
+          "exact_locator": "Discourse topic 28834; post 14 by steve",
+          "stable_fragment": "Topic ID 28834, post 14",
+          "preservation": {
+            "mode": "metadata-only",
+            "archive_url": null,
+            "checksum": null,
+            "rights_basis": "The public community discussion was inspected and linked; no user content is retained or redistributed.",
+            "limitations": "The direct HTML and JSON endpoints returned HTTP 500 during checksum capture. Search indexing supported relocation, but no byte commitment is claimed."
+          }
+        }
+      },
+      {
+        "id": "EV-186",
+        "type": "vendor-documentation",
+        "publisher": "Adobe",
+        "title": "Adobe Audition: Use filter and equalizer effects",
+        "url": "https://helpx.adobe.com/audition/desktop/effects-reference/filter-equalizer-effects.html",
+        "publication_date": "2026-01-21",
+        "accessed_on": "2026-08-31",
+        "location": "Scientific Filter effect, Band Stop option",
+        "direct_observation": "The current documentation defines Band Stop as rejecting frequencies within a specified range, also calls it a Notch filter, and requires two cutoff points to define the range edges.",
+        "interpretation": "This is direct mainstream DAW counterevidence: one product treats Notch as an exact alternate label for a broad two-edge Band-stop operation.",
+        "rights_note": "Linked vendor documentation only; no interface, figure, or text is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "Adobe Audition",
+          "product_version": null,
+          "exact_locator": "Scientific Filter effect type list, Band Stop entry",
+          "stable_fragment": "effects-reference/filter-equalizer-effects.html",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "900588963b1ecdbb7ffee090de00e3e119d389d4e5dcfb2deb0062093b7caf58",
+              "scope": "HTML response bytes from the public Adobe documentation URL"
+            },
+            "rights_basis": "The public vendor page was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The page is mutable, and its product-local naming does not establish universal equivalence."
+          }
+        }
+      },
+      {
+        "id": "EV-187",
+        "type": "education",
+        "publisher": "Native Instruments",
+        "title": "Essential audio filters guide: How to use high-pass, low-pass, and beyond",
+        "url": "https://blog.native-instruments.com/audio-filters-guide/",
+        "publication_date": "2023-02-02",
+        "accessed_on": "2026-08-31",
+        "location": "What is a notch filter?",
+        "direct_observation": "The producer-facing guide says Notch is similar to Band-stop but focuses precisely on a targeted frequency and relates the use to surgical equalization.",
+        "interpretation": "This supports practitioner-facing narrow-subtype usage while stopping short of a numeric boundary or universal distinction.",
+        "rights_note": "Linked education page only; no page image, product interface, or text is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": null,
+          "product_version": null,
+          "exact_locator": "Section What is a notch filter?",
+          "stable_fragment": "audio-filters-guide",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "ac713aa60e1bfd2afb70bb9b48c1c2b6d4f7ee2fd0ef54e9289e90d0e0274fc0",
+              "scope": "HTML response bytes from the public Native Instruments page"
+            },
+            "rights_basis": "The public education page was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The article is mutable and educational rather than normative."
+          }
+        }
+      },
+      {
+        "id": "EV-188",
+        "type": "standards-reference",
+        "publisher": "International Telecommunication Union",
+        "title": "ITU-R Report RS.2184: Arrival time difference lightning detection systems in the meteorological aids service",
+        "url": "https://www.itu.int/dms_pub/itu-r/opb/rep/R-REP-RS.2184-2010-PDF-E.pdf",
+        "publication_date": "2010",
+        "accessed_on": "2026-08-31",
+        "location": "Section 7, Interference mitigation; Figure 11 and Section 7.1",
+        "direct_observation": "The report describes software Notch filters replacing earlier hardware Band-stop filters, defines an implementation-specific notch-width variable, and discusses usefulness when interfering-source bandwidth is small.",
+        "interpretation": "Formal operational practice specifies width for the use case rather than supplying a universal Q or bandwidth threshold for the Notch label.",
+        "rights_note": "Linked formal report only; no report text, equation, graph, or figure is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "ITU-R RS.2184",
+          "product_version": "2010",
+          "exact_locator": "PDF pages 16-17, Sections 7 and 7.1, Figure 11",
+          "stable_fragment": "R-REP-RS.2184-2010-PDF-E.pdf",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "ac8232acd6b2542f1b6c036b7ea16f6cef7bf1e0bac261c18d5e69d84ee845e6",
+              "scope": "Raw public PDF response bytes"
+            },
+            "rights_basis": "The public formal report was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The report concerns a specific telecom/meteorological application, not audio production or standalone glyph semantics."
+          }
+        }
+      },
+      {
+        "id": "EV-189",
+        "type": "vendor-documentation",
+        "publisher": "MathWorks",
+        "title": "MATLAB bandstop",
+        "url": "https://www.mathworks.com/help/signal/ref/bandstop.html",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Syntax, frequency-range input, and examples",
+        "direct_observation": "The function removes a two-edge stopband range with configurable attenuation and steepness; examples include rejected ranges broader than a single interfering tone.",
+        "interpretation": "This direct implementation evidence grounds the general Band-stop class independently from MathWorks' specialized Notch explanation in EV-029.",
+        "rights_note": "Linked vendor documentation only; no code, graph, example data, or text is copied.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T21:38:59-07:00",
+          "product": "MATLAB Signal Processing Toolbox",
+          "product_version": null,
+          "exact_locator": "bandstop syntax, Wpass frequency-range input, and broad-range examples",
+          "stable_fragment": "help/signal/ref/bandstop.html",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "9cef5b758f44675ca09c99c6eb4a4374e94584cf63d7b1de49cba31c7e865125",
+              "scope": "HTML response bytes from the public MathWorks documentation URL"
+            },
+            "rights_basis": "The public vendor documentation was lawfully inspected; only metadata and a response digest are retained.",
+            "limitations": "The page is mutable, and one implementation's API does not establish universal label behavior."
           }
         }
       }

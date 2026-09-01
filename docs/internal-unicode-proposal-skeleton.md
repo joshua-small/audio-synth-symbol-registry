@@ -248,7 +248,7 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.11) | EV-001 through EV-151 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof adds no independent source. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.12) | EV-001 through EV-189 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof and DA-020 add no independent character-use source. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013) | EV-110-EV-118 | Three central criteria remain controlling. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |

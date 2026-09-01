@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.11",
+  "registry_version": "0.2.12",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1551,7 +1551,7 @@
         "id": "DA-006",
         "version": "0.2.11",
         "title": "Current evidence-status synthesis",
-        "path": "docs/current-evidence-status.md",
+        "path": "docs/current-evidence-status-0.2.11.md",
         "kind": "status-synthesis",
         "produced_at": "2026-08-31T21:34:25-07:00",
         "content_sha256": "564d01a2882c496ad105d8a1fe1422167269a02d9cc631d9ed1ee8f3951232b8",
@@ -1576,6 +1576,95 @@
           "The proof is internal technical validation rather than independent usage evidence and cannot increase source-independence counts.",
           "One rendering stack and serialized fontTools lookup/draw inspection do not establish multi-platform rendering, HarfBuzz behavior, font publication readiness, character use, or Unicode eligibility.",
           "Generated proof artifacts remain private; Unicode remains HOLD."
+        ]
+      },
+      {
+        "id": "DA-020",
+        "version": "0.1.0",
+        "title": "Band-stop and Notch adverse boundary dossier",
+        "path": "evidence/reports/2026-08-31-band-stop-notch-adverse-dossier.md",
+        "kind": "boundary-analysis",
+        "produced_at": "2026-08-31T21:38:59-07:00",
+        "content_sha256": "5b483d26093d3525fe4496e66305d98cfe3f107806453e2998952f9cf83fc389",
+        "input_evidence_ids": [
+          "EV-026",
+          "EV-027",
+          "EV-028",
+          "EV-029",
+          "EV-030",
+          "EV-031",
+          "EV-032",
+          "EV-120",
+          "EV-130",
+          "EV-150",
+          "EV-151",
+          "EV-180",
+          "EV-181",
+          "EV-182",
+          "EV-183",
+          "EV-184",
+          "EV-185",
+          "EV-186",
+          "EV-187",
+          "EV-188",
+          "EV-189"
+        ],
+        "input_artifact_refs": [
+          {
+            "artifact_id": "DA-004",
+            "artifact_version": "0.1.0"
+          },
+          {
+            "artifact_id": "DA-015",
+            "artifact_version": "0.1.0"
+          },
+          {
+            "artifact_id": "DA-017",
+            "artifact_version": "0.1.0"
+          }
+        ],
+        "scope": "Adverse comparison of Band-stop and Notch definitions, labels, Q and width treatment, direct implementations, and education or user practice, bounded to the current semantic blocker and 15/20 gaps.",
+        "limitations": [
+          "The purposive English-language sample is not market-weighted and establishes no universal numeric Q or width boundary.",
+          "Notch-only evidence remains excluded unless its source explicitly maps or contrasts it with the broad Band-stop class; unrelated glyph and usage claims never transfer.",
+          "The dossier recommends a later reassessment but makes no semantic, alias, artwork, assessment, status, study, Unicode, release, or outreach change."
+        ]
+      },
+      {
+        "id": "DA-006",
+        "version": "0.2.12",
+        "title": "Current evidence-status synthesis",
+        "path": "docs/current-evidence-status.md",
+        "kind": "status-synthesis",
+        "produced_at": "2026-08-31T21:38:59-07:00",
+        "content_sha256": "b6ca32b7794d9f71e4e3e0f1b1df619b5290752f26471a381f401582f872cb04",
+        "input_evidence_ids": [
+          "EV-180",
+          "EV-181",
+          "EV-182",
+          "EV-183",
+          "EV-184",
+          "EV-185",
+          "EV-186",
+          "EV-187",
+          "EV-188",
+          "EV-189"
+        ],
+        "input_artifact_refs": [
+          {
+            "artifact_id": "DA-006",
+            "artifact_version": "0.2.11"
+          },
+          {
+            "artifact_id": "DA-020",
+            "artifact_version": "0.1.0"
+          }
+        ],
+        "scope": "Superseding six-record status synthesis after the adverse Band-stop/Notch boundary dossier, preserving private font-proof validation without semantic, alias, artwork, assessment, or status movement.",
+        "limitations": [
+          "DA-020 recommends a later mechanical reassessment but does not itself change the immutable assessment snapshot, eligibility, or lifecycle status.",
+          "Text/accessibility and visual-convergence gaps remain open; Notch-only implementations, glyphs, and usage remain excluded without explicit source-local mapping or contrast.",
+          "The private font proof and the dossier establish neither independent character use nor Unicode eligibility; Unicode remains HOLD."
         ]
       }
   ]
