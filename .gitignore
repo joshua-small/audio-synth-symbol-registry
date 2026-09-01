@@ -1,0 +1,7 @@
+node_modules/
+
+# Local study construction and validation material must remain private.
+local-study-*/
+private-study-*/
+synthetic-export*.json
+docs/studies/local-study-*/

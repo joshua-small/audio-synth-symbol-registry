@@ -62,6 +62,24 @@ The public instrument must provide the protocol's prompt, response controls, key
 
 People who cannot access the visual stimulus must not be treated as incorrect respondents or as evidence against the text and speech alternatives. Any evaluation of those alternatives is a separate accessibility study.
 
+## Private offline synthetic harness
+
+After separate authorization, build a non-operational participant-surface validation page from a generated package's public tree:
+
+```sh
+npm run study:harness -- --public path/to/package/public --out path/to/new-harness --form 001
+```
+
+Open the generated `index.html` directly as a local file. Do not serve it, deploy it, or enter real participant data. The page retains only in-memory synthetic answers and exposes a read-only export preview for validation. It deliberately completes all six unprompted responses before it renders the forced-choice labels, then completes all six forced-choice and confidence tasks before asking contamination once at the end.
+
+The companion validator joins a synthetic export to the private answer key without writing a public scoring key:
+
+```sh
+npm run study:synthetic-validate -- --export path/to/synthetic-export.json --answer-key path/to/package/private/answer-key.json --instrument path/to/package/public/instrument.json
+```
+
+Keep the output directory, synthetic export, private package, seed, answer key, and derived scoring key outside git. The harness is a validation aid, not an operational collection platform or evidence that an asset is `study-ready`.
+
 ## Pre-launch verification
 
 1. For construction, confirm each source asset has complete provenance and matches the authorized draft geometry lock. Before serving anything, obtain a separately documented internal `study-ready` decision after independent agent review under D-021.

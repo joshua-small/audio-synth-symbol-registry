@@ -46,6 +46,8 @@ Assessments 0.3.1 adds an immutable post-evidence six-record snapshot using the 
 
 Tooling 0.6.0 adds backwards-compatible package schema 0.2.0 for exact binding of the six locked draft hashes, deterministic blind-derivative construction, six-way choice/control validation, and private provenance commitments. Package schema 0.1.0 remains readable. This does not bump or release artwork: artwork remains 0.0.0, unpublished, noncanonical, and draft.
 
+Tooling 0.7.0 adds a private, offline, synthetic-only participant-surface harness and deterministic private scoring-key/export validation. It does not change either study-package schema, authorize participant use, or alter registry or artwork versions.
+
 ## Compatibility rules
 
 - MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.
