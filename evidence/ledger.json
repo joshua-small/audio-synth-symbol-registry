@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.11",
+  "ledger_version": "0.2.12",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -2292,6 +2292,223 @@
           },
           "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata and digests are retained.",
           "limitations": "The digest is an evidence commitment, not redistribution or endorsement; one codebase cannot establish universal naming or implementation identity."
+        }
+      }
+    },
+    {
+      "id": "EV-170",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "Logic Pro for iPad EQ parameters",
+      "url": "https://support.apple.com/guide/logicpro-ipad/eq-parameters-lpip1816dc6e/ipados",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Official Channel EQ screenshot, band-type selector row above the response graph",
+      "direct_observation": "The official screenshot identifies band 2 as low shelf and band 7 as high shelf. Their compact selectors are mirrored two-prong forks without a local axis; signed gain is controlled separately.",
+      "interpretation": "Apple independently implements the sign-agnostic affected-side fork topology. The EQ graph supplies surrounding context, so this does not prove isolated recognition or plain-text use.",
+      "rights_note": "Apple documentation and screenshot were inspected for reference only. No artwork is copied, traced, imported, or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:10:00-07:00",
+        "product": "Logic Pro for iPad",
+        "product_version": null,
+        "exact_locator": "Screenshot asset a8870283f3423e059daad22f132b9b2c.png; selector row bands 2 and 7",
+        "stable_fragment": "lpip1816dc6e",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "516b4b3b3b82ce25b984b4e469a69d1cd687dc9c14e2dfce5862f42705b9f245",
+            "scope": "Raw 1410 by 796 official PNG bytes from https://help.apple.com/assets/697908FC5CF7AEEA580EF573/697908FD5CF7AEEA580EF579/en_US/a8870283f3423e059daad22f132b9b2c.png"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digest only.",
+          "limitations": "The digest is an evidence commitment, not redistribution or a reuse license."
+        }
+      }
+    },
+    {
+      "id": "EV-171",
+      "type": "historical-vendor-documentation",
+      "publisher": "Ableton",
+      "title": "Ableton Live 8.1 Manual",
+      "url": "https://downloads.ableton.com/manuals/81/ableton_live_manual_en.pdf",
+      "publication_date": "2009",
+      "accessed_on": "2026-08-31",
+      "location": "PDF physical pages 296-297, printed pages 294-295, EQ Eight filter-type controls",
+      "direct_observation": "The EQ Eight screenshot and ordered description show low shelf second and high shelf fifth among six type selectors. Both are mirrored two-prong forks without local axes, while gain is a separate signed control.",
+      "interpretation": "This historical vendor source establishes that the neutral affected-side fork topology predates the project and is not merely a current cross-vendor imitation.",
+      "rights_note": "The Ableton manual was inspected for reference only. No screenshot or artwork is imported or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:15:00-07:00",
+        "product": "Ableton Live",
+        "product_version": "8.1",
+        "exact_locator": "PDF physical page 296, printed page 294; continuation on printed page 295",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "d2ea8771120914a565fa196e1dbd76a769006a567d0916be245b7da8d9befe7e",
+            "scope": "Raw 553-page, 13143090-byte official PDF bytes"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digest only.",
+          "limitations": "The manual establishes product-local form, not portable interchange or reuse rights."
+        }
+      }
+    },
+    {
+      "id": "EV-172",
+      "type": "vendor-documentation",
+      "publisher": "Avid",
+      "title": "Audio Plug-Ins Guide 2023.3",
+      "url": "https://resources.avid.com/SupportFiles/PT/Audio_Plug-Ins_Guide_2023.3.pdf",
+      "publication_date": "2023",
+      "accessed_on": "2026-08-31",
+      "location": "PDF physical pages 35-36, printed pages 21-22, EQ III 1-Band EQ filter-type selector",
+      "direct_observation": "The guide maps six EQ III selector icons to filter types. Low shelf and high shelf are mirrored two-prong forks without local axes; a separate gain control supplies boost or cut.",
+      "interpretation": "Avid independently implements the same sign-agnostic affected-side topology while using its own contour, layout, and circular control treatment.",
+      "rights_note": "The Avid guide was inspected for reference only. No screenshot or artwork is imported or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:20:00-07:00",
+        "product": "Pro Tools EQ III",
+        "product_version": "2023.3 guide",
+        "exact_locator": "PDF physical pages 35-36, printed pages 21-22",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "6ecaaf334fe9dc544616fe434c477862a8c87a314cb850696fe415a360716dad",
+            "scope": "Raw 446-page, 18299361-byte official PDF bytes"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digest only.",
+          "limitations": "The guide establishes product-local form, not isolated recognition, plain-text use, or reuse rights."
+        }
+      }
+    },
+    {
+      "id": "EV-173",
+      "type": "education",
+      "publisher": "University of Iowa Electronic Music Studios",
+      "title": "Electronic Music assignment 5",
+      "url": "https://theremin.music.uiowa.edu/EMS.Files/Assignments/1996/F.1996/EMS.F1996.Assignment5.pdf",
+      "publication_date": "1996",
+      "accessed_on": "2026-08-31",
+      "location": "Page 3, Sound Designer Parametric EQ screenshot",
+      "direct_observation": "The screenshot orders High Pass, Low-shelf, Band Pass/Reject, High-shelf, and Low-pass selectors. The shelf selectors are single stepped, polarity-bearing response states rather than neutral two-prong forks, despite a separate Boost/Cut control.",
+      "interpretation": "This is historical negative form evidence: shelf concepts were taught with a single-state response trace whose direction bears polarity, showing that the fork convention is not universal. The static capture does not establish whether the selector itself changes dynamically with gain sign.",
+      "rights_note": "The public course PDF was inspected for reference only. No screenshot or artwork is imported or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:25:00-07:00",
+        "product": "Sound Designer Parametric EQ",
+        "product_version": "1996 course capture",
+        "exact_locator": "PDF page 3",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "100d3c76394a50db5299ef9c2c0a20f3b98b24980856c34927b0074db83383d9",
+            "scope": "Raw 3-page, 75047-byte public PDF bytes"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digest only.",
+          "limitations": "One historical teaching capture cannot establish prevalence or priority."
+        }
+      }
+    },
+    {
+      "id": "EV-174",
+      "type": "open-source-icon-font",
+      "publisher": "DSSSP contributors",
+      "title": "DSSSP shelf icons at commit 860b8918957668c07e1403c1658057bba3c200ec",
+      "url": "https://github.com/NumberOneBot/dsssp/tree/860b8918957668c07e1403c1658057bba3c200ec/src/icons",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "src/icons/low-shelf.svg, high-shelf.svg, font/dsssp.svg, and src/docs/Foundations/Icons.docs.mdx",
+      "direct_observation": "DSSSP supplies low-shelf and high-shelf icon-font glyphs as a single curve plus a detached horizontal reference segment. Its documentation says positive and negative gain flip the icon curve. The font maps them to project-local PUA slots.",
+      "interpretation": "This open-source implementation is polarity-specific rather than a neutral fork. It is counterevidence to universality and its PUA mapping is not portable Unicode use.",
+      "rights_note": "The public repository was inspected at an immutable commit. No source SVG, font, or documentation text is copied into this repository.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:30:00-07:00",
+        "product": "DSSSP icon font",
+        "product_version": "Git commit 860b8918957668c07e1403c1658057bba3c200ec",
+        "exact_locator": "Four named source and documentation files",
+        "stable_fragment": "Git commit 860b8918957668c07e1403c1658057bba3c200ec",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "3e8acd61b63da4b5a8a2f4524a670f0da842fab38a642a4d0a7809036cccade0",
+            "scope": "Concatenated raw bytes in this order: Icons.docs.mdx (afb1fbcfa0f18be6f1dc36834ce524d61fe05bfb835081952f34a264315ea97c), font/dsssp.svg (5ec8f81704bb6a27cc3eca13499d2f3f36f58c9dc216e32ca3994b2a4ef9174e), high-shelf.svg (3d14036fdbbb0546abf162fe7a6d7529da4e67ecd2f7e6395f521f320a1d8821), low-shelf.svg (42e94aef589740255e802dde010a29c87349b10438b70d594abe4c24588b6b67)"
+          },
+          "rights_basis": "Lawful public inspection at an immutable commit with metadata and digests only.",
+          "limitations": "Project-local font mapping and artwork do not establish portable character use or a reuse right."
+        }
+      }
+    },
+    {
+      "id": "EV-175",
+      "type": "vendor-documentation",
+      "publisher": "Image-Line",
+      "title": "Fruity Parametric EQ 2 manual",
+      "url": "https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/plugins/Fruity%20Parametric%20EQ%202.htm",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Official plug-in screenshot and filter-shape list",
+      "direct_observation": "The page lists Low Shelf and High Shelf among available shapes and shows compact colored band states, but the static screenshot does not reproducibly map a particular displayed icon to either shelf type.",
+      "interpretation": "The page supports compact selector existence but is excluded from the exact-form convergence count because the visible shelf mapping cannot be pinned.",
+      "rights_note": "The Image-Line page and screenshot were inspected for reference only. No artwork is imported or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:35:00-07:00",
+        "product": "Fruity Parametric EQ 2",
+        "product_version": null,
+        "exact_locator": "Screenshot asset plugin_fx_FruityParametricEQ2.png and shape list",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "c46f4c9cbe314750094d2be7f7c86ee1775ade8d7b02318bb8e3adca83bf747e",
+            "scope": "Raw 1308 by 686 official PNG bytes from the manual asset"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digest only.",
+          "limitations": "The unmapped static state is retained as an exclusion, not counted positive evidence."
+        }
+      }
+    },
+    {
+      "id": "EV-176",
+      "type": "vendor-documentation",
+      "publisher": "FabFilter",
+      "title": "Pro-Q 4 band controls help",
+      "url": "https://www.fabfilter.com/help/pro-q/using/bandcontrols",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Filter shape list and band-controls screenshot",
+      "direct_observation": "The page lists Low Shelf and High Shelf as filter shapes, but the cited static screenshot exposes only a Bell state in the shape button and does not show either shelf glyph.",
+      "interpretation": "This result is excluded from exact-form counting because text naming without a visible shelf state cannot establish shelf contour.",
+      "rights_note": "The FabFilter page and screenshot were inspected for reference only. No artwork is imported or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T21:40:00-07:00",
+        "product": "FabFilter Pro-Q 4",
+        "product_version": "4",
+        "exact_locator": "Band controls help page and bandcontrols@2x.jpg",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "75c85a26aceb5d157e0b22fbedc621b45fdbc529e81892ea45fe4d5928274ab1",
+            "scope": "Raw 952 by 366 official JPEG bytes from https://www.fabfilter.com/help_pages/pro-q/images/bandcontrols@2x.jpg"
+          },
+          "rights_basis": "Lawful public inspection with metadata and digests only.",
+          "limitations": "The static capture does not expose a shelf glyph and is retained as an exclusion. The help-page HTML injects per-request CSP nonces and CSRF tokens, so its dynamic raw bytes are metadata-only and intentionally not checksum-pinned."
         }
       }
     }

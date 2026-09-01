@@ -2,7 +2,7 @@
 
 Status as of 2026-08-31T20:35:06-07:00, after the band-stop render and terminology spike and the completed D-022 offline-harness validation. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.2.11.
+The current queue is aligned with registry metadata 0.2.12.
 
 ## Current dependency map
 

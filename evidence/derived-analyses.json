@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.13",
+  "registry_version": "0.2.14",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1702,7 +1702,7 @@
       "id": "DA-006",
       "version": "0.2.13",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.13.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T22:08:00-07:00",
       "content_sha256": "b3e1d27b5733acd56d910fd1c5c97f865cf992b9c0de1458ce6f42dea5819e94",
@@ -1730,6 +1730,63 @@
         "The bounded alias recommendation does not itself change a live record and does not establish implementation equivalence, portable character use, encoding necessity, or Unicode eligibility.",
         "The Band-stop controlled-polysemy recommendation remains pending its separate reassessment, and Notch-only evidence remains excluded under DA-020.",
         "The private font proof and all three dossiers establish neither independent character use nor Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-019",
+      "version": "0.1.0",
+      "title": "Shelf fork form-stability spike",
+      "path": "evidence/reports/2026-08-31-shelf-fork-form-stability.md",
+      "kind": "historical-analysis",
+      "produced_at": "2026-08-31T21:44:53-07:00",
+      "content_sha256": "cbca87c4a752a331a38b43a0372f37eebfcd3762909adb7f8b6c5354c5cca3e4",
+      "input_evidence_ids": [
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176"
+      ],
+      "input_artifact_refs": [],
+      "scope": "Tests whether the locked shelf pair's axis-free, sign-agnostic, affected-side two-prong topology is independently established across current, historical, open-source, and educational sources without altering or importing artwork.",
+      "limitations": [
+        "The positive result establishes topology and orientation, not identical contour, isolated recognition, portable text use, artwork reuse rights, or Unicode eligibility.",
+        "Product-local UI context may contribute to recognition, and polarity-specific counterexamples prevent a universal-form claim."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.14",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T22:14:43-07:00",
+      "content_sha256": "5e52e3a24e9938e8d320732d1cba84c7eb6ff31287a0b8d12711a579b7016dc0",
+      "input_evidence_ids": [
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.13"
+        },
+        {
+          "artifact_id": "DA-019",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the shelf-fork form-stability spike, preserving the private font proof, Band-stop/Notch dossier, and pass/cut alias dossier without reassessment or status movement.",
+      "limitations": [
+        "The current immutable shelf scores predate EV-170 through EV-176 and DA-019; score incorporation requires a new assessment snapshot.",
+        "Topology convergence does not establish isolated recognition, portable text use, identical contour, artwork reuse rights, or Unicode eligibility; Unicode remains HOLD."
       ]
     }
   ]

@@ -49,7 +49,7 @@ The current conceptual order is low-side pass, high-side pass, middle pass, midd
 | [`asr:filter.low-shelf`](../registry/symbols/filter.low-shelf.json) | Low-shelf filter response, gain sign excluded | `[UNMET - immutable name]` | `[UNASSIGNED]` | `[PLACEHOLDER - no proposal glyph accepted]` | `[UNMET]` |
 | [`asr:filter.high-shelf`](../registry/symbols/filter.high-shelf.json) | High-shelf filter response, gain sign excluded | `[UNMET - immutable name]` | `[UNASSIGNED]` | `[PLACEHOLDER - no proposal glyph accepted]` | `[UNMET]` |
 
-Current compact-a SVGs are owner-approved for internal study construction and hash-locked in [`artwork/study-locks/six-member-compact-a.json`](../artwork/study-locks/six-member-compact-a.json). That lock is not artwork acceptance, canonical-reference designation, evidence of established forms, or permission to present the drawings as proposed characters. The two-prong shelf forks are original research geometry.
+Current compact-a SVGs are owner-approved for internal study construction and hash-locked in [`artwork/study-locks/six-member-compact-a.json`](../artwork/study-locks/six-member-compact-a.json). That lock is not artwork acceptance, canonical-reference designation, evidence of portable character use, or permission to present the drawings as proposed characters. DA-019 establishes the two-prong shelf topology as a cross-vendor design grammar; the exact locked paths and proportions remain original project implementation.
 
 ### Repertoire questions still open
 
@@ -248,7 +248,7 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.13) | EV-001 through EV-189 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof, DA-018, and DA-020 add no independent character-use source. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.14) | EV-001 through EV-189 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof, DA-018, DA-019, and DA-020 add no independent character-use source. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013) | EV-110-EV-118 | Three central criteria remain controlling. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
