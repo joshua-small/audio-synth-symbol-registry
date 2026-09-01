@@ -233,7 +233,7 @@ async function layoutAudit(page) {
     };
   });
   if (result.horizontal_overflow_px !== 0 || result.horizontally_clipped_control_count !== 0 || result.unreachable_control_count !== 0) {
-    fail("rendered phase has horizontal overflow, clipping, or an unreachable control");
+    fail(`rendered phase has horizontal overflow, clipping, or an unreachable control: ${JSON.stringify(result)}`);
   }
   return result;
 }
