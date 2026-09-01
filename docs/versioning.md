@@ -62,6 +62,10 @@ Tooling 0.6.0 adds backwards-compatible package schema 0.2.0 for exact binding o
 
 Tooling 0.7.0 adds a private, offline, synthetic-only participant-surface harness and deterministic private scoring-key/export validation. It does not change either study-package schema, authorize participant use, or alter registry or artwork versions.
 
+Tooling 0.8.0 adds deterministic construction and validation for a private, cmap-free, unencoded six-glyph font proof plus a separate abstract character-property simulator. Generated font bytes, specimens, and simulation output must remain outside the repository. This version allocates no Unicode or Private Use Area code points, changes no locked SVG bytes, publishes no font, and does not change registry, evidence, schema, artwork, or study-package versions.
+
+Derived analyses 0.2.11 preserves DA-006 0.2.10 at its immutable historical path and adds the superseding current synthesis as DA-006 0.2.11. It records tooling 0.8.0 and the internal proof result without treating private technical validation as an independent evidence source or changing any record, assessment, artwork, or Unicode position.
+
 ## Compatibility rules
 
 - MAJOR: incompatible schema changes, removal or semantic redefinition of a permanent identifier, or incompatible public tooling API changes.

@@ -4,7 +4,7 @@
 >
 > This gap-driven worksheet is an internal project artifact. It deliberately contains unresolved placeholders, incomplete claims, no requested code points, no endorsement, and no authorization for outreach, submission, publication as a proposal, or standards action. Completing the layout does not make the repertoire eligible for encoding.
 
-Status as of 2026-08-31T21:04:07-07:00 on repository base `48f688560dabe0363836de453c1de3bd346cc516`. This structure follows the current [SEW Submission Guidelines and Process](https://sew.unicode.org/guidelines) (EV-110), the [Unicode character-proposal FAQ](https://www.unicode.org/faq/char_proposal.html) (EV-112), the [property guidance](https://www.unicode.org/pending/properties.html) (EV-113), the [font policy](https://www.unicode.org/policies/font_policy.html) (EV-114), and the required [ISO/IEC JTC 1/SC 2/WG 2 Proposal Summary Form](https://www.unicode.org/L2/summary.html) (EV-116). The headings are a review scaffold, not a representation that SEW has reviewed or endorsed this project.
+Status as of 2026-08-31T21:34:25-07:00 on repository base `0174fde2ab6df5967f8a59e3e129114604cf4853`. This structure follows the current [SEW Submission Guidelines and Process](https://sew.unicode.org/guidelines) (EV-110), the [Unicode character-proposal FAQ](https://www.unicode.org/faq/char_proposal.html) (EV-112), the [property guidance](https://www.unicode.org/pending/properties.html) (EV-113), the [font policy](https://www.unicode.org/policies/font_policy.html) (EV-114), and the required [ISO/IEC JTC 1/SC 2/WG 2 Proposal Summary Form](https://www.unicode.org/L2/summary.html) (EV-116). The headings are a review scaffold, not a representation that SEW has reviewed or endorsed this project.
 
 ## Front matter - blocked
 
@@ -185,7 +185,7 @@ The project's original CC0 SVG provenance does not grant rights to vendor/manual
 
 ## 8. Font and implementation - blocked
 
-The property/font strategy supports a private, purpose-built, unencoded feasibility proof addressed by glyph name or glyph ID. It prohibits PUA mappings, invented code points, third-party font forks, and claims of proposal-font status. Font feasibility proves renderability, not character eligibility.
+The property/font strategy now has a [private, purpose-built, unencoded feasibility proof](private-unencoded-font-proof-2026-08-31.md) addressed by registry-derived glyph name or glyph ID. It contains no cmap, PUA mapping, invented code point, third-party font fork, or proposal-font claim. The private proof passes deterministic construction, serialized glyph lookup/draw/metric inspection, bounded property simulation, and one-stack threshold-bounded rendering checks. Font feasibility proves renderability, not character eligibility.
 
 Required before an external package:
 
@@ -193,7 +193,7 @@ Required before an external package:
 - `[UNMET]` human-selected font license and verified ownership/provenance;
 - `[UNMET]` appropriately licensed font supplied under current Unicode font policy;
 - `[UNMET]` OpenType name IDs 0, 8, 9, 13, and 14 as applicable;
-- `[UNMET]` deterministic transform, metrics, contour, raster, and reproducibility records;
+- `[PARTIAL - PRIVATE PROOF ONLY]` deterministic transform, metrics, contour, raster, and reproducibility records; independent platform rasterizers and a publication-licensed proposal font remain unmet;
 - `[UNMET]` valid committee-appropriate mapping after legitimate assignment strategy exists;
 - `[UNMET]` tested fallback, baseline, advance, small-size rendering, bidi, line wrap, normalization, and accessibility behavior;
 - `[UNMET]` no unexpected color, emoji, GSUB ligature, variation, joining, math, or identifier behavior.
@@ -248,13 +248,13 @@ Every current answer that would assert encoding need, community support, a propo
 
 | Question | Repository authority | Direct source IDs | Current answer |
 | --- | --- | --- | --- |
-| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.10) | EV-001 through EV-151 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. |
+| Current status and scores | [Current evidence status](current-evidence-status.md) (DA-006 v0.2.11) | EV-001 through EV-151 in sparse ledger ranges | Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`. The private proof adds no independent source. |
 | Current SEW requirements | [Unicode critical-path audit](unicode-proposal-critical-path-audit.md) (DA-013) | EV-110-EV-118 | Three central criteria remain controlling. |
 | Repertoire coherence | [Six-concept stability dossier](../evidence/reports/2026-08-31-six-concept-repertoire-stability.md) (DA-017) | EV-150, EV-151 plus cited corpus | Stable taxonomy; universal character forms unproved. |
 | Existing Unicode/standards overlap | [Four-record audit](unicode-overlap-audit.md) (DA-005); [shelf audit](shelf-unicode-standards-overlap-audit.md) (DA-009) | EV-001, EV-037-EV-039, EV-070-EV-073 | No bounded semantic equivalent found; confusables and adjacent standards remain. |
 | Independent character-like use | [Independent-use spike](../evidence/reports/2026-08-31-independent-character-use-spike.md) (DA-014) | EV-100, EV-101, EV-120-EV-122 | Compact/project-local implementation exists; portable character use absent. |
 | Plain-text friction | [Workaround search](plain-text-workaround-search.md) (DA-001); [shelf spike](../evidence/reports/2026-08-31-shelf-plain-text-friction.md) (DA-010); [casebook](../evidence/reports/2026-09-01-communication-failure-casebook.md) (DA-016) | EV-080-EV-084, EV-121, EV-140, EV-141 | Bounded friction exists; encoding need unproved. |
-| Names/properties/font | [Property/font strategy](character-properties-font-strategy.md) | EV-110, EV-113, EV-114 | Provisional shared property hypothesis; no names, code points, or font. |
+| Names/properties/font | [Property/font strategy](character-properties-font-strategy.md); [private proof](private-unencoded-font-proof-2026-08-31.md) | EV-110, EV-113, EV-114 | Provisional shared property hypothesis and private unencoded proof; no character names, code points, publication license, or proposal font. |
 | Artwork | [Study lock](../artwork/study-locks/six-member-compact-a.json); [artwork criteria](artwork-criteria.md) | Repository-authored provenance only | Internal geometry lock; no canonical/proposal artwork acceptance. |
 
 Ledger IDs resolve through [`evidence/ledger.json`](../evidence/ledger.json); derived-analysis versions and content hashes resolve through [`evidence/derived-analyses.json`](../evidence/derived-analyses.json). A self-contained external proposal cannot rely on repository links alone: all necessary figures and arguments must be embedded and archived in the owner-reviewed submission package.

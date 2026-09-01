@@ -6,7 +6,7 @@ An evidence-led, open registry for stable audio and synthesis symbols.
 
 Registry release: **0.2.9**\
 Schema release: **0.4.0**\
-Tooling release: **0.7.0**\
+Tooling release: **0.8.0**\
 Artwork release: **not yet published**  
 Standards status: **Unicode preparatory research only. No submission has been made.**
 

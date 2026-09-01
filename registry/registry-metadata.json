@@ -22,7 +22,7 @@
       "current_snapshot": "registry/assessments/registry-0.2.9-2026-08-31.json"
     },
     "derived_analyses": {
-      "version": "0.2.10",
+      "version": "0.2.11",
       "format_version": "0.1.0",
       "schema": "registry/schema/derived-analysis-registry.schema.json",
       "index": "evidence/derived-analyses.json"
@@ -32,7 +32,7 @@
       "status": "not-published"
     },
     "tooling": {
-      "version": "0.7.0",
+      "version": "0.8.0",
       "package": "package.json"
     }
   },

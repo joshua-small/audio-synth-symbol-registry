@@ -177,6 +177,8 @@ Only after the repository's Unicode non-go conditions clear, prepare a complete 
 
 ## Findings
 
+The private implementation and commitment-only results are recorded in [Private unencoded font-proof validation](private-unencoded-font-proof-2026-08-31.md). That proof preserves this note's unencoded, private, registry-ID-first boundary and does not change the Unicode `HOLD`.
+
 - Observed fact: current Unicode guidance requires usage, repertoire stability, and public plain-text interchange need, plus proposed properties and an appropriately licensed font before recommendation.
 - Observed fact: authoritative UCD analogues support `So/0/ON/N` and `AL` as the best current technical-symbol baseline.
 - Interpretation: the six concepts should share one simple property profile; their visual direction does not require bidi mirroring or strong LTR behavior.
