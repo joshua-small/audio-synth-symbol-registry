@@ -139,6 +139,8 @@ These are future listening questions, not outreach already made. Joining, postin
 
 The repository's `HOLD` remains warranted. Unicode's [character proposal guidance](https://www.unicode.org/pending/proposals.html) calls for modern sources, comparison with visually similar characters, proposed properties, an ISO/IEC 10646 summary form, and an appropriately licensed font before recommendation. The project's overlap audit addresses only one part of that burden.
 
+The later [character-properties and internal font-proof strategy](character-properties-font-strategy.md) records a reversible property hypothesis and a private unencoded proof architecture for the current six concepts. It does not change this roadmap's `HOLD`, choose code points, allocate PUA values, publish a font, or cure the missing plain-text interchange evidence.
+
 ### Reassessment triggers
 
 Reopen the internal feasibility assessment only when all repository non-go safeguards are cleared and the corpus can answer:

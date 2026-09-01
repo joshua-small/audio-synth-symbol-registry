@@ -53,3 +53,20 @@ test("current assessment selects the post-shelf evidence snapshot", async () => 
     assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /overlap audit is absent|overlap audit is pending/i);
   }
 });
+
+test("font strategy preserves the unencoded HOLD boundary", async () => {
+  const fontStrategy = await readText("docs/character-properties-font-strategy.md");
+  assert.match(fontStrategy, /General_Category=So/);
+  assert.match(fontStrategy, /Canonical_Combining_Class=0/);
+  assert.match(fontStrategy, /Bidi_Class=ON/);
+  assert.match(fontStrategy, /Bidi_Mirrored=N/);
+  assert.match(fontStrategy, /Line_Break=AL/);
+  assert.match(fontStrategy, /`Script` \| `Common`/);
+  assert.match(fontStrategy, /`East_Asian_Width` \| `N`/);
+  assert.match(fontStrategy, /repository's `HOLD` position/);
+  assert.match(fontStrategy, /Do not use PUA|no PUA/i);
+  assert.match(fontStrategy, /does not recommend Unicode character names or code points/);
+  assert.match(fontStrategy, /Do not publish a font|no font publication/i);
+  assert.match(fontStrategy, /glyph name or glyph ID/i);
+  assert.match(fontStrategy, /font proves renderability rather than encoding need/i);
+});
