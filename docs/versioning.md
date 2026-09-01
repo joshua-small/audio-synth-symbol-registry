@@ -88,6 +88,8 @@ Tooling 0.8.0 adds deterministic construction and validation for a private, cmap
 
 Tooling 0.9.0 adds deterministic construction and validation for a private, non-PUA SVG and Iconify-style package over the six byte-locked draft sources. Generated manifests, byte-identical individual SVGs, a sprite, Iconify JSON, typed fail-closed whole-label alias lookup, unique-ID inline accessibility examples, and integrity commitments must remain outside the repository. The package keeps Unicode, SMuFL, and Private Use Area code points explicitly null; preserves unpublished, noncanonical, unaccepted artwork state; selects no package-output publication license; and authorizes no release or external use.
 
+Derived analyses 0.2.23 is a docs-only PATCH. It preserves DA-006 v0.2.22 and DA-013 v0.2.1 at immutable historical paths, then synchronizes their current versions to tooling 0.9.0, 124/124 validation, completed exact-head reviews, closed or superseded tracker state, and the completed private property-simulation and cmap-free font-proof work. It changes no evidence conclusion, live record, assessment, score, status, artwork, geometry, schema, tooling functionality, Unicode position, or external posture.
+
 Derived analyses 0.2.11 preserves DA-006 0.2.10 at its immutable historical path and adds the superseding current synthesis as DA-006 0.2.11. It records tooling 0.8.0 and the internal proof result without treating private technical validation as an independent evidence source or changing any record, assessment, artwork, or Unicode position.
 
 ## Compatibility rules
