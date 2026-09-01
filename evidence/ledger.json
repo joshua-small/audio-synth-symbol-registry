@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.4.1",
+  "ledger_version": "0.4.2",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -3069,6 +3069,370 @@
           },
           "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata, factual observations, and a digest are retained.",
           "limitations": "This is the same FFmpeg source lineage and same source bytes as EV-193, now inspected at additional exact sections; it cannot be counted as a second independent FFmpeg source. Command names do not establish glyph use or universal cross-protocol aliases."
+        }
+      }
+    },
+    {
+      "id": "EV-210",
+      "type": "journalism",
+      "publisher": "MusicRadar",
+      "title": "Best DAWs 2026: The best digital audio workstations for PC and Mac",
+      "url": "https://www.musicradar.com/news/the-best-daws-the-best-music-production-software-for-pc-and-mac",
+      "publication_date": "2022-06-09",
+      "accessed_on": "2026-09-01",
+      "location": "Buying-guide heading, Last updated 7 May 2026, and numbered product summary entries 1 through 5",
+      "direct_observation": "The updated editorial buying guide numbers Ableton Live, Image-Line FL Studio, Apple Logic Pro, Avid Pro Tools, and Cockos Reaper as entries 1 through 5 and gives a use-case label for each.",
+      "interpretation": "This is a reproducible editorial sampling frame for a bounded current-DAW documentation check. It is not a market-share estimate, sales ranking, user census, or adoption denominator.",
+      "rights_note": "The public buying guide was inspected only to define the sample frame. No article prose, product screenshot, rating, logo, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Article heading and numbered summary entries 1 Ableton Live, 2 Image-Line FL Studio, 3 Apple Logic Pro, 4 Avid Pro Tools, and 5 Cockos Reaper",
+        "stable_fragment": "Article ID WiDq5RZ6TyZrmkfSzQBfSj; dateModified 2026-05-07T14:17:38Z",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "b364fb32ba66a398bb757f2f66f410a94f4251e12edba17088bf4048b0d79ba5",
+            "scope": "1401076-byte raw HTML response from the public MusicRadar article URL"
+          },
+          "rights_basis": "The public article was lawfully inspected; only bibliographic metadata, the numbered sample membership, and a response digest are retained.",
+          "limitations": "The page is mutable, editorial, affiliate-supported, English-language, and neither statistically representative nor a measure of market share or adoption."
+        }
+      }
+    },
+    {
+      "id": "EV-211",
+      "type": "vendor-documentation",
+      "publisher": "Geoffrey Francis",
+      "title": "The REAPER Cockos Effects Summary Guide, version 3.04",
+      "url": "https://www.reaper.fm/userguide/REAPEREffectsGuide2021.pdf",
+      "publication_date": "2022",
+      "accessed_on": "2026-09-01",
+      "location": "PDF pages 16-17; section 7 ReaEQ; screenshot and Type dropdown list",
+      "direct_observation": "The ReaEQ section names Low shelf, High shelf, Band, Low pass, High pass, All pass, Notch, Band Pass, and Parallel Band Pass. Its screenshot places a selected Low Shelf label and separate Frequency, Gain, and Bandwidth controls under a labeled logarithmic frequency and dB graph with numbered nodes.",
+      "interpretation": "REAPER carries the response type through prose and a dropdown while the graph depicts configured state. Shelf identity selects the affected side, signed gain remains separate, and Notch remains source-local rather than automatically transferring to broad Band-stop.",
+      "rights_note": "The publicly hosted supplemental PDF was inspected for terminology, context, and topology. No screenshot, graph, prose, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": "REAPER ReaEQ",
+        "product_version": "Effects Summary Guide 3.04",
+        "exact_locator": "PDF pages 16-17; 7 ReaEQ; Type (drop down list) and adjacent screenshot",
+        "stable_fragment": "Guide version 3.04, December 2022",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "b91701e03916f0e56dcb515b5d3d6ed68beea6a8389dea633c85f33e480bfde9",
+            "scope": "2706851-byte public REAPEREffectsGuide2021.pdf response"
+          },
+          "rights_basis": "The publicly accessible PDF hosted at reaper.fm was lawfully downloaded for inspection; only metadata, factual observations, and a digest are retained.",
+          "limitations": "The guide is authored and copyrighted by Geoffrey Francis and is treated as a REAPER product-ecosystem source, not an independent Cockos graphic adoption. The URL filename does not state the displayed 3.04 version. A configured graph is not a standalone selector, and Notch-only material does not transfer without DA-020's source-local mapping or contrast."
+        }
+      }
+    },
+    {
+      "id": "EV-212",
+      "type": "vendor-documentation",
+      "publisher": "Bitwig GmbH",
+      "title": "Bitwig Studio User Guide: EQ",
+      "url": "https://www.bitwig.com/userguide/latest/eq",
+      "publication_date": null,
+      "accessed_on": "2026-09-01",
+      "location": "EQ > EQ+; mouse gestures for adding bands with specific modes",
+      "direct_observation": "The guide says peak filters are added at the pointer, low- and high-shelf filters from the left and right edges of the EQ curve, low- and high-cut filters from the graph edges off the curve, and Notch from the lower graph edge. It states that different mouse cursors identify each interaction's mode.",
+      "interpretation": "This product communicates response class through graph location, gesture, cursor, and prose. It supports semantic convergence while demonstrating a product-local interactive method rather than a portable standalone character.",
+      "rights_note": "The public guide was inspected for factual interaction and terminology evidence. No HTML, cursor, interface image, graph, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": "Bitwig Studio EQ+",
+        "product_version": null,
+        "exact_locator": "EQ > EQ+; paragraph and four-item list beginning There are also a number of mouse gestures",
+        "stable_fragment": null,
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public official guide was lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The latest guide is mutable, changed between immediate lawful fetches, and does not state a product version at the cited location; no byte-stable capture is claimed. Cursor behavior and graph-edge gestures are product-local and establish no shared standalone glyph."
+        }
+      }
+    },
+    {
+      "id": "EV-213",
+      "type": "vendor-documentation",
+      "publisher": "Reason Studios",
+      "title": "Reason Rack Plugin 13 Operation Manual: The MClass effects",
+      "url": "https://docs.reasonstudios.com/rackplugin13/the-mclass-effects",
+      "publication_date": null,
+      "accessed_on": "2026-09-01",
+      "location": "The MClass Equalizer; Activating the separate EQ bands; Lo/Hi Shelf parameters; About the graphic display",
+      "direct_observation": "The guide orders panel strips as Lo Cut, Lo Shelf, Parametric 1, Parametric 2, and Hi Shelf. It says shelving EQ boosts or cuts frequencies below or above the selected frequency, supplies a separate +/-18 dB Gain parameter, and describes the graphic display as the configured frequency response.",
+      "interpretation": "The panel uses labels and a contextual graph rather than an isolated character. Low/high shelf identity marks affected side while boost/cut sign remains a separate gain state.",
+      "rights_note": "The public operation manual was inspected for terminology, panel organization, and semantic boundaries. No panel image, response graph, prose, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": "Reason MClass Equalizer",
+        "product_version": "Rack Plugin 13 operation manual",
+        "exact_locator": "The MClass Equalizer; anchors 1044834, 1044858, 1044867, and About the graphic display",
+        "stable_fragment": "the-mclass-equalizer",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "89905a615a44a4a10d67007a7f0f352dc4f75ffbe51ef072a0a3e4e46e32b3d2",
+            "scope": "231991-byte raw HTML response from the public Reason Studios operation-manual URL"
+          },
+          "rights_basis": "The public official manual was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The HTML is mutable. Rack Plugin 13 identifies the manual route, not a dated UI revision, and the configured graph carries parameter state beyond filter-type identity."
+        }
+      }
+    },
+    {
+      "id": "EV-214",
+      "type": "historical-primary-source",
+      "publisher": "United States Patent Office",
+      "title": "US1227113A: Electric wave-filter",
+      "url": "https://patents.google.com/patent/US1227113A/en",
+      "publication_date": "1917-05-22",
+      "accessed_on": "2026-09-01",
+      "location": "Patent sheets 1-3 and specification; especially Figs. 1-9 and the opening functional description",
+      "direct_observation": "Campbell's patent defines a wave-filter by transmitting frequencies within preassigned ranges with small attenuation and attenuating neighboring frequencies outside them. Figs. 1-7 are circuit networks; Figs. 8-9 plot received current and attenuation across marked limiting frequencies.",
+      "interpretation": "This is early direct semantic and graphic evidence for passed and attenuated frequency regions. It is circuit-and-axis evidence, not the modern six-name taxonomy, six-glyph family, or a documented ancestor of any exact selector contour.",
+      "rights_note": "The public patent PDF was inspected as a historical primary source. No figure, circuit, curve, OCR text, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": "US patent 1,227,113",
+        "exact_locator": "Patent sheets 1-3, Figs. 1-9; specification opening on printed page 1",
+        "stable_fragment": "US1227113A; public PDF linked by citation_pdf_url",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "2f6fd4df5f7062273ee142b04b206d7e0d7f17990dfbcfdf63c522aacab27da2",
+            "scope": "1066685-byte US1227113.pdf response from https://patentimages.storage.googleapis.com/ca/4f/dd/929c158db46cf0/US1227113.pdf"
+          },
+          "rights_basis": "The publicly served patent facsimile was lawfully inspected; only bibliographic metadata, factual observations, and a digest are retained.",
+          "limitations": "The scan and OCR can contain defects. Functional and visual resemblance plus chronology do not prove that a later product copied the patent curves or establish a portable character convention."
+        }
+      }
+    },
+    {
+      "id": "EV-215",
+      "type": "historical-primary-source",
+      "publisher": "Wireless World",
+      "title": "P. J. Baxandall: Negative-Feedback Tone Control",
+      "url": "https://www.learnabout-electronics.org/Downloads/NegativeFeedbackTone.pdf",
+      "publication_date": "1952",
+      "accessed_on": "2026-09-01",
+      "location": "Reproduced Wireless World October 1952 pages 402-405; PDF pages 1-6; especially Figs. 3, 5, and 8",
+      "direct_observation": "The article describes independent bass and treble lift and cut with level response at the middle settings. Its calculated and measured frequency-response families use labeled frequency and relative-response axes and show opposing lift/cut curves around a 0 dB line.",
+      "interpretation": "This is a historical semantic and graphical precursor and specimen for shelf-like affected-side behavior and signed response states. It does not prove direct descent, use low-shelf/high-shelf names, or establish standalone shelf selector glyphs, and sign remains distinct from affected-side type.",
+      "rights_note": "The publicly available reproduction was inspected as a historical primary article. No article text, circuit, equation, response plot, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "PDF pages 1-6 reproducing Wireless World October 1952 pages 402-405; Figs. 3, 5, and 8",
+        "stable_fragment": "Article reproduction identifies Wireless World, October 1952, pages 402-405",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "f04dc3155bbd72831b53981e401b79d1f1c9b55f4cec9e308a6661fbb33e7f37",
+            "scope": "1691920-byte NegativeFeedbackTone.pdf response"
+          },
+          "rights_basis": "The public article reproduction was lawfully inspected; only bibliographic metadata, factual observations, and a digest are retained.",
+          "limitations": "The host is an educational mirror rather than the original periodical publisher. Later Baxandall tutorials and emulations remain derivative of this source family unless they establish independent usage."
+        }
+      }
+    },
+    {
+      "id": "EV-216",
+      "type": "historical-vendor-documentation",
+      "publisher": "Oberheim Electronics",
+      "title": "A Brief Instruction Manual for the Oberheim Two-Voice Synthesizer",
+      "url": "https://archive.org/download/synthmanual-oberheim-2-voice-owners-manual/oberheim2-voiceownersmanual_djvu.txt",
+      "publication_date": null,
+      "accessed_on": "2026-09-01",
+      "location": "Archive OCR lines for voice-module manual control 4 and the later VCF summary; BP, LP, notch, and HP mode positions",
+      "direct_observation": "The manual assigns one VCF mode knob to bandpass at the BP click stop, lowpass immediately clockwise at LP, notch at a vertical position, and highpass at the HP extreme. It separately explains cutoff or center frequency and resonance.",
+      "interpretation": "Four filter concepts coexist in one early synthesizer control, communicated by abbreviations, words, and physical knob positions rather than response-curve glyphs. The inspected manual bytes do not state a publication date.",
+      "rights_note": "The public archive OCR was inspected for factual historical control terminology. No OCR passage, scan, control image, diagram, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": "Oberheim Two-Voice Synthesizer",
+        "product_version": null,
+        "exact_locator": "Public OCR around manual control 4 and VCF summary; text beginning The smaller knob at the lower right",
+        "stable_fragment": "Internet Archive item synthmanual-oberheim-2-voice-owners-manual; file oberheim2-voiceownersmanual_djvu.txt",
+        "preservation": {
+          "mode": "archive-and-checksum",
+          "archive_url": "https://archive.org/details/synthmanual-oberheim-2-voice-owners-manual",
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "e0bf7ee1a5acdaabe0c71822a84df64b036cde1152423530cc56022e0dce2623",
+            "scope": "41565-byte public Internet Archive OCR text response"
+          },
+          "rights_basis": "The existing public archive item was lawfully inspected and linked; the project created no archive and retains only metadata, factual observations, and a digest.",
+          "limitations": "OCR errors are visible, the manual bytes are undated, and archive availability favors surviving famous products. Product-era placement requires separate corroboration."
+        }
+      }
+    },
+    {
+      "id": "EV-217",
+      "type": "historical-primary-source",
+      "publisher": "BBC Research Department",
+      "title": "R&D Report 1964-31: The design of receivers for the pilot-tone stereophonic system",
+      "url": "https://downloads.bbc.co.uk/rd/pubs/reports/1964-31.pdf",
+      "publication_date": "1964",
+      "accessed_on": "2026-09-01",
+      "location": "Printed pages 4-16; decoder filtering requirements, especially printed pages 8-10 and Fig. 16",
+      "direct_observation": "The report requires low-pass filtering in a stereophonic decoder and analyzes cutoff, amplitude, phase, interference rejection, and resulting crosstalk through formulas, schematics, and measured characteristics.",
+      "interpretation": "This is direct broadcast-engineering evidence that filter semantics and response plots were used quantitatively in system design. It does not establish a compact response-selector family or portable character.",
+      "rights_note": "The BBC public research PDF was inspected as a historical primary source. No report text, equation, schematic, plot, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": "BBC R&D Report 1964-31",
+        "exact_locator": "Printed pages 4-16; low-pass filter requirements at printed pages 8-10 and interference comparison in Fig. 16",
+        "stable_fragment": "R&D Report 1964-31",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "2eb56f8c3785e1c106e861af11ec52fda5be378b83f310031110bdd26c9f049a",
+            "scope": "961475-byte public BBC R&D Report 1964-31 PDF response"
+          },
+          "rights_basis": "The public BBC research report was lawfully inspected; only bibliographic metadata, factual observations, and a digest are retained.",
+          "limitations": "The source is one broadcast application and is not evidence of general consumer symbol adoption. Its plots and schematics are contextual engineering graphics."
+        }
+      }
+    },
+    {
+      "id": "EV-218",
+      "type": "historical-vendor-documentation",
+      "publisher": "Avid Technology",
+      "title": "Avid NewsCutter XP User's Guide, Release 1.5",
+      "url": "https://resources.avid.com/SupportFiles/attach/NCXP_UG_1_5_Win.pdf",
+      "publication_date": "2000",
+      "accessed_on": "2026-09-01",
+      "location": "Printed pages 397-405; Audio EQ Tool Features, graph description, and Low Shelf Example",
+      "direct_observation": "The guide labels low shelf and high shelf controls, defines their affected frequency ranges, and explains a response graph whose horizontal center is zero, with curves below zero deemphasizing and curves above zero emphasizing. A worked low-shelf example applies negative gain.",
+      "interpretation": "This is a dated contextual software graph showing both shelf polarity states around zero. It reinforces that shelf type identifies affected side while current graph direction carries signed gain; it is not an isolated neutral selector character.",
+      "rights_note": "The public historical vendor PDF was inspected for terminology, UI context, and polarity. No UI image, graph, prose, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": "Avid NewsCutter XP Audio EQ",
+        "product_version": "Release 1.5",
+        "exact_locator": "Printed pages 397-405; Audio EQ Tool Features, 0-line graph description, and Low Shelf Example",
+        "stable_fragment": "User's Guide Release 1.5, August 2000",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "27d6a8e0157d575414a6b50403e473bfd4c36305b52caa968e9dfe10f92b9abf",
+            "scope": "6610590-byte public NCXP_UG_1_5_Win.pdf response"
+          },
+          "rights_basis": "The public historical vendor guide was lawfully inspected; only metadata, factual observations, and a digest are retained.",
+          "limitations": "This is one 2000 editing product, not a prevalence measure. The graph depicts configured gain and contains more state than standalone response-class identity."
+        }
+      }
+    },
+    {
+      "id": "EV-219",
+      "type": "education",
+      "publisher": "MIT OpenCourseWare",
+      "title": "2.161 Signal Processing: Continuous and Discrete, Lecture 8",
+      "url": "https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/32157b1c3d282eb849fbda43d513c5e3_lecture_08.pdf",
+      "publication_date": "2008",
+      "accessed_on": "2026-09-01",
+      "location": "PDF pages 1-5; Second-Order Filter Sections and transformation diagrams",
+      "direct_observation": "The lecture defines Low-Pass, High-Pass, Band-Pass, and Band-Stop filter sections with Hlp, Hhp, Hbp, and Hbs formulas and axis-bearing response/tolerance diagrams. Within the Band-Stop derivation it calls the zero the band rejection (notch) center frequency.",
+      "interpretation": "This is formal education evidence for four stable engineering classes and their response topology. The parenthetical Notch phrase is source-local within Band-stop and does not authorize unrestricted transfer from every Notch-only source.",
+      "rights_note": "The public course PDF was inspected for terminology, equations, and diagram context. No lecture text, formula, diagram, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": "MIT 2.161 Fall 2008 Lecture 8",
+        "exact_locator": "PDF pages 1-5; sections (a) through (d), Band-Stop center-frequency text, and response transformation diagrams",
+        "stable_fragment": "OCW course 2.161 Fall 2008; lecture_08.pdf",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "af07bf3180d612ad38b35f8105805a1b632447104288012d917c08efc97b2757",
+            "scope": "182137-byte public MIT OCW lecture_08.pdf response"
+          },
+          "rights_basis": "The public course PDF was lawfully inspected; only bibliographic metadata, factual observations, and a digest are retained.",
+          "limitations": "An engineering transfer-function diagram is not automatically an audio-production selector or portable character. Notch transfer remains bounded to the source's explicit context."
+        }
+      }
+    },
+    {
+      "id": "EV-220",
+      "type": "journalism",
+      "publisher": "MusicRadar",
+      "title": "Understanding the fundamentals of EQ",
+      "url": "https://www.musicradar.com/how-to/understanding-the-fundamentals-of-eq",
+      "publication_date": "2024-05-24",
+      "accessed_on": "2026-09-01",
+      "location": "Article sections introducing peak, shelving, and high-/low-pass shapes and the later low-frequency technique",
+      "direct_observation": "The tutorial calls peak, high/low shelves, and high-/low-pass filters the main shapes, explains shelves as affecting the spectrum above or below, distinguishes modest shelving changes from more aggressive pass filtering, and discusses combining high-pass with low shelf.",
+      "interpretation": "This is independent trade prose for the semantic distinctions and a representative educational communication method. Its embedded Melda Production screenshots remain derivative vendor imagery and do not count as independent graphic implementations.",
+      "rights_note": "The public tutorial was inspected for terminology and teaching method. No article prose, product screenshot, graph, logo, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Paragraphs beginning In a typical mix, Shelving filters come, Finally we have high- and low-pass, and Finally sticking with the low frequencies",
+        "stable_fragment": "Article ID xLeDhFHU6rVZ8dBNrMhmQc; datePublished and dateModified 2024-05-24T12:42:36Z",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "b3ec5b6b6154d006a34e1a379a963f413db5e4bf1f945c9f36b7bb646d010280",
+            "scope": "1122719-byte raw HTML response from the public MusicRadar tutorial URL"
+          },
+          "rights_basis": "The public tutorial was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The page is mutable, English-language, and non-statistical. Product screenshots are source-dependent teaching specimens and are excluded from independent graphic counts."
+        }
+      }
+    },
+    {
+      "id": "EV-221",
+      "type": "community-discussion",
+      "publisher": "Sound Stack Exchange contributors",
+      "title": "What is the difference between low-pass and high-cut filters?",
+      "url": "https://sound.stackexchange.com/questions/22475/what-is-the-difference-between-low-pass-and-high-cut-filters",
+      "publication_date": "2013-08-13",
+      "accessed_on": "2026-09-01",
+      "location": "Question 22475; title and question body",
+      "direct_observation": "A practitioner asks in ordinary text whether low-pass and high-cut differ and assumes the different names may imply different use. The accepted question response contains no target response glyph.",
+      "interpretation": "This is direct community evidence of lexical ambiguity and simultaneous adverse evidence that the question itself is communicable in prose. It does not establish a portable glyph or a universal need for one.",
+      "rights_note": "The public question API response was inspected and summarized. No question wording, answer, profile data, code, image, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T02:11:15-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Stack Exchange API 2.3 questions/22475 response with filter=withbody; title and body",
+        "stable_fragment": "Question ID 22475",
+        "preservation": {
+          "mode": "metadata-only",
+          "archive_url": null,
+          "checksum": null,
+          "rights_basis": "The public question and API response were lawfully inspected; only metadata and factual observations are retained.",
+          "limitations": "The API wrapper changed between immediate lawful fetches, so no byte-stable capture is claimed. The source represents one English-language question, not prevalence, and answers were not required for the accepted observation."
         }
       }
     }

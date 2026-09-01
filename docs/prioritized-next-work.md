@@ -2,7 +2,7 @@
 
 Status as of 2026-09-01T01:44:51-07:00, after the evidence-triggered six-record reassessment. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.4.1.
+The current queue is aligned with registry metadata 0.4.2.
 
 ## Current dependency map
 
