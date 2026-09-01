@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.16",
+  "registry_version": "0.2.17",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1897,7 +1897,7 @@
       "id": "DA-006",
       "version": "0.2.16",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.16.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T22:46:13-07:00",
       "content_sha256": "9ae7a2cf1298a7117c959c7ce31761147916cc9673fd9f7621afb4c24ce76942",
@@ -2023,6 +2023,66 @@
       "limitations": [
         "The accumulated source set is purposive rather than market-weighted and does not establish ordinary portable text use.",
         "Shelf topology convergence does not establish isolated recognition or exact contour, and Notch-only forms remain non-transferable without explicit source-local mapping or contrast."
+      ]
+    },
+    {
+      "id": "DA-022",
+      "version": "0.1.0",
+      "title": "Shelf/shelving terminology dossier",
+      "path": "evidence/reports/2026-08-31-shelf-shelving-terminology.md",
+      "kind": "boundary-analysis",
+      "produced_at": "2026-08-31T23:51:02-07:00",
+      "content_sha256": "d2c9efed1629acf852ca759be084155931ba7d3efc614d840b4d0a6e59d5f5ea",
+      "input_evidence_ids": [
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197"
+      ],
+      "input_artifact_refs": [],
+      "scope": "Adverse cross-publisher lexical disposition of low/high shelf versus low/high shelving filter, separating bounded response-class equivalence from orthography, implementation identity, product-local mappings, and unrestricted lexical substitution.",
+      "limitations": [
+        "The purposive English-language corpus is not market-weighted, and repeated pages within one publisher are collapsed rather than treated as independent support.",
+        "The finding supports the two full shelving-filter phrases only at response-class level; it does not transfer gain sign, parameters, topology, implementation, glyph identity, shorter fragments, broad region terms, collision-prone product enums, or abbreviations.",
+        "This evidence dossier changes no live semantic record; its recommendation requires a separate exact-head semantic disposition and does not resolve isolated shelf recognition or Unicode eligibility."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.17",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T23:55:22-07:00",
+      "content_sha256": "981163c22ab85acec2992fbe0982a5a05cab269a423b6755f255fa77b8491b5f",
+      "input_evidence_ids": [
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.16"
+        },
+        {
+          "artifact_id": "DA-022",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the evidence-only shelf/shelving terminology dossier, without applying its semantic recommendation or changing any assessment, score, lifecycle state, artwork, or external posture.",
+      "limitations": [
+        "Both shelf records remain evidence-collecting at 19/20 with their live terminology and isolated-recognition questions unchanged pending separate review.",
+        "Lexical response-class equivalence does not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
       ]
     }
   ]
