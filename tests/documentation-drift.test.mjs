@@ -92,6 +92,29 @@ test("font strategy preserves the unencoded HOLD boundary", async () => {
   assert.match(fontStrategy, /font proves renderability rather than encoding need/i);
 });
 
+test("portable-text dossier preserves direct and adverse evidence under Unicode HOLD", async () => {
+  const [ledger, derived, dossier, status, blockerMap] = await Promise.all([
+    readJson("evidence/ledger.json"),
+    readJson("evidence/derived-analyses.json"),
+    readText("evidence/reports/2026-09-01-portable-text-and-interchange-need-corpus.md"),
+    readText("docs/current-evidence-status.md"),
+    readText("docs/unicode-proposal-critical-path-audit.md"),
+  ]);
+  const ids = new Set(ledger.sources.map(({ id }) => id));
+  for (const id of ["EV-205", "EV-206", "EV-207", "EV-208", "EV-209"]) {
+    assert.ok(ids.has(id), `portable-text dossier source missing ${id}`);
+  }
+  assert.ok(derived.artifacts.some(({ id, version }) => id === "DA-024" && version === "0.1.0"));
+  assert.match(dossier, /negative for portable response-glyph use across all six records/i);
+  assert.match(dossier, /FontAudio and Iconify count as one lineage/i);
+  assert.match(dossier, /A single scalar can tokenize into multiple model tokens/i);
+  assert.match(dossier, /Band-stop has zero accepted drawing-required or label-failure cases/i);
+  assert.match(status, /scores remain 20, 20, 20, 16, 19, and 19/);
+  assert.match(status, /Formal Unicode proposal: `HOLD`/);
+  assert.match(blockerMap, /Independent character use and public plain-text encoding need remain open for all six records/i);
+  assert.doesNotMatch(dossier, /Unicode status: `GO`|formal Unicode proposal: `GO`/i);
+});
+
 test("internal Unicode skeleton remains visibly non-submittable and covers all live records", async () => {
   const [metadata, skeleton, symbolFiles] = await Promise.all([
     readJson("registry/registry-metadata.json"),
