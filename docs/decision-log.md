@@ -242,3 +242,15 @@ Use ISO 8601 timestamps with an explicit numeric UTC offset. A decision is durab
 - Alternatives considered: Stop after fixture tests; expose the private package for review; or treat construction checks as sufficient for `study-ready` status. The first supplies weaker exact-instance evidence, and the latter two would violate the approved boundary.
 - Consequences: The private seed, answer key, source-to-token mappings, and answer-bearing package remain outside git and GitHub. Only cryptographic commitments and non-sensitive aggregate results are recorded. No `study-ready` status, participant access, recruitment, privacy or consent terms, retention, incentives or spending, launch, publication, artwork acceptance, release, outreach, or standards action is authorized.
 - Revisit trigger: A new construction instance is requested, any committed input changes, a commitment cannot be reproduced from the retained private material, or a separately authorized offline runtime exposes a material defect.
+
+## D-021: Private offline synthetic participant-surface validation
+
+- Date: 2026-08-31T19:33:55-07:00
+- Status: Authorized and completed
+- Owner: @joshua-small
+- Decision: Authorize private construction and validation of a self-contained offline participant-surface harness using synthetic responses only. Require all six unprompted responses before category labels, then six forced-choice and confidence tasks, then one terminal contamination question. Permit private scoring-key commitments and synthetic export/analysis checks.
+- Evidence: Owner's interactive-chat delegation after approving the six glyph geometries; HR-003 scope recorded on Issue #28; commitment-only findings in [`docs/studies/offline-harness-validation-2026-08-31.md`](studies/offline-harness-validation-2026-08-31.md).
+- Counterevidence or objections: No browser executable was available, so rendered keyboard/focus/zoom behavior, browser accessibility-tree output, screenshots, and actual CSP enforcement remain untested. Synthetic validation cannot establish recognition or participant safety.
+- Alternatives considered: Stop after package construction; build an operational or hosted instrument; or treat static/source validation as sufficient for launch. The first leaves the participant flow unexercised, while the latter two exceed the approved boundary.
+- Consequences: The tooling may build owner-only local validation pages and privately validate synthetic exports. Private seeds, mappings, generated pages, responses, and scoring keys remain outside git. No participant use, `study-ready` status, recruitment, data policy, incentive, spending, launch, publication, artwork acceptance, release, outreach, or standards action is authorized. Operational study work is parked because it is optional QA rather than the registry's critical path.
+- Revisit trigger: The owner elects to resume empirical recognition work, a browser validation environment becomes available, a committed input changes, or synthetic validation exposes a material defect.
