@@ -29,43 +29,50 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.ok(status.includes(`Schema | ${metadata.artifacts.schema.version}`));
   assert.doesNotMatch(prototype, /four current records|four canonical ASCII IDs/);
   assert.doesNotMatch(status, /Current records:\*\* all four|ledger version 0\.1\.3/);
-  assert.ok(status.includes("| `asr:filter.low-shelf` | 17/20 |"));
-  assert.ok(status.includes("| `asr:filter.high-shelf` | 17/20 |"));
-  assert.ok(status.includes("| `asr:filter.high-pass` | 18/20 |"));
-  assert.ok(status.includes("| `asr:filter.low-pass` | 18/20 |"));
+  assert.ok(status.includes("| `asr:filter.low-shelf` | 19/20 |"));
+  assert.ok(status.includes("| `asr:filter.high-shelf` | 19/20 |"));
+  assert.ok(status.includes("| `asr:filter.high-pass` | 20/20 |"));
+  assert.ok(status.includes("| `asr:filter.low-pass` | 20/20 |"));
   assert.ok(status.includes("| `asr:filter.band-pass` | 20/20 |"));
-  assert.ok(status.includes("| `asr:filter.band-stop` | 15/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-stop` | 16/20 |"));
   assert.doesNotMatch(status, /shelf records?[^\n]*14\/20/i);
   assert.doesNotMatch(status, /predate DA-009|overlap audit is pending/i);
-  assert.match(status, /low-shelf[^\n]*bounded friction threshold now met/i);
-  assert.match(status, /high-shelf[^\n]*open friction safeguard/i);
+  assert.match(status, /low-shelf[^\n]*shelving-term disposition and isolated distinction from high pass remain material/i);
+  assert.match(status, /high-shelf[^\n]*shelving-term disposition and isolated distinction from low pass remain material/i);
   assert.doesNotMatch(roadmap, /Status as of 2026-08-29, after work merged through PR #24|initial four-record scope|affect the four records/);
   assert.ok(roadmap.includes(`registry metadata ${metadata.artifacts.registry.version}`));
 });
 
-test("current assessment selects the post-corpus reassessment snapshot", async () => {
+test("current assessment selects the post-disposition six-record snapshot", async () => {
   const metadata = await readJson("registry/registry-metadata.json");
   assert.equal(metadata.artifacts.assessments.current_snapshot,
-    "registry/assessments/registry-0.2.9-2026-08-31.json");
+    "registry/assessments/registry-0.3.1-2026-08-31.json");
   const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
   assert.equal(snapshot.assessments.length, 6);
   const byId = new Map(snapshot.assessments.map((assessment) => [assessment.record_id, assessment]));
   for (const id of ["asr:filter.low-shelf", "asr:filter.high-shelf"]) {
     assert.equal(byId.get(id).dimensions.overlap_audit.score, 3);
-    assert.equal(byId.get(id).total_score, 17);
+    assert.equal(byId.get(id).total_score, 19);
     assert.equal(byId.get(id).result.recommended_status, "evidence-collecting");
     assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /overlap audit is absent|overlap audit is pending/i);
   }
-  assert.match(byId.get("asr:filter.low-shelf").result.rationale, /closes the bounded low-shelf recurrence threshold/i);
-  assert.match(byId.get("asr:filter.high-shelf").result.rationale, /below its bounded three-case recurrence threshold/i);
-  assert.equal(byId.get("asr:filter.high-pass").total_score, 18);
-  assert.equal(byId.get("asr:filter.low-pass").total_score, 18);
+  assert.match(byId.get("asr:filter.low-shelf").result.rationale, /isolated distinction from high pass remain material/i);
+  assert.match(byId.get("asr:filter.high-shelf").result.rationale, /isolated distinction from low pass remain material/i);
+  assert.equal(byId.get("asr:filter.high-pass").total_score, 20);
+  assert.equal(byId.get("asr:filter.low-pass").total_score, 20);
   assert.equal(byId.get("asr:filter.band-pass").total_score, 20);
-  assert.equal(byId.get("asr:filter.band-stop").total_score, 15);
-  assert.equal(byId.get("asr:filter.band-pass").result.eligible, true);
-  assert.equal(byId.get("asr:filter.band-pass").result.recommended_status, "registry-candidate");
-  assert.equal(byId.get("asr:filter.band-pass").status_at_assessment, "registry-candidate");
-  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /every Notch-only source remain excluded/);
+  assert.equal(byId.get("asr:filter.band-stop").total_score, 16);
+  for (const id of [
+    "asr:filter.high-pass",
+    "asr:filter.low-pass",
+    "asr:filter.band-pass",
+    "asr:filter.band-stop",
+  ]) {
+    assert.equal(byId.get(id).result.eligible, true);
+    assert.equal(byId.get(id).result.recommended_status, "registry-candidate");
+    assert.equal(byId.get(id).status_at_assessment, "registry-candidate");
+  }
+  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /no Notch-only evidence transfers/);
 });
 
 test("font strategy preserves the unencoded HOLD boundary", async () => {
@@ -109,7 +116,7 @@ test("internal Unicode skeleton remains visibly non-submittable and covers all l
   assert.match(skeleton, /No third-party image is embedded/i);
   assert.match(skeleton, /DA-014 found no portable independent character use/i);
   assert.match(skeleton, new RegExp(`DA-006 v${metadata.artifacts.derived_analyses.version.replaceAll(".", "\\.")}`));
-  assert.match(skeleton, /Band-pass is `registry-candidate`; the other five records remain `evidence-collecting`; Unicode `HOLD`\./);
+  assert.match(skeleton, /High-pass, low-pass, band-pass, and band-stop are reversible `registry-candidate` records; both shelves remain `evidence-collecting`; Unicode `HOLD`\./);
   assert.doesNotMatch(skeleton, /U\+[0-9A-F]{4,6}\s+(?:AUDIO|FILTER)/i);
 });
 

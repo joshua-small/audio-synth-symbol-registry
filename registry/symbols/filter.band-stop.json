@@ -2,7 +2,7 @@
   "schema_version": "0.4.0",
   "id": "asr:filter.band-stop",
   "name": "Band-stop filter",
-  "status": "evidence-collecting",
+  "status": "registry-candidate",
   "semantics": {
     "category": "filter-response",
     "definition": "A filter response that attenuates a bounded band of frequencies while passing frequencies below and above that band.",
