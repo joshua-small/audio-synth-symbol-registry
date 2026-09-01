@@ -60,4 +60,6 @@ This evidence does not establish human recognition, participant safety, platform
 
 ### Independent review
 
-Pending independent adverse review on the pull request. Record the reviewer, exact head, findings, and disposition before merge.
+An independent adverse reviewer initially blocked the work after demonstrating two material failures: a matching-hash traversal path could embed private bytes, and malformed export choices/confidence/contamination could pass aggregate validation. The implementation now requires the exact `assets/<opaque-token>.svg` path, a regular file, realpath containment, constrained blind-SVG structure, and exact response/form domains. Traversal, intermediate-directory symlink escape, and malformed-response regressions were added.
+
+The reviewer approved exact rebased commit `e4f1b30a7d255d37d3ee813e0b1cb7608dc3fa72` after independently reproducing 110/110 passing tests, all 12 exact harness hashes, and all 12 synthetic validations. The reviewer then approved the complete two-file hardening delta at `2d83ab00a12b82c1b0a98ddfed4d23115e63edd0`, which additionally requires exact eight-choice sets/order length and exact six-record answer-key coverage. No blocker remains within HR-003's authorized scope.
