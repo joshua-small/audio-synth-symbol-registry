@@ -1,12 +1,13 @@
 {
   "name": "audio-synth-symbol-registry",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": true,
   "description": "Evidence-led open registry for audio and synthesis symbols.",
   "type": "module",
   "scripts": {
     "study:package": "node tooling/build-study-package.mjs",
     "study:harness": "node tooling/build-offline-study-harness.mjs",
+    "study:browser-preflight": "node tooling/browser-preflight.mjs",
     "study:synthetic-validate": "node tooling/validate-synthetic-study-export.mjs",
     "report:hygiene": "node tooling/check-agent-reports.mjs",
     "svg:validate": "node tooling/validate-study-svg.mjs",
@@ -20,6 +21,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "ajv": "8.17.1",
+    "playwright-core": "1.62.1",
     "saxes": "6.0.0",
     "sharp": "0.35.4",
     "svg-path-parser": "1.1.0"

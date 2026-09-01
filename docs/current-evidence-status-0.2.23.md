@@ -1,6 +1,6 @@
 # Current Evidence Status
 
-Status as of 2026-09-01T03:18:06-07:00. This synthesis supersedes the historical [0.2.23 status synthesis](current-evidence-status-0.2.23.md). It preserves the status-neutral evolutionary-history corpus DA-026 and records the bounded private browser-QA preflight without changing any live semantic record, alias, question, assessment, score, lifecycle status, artwork, or external posture.
+Status as of 2026-09-01T03:04:13-07:00. This synthesis supersedes the historical [0.2.22 status synthesis](current-evidence-status-0.2.22.md). It preserves the status-neutral evolutionary-history corpus DA-026 and synchronizes current tooling and review facts without changing any live semantic record, alias, question, assessment, score, lifecycle status, artwork, or external posture.
 
 ## Current artifacts
 
@@ -9,8 +9,8 @@ Status as of 2026-09-01T03:18:06-07:00. This synthesis supersedes the historical
 | Registry and evidence ledger | 0.4.2 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.5, format 0.2.0 | `registry/assessments/registry-0.4.1-2026-09-01.json` |
-| Derived analyses | 0.2.24, format 0.1.0 | `evidence/derived-analyses.json` |
-| Tooling | 0.10.0 | `package.json` |
+| Derived analyses | 0.2.23, format 0.1.0 | `evidence/derived-analyses.json` |
+| Tooling | 0.9.0 | `package.json` |
 
 ## Current records
 
@@ -62,20 +62,18 @@ DA-026 also preserves a negative result: it found no independently used portable
 ## Next work
 
 1. Preserve the exact-head adverse-review evidence for DA-026 and its source-family, polarity, graph/selector, capture, gap, and protected-tree boundaries.
-2. Preserve the private browser-QA preflight and its explicit omissions; synthetic browser mechanics do not satisfy the two shelf recognition blockers.
+2. Continue private isolated six-way recognition validation; lexical equivalence and topology convergence do not satisfy the two shelf blockers.
 3. Continue seeking independently authored portable character use or irreducible public interchange failures while preserving successful prose, IDs, accessibility text, and parser-fix counterexamples.
 4. Preserve the `registry-accepted` Human Review gate and batch it with a complete external-package review if that stage is reached.
 5. Keep Unicode `HOLD` until every formal non-go condition is cleared and the owner separately authorizes external action.
 
-## Agent Report - 2026-09-01T03:18:06-07:00
+## Agent Report - 2026-09-01T03:04:13-07:00
 
-- Report status: bounded private browser-QA preflight implemented and approved by exact-head independent adverse review; the status-neutral evolutionary-history evidence dossier remains merged and reviewed.
+- Report status: status-neutral evolutionary-history evidence dossier merged after exact-head independent adverse review; current artifact and validation facts synchronized through tooling 0.9.0.
 - Finding: semantic continuity is long-lived, while one unbroken graphic genealogy, exact contour inheritance, universal standardization, and portable character use remain unproven.
 - Boundaries: shelf affected side remains separate from gain polarity; contextual graphs remain distinct from standalone selectors; DA-020 Notch non-transfer remains controlling.
-- Versions: registry/evidence 0.4.2 and derived analyses 0.2.24; assessments remain 0.3.5 with format 0.2.0, schema 0.4.0, and tooling 0.10.0.
-- Protected state: live records and aliases, questions, assessments, scores, status values, artwork, geometry, schema, font, PUA, registry-accepted gate, Unicode `HOLD`, and external posture remain unchanged; tooling alone advances through the bounded 0.10.0 preflight.
-- Limitations: no Chrome or Chromium executable was available locally, so the conditional real-browser integration remains unexecuted here. The preflight omits screenshot/pixel focus, contrast, validation-error, reload/resume, native browser-chrome zoom, cross-browser, deployed-server, and OS-level process-network evidence. The historical sample remains purposive, English-heavy, and archive-dependent; Bell 1923 remains an acquisition lead only.
-- Validation: `npm test` passed 126/126 runnable tests with one expected browser integration skip after validating six records, nine assessment sets, 136 evidence sources, registry/evidence 0.4.2, assessments 0.3.5, schema 0.4.0, tooling 0.10.0, derived analyses 0.2.24, registered source and artifact digests, documentation drift, Agent Report hygiene, and protected private study, font, and icon-package boundaries. The already-installed system-browser integration is required in CI; no browser was installed locally. For DA-026 and D-029, Exact-head independent adverse review is complete.
+- Versions: registry/evidence 0.4.2 and derived analyses 0.2.23; assessments remain 0.3.5 with format 0.2.0, schema 0.4.0, and tooling 0.9.0.
+- Protected state: live records and aliases, questions, assessments, scores, status values, artwork, geometry, schema, tooling, font, PUA, registry-accepted gate, Unicode `HOLD`, and external posture remain unchanged.
+- Limitations: the sample is purposive, editorially framed, English-heavy, archive-dependent, and not a market-share or global-prevalence study. Bell 1923 remains an acquisition lead only.
+- Validation: `npm test` passed 124/124 after validating six records, nine assessment sets, 136 evidence sources, registry/evidence 0.4.2, assessments 0.3.5, schema 0.4.0, tooling 0.9.0, derived analyses 0.2.23, registered source and artifact digests, documentation drift, Agent Report hygiene, and protected private study, font, and icon-package boundaries. Exact-head independent adverse review is complete.
 - Independent adverse review - 2026-09-01T02:30:26-07:00: `APPROVE` exact substantive head `1598fa5b1b5905553d1ffe8f2a8d1ccc76c15575` (tree `1464be7473cf7ab057367fcf3fd9f2d9cf2f098b`) with no blocker. This approval-report-only annotation changes no reviewed substance.
-- Current-state hygiene review - 2026-09-01T03:16:07-07:00: `APPROVE` exact substantive head `2ce7119c99993ccd7e7d90a7e5652ad5c845a506` (tree `50ec112e2080330c4c852b4be6498277cd2e3457`) after an independent 124/124 run, immutable-predecessor digest checks, tracker verification, protected-tree comparison, and Unicode `HOLD` confirmation. This approval-report-only annotation changes no reviewed conclusion.
-- Browser-QA review - 2026-09-01T03:25:23-07:00: `APPROVE` exact substantive head `ec324fd013393b0944c5a2e5ee43c5b02e145d3e` with no blocker. CI real-browser integration remains mandatory before merge because no local Chrome or Chromium executable was available. This approval-report-only annotation changes no reviewed substance.

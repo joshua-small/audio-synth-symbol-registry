@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.23",
+  "registry_version": "0.2.24",
   "artifacts": [
     {
       "id": "DA-001",
@@ -2707,10 +2707,10 @@
       "id": "DA-006",
       "version": "0.2.23",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.23.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T03:04:13-07:00",
-      "content_sha256": "227c2ea695981d0ee2358c3a1f60bf247e1d5b6c957714d9c5fd6d1fbfbbc288",
+      "content_sha256": "92acbc6ede11370c5c15bed05a009e2f3f57bafb604e8dfbd6710405af1207b5",
       "input_evidence_ids": [
         "EV-210",
         "EV-211",
@@ -2739,6 +2739,40 @@
       "limitations": [
         "Documentation synchronization does not establish portable character use, encoding necessity, artwork acceptance, or Unicode eligibility.",
         "No live record, alias, question, assessment, score, status, artwork, geometry, schema, tooling functionality, font, PUA, release, outreach, or external posture changes; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.24",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T03:18:06-07:00",
+      "content_sha256": "ccd25628f0c2215356007562a9ac8e06f0deb2eb2ef691cc0c8de6eb640da51d",
+      "input_evidence_ids": [
+        "EV-210",
+        "EV-211",
+        "EV-212",
+        "EV-213",
+        "EV-214",
+        "EV-215",
+        "EV-216",
+        "EV-217",
+        "EV-218",
+        "EV-219",
+        "EV-220",
+        "EV-221"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.23"
+        }
+      ],
+      "scope": "Docs-only patch recording the bounded private browser-QA tooling, exact local validation and omission facts while preserving the six-record evidence conclusions and Unicode HOLD.",
+      "limitations": [
+        "Synthetic browser mechanics do not establish human recognition, participant comprehension, deployed behavior, cross-browser equivalence, artwork acceptance, portable character use, encoding necessity, or Unicode eligibility.",
+        "No live record, alias, question, assessment, score, status, artwork, geometry, schema, font, PUA, release, outreach, or external posture changes; Unicode remains HOLD."
       ]
     }
   ]

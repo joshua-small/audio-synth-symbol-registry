@@ -24,3 +24,9 @@ jobs:
       - run: npm ci
       - run: pip install --require-hashes -r tooling/private-font-proof/requirements.lock.txt
       - run: npm test
+      - name: Run private browser-QA preflight integration
+        shell: bash
+        run: |
+          browser_executable="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          test -n "$browser_executable"
+          BROWSER_QA_EXECUTABLE="$browser_executable" node --test tests/browser-preflight.test.mjs

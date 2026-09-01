@@ -83,12 +83,17 @@ test("builder emits one self-contained offline page and no answer-bearing or per
   assert.equal(manifest.network_listener, false);
   assert.equal(manifest.persistent_storage, false);
   assert.equal(manifest.real_participant_data_authorized, false);
+  assert.equal(manifest.index_sha256, sha256(html));
   assert.match(html, /Content-Security-Policy/);
   assert.match(html, /connect-src 'none'/);
   assert.match(html, /PRIVATE OFFLINE SYNTHETIC VALIDATION ONLY/);
   assert.match(html, /focus-visible/);
   assert.match(html, /aria-live="assertive"/);
   assert.match(html, /width: min\(48rem, 100%\)/);
+  assert.match(html, /#receipt \{ overflow-wrap: anywhere; \}/);
+  const style = html.match(/<style>([\s\S]*?)<\/style>/)?.[1];
+  assert.ok(style);
+  assert.ok(html.includes(`style-src 'sha256-${Buffer.from(createHash("sha256").update(style).digest()).toString("base64")}'`));
   assert.doesNotMatch(html, /localStorage|sessionStorage|indexedDB|serviceWorker|fetch\(|XMLHttpRequest|WebSocket/);
   await assert.rejects(readFile(join(output, "private", "answer-key.json")));
   await assert.rejects(buildOfflineHarness(publicDirectory, output, "001"));
