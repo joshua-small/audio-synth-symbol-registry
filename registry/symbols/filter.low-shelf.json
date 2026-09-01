@@ -68,11 +68,31 @@
       "source_id": "EV-065",
       "claim": "Documents practitioner distinction between low shelf and high-pass filtering in prose.",
       "scope": "community"
+    },
+    {
+      "source_id": "EV-170",
+      "claim": "Documents an axis-free, sign-agnostic low-shelf selector that forks on the low-frequency left side while signed gain remains separate.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-171",
+      "claim": "Provides historical independent use of the same affected-side two-prong low-shelf topology with separate gain.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-172",
+      "claim": "Documents a third independent mirrored two-prong low-shelf selector with separate gain.",
+      "scope": "product-ui"
+    },
+    {
+      "source_id": "EV-174",
+      "claim": "Preserves a polarity-dependent single-curve shelf implementation as counterevidence to universal form.",
+      "scope": "product-ui"
     }
   ],
   "confidence": {
     "level": "medium",
-    "rationale": "Affected-side semantics and full-name text communication are well supported, but compact cross-vendor glyph convergence, shelf-specific overlap review, and portable glyph use remain unresolved."
+    "rationale": "Affected-side semantics, full-name text communication, shelf-specific overlap review, and cross-vendor two-prong topology convergence are well supported; isolated recognition and portable glyph interchange remain unresolved."
   },
   "open_questions": [
     {
@@ -81,10 +101,14 @@
     },
     {
       "question": "Do independent compact implementations converge on a reproducible sign-agnostic low-shelf primitive?",
-      "status": "open"
+      "status": "resolved"
     },
     {
       "question": "Which Unicode characters, sequences, and adjacent-standard symbols overlap or conflict with this concept?",
+      "status": "resolved"
+    },
+    {
+      "question": "Does isolated use reliably distinguish the low-shelf topology from high-pass in the six-member family?",
       "status": "open"
     }
   ],
@@ -93,6 +117,10 @@
     "Boost versus attenuation, gain sign and amount, plateau placement, slope, order, Q, resonance, overshoot, implementation, and UI context are excluded from semantic identity.",
     "Low cut is not an alias; it collides with the existing high-pass terminology boundary.",
     "LS, LSF, bass shelf, and signed boost/cut names are not adopted as aliases or fallbacks.",
+    "The independently established topology forks on the low-frequency left side and converges toward the unaffected right side; signed gain remains separate.",
+    "Affected-side orientation is semantic: the low-shelf form forks on the low-frequency left side. Arbitrary rotation or mirroring that changes the forked side is not equivalent.",
+    "Axes, baselines, parameter values, slope, color, interaction state, exact proportions, path curvature, whitespace, line weight, and endpoint placement are not semantic identity.",
+    "The two-prong convention is convergent, not universal; polarity-bearing single curves and contextual alternatives remain documented counterevidence.",
     "The representative glyph concept does not accept or publish artwork."
   ]
 }
