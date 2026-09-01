@@ -1,6 +1,6 @@
 # Unicode proposal critical-path audit
 
-Status as of 2026-09-01T01:44:51-07:00, refreshed on exact merged base `00bbe89f19f376aed2bdc4f36e3c8ccbf03cb1b7` through the evidence-triggered six-record reassessment. This is an internal readiness map for the approved six-concept filter repertoire. It does not propose characters, select code points, accept artwork, contact an external party, or change the formal Unicode position from `HOLD`.
+Status as of 2026-09-01T00:53:06-07:00, refreshed on exact merged base `2a55ab6dd6a38a53352a40586059e75e124ed8cf` through the evidence-only portable-text and interchange-need corpus DA-024. This is an internal readiness map for the approved six-concept filter repertoire. It does not propose characters, select code points, accept artwork, contact an external party, or change the formal Unicode position from `HOLD`.
 
 ## Executive conclusion
 
@@ -57,8 +57,6 @@ The [Emoji and Pictographs FAQ](https://www.unicode.org/faq/emoji_dingbats.html)
 | `asr:filter.high-shelf` | Strong sign-agnostic affected-side semantics and three-form two-prong convergence | Multiple public image-label cases remain below threshold; local font use and HS parser loss exist, while `HS`, `highshelf`, and prose succeed; no portable target character | Establish a third independent qualifying failure plus character-specific benefit, or actual portable target-glyph use; isolated shelf/pass recognition remains open. |
 
 No concept currently clears the central proposal criteria merely because its registry assessment score is high. The assessment rubric measures internal record readiness and expressly does not assert Unicode eligibility.
-
-Assessment artifact 0.3.5 records high-pass, low-pass, and band-pass at 20/20, Band-stop at 18/20, and both shelves at 19/20. Band-stop's higher text and visual scores do not repair its zero accepted drawing-required cases or establish portable glyph use. The two full shelving-filter terms are resolved at bounded response-class level, but isolated low-shelf/high-pass and high-shelf/low-pass recognition remain material internal registry blockers. None of these assessment changes clears independent character use, public plain-text need, community support, proposal artwork, registry acceptance, or owner authorization for external action.
 
 ## Unicode requirements versus project safeguards
 
@@ -154,12 +152,3 @@ Review and authorization of that complete package, its legal representations, an
 - Unicode status: `HOLD`; no proposal, outreach, external submission, code point, font publication, or artwork acceptance is authorized or implied.
 - Validation: `npm test` passed 118/118 with registry/evidence 0.3.4 and derived analyses 0.2.19; registered hashes, documentation drift, Agent Report hygiene, source re-fetches, protected paths, and `git diff --check` passed before the exact-head approval recorded below.
 - Independent review: `APPROVE` with no blocker at exact substantive head `826746603eaceb0b3c03145e9de997787b67078c`; the approval-only annotation changes no reviewed blocker or external posture.
-
-## Agent Report - 2026-09-01T01:55:03-07:00
-
-- Report status: blocker map synchronized to assessment artifact 0.3.5 for exact-head adverse review.
-- Scope: record Band-stop 18/20 and the two shelf 19/20 dispositions without changing any proposal-specific eligibility conclusion.
-- Result: independent character use, character-specific public plain-text need, community support, registry acceptance, and external authorization remain open for all six records.
-- Boundary: Band-stop score movement does not create portable glyph use; shelf terminology resolution does not establish isolated recognition; registry scores do not establish Unicode eligibility.
-- Unicode status: `HOLD`; no proposal, outreach, submission, code point, font publication, artwork acceptance, or external action is authorized.
-- Validation: all 119 tests, registered-digest validation, documentation drift, Agent Report hygiene, immutable-predecessor comparison, and protected-tree checks pass. Exact-head adverse review remains pending.

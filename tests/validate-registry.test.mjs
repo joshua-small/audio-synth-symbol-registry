@@ -206,7 +206,7 @@ test("rejects a ledger version that differs from metadata", () => {
 test("rejects a README registry release that differs from metadata", () => {
   const result = runValidator({ readmeRegistryVersion: "0.1.0" });
   assert.equal(result.status, 1, result.stdout);
-  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.4\.0/);
+  assert.match(result.stderr, /README registry release 0\.1\.0 differs from registry metadata 0\.4\.1/);
 });
 
 const invalidLedgerMutations = [
@@ -315,7 +315,7 @@ for (const [assessmentMutationFixture, expectedFailure] of invalidAssessmentMuta
 test("preserves historical assessments when a newer snapshot is appended", () => {
   const result = runValidator({ assessmentMutationFixture: "newer-historical-snapshot.json" });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /Validated 6 registry record\(s\), 8 assessment set\(s\)/);
+  assert.match(result.stdout, /Validated 6 registry record\(s\), 9 assessment set\(s\)/);
 });
 
 test("rejects a duplicate derived-analysis ID-version pair", () => {
