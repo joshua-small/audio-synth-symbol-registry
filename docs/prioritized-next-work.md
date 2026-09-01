@@ -1,8 +1,8 @@
 # Prioritized next work
 
-Status as of 2026-08-31T19:27:18-07:00, after the post-evidence six-record reassessment and D-021 standing delegation. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-08-31T20:35:06-07:00, after the band-stop render and terminology spike and the completed D-022 offline-harness validation. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.2.5.
+The current queue is aligned with registry metadata 0.2.6.
 
 ## Current dependency map
 
@@ -11,9 +11,9 @@ The current queue is aligned with registry metadata 0.2.5.
 | Provisional shelf records | Completed in [PR #62](https://github.com/joshua-small/audio-synth-symbol-registry/pull/62) | Preserve six `evidence-collecting` records and D-017 boundaries. |
 | Shelf overlap audit | Completed in [PR #63](https://github.com/joshua-small/audio-synth-symbol-registry/pull/63) | Carry EV-070 through EV-073 and DA-009 into the next assessment without presuming score movement. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
-| Six-record reassessment | Completed in Issue #64 | Preserve the 17/20 shelf diagnostics and all six `evidence-collecting` statuses until new evidence warrants another assessment. |
+| Six-record reassessment | Targeted band-stop update pending | Mechanically reassess band-stop against material EV-120, EV-130, and EV-131 without borrowing Notch-only evidence; preserve all live statuses unless the rubric and review support movement. |
 | Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
-| Study-stimulus infrastructure | Construction validation completed in [PR #74](https://github.com/joshua-small/audio-synth-symbol-registry/pull/74) | Build and validate the D-022 private offline synthetic-response harness; preserve opaque packaging and exact hashes. |
+| Study-stimulus infrastructure | Offline harness validation completed in [PR #77](https://github.com/joshua-small/audio-synth-symbol-registry/pull/77) | Preserve opaque packaging and exact hashes; park operational work unless the owner resumes empirical recognition work, then require real-browser validation before separate recruitment, data-plan, and launch gates. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
@@ -32,11 +32,11 @@ The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.
 
 This is mechanical assessment work only. Do not transfer notch evidence to band-stop, infer aliases from related terms, count derived analyses as independent evidence, or promote a record without satisfying the rubric. If a score reaches a threshold, report the unmet floors and blockers. Agents may promote to `registry-candidate` after the required independent review. Promotion to `registry-accepted` remains Human Review because it makes the identifier permanent, but that question should normally be batched into review of the complete external submission package instead of interrupting earlier work.
 
-### 3. Validate the private offline participant harness
+### 3. Preserve the validated offline harness boundary
 
-The six hashes in `artwork/study-locks/six-member-compact-a.json` are bound to opaque-token packaging and protocol inputs. D-022 authorizes a private, offline, non-operational harness using synthetic responses only. The harness must collect all six free-text responses before exposing class labels and must exercise leakage, rendering, accessibility, keyboard, zoom, validation-error, resume, and submission behavior.
+The six hashes in `artwork/study-locks/six-member-compact-a.json` are bound to opaque-token packaging and protocol inputs. PR #77 completed the private, offline, synthetic-only harness validation, including the rule that all six free-text responses are fixed before any class labels appear.
 
-After independent adverse review and passing validation, agents may record an internal `study-ready` decision under D-021. This does not authorize recruitment, real participant access, privacy or consent commitments, incentives, launch, artwork acceptance, publication, release, outreach, or any other external action.
+Keep operational study work parked. If the owner resumes empirical recognition work, perform the documented real-browser validation before requesting the separate recruitment, data-plan, and launch gates. The completed synthetic validation does not establish human recognition, participant safety, platform behavior, `study-ready` status, artwork acceptance, or authorization for real participant access, privacy or consent commitments, incentives, launch, publication, release, outreach, or any other external action.
 
 ### 4. Maintain adjacent-path research without outreach
 
