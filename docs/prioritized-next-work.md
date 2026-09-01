@@ -1,8 +1,8 @@
 # Prioritized next work
 
-Status as of 2026-09-01T00:19:18-07:00, after the six-record reassessment, shelf/shelving terminology dossier, and Band-stop text-use and third-render dossier. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-09-01T00:53:06-07:00, after the six-record reassessment, shelf/shelving terminology dossier, Band-stop text-use and third-render dossier, and portable-text/interchange-need corpus. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.3.3.
+The current queue is aligned with registry metadata 0.3.4.
 
 ## Current dependency map
 
@@ -10,6 +10,7 @@ The current queue is aligned with registry metadata 0.3.3.
 | --- | --- | --- |
 | Provisional shelf records | 19/20 and `evidence-collecting` | DA-022 supports two bounded shelving-filter aliases without applying them; resolve that semantic disposition and isolated shelf/pass recognition separately. |
 | Band-stop evidence | 16/20 and `registry-candidate` | DA-023 recommends later text 3 and visual 3 for 18/20; complete exact-head review, then reassess separately without changing DA-020 or text fallbacks. |
+| Portable-text and interchange need | DA-024 serialized; Unicode `HOLD` unchanged | Complete exact-head adverse review of direct/adverse classification, derivative-lineage collapse, record gaps, negative searches, and source digests. |
 | Shelf topology and overlap | Incorporated through DA-019 and DA-021 | Preserve affected-side two-prong topology, semantic orientation, polarity/context exclusions, and exact-geometry boundary. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
 | Six-record reassessment | Implemented and reviewed in assessment artifact 0.3.4 | Preserve the immutable 20/20 HP, 20/20 LP, 20/20 BP, 16/20 BS, and 19/20 shelf baseline until separately reviewed evidence or semantic changes justify another snapshot. |
@@ -30,6 +31,12 @@ Completion requires direct evidence sufficient to resolve both material question
 Complete exact-head adverse review of EV-200 through EV-204, enriched EV-032, and DA-023. Verify the Bitwig prose-to-image binding, three-way visual implementation independence, KVR/Sound On Sound publisher accounting, mutable-source digests, negative searches, and DA-020 Notch exclusion.
 
 If approved, create a separate immutable assessment snapshot that mechanically tests visual convergence 2 -> 3, text/accessibility 2 -> 3, and total 16 -> 18. Do not infer unrestricted BR/BRF aliases, replace BSF, change speech, transfer Notch-only evidence, modify geometry, or treat score 18 as registry acceptance or Unicode eligibility.
+
+### 1.75. Review the portable-text and interchange-need corpus
+
+Complete exact-head adverse review of EV-205 through EV-209 and DA-024. Reproduce the five source digests and verify the direct-versus-adverse taxonomy, Equalizer APO protocol collision, EasyEffects parser and locale causation, REAPER accessibility counterexample, FFmpeg/Web Audio machine names, FontAudio/Iconify derivative collapse, Notch non-transfer, LLM tokenization caveat, negative searches, and all six record-level gap findings.
+
+Do not convert bounded friction into encoding need, count project-authored demonstrations as independent demand, mutate an assessment or record, allocate a PUA or code point, publish a font, change geometry, or relax Unicode `HOLD`.
 
 ### 2. Maintain the six-record assessment lifecycle
 
@@ -83,3 +90,12 @@ After a gate is resolved, record the authorization and continue under D-014 unti
 - Evidence boundary: Bitwig is the third broad-class render; KVR and Sound On Sound support non-UI prose; Apple corroborates. Notch-only forms, portable-glyph use, common BSF chat usage, and unrestricted BR aliases remain excluded.
 - Preserved state: current assessments and statuses remain unchanged; shelf semantic disposition and isolated recognition remain separate work; Unicode remains `HOLD`.
 - Validation: `npm test` passed 117/117 with registry/evidence 0.3.3 and derived analyses 0.2.18; exact-head independent adverse review remains pending.
+
+## Agent Report - 2026-09-01T00:53:06-07:00
+
+- Report status: queue synchronized to registry/evidence 0.3.4 and derived analyses 0.2.19 for exact-head adverse review.
+- Scope: add a serialized DA-024 review lane without displacing the separately scoped shelf and Band-stop work.
+- Evidence boundary: no portable target-glyph use was found; low shelf has the strongest bounded friction, Band-stop the weakest, and successful prose, protocols, accessible text, parser fixes, and named assets remain counteroptions.
+- Preserved state: assessments, scores, statuses, semantics, aliases, questions, artwork, geometry, font/PUA posture, and Unicode `HOLD` remain unchanged.
+- Validation: `npm test` passed 118/118 with registry/evidence 0.3.4 and derived analyses 0.2.19; source/hash/protected-path and `git diff --check` checks passed before the exact-head approval recorded below.
+- Independent review: `APPROVE` with no blocker at exact substantive head `826746603eaceb0b3c03145e9de997787b67078c`; the approval-only annotation changes no queue scope or protected state.

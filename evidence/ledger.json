@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.3.3",
+  "ledger_version": "0.3.4",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -2914,6 +2914,161 @@
           },
           "rights_basis": "The public vendor documentation was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
           "limitations": "The vendor controls the versioned route and content. Product-local labeling does not establish non-UI interchange, a universal BR alias, exact Notch equivalence, or a reusable visual form."
+        }
+      }
+    },
+    {
+      "id": "EV-205",
+      "type": "engineering-reference",
+      "publisher": "Equalizer APO",
+      "title": "Configuration reference: Filter command text format",
+      "url": "https://sourceforge.net/p/equalizerapo/wiki/Configuration%20reference/",
+      "publication_date": "2019-06-10",
+      "accessed_on": "2026-09-01",
+      "location": "Filtering commands; Filter command description and LP/LPQ, HP/HPQ, BP, LS/LSC, HS/HSC, and NO table rows",
+      "direct_observation": "The public configuration reference maps ASCII protocol tokens LP and LPQ to Low-pass, HP and HPQ to High-pass, BP to Band-pass, LS and LSC to Low-shelf, HS and HSC to High-shelf, and NO to Notch. It separately warns that Equalizer APO's real band-pass BP differs from the DCX2496 BP, which is a peaking filter.",
+      "interpretation": "This is adverse evidence that documented ASCII tokens can carry five exact registry concepts plus Notch in machine interchange. It is also direct evidence that abbreviations require protocol context. NO is Notch-only and does not transfer to broad Band-stop without DA-020's source-local mapping or contrast.",
+      "rights_note": "The public documentation was inspected through its stable REST representation. No documentation text, examples, implementation, graph, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T00:52:43-07:00",
+        "product": "Equalizer APO",
+        "product_version": "Configuration reference supporting filter types since 0.8.1",
+        "exact_locator": "SourceForge wiki REST field text; Filtering commands > Filter table and preceding DCX2496 compatibility warning",
+        "stable_fragment": "Wiki page Configuration reference; REST mod_date 2019-06-10 12:36:02.773000",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "abb93da7fe8551b4919954b5fe6c48397cd2067fda84f6ff9c09a657045a8fa3",
+            "scope": "23987-byte raw JSON response from https://sourceforge.net/rest/p/equalizerapo/wiki/Configuration%20reference"
+          },
+          "rights_basis": "The public documentation was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The wiki response is mutable and outside project control. Its ASCII mappings are protocol-local, BP has a documented cross-protocol collision, and the Notch-only NO member cannot establish broad Band-stop interchange."
+        }
+      }
+    },
+    {
+      "id": "EV-206",
+      "type": "community-discussion",
+      "publisher": "EasyEffects contributors",
+      "title": "Issue 1283: APO shelf filter types lost on import",
+      "url": "https://github.com/wwmm/easyeffects/issues/1283",
+      "publication_date": "2021-12-07",
+      "accessed_on": "2026-09-01",
+      "location": "Issue body; supplied Equalizer APO input and EasyEffects output for filter 1 LS and filter 10 HS",
+      "direct_observation": "The reporter supplies an APO preset whose first and tenth filters are LS and HS with Q values. EasyEffects 6.1.5 imports both as PK and resets their Q values to zero; the expected behavior is to preserve the declared filter types and Q.",
+      "interpretation": "This is direct public semantic round-trip loss for low shelf and high shelf, but adverse to glyph causation: the portable ASCII input already carries LS and HS. The demonstrated defect is importer support, not absence of an encoded response glyph.",
+      "rights_note": "The public issue is linked and summarized. No issue text, preset, log, screenshot, source code, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T00:52:49-07:00",
+        "product": "EasyEffects",
+        "product_version": "6.1.5",
+        "exact_locator": "GitHub issue 1283 API fields title, state, created_at, updated_at, and body; LS and HS input/output examples",
+        "stable_fragment": "Issue number 1283",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "08582cdfec101e8f53da31707e8a188947ca10008023d6320bc91c4de53b7ba1",
+            "scope": "5429-byte raw JSON response from https://api.github.com/repos/wwmm/easyeffects/issues/1283 with Accept application/vnd.github+json"
+          },
+          "rights_basis": "The public issue was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The issue is mutable and reporter-authored. It demonstrates one version and environment, not prevalence, and does not show that a glyph would repair unsupported filter-type parsing."
+        }
+      }
+    },
+    {
+      "id": "EV-207",
+      "type": "community-discussion",
+      "publisher": "EasyEffects contributors",
+      "title": "Issue 1479: APO preset import depends on numeric locale",
+      "url": "https://github.com/wwmm/easyeffects/issues/1479",
+      "publication_date": "2022-04-17",
+      "accessed_on": "2026-09-01",
+      "location": "Issue body; pt-BR reproduction steps and APO text containing LS and HS entries",
+      "direct_observation": "The reporter states that EasyEffects 6.2.4 truncates decimal Quality, Gain, and Input values when importing an APO preset under a pt-BR numeric locale, while en-US works. The supplied text includes LS and HS entries whose type tokens remain explicit.",
+      "interpretation": "This is a real public text round-trip failure, but the lost information is numeric precision rather than filter identity. It is adverse causation evidence and is not counted as portable-character need for either shelf.",
+      "rights_note": "The public issue is linked and summarized. No issue text, preset, debug log, source code, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T00:52:55-07:00",
+        "product": "EasyEffects",
+        "product_version": "6.2.4",
+        "exact_locator": "GitHub issue 1479 API fields title, state, created_at, updated_at, and body; numeric-locale reproduction and LS/HS preset entries",
+        "stable_fragment": "Issue number 1479",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "7f9c5a2e92af72d20a59b754dfe00eedf509b78dcd565c15b4b3094707fbb1e4",
+            "scope": "17067-byte raw JSON response from https://api.github.com/repos/wwmm/easyeffects/issues/1479 with Accept application/vnd.github+json"
+          },
+          "rights_basis": "The public issue was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The issue is mutable and reporter-authored. It demonstrates locale-sensitive numeric parsing rather than loss of a response-class token or a need for an encoded glyph."
+        }
+      }
+    },
+    {
+      "id": "EV-208",
+      "type": "education",
+      "publisher": "REAPER Accessibility Wiki contributors",
+      "title": "ReaEffects guide: accessible ReaEQ type descriptions, revision 5",
+      "url": "https://reaperaccessibility.com/wiki/ReaEffects_guide",
+      "publication_date": "2023-05-17",
+      "accessed_on": "2026-09-01",
+      "location": "ReaEffects_guide revision 5; section 5 ReaEQ; Type dropdown list",
+      "direct_observation": "The accessibility guide uses ordinary text to name and explain Low shelf, High shelf, Low pass, High pass, Notch, and Band Pass by affected, passing, or rejected frequency regions.",
+      "interpretation": "This is adverse evidence that prose can make five exact active concepts and a separate Notch type accessible without encoding the response drawing. Notch is not silently transferred to broad Band-stop under DA-020.",
+      "rights_note": "The public accessibility documentation was inspected at a pinned MediaWiki revision. No wiki prose, interface, graph, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T00:53:00-07:00",
+        "product": "REAPER ReaEffects guide",
+        "product_version": "MediaWiki revision 5",
+        "exact_locator": "MediaWiki API revision ID 5, timestamp 2023-05-17T22:33:26Z; section 5 ReaEQ > Type dropdown list",
+        "stable_fragment": "Revision ID 5",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "a7aae2670640cfd16edc8e969f54fe2cb3235b7dc53a1ee03fa5d66e7d703d3a",
+            "scope": "85998-byte raw JSON response from the MediaWiki API query for ReaEffects_guide revision content"
+          },
+          "rights_basis": "The public accessibility wiki was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The guide is community-maintained and not a formal accessibility standard. Revision pinning aids reinspection, while Notch-only prose does not establish broad Band-stop equivalence."
+        }
+      }
+    },
+    {
+      "id": "EV-209",
+      "type": "engineering-reference",
+      "publisher": "FFmpeg contributors",
+      "title": "FFmpeg word-based audio filter names at commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/b1f564bda248dbe8ac37cb743966fdd7ee4b490c/doc/filters.texi",
+      "publication_date": "2026-08-31",
+      "accessed_on": "2026-09-01",
+      "location": "doc/filters.texi sections asuperpass, asuperstop, bandpass, bandreject, highpass, lowpass, bass,lowshelf, and treble,highshelf",
+      "direct_observation": "The immutable documentation exposes ordinary word-based audio filter names including highpass, lowpass, bandpass, bandreject, asuperpass, asuperstop, lowshelf, and highshelf.",
+      "interpretation": "This is adverse evidence that a public machine interface carries all six active response identities with ordinary text, including broad Band-stop through bandreject and asuperstop. These implementation names are not portable response glyphs and require a mapping layer across other protocols.",
+      "rights_note": "The public repository was inspected at an immutable commit. No documentation, implementation source, example, plot, response, or artwork is copied into the repository.",
+      "source_capture": {
+        "accessed_at": "2026-09-01T00:53:06-07:00",
+        "product": "FFmpeg audio filters",
+        "product_version": "Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+        "exact_locator": "doc/filters.texi sections asuperpass, asuperstop, bandpass, bandreject, highpass, lowpass, bass,lowshelf, and treble,highshelf",
+        "stable_fragment": "Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "d9a184d6f9ee7e3563dfa5271afb1251d3871ffddbc96b7f594fae3a6935defc",
+            "scope": "961464-byte raw doc/filters.texi at Git commit b1f564bda248dbe8ac37cb743966fdd7ee4b490c"
+          },
+          "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata, factual observations, and a digest are retained.",
+          "limitations": "This is the same FFmpeg source lineage and same source bytes as EV-193, now inspected at additional exact sections; it cannot be counted as a second independent FFmpeg source. Command names do not establish glyph use or universal cross-protocol aliases."
         }
       }
     }

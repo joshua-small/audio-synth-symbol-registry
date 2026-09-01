@@ -3,7 +3,7 @@
   "registry": "Open Audio and Synthesis Symbol Registry",
   "artifacts": {
     "registry": {
-      "version": "0.3.3",
+      "version": "0.3.4",
       "status": "bootstrap",
       "includes": [
         "registry/symbols/",
@@ -22,7 +22,7 @@
       "current_snapshot": "registry/assessments/registry-0.3.1-2026-08-31.json"
     },
     "derived_analyses": {
-      "version": "0.2.18",
+      "version": "0.2.19",
       "format_version": "0.1.0",
       "schema": "registry/schema/derived-analysis-registry.schema.json",
       "index": "evidence/derived-analyses.json"

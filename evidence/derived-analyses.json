@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.18",
+  "registry_version": "0.2.19",
   "artifacts": [
     {
       "id": "DA-001",
@@ -871,7 +871,7 @@
       "id": "DA-013",
       "version": "0.1.0",
       "title": "Unicode proposal critical-path audit",
-      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "path": "docs/unicode-proposal-critical-path-audit-0.1.0.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T20:15:37-07:00",
       "content_sha256": "d05b7a0096961426d88891926e29b095446e42ebe9ab13e4b4bb315f8ae2c213",
@@ -2128,7 +2128,7 @@
       "id": "DA-006",
       "version": "0.2.18",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.18.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T00:19:18-07:00",
       "content_sha256": "95868aee9f4ebf7b146a304d4d838ec92edfd766f38e8a25841e087cef1683af",
@@ -2222,6 +2222,137 @@
       "limitations": [
         "The accumulated source set is purposive rather than market-weighted and establishes neither ordinary portable response-glyph use nor common audio-chat BSF usage.",
         "Notch-only forms remain non-transferable without explicit source-local mapping or contrast, and render convergence does not establish exact contour, common lineage, authorship, or reuse rights."
+      ]
+    },
+    {
+      "id": "DA-024",
+      "version": "0.1.0",
+      "title": "Six-concept portable-text use and interchange-need corpus",
+      "path": "evidence/reports/2026-09-01-portable-text-and-interchange-need-corpus.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-09-01T00:53:06-07:00",
+      "content_sha256": "ca07ac53305122bcb7535babc28ab5f2a3da7f4af889ecf777e036ff05323005",
+      "input_evidence_ids": [
+        "EV-021",
+        "EV-023",
+        "EV-025",
+        "EV-100",
+        "EV-101",
+        "EV-120",
+        "EV-121",
+        "EV-122",
+        "EV-140",
+        "EV-141",
+        "EV-150",
+        "EV-205",
+        "EV-206",
+        "EV-207",
+        "EV-208",
+        "EV-209"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-001",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-010",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-014",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-016",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-020",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Confirmation-bias-resistant corpus of independently observed portable-text use, image and communication friction, project-local font and asset mechanisms, accessibility and machine interchange, successful prose or structured alternatives, and non-glyph failure causes across the six active concepts.",
+      "limitations": [
+        "The purposive English-language corpus is not market-weighted, and bounded negative searches cannot prove that no portable use exists outside the inspected sources.",
+        "FontAudio and Iconify are one derivative lineage, repeated publisher artifacts are collapsed, Notch-only evidence does not transfer to broad Band-stop, and project-authored demonstrations never count as independent usage.",
+        "No portable target response glyph was found; the dossier changes no score, status, semantic field, artwork, font, PUA, code point, proposal posture, or Unicode HOLD. LLM token efficiency remains a model- and tokenizer-specific hypothesis."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.19",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T00:53:06-07:00",
+      "content_sha256": "f2d9d654a1abf0097cb6e1a8e06b90e0414031bba88e1bc795a983c8b72aa4d4",
+      "input_evidence_ids": [
+        "EV-205",
+        "EV-206",
+        "EV-207",
+        "EV-208",
+        "EV-209"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.18"
+        },
+        {
+          "artifact_id": "DA-024",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the evidence-only direct-versus-adverse portable-text and interchange-need corpus, without applying any semantic, assessment, score, status, artwork, or external-posture change.",
+      "limitations": [
+        "The current immutable scores and statuses remain unchanged; DA-023's Band-stop reassessment recommendation remains unapplied and the shelf terminology disposition remains separately scoped.",
+        "The corpus establishes neither portable character use nor encoding necessity. Successful text alternatives and narrower parser, locale, documentation, and UI causes remain material counterevidence; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-013",
+      "version": "0.2.0",
+      "title": "Unicode proposal critical-path audit",
+      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T00:53:06-07:00",
+      "content_sha256": "fad66e3e55df59e6b64c34a50eb99d9f209674a178fb825118c68e8f927f11bf",
+      "input_evidence_ids": [
+        "EV-110",
+        "EV-111",
+        "EV-112",
+        "EV-113",
+        "EV-114",
+        "EV-115",
+        "EV-116",
+        "EV-117",
+        "EV-118",
+        "EV-150",
+        "EV-205",
+        "EV-206",
+        "EV-207",
+        "EV-208",
+        "EV-209"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-024",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Refreshes the internal Unicode proposal blocker map with DA-024's direct-versus-adverse character-use and interchange-need findings while preserving the formal HOLD and every protected external-action boundary.",
+      "limitations": [
+        "The bounded corpus and negative searches are not a prevalence study, and no legal conclusion is offered about evidence figures, font licensing, CLAs, authorship, or external submission.",
+        "Independent character use and character-specific public plain-text need remain open for every record; LLM token efficiency is only a model-specific hypothesis and no external action is authorized."
       ]
     }
   ]
