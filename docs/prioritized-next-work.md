@@ -1,36 +1,36 @@
 # Prioritized next work
 
-Status as of 2026-09-01T01:22:37-07:00, after the bounded shelf/shelving semantic disposition. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
+Status as of 2026-09-01T01:44:51-07:00, after the evidence-triggered six-record reassessment. This queue covers all six live records and separates agent-reviewed internal work from reserved Human Review gates. It does not authorize `registry-accepted` promotion, artwork acceptance, participant recruitment, publication, outreach, or a standards submission.
 
-The current queue is aligned with registry metadata 0.4.0.
+The current queue is aligned with registry metadata 0.4.1.
 
 ## Current dependency map
 
 | Lane | State | Dependency or next action |
 | --- | --- | --- |
-| Provisional shelf records | 19/20 and `evidence-collecting` | DA-025 applies the two bounded shelving-filter aliases; independently review, then reassess only the terminology consequence while preserving isolated recognition. |
-| Band-stop evidence | 16/20 and `registry-candidate` | DA-023 recommends later text 3 and visual 3 for 18/20; reassess separately without changing DA-020 or text fallbacks. |
+| Provisional shelf records | 19/20 and `evidence-collecting` | Terminology is resolved through DA-025; isolated low-shelf/high-pass and high-shelf/low-pass recognition are the sole material blockers. |
+| Band-stop evidence | 18/20 and `registry-candidate` | DA-023 text 3 and visual 3 are applied; preserve DA-020 Notch non-transfer, contextual abbreviation limits, and unchanged fallback/speech. |
 | Portable-text and interchange need | DA-024 reviewed and merged; Unicode `HOLD` unchanged | Preserve its negative portable-glyph finding, direct friction, and successful text/interchange counteroptions. |
 | Shelf topology and overlap | Incorporated through DA-019 and DA-021 | Preserve affected-side two-prong topology, semantic orientation, polarity/context exclusions, and exact-geometry boundary. |
 | Shelf text-friction search | Completed in PR #66 | DA-010 preserves negative and excluded findings; both record-specific safeguards remain open. |
-| Six-record reassessment | Implemented and reviewed in assessment artifact 0.3.4 | Preserve the immutable 20/20 HP, 20/20 LP, 20/20 BP, 16/20 BS, and 19/20 shelf baseline until separately reviewed evidence or semantic changes justify another snapshot. |
+| Six-record reassessment | Implemented in assessment artifact 0.3.5; exact-head adverse review pending | Verify the immutable 20/20 HP, 20/20 LP, 20/20 BP, 18/20 BS, and 19/20 shelf snapshot without moving lifecycle states. |
 | Six-member draft artwork | Geometry lock approved in [PR #61](https://github.com/joshua-small/audio-synth-symbol-registry/pull/61) | Preserve the exact lock-manifest hashes; internal `study-ready` evaluation proceeds through independent agent review, while any visible design change and all operational actions remain gated. |
 | Study-stimulus infrastructure | Offline harness validation completed in [PR #77](https://github.com/joshua-small/audio-synth-symbol-registry/pull/77) | Preserve opaque packaging and exact hashes; park operational work unless the owner resumes empirical recognition work, then require real-browser validation before separate recruitment, data-plan, and launch gates. |
 | Monoline-linear artwork | Retained draft comparator in [PR #49](https://github.com/joshua-small/audio-synth-symbol-registry/pull/49) | Do not infer selection, rejection, or lock. |
 
 ## Active queue
 
-### 1. Review the shelf semantic disposition
+### 1. Review the evidence-triggered reassessment
 
-Adversely review DA-025's two exact aliases, morphology/orthography distinction, full exclusion list, product-documentation override, record question changes, version sequence, and protected trees. Continue private isolated six-way shelf/pass recognition validation separately. Preserve DA-019's distinction between established topology and unproved isolated recognition.
+Adversely review assessment artifact 0.3.5, its arithmetic, source-group accounting, evidence-to-dimension mapping, DA-020 Notch admission rule, DA-023 score application, DA-025 shelf terminology disposition, exact digests, version sequence, and protected trees.
 
-After approval, create a separate immutable assessment snapshot only if a mechanical reassessment is warranted. Do not rewrite the current assessment, clear the isolated-recognition blocker, move either shelf by score alone, or infer implementation, parameter, topology, glyph, abbreviation, fragment, or product-local pass-term equivalence.
+Do not clear either isolated-recognition blocker, move a shelf by score alone, infer unrestricted BR/BRF or Notch equivalence, or infer implementation, parameter, topology, glyph, abbreviation, fragment, or product-local pass-term equivalence.
 
-### 1.5. Review and reassess the Band-stop evidence recommendation
+### 1.5. Continue isolated shelf/pass recognition validation
 
-Complete exact-head adverse review of EV-200 through EV-204, enriched EV-032, and DA-023. Verify the Bitwig prose-to-image binding, three-way visual implementation independence, KVR/Sound On Sound publisher accounting, mutable-source digests, negative searches, and DA-020 Notch exclusion.
+Continue only the private, non-operational six-way recognition lane needed to test low shelf versus high pass and high shelf versus low pass. Preserve DA-019's distinction between established topology and unproved isolated recognition.
 
-If approved, create a separate immutable assessment snapshot that mechanically tests visual convergence 2 -> 3, text/accessibility 2 -> 3, and total 16 -> 18. Do not infer unrestricted BR/BRF aliases, replace BSF, change speech, transfer Notch-only evidence, modify geometry, or treat score 18 as registry acceptance or Unicode eligibility.
+Lexical equivalence, topology convergence, score 19, and owner approval of appearance do not by themselves satisfy isolated recognition. Any real-participant access, recruitment, privacy or consent commitment, launch, or publication remains separately gated.
 
 ### 1.75. Preserve the portable-text and interchange-need corpus
 
@@ -40,7 +40,7 @@ Do not convert bounded friction into encoding need, count project-authored demon
 
 ### 2. Maintain the six-record assessment lifecycle
 
-Treat `registry/assessments/registry-0.3.1-2026-08-31.json` as the current immutable six-record snapshot after exact-head review. Create another snapshot only after material new evidence or a material record change lands, and compare it with this baseline.
+Treat `registry/assessments/registry-0.4.1-2026-09-01.json` as the current immutable six-record snapshot after exact-head review. Preserve `registry/assessments/registry-0.3.1-2026-08-31.json` as its immutable predecessor. Create another snapshot only after material new evidence or a material record change lands.
 
 The lifecycle covers `asr:filter.high-pass`, `asr:filter.low-pass`, `asr:filter.band-pass`, `asr:filter.band-stop`, `asr:filter.low-shelf`, and `asr:filter.high-shelf`.
 

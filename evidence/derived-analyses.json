@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.20",
+  "registry_version": "0.2.21",
   "artifacts": [
     {
       "id": "DA-001",
@@ -2160,7 +2160,7 @@
       "id": "DA-003",
       "version": "0.2.1",
       "title": "Current representation matrix",
-      "path": "docs/current-representation-matrix.md",
+      "path": "docs/current-representation-matrix-0.2.1.md",
       "kind": "corpus-analysis",
       "produced_at": "2026-09-01T00:19:18-07:00",
       "content_sha256": "f59a14659d18e2ce8f217716a4f9c92da8333f2c8c8654d909093dfa25d97e5f",
@@ -2318,7 +2318,7 @@
       "id": "DA-013",
       "version": "0.2.0",
       "title": "Unicode proposal critical-path audit",
-      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "path": "docs/unicode-proposal-critical-path-audit-0.2.0.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T00:53:06-07:00",
       "content_sha256": "fad66e3e55df59e6b64c34a50eb99d9f209674a178fb825118c68e8f927f11bf",
@@ -2389,7 +2389,7 @@
       "id": "DA-006",
       "version": "0.2.20",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.20.md",
       "kind": "status-synthesis",
       "produced_at": "2026-09-01T01:22:37-07:00",
       "content_sha256": "6a34b40be5a41a8f3352580cbdda5f76ef3399b84dee0850c37c549227246eba",
@@ -2417,6 +2417,152 @@
       "limitations": [
         "The immutable current assessment remains 19/20 for both shelves and retains its historical terminology and isolated-recognition blockers; a separate reassessment is required for any score or eligibility consequence.",
         "Lexical response-class equivalence does not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-003",
+      "version": "0.2.2",
+      "title": "Current representation matrix",
+      "path": "docs/current-representation-matrix.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-09-01T01:44:51-07:00",
+      "content_sha256": "1cd754ac91fa5fb99626d1dabed80319d25b49a3f87aafa1ccbc7f635f24c2fc",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-100",
+        "EV-120",
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.2.1"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-025",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Updates the current representation matrix after the evidence-triggered assessment: Band-stop's third broad-class rendering and non-UI prose are applied at 18/20, while bounded shelf aliases and isolated-recognition limits remain explicit.",
+      "limitations": [
+        "Primitive convergence does not establish identical outlines, common authorship, portable character use, artwork reuse rights, encoding necessity, or Unicode eligibility.",
+        "Notch-only forms remain non-transferable without source-local mapping or contrast, and lexical shelf equivalence does not establish isolated shelf/pass recognition."
+      ]
+    },
+    {
+      "id": "DA-013",
+      "version": "0.2.1",
+      "title": "Unicode proposal critical-path audit",
+      "path": "docs/unicode-proposal-critical-path-audit.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T01:44:51-07:00",
+      "content_sha256": "ae9f1b2a4c23a115e0c12657522ec8e1e4382af7bee826490f4401dfda77b0d3",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-100",
+        "EV-120",
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.2.0"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-025",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Synchronizes the internal Unicode blocker map to assessment artifact 0.3.5 while preserving independent character use, public plain-text need, community support, registry acceptance, and external authorization as open.",
+      "limitations": [
+        "Higher registry-readiness scores do not establish Unicode eligibility, portable character use, encoding necessity, or community support.",
+        "Unicode remains HOLD; no proposal, outreach, submission, code point, font publication, artwork acceptance, or external action is authorized."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.21",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T01:44:51-07:00",
+      "content_sha256": "c7a83eae2c8875bedb3f21e8e9bf2e49ffdb52b2b63e73c992cded745e9e95b6",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-100",
+        "EV-120",
+        "EV-190",
+        "EV-191",
+        "EV-192",
+        "EV-193",
+        "EV-194",
+        "EV-195",
+        "EV-196",
+        "EV-197",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.20"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-025",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.2.2"
+        },
+        {
+          "artifact_id": "DA-013",
+          "artifact_version": "0.2.1"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the D-021 mechanical reassessment of DA-023 and DA-025: Band-stop rises to 18/20 without lifecycle movement, while both shelves remain 19/20 and evidence-collecting with isolated shelf/pass recognition as their sole material blocker.",
+      "limitations": [
+        "The reassessment changes no live semantic record, alias, lifecycle status, artwork, geometry, schema, tooling, font, PUA, release, or external posture; every asr identifier remains provisional.",
+        "Registry readiness does not establish portable character use, encoding necessity, artwork acceptance, or Unicode eligibility; Unicode remains HOLD."
       ]
     }
   ]

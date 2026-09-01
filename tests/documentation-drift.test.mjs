@@ -34,19 +34,19 @@ test("current prototype, evidence status, and roadmap cover every live record", 
   assert.ok(status.includes("| `asr:filter.high-pass` | 20/20 |"));
   assert.ok(status.includes("| `asr:filter.low-pass` | 20/20 |"));
   assert.ok(status.includes("| `asr:filter.band-pass` | 20/20 |"));
-  assert.ok(status.includes("| `asr:filter.band-stop` | 16/20 |"));
+  assert.ok(status.includes("| `asr:filter.band-stop` | 18/20 |"));
   assert.doesNotMatch(status, /shelf records?[^\n]*14\/20/i);
   assert.doesNotMatch(status, /predate DA-009|overlap audit is pending/i);
-  assert.match(status, /low-shelf[^\n]*low shelving filter[^\n]*bounded alias[^\n]*isolated distinction from high pass remains material/i);
-  assert.match(status, /high-shelf[^\n]*high shelving filter[^\n]*bounded alias[^\n]*isolated distinction from low pass remains material/i);
+  assert.match(status, /low-shelf[^\n]*low shelving filter[^\n]*resolved as bounded alias[^\n]*isolated distinction from high pass is the sole material blocker/i);
+  assert.match(status, /high-shelf[^\n]*high shelving filter[^\n]*resolved as bounded alias[^\n]*isolated distinction from low pass is the sole material blocker/i);
   assert.doesNotMatch(roadmap, /Status as of 2026-08-29, after work merged through PR #24|initial four-record scope|affect the four records/);
   assert.ok(roadmap.includes(`registry metadata ${metadata.artifacts.registry.version}`));
 });
 
-test("current assessment selects the post-disposition six-record snapshot", async () => {
+test("current assessment selects the evidence-triggered six-record snapshot", async () => {
   const metadata = await readJson("registry/registry-metadata.json");
   assert.equal(metadata.artifacts.assessments.current_snapshot,
-    "registry/assessments/registry-0.3.1-2026-08-31.json");
+    "registry/assessments/registry-0.4.1-2026-09-01.json");
   const snapshot = await readJson(metadata.artifacts.assessments.current_snapshot);
   assert.equal(snapshot.assessments.length, 6);
   const byId = new Map(snapshot.assessments.map((assessment) => [assessment.record_id, assessment]));
@@ -54,14 +54,21 @@ test("current assessment selects the post-disposition six-record snapshot", asyn
     assert.equal(byId.get(id).dimensions.overlap_audit.score, 3);
     assert.equal(byId.get(id).total_score, 19);
     assert.equal(byId.get(id).result.recommended_status, "evidence-collecting");
+    assert.equal(byId.get(id).hard_blockers.length, 1);
+    assert.equal(byId.get(id).material_open_questions.length, 1);
+    assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /shelving-term disposition remains material/i);
+    assert.doesNotMatch(JSON.stringify(byId.get(id).material_open_questions), /shelving filter is an exact alias/i);
     assert.doesNotMatch(JSON.stringify(byId.get(id).hard_blockers), /overlap audit is absent|overlap audit is pending/i);
   }
-  assert.match(byId.get("asr:filter.low-shelf").result.rationale, /isolated distinction from high pass remain material/i);
-  assert.match(byId.get("asr:filter.high-shelf").result.rationale, /isolated distinction from low pass remain material/i);
+  assert.match(byId.get("asr:filter.low-shelf").result.rationale, /isolated distinction from high pass remains material/i);
+  assert.match(byId.get("asr:filter.high-shelf").result.rationale, /isolated distinction from low pass remains material/i);
   assert.equal(byId.get("asr:filter.high-pass").total_score, 20);
   assert.equal(byId.get("asr:filter.low-pass").total_score, 20);
   assert.equal(byId.get("asr:filter.band-pass").total_score, 20);
-  assert.equal(byId.get("asr:filter.band-stop").total_score, 16);
+  assert.equal(byId.get("asr:filter.band-stop").total_score, 18);
+  assert.equal(byId.get("asr:filter.band-stop").dimensions.text_and_accessibility.score, 3);
+  assert.equal(byId.get("asr:filter.band-stop").dimensions.visual_convergence.score, 3);
+  assert.match(JSON.stringify(byId.get("asr:filter.band-stop")), /DA-023/);
   for (const id of [
     "asr:filter.high-pass",
     "asr:filter.low-pass",
@@ -130,7 +137,7 @@ test("portable-text dossier preserves direct and adverse evidence under Unicode 
   assert.match(dossier, /FontAudio and Iconify count as one lineage/i);
   assert.match(dossier, /A single scalar can tokenize into multiple model tokens/i);
   assert.match(dossier, /Band-stop has zero accepted drawing-required or label-failure cases/i);
-  assert.match(status, /scores remain 20, 20, 20, 16, 19, and 19/);
+  assert.match(status, /Scores: 20, 20, 20, 18, 19, and 19/);
   assert.match(status, /Formal Unicode proposal: `HOLD`/);
   assert.match(blockerMap, /Independent character use and public plain-text encoding need remain open for all six records/i);
   assert.doesNotMatch(dossier, /Unicode status: `GO`|formal Unicode proposal: `GO`/i);
