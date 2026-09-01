@@ -44,6 +44,6 @@ Automated QA establishes that constrained SVG bytes parse and rasterize reproduc
 
 The allowlist reduces the attack and portability surface, but processing untrusted graphics is still a security-sensitive operation. Run validation and rendering in a current, isolated environment; retain dependency updates; do not treat this tool as a general SVG sanitizer; and never publish its output as proof that arbitrary input is safe.
 
-## Remaining Issue #28 gate
+## Issue #28 progression
 
-Infrastructure can be completed with synthetic fixtures. Applying it to real candidates requires original geometry and provenance. Selecting or locking that geometry remains a Human Review gate, followed later by the separate recruitment and study-launch gates. Until then, Issue #28 must remain open and no asset may be described as `study-ready` or accepted.
+Infrastructure can be completed with synthetic fixtures. Applying it to real candidates requires original geometry and provenance. The current six exact geometries were visually reviewed and locked under D-019. D-021 delegates internal `study-ready` evaluation to documented independent agent review, while any intentional visible geometry or family-design change returns to Human Review. Recruitment, privacy and consent commitments, launch, artwork acceptance, publication, release, and external action remain separately gated.

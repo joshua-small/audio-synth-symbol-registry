@@ -64,19 +64,19 @@ People who cannot access the visual stimulus must not be treated as incorrect re
 
 ## Pre-launch verification
 
-1. For construction, confirm each source asset has complete provenance and matches the authorized draft geometry lock. Before serving anything, obtain separate `study-ready` authorization.
+1. For construction, confirm each source asset has complete provenance and matches the authorized draft geometry lock. Before serving anything, obtain a separately documented internal `study-ready` decision after independent agent review under D-021.
 2. Generate and retain the plan and private answer key outside the participant-serving tree.
 3. Verify copied asset hashes against the locked stimulus hashes.
 4. Inspect the full public tree for semantic names, IDs, source paths, comments, metadata, and answer-key material.
 5. Render every form at required sizes and supported display modes.
 6. Verify form and forced-choice randomization and confirm no feedback appears between items.
 7. Exercise keyboard, zoom, contrast, error, resume, and submission behavior.
-8. Obtain the protocol's Human Review authorization before recruitment or launch.
+8. Obtain Human Review authorization for recruitment, the platform-specific privacy and consent commitments, and launch.
 
 ## Explicit omissions
 
 - No SVG geometry generator or geometric parameters.
-- No canonical or study-ready artwork files; the 0.2.0 binding consumes only the six authorized locked drafts and emits blind construction derivatives.
+- No predesignated study-ready or canonical artwork files; the 0.2.0 binding consumes only the six authorized locked drafts and emits blind construction derivatives.
 - No provenance claim for future artwork.
 - No participant identifiers, response storage, analytics, consent collection, incentives, or recruitment integration.
 - No claim of ISO 9186 conformance.

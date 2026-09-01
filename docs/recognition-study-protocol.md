@@ -40,7 +40,7 @@ Before launch, all of the following MUST exist:
 - Original SVG geometry and complete provenance declaration.
 - A locked `study-ready` rendering with a recorded cryptographic hash.
 - A scoring key and accepted aliases written before responses are reviewed.
-- Human Review authorization recorded in the PR and decision log.
+- An internal `study-ready` decision following documented independent agent review, plus separate Human Review authorization for recruitment, platform-specific privacy and consent commitments, and launch, recorded in the PR and decision log.
 - A privacy and consent notice appropriate to the recruitment method and jurisdiction.
 - A repository location for anonymized data, instrument text, analysis code, exclusions, and results.
 
