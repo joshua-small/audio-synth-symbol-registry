@@ -1,31 +1,31 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T20:55:21-07:00. This synthesis supersedes the historical [0.2.8 status synthesis](current-evidence-status-0.2.8.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-31T21:21:44-07:00. This synthesis supersedes the historical [0.2.9 status synthesis](current-evidence-status-0.2.9.md). It reports the mechanical reassessment of all six records after EV-120 through EV-151 and DA-014 through DA-017 and the independently reviewed D-021 candidate transition. No artwork, study, or external action is authorized.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.8 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.9 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
-| Assessments | 0.3.2, format 0.2.0 | `registry/assessments/registry-0.2.3-2026-08-31.json`; material EV-120, EV-130, and EV-131 await mechanical reassessment, while EV-150/EV-151 and DA-017 establish repertoire coherence without changing record readiness or assessment conclusions |
-| Derived analyses | 0.2.9, format 0.1.0 | `evidence/derived-analyses.json` |
+| Assessments | 0.3.3, format 0.2.0 | `registry/assessments/registry-0.2.9-2026-08-31.json`; independent adverse review passed |
+| Derived analyses | 0.2.10, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.7.0 | `package.json` |
 
 ## Current records
 
-All six records remain `evidence-collecting`:
+Band-pass is now the first `registry-candidate`; the other five records remain `evidence-collecting`:
 
 | ID | Score | Principal blockers |
 | --- | ---: | --- |
 | `asr:filter.high-pass` | 18/20 | Material `Low Cut` alias boundary |
 | `asr:filter.low-pass` | 18/20 | Material `High Cut` alias boundary |
-| `asr:filter.band-pass` | 18/20 | Candidate-eligible after independent review; live status intentionally unchanged by this spike |
-| `asr:filter.band-stop` | 12/20 | Notch boundary and pending mechanical assessment of EV-120, EV-130, and EV-131 |
-| `asr:filter.low-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
+| `asr:filter.band-pass` | 20/20 | `registry-candidate`; no candidate blocker or material question remains |
+| `asr:filter.band-stop` | 15/20 | Material Notch boundary; Notch-only evidence remains excluded |
+| `asr:filter.low-shelf` | 17/20 | Visual convergence, six-way recognition, and shelving-term disposition; bounded friction threshold now met |
 | `asr:filter.high-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
 
-Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101 close real target-use gaps: high-pass and low-pass have three qualifying independent axis-less implementations and band-pass has two. EV-120 now supplies a second separately published project-local Band Reject implementation. EV-130 and EV-131 independently ground `BSF` as engineering terminology, while EV-130 also preserves contradictory Notch-boundary wording. This evidence-only spike does not rewrite the current assessment snapshot or establish original outline authorship. High-pass and low-pass still fail the semantic floor because their cut-name boundaries remain material. Band-stop retains its Notch boundary and awaits separate mechanical reassessment. Band-pass clears the numerical and dimension floors and passed independent adverse review, so its assessment recommends `registry-candidate`; its live status remains unchanged because this bounded spike performs no lifecycle mutation. The shelf assessments remain unchanged at 17/20 and retain their existing blockers and three-independent-source safeguard open.
+The reassessment reproduces each score from direct ledger sources and counts publisher or implementation groups rather than URLs. High-pass and low-pass remain 18/20 because Ardour adds another implementation and DA-017 strengthens the stable semantic nuclei without resolving `Low Cut` or `High Cut` as unrestricted exact aliases. Band-pass rises to 20/20: DA-017 supports maximal semantic stability after adverse review, and Ardour joins Image-Line and DSSSP as the third direct axis-less implementation required for visual score 3. With every candidate floor satisfied and no hard blocker or material question, independent adverse review approved its reversible `registry-candidate` transition under D-021. Band-stop rises to 15/20 because Image-Line and Ardour establish two independent broad rejected-band renderings, while EV-130 and EV-131 ground `BSF`; its semantic score and hard blocker remain because Notch treatments still conflict. Both shelves stay 17/20: Ardour establishes another direct compact implementation, but its single-polarity stepped outlines do not establish the registry's sign-agnostic affected-side primitive. DA-016 closes only low shelf's bounded three-case friction threshold.
 
 ## Evidence synthesis
 
@@ -36,7 +36,7 @@ Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101
 - The two-prong fork is original research geometry. It is not accepted artwork or evidence of an established portable glyph convention.
 - No sampled source establishes `LS`, `HS`, `LSF`, or `HSF` as a portable fallback. Full `LOW SHELF` and `HIGH SHELF` fallbacks avoid that overclaim.
 - EV-070 through EV-073 and DA-009 establish a bounded, reproducible shelf-specific Unicode and standards overlap audit. It found no semantic equivalent, while identifying phonetic `SHELF` false positives and representative fork, routing, mathematical, bracket, and OCR near-miss families.
-- EV-080 through EV-084 document additional shelf communication cases, but only EV-083 qualifies under the project's existing record-specific friction rule; neither shelf record reaches three independent examples.
+- EV-080 through EV-084 document the earlier bounded shelf search. DA-016 later combines independent EV-121, EV-140, and EV-141 cases to meet its conservative recurrence threshold for low shelf only; high shelf has two qualifying cases.
 - EV-100 directly documents Image-Line's axis-less high-pass, low-pass, band-pass, and `Band stop` type selectors while keeping filter order separate.
 - EV-101 directly documents DSSSP's high-pass, low-pass, and band-pass custom-font components at an immutable commit. Its separate Notch component is excluded from band-stop evidence.
 - EV-120 directly documents Ardour's project-local Toolkit font mappings for all six active concepts, including separate Band Reject and Notch members. The raw ASCII slots are meaningless without the bundled font and stylesheet, so this is not portable text.
@@ -53,7 +53,7 @@ Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101
 - EV-110 through EV-118 and DA-013 map the current SEW proposal path. They confirm that independent character usage, community-level stability, and public plain-text interchange need remain the controlling Unicode blockers even if downstream technical proposal artifacts are completed.
 - DA-017 finds that the six concepts form a durable, coherent semantic response taxonomy across manufacturers, decades, education, standards-adjacent APIs, and open-source implementation. It explicitly does not establish universal standalone drawing identity or character use.
 
-Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 found no portable independent text use for any active concept. DA-015 closes the specifically named second-render and drafted-fallback provenance gaps without inferring assessment or lifecycle movement. DA-016 finds bounded recurring public communication friction only for low shelf under its conservative internal threshold; it does not establish portable character use, encoding necessity, or Unicode eligibility. DA-017 establishes semantic-taxonomy coherence but not universal form stability. Unicode remains `HOLD`.
+Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 establishes Ardour's direct project-local implementation while finding no portable independent text use. DA-015 closes the band-stop second-render and BSF-provenance gaps while preserving Notch exclusion. DA-016 finds bounded recurring public communication friction only for low shelf. DA-017 establishes semantic-taxonomy coherence but not universal form stability. Unicode remains `HOLD`.
 
 ## Current position
 
@@ -65,8 +65,8 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 ## Next evidence work
 
 1. Resolve the `Low Cut`/high-pass and `High Cut`/low-pass alias boundaries without presuming universal exactness.
-2. Mechanically reassess band-stop against EV-120, EV-130, and EV-131 without borrowing Notch-only evidence or presuming lifecycle movement.
-3. Continue the bounded search for independently published, record-specific plain-text friction and portable symbol use.
+2. Preserve band-pass candidate evidence while seeking the remaining public-use and community-support evidence; do not infer `registry-accepted` or Unicode readiness.
+3. Continue the bounded search for independently published, record-specific plain-text friction and portable symbol use, especially high shelf and band-stop.
 4. Use internal recognition validation to test six-way discrimination; do not infer industry adoption from original study artwork.
 5. Prepare a rights inventory for independently authored usage images.
 6. Run the merged provisional property simulations and complete names, ordering, cross-references, and rendering work; do not treat properties or a private font proof as substitutes for usage evidence.
@@ -138,3 +138,15 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 - Limitations: no semantic, alias, identifier, artwork, assessment, score, study, status, outreach, release, or external-position change; Unicode remains `HOLD`.
 - Validation: exact head `214b9df2b6b3c4aa8bf9a0f4a42a30b249d91fc2` passed `npm test` 112/112 and `git diff --check`; validation reported six records, six assessment sets, and 82 evidence sources at registry 0.2.8, and Agent Report hygiene passed.
 - Independent review: APPROVE at exact substantive head `214b9df2b6b3c4aa8bf9a0f4a42a30b249d91fc2` on base `33fe0279887a31ffc2623759fab8c4b05f766f05`; the reviewer independently verified preservation of EV-120 through EV-141 and DA-014 through DA-016, all 26 derived-artifact hashes, sequential versions, source digests and rights, semantic boundaries, Unicode `HOLD`, and the exact full suite. This approval-report-only annotation is permitted by that verdict.
+
+## Agent Report - 2026-08-31T21:21:44-07:00
+
+- Report status: in progress pending exact-transition-head confirmation.
+- Scope: mechanical reassessment of all six records against EV-120 through EV-151 and DA-014 through DA-017 under D-021.
+- Reproduced scores: high-pass 18/20; low-pass 18/20; band-pass 20/20; band-stop 15/20; low shelf 17/20; high shelf 17/20.
+- Independence: Ardour is one implementation group; Image-Line EV-054/EV-100 and DSSSP EV-005/EV-101 are each one group; derived analyses create no group. Band-stop counts Image-Line Band stop and Ardour Band Reject but excludes Ardour and DSSSP Notch members.
+- Threshold effects: low shelf meets DA-016's bounded three-case communication-friction threshold; high shelf does not. This does not establish portable character use, encoding necessity, or Unicode eligibility.
+- Result: independent adverse review approved the six scores and exact source grouping; `asr:filter.band-pass` moved to reversible `registry-candidate` under D-021, while the other five live statuses remain unchanged.
+- Boundaries: the candidate identifier remains provisional. No semantic field, identifier, alias, fallback, speech label, visible geometry, artwork status, study authority, outreach, release, or external-position change. Unicode remains `HOLD`.
+- Validation: the exact transitioned worktree passed `npm test` 113/113, registry validation for six records, seven assessment sets, and 82 evidence sources at registry 0.2.9, Agent Report hygiene, all 27 derived-artifact digests, proposal-skeleton drift coverage, and `git diff --check`. Exact committed-head confirmation is pending.
+- Independent review: APPROVE at exact pre-transition head `18c328037dcd0e1342398613ffae411ed7c6bc7e`; the reviewer independently fetched Ardour and DSSSP, reproduced all six scores and source groups, verified Notch exclusion and shelf conservatism, reconciled every derived digest, and confirmed the D-021 candidate boundary. Exact-final-head confirmation is pending.
