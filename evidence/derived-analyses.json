@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.17",
+  "registry_version": "0.2.18",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1947,7 +1947,7 @@
       "id": "DA-003",
       "version": "0.2.0",
       "title": "Current representation matrix",
-      "path": "docs/current-representation-matrix.md",
+      "path": "docs/current-representation-matrix-0.2.0.md",
       "kind": "corpus-analysis",
       "produced_at": "2026-08-31T22:46:13-07:00",
       "content_sha256": "1e2c3005b4f4e9a82878544bc19f4cdd05a237292918f19b2443d5c285d2f020",
@@ -2055,7 +2055,7 @@
       "id": "DA-006",
       "version": "0.2.17",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.17.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T23:55:22-07:00",
       "content_sha256": "981163c22ab85acec2992fbe0982a5a05cab269a423b6755f255fa77b8491b5f",
@@ -2083,6 +2083,145 @@
       "limitations": [
         "Both shelf records remain evidence-collecting at 19/20 with their live terminology and isolated-recognition questions unchanged pending separate review.",
         "Lexical response-class equivalence does not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-023",
+      "version": "0.1.0",
+      "title": "Band-stop text use and third-render dossier",
+      "path": "evidence/reports/2026-08-31-band-stop-text-and-third-render-dossier.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-09-01T00:19:18-07:00",
+      "content_sha256": "ae6c6eff3c0bd20c359e1d842c1d0b56b9e83dc8422941995b90c603f841ad0e",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-100",
+        "EV-120",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-015",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-020",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-021",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Tests whether a third independent broad-class axis-less Band-stop or Band-reject rendering and independent audio-specific non-UI text use are established under DA-020's source-local Notch transfer rule, without applying a score or lifecycle change.",
+      "limitations": [
+        "The purposive English-language corpus is not market-weighted; repeated pages within KVR, Sound On Sound, and Apple are collapsed by publisher rather than counted independently.",
+        "BR and BRF are context-dependent observations, not unrestricted aliases, and no common audio-chat BSF corpus, portable response-glyph text use, or independent drawing-required Band-stop case was established.",
+        "Third-render convergence establishes only an axis-less centered rejected-band primitive, not exact width, curvature, proportions, design lineage, authorship, artwork identity, reuse rights, project geometry, encoding necessity, or Unicode eligibility."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.18",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-09-01T00:19:18-07:00",
+      "content_sha256": "95868aee9f4ebf7b146a304d4d838ec92edfd766f38e8a25841e087cef1683af",
+      "input_evidence_ids": [
+        "EV-032",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.17"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after the evidence-only Band-stop text-use and third-render dossier, recommending but not applying later text, visual, or total-score changes.",
+      "limitations": [
+        "The current immutable Band-stop assessment remains 16/20 and registry-candidate; score incorporation requires a separate assessment snapshot and exact-head review.",
+        "The dossier does not establish an unrestricted BR alias, portable response-glyph use, artwork reuse rights, encoding necessity, or Unicode eligibility; DA-020 remains controlling and Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-003",
+      "version": "0.2.1",
+      "title": "Current representation matrix",
+      "path": "docs/current-representation-matrix.md",
+      "kind": "corpus-analysis",
+      "produced_at": "2026-09-01T00:19:18-07:00",
+      "content_sha256": "f59a14659d18e2ce8f217716a4f9c92da8333f2c8c8654d909093dfa25d97e5f",
+      "input_evidence_ids": [
+        "EV-002",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-032",
+        "EV-100",
+        "EV-101",
+        "EV-120",
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166",
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176",
+        "EV-180",
+        "EV-181",
+        "EV-182",
+        "EV-183",
+        "EV-184",
+        "EV-185",
+        "EV-186",
+        "EV-187",
+        "EV-188",
+        "EV-189",
+        "EV-200",
+        "EV-201",
+        "EV-202",
+        "EV-203",
+        "EV-204"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-003",
+          "artifact_version": "0.2.0"
+        },
+        {
+          "artifact_id": "DA-023",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Preserves the original eight-vendor matrix and current six-record dispositions while adding the third independent Band-stop render and the separate contextual-text versus portable-glyph finding.",
+      "limitations": [
+        "The accumulated source set is purposive rather than market-weighted and establishes neither ordinary portable response-glyph use nor common audio-chat BSF usage.",
+        "Notch-only forms remain non-transferable without explicit source-local mapping or contrast, and render convergence does not establish exact contour, common lineage, authorship, or reuse rights."
       ]
     }
   ]

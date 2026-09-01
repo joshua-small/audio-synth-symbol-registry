@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.3.2",
+  "ledger_version": "0.3.3",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -454,11 +454,29 @@
       "title": "Band-Rejection or Band-Stop filter plugin (not Band Pass)",
       "url": "https://www.kvraudio.com/forum/viewtopic.php?t=483762",
       "publication_date": "2017-04-27",
-      "accessed_on": "2026-08-29",
-      "location": "Forum discussion of band-rejection and notch behavior",
-      "direct_observation": "Participants explicitly disagree with treating notch and rejection filters as the same behavior while discussing audio plug-in requirements.",
-      "interpretation": "The thread is non-authoritative but demonstrates that audio-community usage does not guarantee an exact shared semantic boundary from the labels alone.",
-      "rights_note": "Linked discussion only; user content is summarized rather than reproduced."
+      "accessed_on": "2026-08-31",
+      "location": "Posts p6769026, p6769042, and p6918855 in the audio-plugin discussion",
+      "direct_observation": "The opening post uses Band-Rejection, Band-Stop, and BR while contrasting HP, LP, and BP plug-ins. A later post reports an HP/LP/BP/BR selector whose BR behavior differed from a typical notch filter, and another participant uses BPF and BRF while continuing the rejection-versus-notch distinction.",
+      "interpretation": "This is actual audio-community prose using BR and BRF in a locally recoverable band-rejection context. It also preserves direct counterevidence against unrestricted Notch equivalence, so the abbreviations remain context-dependent rather than global aliases.",
+      "rights_note": "Linked discussion only; user content is summarized rather than reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:43:33-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Posts p6769026, p6769042, and p6918855",
+        "stable_fragment": "Topic 483762 and post anchors p6769026, p6769042, p6918855",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "98293ae3394702a98f01ad39dd8eb930e0b5736d656fb1b35778d3f9b5365861",
+            "scope": "148910-byte HTML response from the public KVR topic URL"
+          },
+          "rights_basis": "The public discussion was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "Forum content is mutable, and the response contains per-request session-bearing URLs. Post IDs aid relocation, while the digest commits only to the inspected response and is not a stable upstream identity."
+        }
+      }
     },
     {
       "id": "EV-033",
@@ -2741,6 +2759,161 @@
           "checksum": null,
           "rights_basis": "The public vendor documentation was lawfully inspected; only metadata and factual observations are retained.",
           "limitations": "The rendered page is mutable and outside project control, and repeated raw responses changed during validation. One product topology cannot define all shelf implementations."
+        }
+      }
+    },
+    {
+      "id": "EV-200",
+      "type": "vendor-documentation",
+      "publisher": "Bitwig GmbH",
+      "title": "Bitwig Studio User Guide: Phase-4",
+      "url": "https://www.bitwig.com/userguide/latest/synth/#phase-4",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Phase-4 section; ordered filter-mode description and official Phase-4 screenshot, top filter row",
+      "direct_observation": "The guide orders eight filter modes as gentle low-pass, 4-pole low-pass, gentle band-pass, 4-pole band-pass, gentle high-pass, 4-pole high-pass, band-reject, and disabled. In the matching official screenshot, the penultimate compact selector is an axis-less centered valley.",
+      "interpretation": "The ordered prose binds the centered valley directly to Band-reject without borrowing a Notch-only form. Bitwig is a third publisher and implementation independent of Image-Line EV-100 and Ardour EV-120, establishing convergence on the axis-less centered rejected-band primitive but not exact contour, authorship, or reuse rights.",
+      "rights_note": "The public guide and screenshot were inspected for evidence only. No vendor interface, image, icon, contour, or artwork is copied, traced, retained in the repository, or claimed reusable.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:41:50-07:00",
+        "product": "Bitwig Studio Phase-4",
+        "product_version": null,
+        "exact_locator": "Phase-4 section filter-mode paragraph and screenshot asset 10 - PHASE-4.png; top filter row, penultimate mode",
+        "stable_fragment": "phase-4",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "5a822dd2a69db212997976054ed608f893cea93ce7b7e9b6170b790fb1993615",
+            "scope": "Ordered concatenation of the 143275-byte guide HTML response and 160222-byte, 1756 by 453 official PNG response; individual SHA-256 digests are recorded in DA-023"
+          },
+          "rights_basis": "The public vendor documentation and image were lawfully inspected; only metadata, factual observations, and digests are retained.",
+          "limitations": "The mutable latest-guide route and query-versioned image are outside project control. The capture establishes product-local mapping, not portable text use, common design lineage, outline authorship, or a reuse license."
+        }
+      }
+    },
+    {
+      "id": "EV-201",
+      "type": "community-discussion",
+      "publisher": "KVR Audio Community",
+      "title": "FM-style sound-design discussion with BR expansion",
+      "url": "https://www.kvraudio.com/forum/viewtopic.php?t=114226",
+      "publication_date": "2005-12-06",
+      "accessed_on": "2026-08-31",
+      "location": "Posts p1542235 and p1544880",
+      "direct_observation": "One participant recommends a BR filter while discussing how to reproduce a sound, and a later participant in the same thread explicitly expands BR as Band reject and identifies it as a filter type.",
+      "interpretation": "This is actual audio-community prose in which the compact BR form is locally unambiguous because the same discussion expands it. It corroborates contextual shorthand use but does not establish a universal alias, portable glyph interchange, or common BSF usage.",
+      "rights_note": "Linked discussion only; user content is summarized rather than reproduced.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:43:27-07:00",
+        "product": null,
+        "product_version": null,
+        "exact_locator": "Posts p1542235 and p1544880",
+        "stable_fragment": "Topic 114226 and post anchors p1542235, p1544880",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "436f5332baa3318b9413be7437ba702ae9082e77d3883f3efe1c6bd9d759a58d",
+            "scope": "172418-byte HTML response from the public KVR topic URL"
+          },
+          "rights_basis": "The public discussion was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "Forum content is mutable, and the response contains per-request session-bearing URLs. Post IDs aid relocation, while the digest commits only to the inspected response and is not a stable upstream identity."
+        }
+      }
+    },
+    {
+      "id": "EV-202",
+      "type": "journalism",
+      "publisher": "Sound On Sound",
+      "title": "ES2: Logic's Most Sophisticated Virtual Analogue Synth",
+      "url": "https://www.soundonsound.com/techniques/es2-logics-most-sophisticated-virtual-analogue-synth",
+      "publication_date": "2007",
+      "accessed_on": "2026-08-31",
+      "location": "Section 3, Filters",
+      "direct_observation": "The trade article enumerates ES2 Filter 1 settings in continuous explanatory prose and pairs BR directly with band-reject alongside Lo, Hi, Peak, and BP.",
+      "interpretation": "This is independent non-UI audio prose using BR unambiguously for Band-reject. Sound On Sound counts as one trade-media publisher group across EV-202 and EV-203.",
+      "rights_note": "Linked public trade journalism only; no article text, image, interface, contour, or artwork is copied or retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:45:37-07:00",
+        "product": "Logic ES2",
+        "product_version": null,
+        "exact_locator": "Section 3, Filters; paragraph enumerating Filter 1 settings",
+        "stable_fragment": "Path /techniques/es2-logics-most-sophisticated-virtual-analogue-synth",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "18f423c6081d2c245929b53d5063a59eb282c7376810e08fd5467288057c2304",
+            "scope": "155195-byte HTML response from the public Sound On Sound article URL"
+          },
+          "rights_basis": "The public article was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The article route is mutable and outside project control. This product-focused prose establishes contextual text use, not glyph-based interchange or a reusable visual form."
+        }
+      }
+    },
+    {
+      "id": "EV-203",
+      "type": "journalism",
+      "publisher": "Sound On Sound",
+      "title": "Programming Sonar 5's Pentagon I Soft Synth",
+      "url": "https://www.soundonsound.com/techniques/programming-sonar-5s-pentagon-i-soft-synth",
+      "publication_date": "2006",
+      "accessed_on": "2026-08-31",
+      "location": "Filter-routing discussion following the Pentagon I filter-routing figure",
+      "direct_observation": "In a practical programming example, the author instructs readers to set both filters to BR and immediately expands the abbreviation as band-reject before discussing independent cutoff control.",
+      "interpretation": "This is unambiguous non-UI audio prose using BR for Band-reject in an instructional sentence. It corroborates EV-202 within one Sound On Sound publisher group rather than adding a second independent publisher.",
+      "rights_note": "Linked public trade journalism only; no article text, image, interface, contour, or artwork is copied or retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:45:44-07:00",
+        "product": "Cakewalk Pentagon I",
+        "product_version": "Sonar 5 era",
+        "exact_locator": "Filter-routing discussion; paragraph beginning with the author's two preferred series-filter applications",
+        "stable_fragment": "Path /techniques/programming-sonar-5s-pentagon-i-soft-synth",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "f297e923908247fc3357009898be7a92b505bad3b169f6df6d05d7e22cdcfd57",
+            "scope": "151878-byte HTML response from the public Sound On Sound article URL"
+          },
+          "rights_basis": "The public article was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The article route is mutable and outside project control. Repeated articles from one publisher do not multiply independence, and this prose does not establish glyph-based interchange."
+        }
+      }
+    },
+    {
+      "id": "EV-204",
+      "type": "vendor-documentation",
+      "publisher": "Apple",
+      "title": "Sculpture filter parameters in Logic Pro for iPad",
+      "url": "https://support.apple.com/guide/logicpro-ipad/filter-lpipbe1143ab/3.3/ipados/26",
+      "publication_date": null,
+      "accessed_on": "2026-08-31",
+      "location": "Filter parameters; Filter type buttons; BR entry",
+      "direct_observation": "The versioned guide labels one Sculpture filter-type button BR, expands it as band reject, describes the rejected band, and then notes Band reject or notch filters in product-local prose.",
+      "interpretation": "Apple independently corroborates explicit BR labeling and preserves the source-local Band-reject/Notch mapping required by DA-020. As vendor documentation, it is not the non-UI prose basis and does not make BR an unrestricted registry alias.",
+      "rights_note": "Linked public vendor documentation only; no page text, screenshot, interface, contour, or artwork is copied or retained.",
+      "source_capture": {
+        "accessed_at": "2026-08-31T23:43:50-07:00",
+        "product": "Logic Pro for iPad Sculpture",
+        "product_version": "Guide 3.3 for iPadOS 26",
+        "exact_locator": "Article lpipbe1143ab; Filter parameters > Filter type buttons > BR (band reject)",
+        "stable_fragment": "lpipbe1143ab and versioned route /3.3/ipados/26",
+        "preservation": {
+          "mode": "checksum-only",
+          "archive_url": null,
+          "checksum": {
+            "algorithm": "sha256",
+            "digest": "2783d567f031aa94c10fbfa265057c47a55216095c52e8966e9c54a2e7f42242",
+            "scope": "1540844-byte HTML response from the versioned public Apple guide URL"
+          },
+          "rights_basis": "The public vendor documentation was lawfully inspected; only metadata, factual observations, and a response digest are retained.",
+          "limitations": "The vendor controls the versioned route and content. Product-local labeling does not establish non-UI interchange, a universal BR alias, exact Notch equivalence, or a reusable visual form."
         }
       }
     }

@@ -1,6 +1,6 @@
 # Current Representation Matrix
 
-Status as of 2026-09-01T00:19:18-07:00. This version preserves the original EV-006 through EV-013 matrix below and adds the current disposition from later direct evidence and DA-018 through DA-023. The immutable expanded predecessor is [version 0.2.0](current-representation-matrix-0.2.0.md), and the immutable original is [version 0.1.0](current-representation-matrix-0.1.0.md).
+Status as of 2026-08-31T22:46:13-07:00. This version preserves the original EV-006 through EV-013 matrix below and adds the current disposition from later direct evidence and DA-018 through DA-021. The immutable original is [version 0.1.0](current-representation-matrix-0.1.0.md).
 
 ## Purpose and scope
 
@@ -53,30 +53,23 @@ The matrix therefore supports two claims at different strengths:
 
 ## Current disposition after later evidence
 
-The original eight-source matrix remains accurate for its bounded 2026-08-29 source pass, but it is no longer the complete target-rendering corpus. Later evidence adds independent axis-less implementations for the pass, band-pass, and band-stop forms, plus three-vendor convergence on the shelf pair's affected-side two-prong topology. DA-023 also distinguishes actual Band-stop/Band-reject prose from portable glyph use.
+The original eight-source matrix remains accurate for its bounded 2026-08-29 source pass, but it is no longer the complete target-rendering corpus. Later evidence adds independent axis-less implementations for the pass, band-pass, and band-stop forms, plus three-vendor convergence on the shelf pair's affected-side two-prong topology.
 
 | Record | Current representation finding | Lifecycle result |
 | --- | --- | --- |
 | High-pass | At least three independent axis-less monotonic implementations converge; `Low Cut` is a bounded response-class alias only | 20/20, `registry-candidate` |
 | Low-pass | At least three independent axis-less monotonic implementations converge; `High Cut` is a bounded response-class alias only | 20/20, `registry-candidate` |
 | Band-pass | At least three independent axis-less centered-pass implementations converge | 20/20, `registry-candidate` |
-| Band-stop | Three independent explicit Band-stop/Band-reject implementations converge on an axis-less centered rejected-band primitive; KVR and Sound On Sound independently use the broad name or locally expanded BR in non-UI audio prose; Notch-only forms remain non-transferable without source-local mapping or contrast | 16/20, `registry-candidate`; DA-023 recommends later visual 3, text 3, and total 18/20 without applying them |
+| Band-stop | Two independent explicit Band-stop/Band-reject implementations converge; Notch-only forms remain non-transferable without source-local mapping or contrast | 16/20, `registry-candidate` |
 | Low shelf | Three independent implementations converge on an axis-free, sign-agnostic topology forked on the low-frequency left side | 19/20, `evidence-collecting` |
 | High shelf | Three independent implementations converge on an axis-free, sign-agnostic topology forked on the high-frequency right side | 19/20, `evidence-collecting` |
 
 Affected-side orientation is semantic for the shelf pair; arbitrary rotation or mirroring that changes the forked side is not equivalent. The convergence claim excludes polarity-specific alternatives, contextual graphs and controls, axes, baselines, parameters, interaction state, and exact contour or proportions. It does not establish isolated shelf/pass recognition, portable text use, reuse rights, Unicode eligibility, or standard-master status for project-authored geometry.
 
-For Band-stop, the three counted visual groups are Image-Line EV-100, Ardour EV-120, and Bitwig EV-200. Bitwig's ordered guide prose binds the penultimate Phase-4 selector directly to Band-reject; no Notch-only transfer is used. Publisher and implementation independence are established, while common design lineage and individual outline authorship remain unknown. The claim excludes exact width, curvature, proportions, slope, color, orientation changes, interaction state, artwork identity, and reuse rights.
-
-The text finding remains separate from glyph use. Enriched EV-032 directly uses full Band-Stop in non-UI KVR prose, while EV-201 corroborates Band-reject and source-local contextual BR; together they form one community publisher group. Sound On Sound EV-202 and EV-203 form one independent trade-media group using Band-reject and locally expanded BR; Apple EV-204 is vendor corroboration. These sources establish actual contextual use, not common BSF chat usage, a fallback change, an unrestricted BR alias, or use of the response graphic as a portable character.
-
 ## Limitations and next checks
 
 - The source set follows the existing ledger and is not weighted by sales, installed base, region, or user population.
 - Mutable online manuals may change after the snapshot date.
-- Mutable forum and journalism responses may change; their checksums commit to inspected responses but do not freeze upstream content.
 - `Not established` is not a claim that the product has no icon; it means the cited page does not establish one under this method.
-- SIR StandardGATE names Band stop behind a filter-type icon but does not bind a visible compact form to that member in the reviewed static material; EasyEffects names a band-reject mode without exposing a qualifying compact glyph. Both remain negative results.
-- BR and BRF observations remain context-dependent. No independent common audio-chat BSF corpus or response-glyph plain-text use was established.
 - Visual inspection of downloadable manuals or product builds could resolve some `axes not established` cells, but should be recorded as a new dated observation with product/build provenance.
 - A later machine-readable format may be warranted after observation categories stabilize. Creating one now would turn provisional research vocabulary into a compatibility commitment without improving the underlying evidence.
