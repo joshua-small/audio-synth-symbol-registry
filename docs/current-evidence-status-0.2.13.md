@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T22:14:43-07:00. This synthesis supersedes the historical [0.2.13 status synthesis](current-evidence-status-0.2.13.md). It preserves the private unencoded font-proof validation, Band-stop/Notch dossier, and pass/cut alias-equivalence dossier, then incorporates the evidence-only shelf-fork form-stability spike without changing an assessment, live record, artwork, study state, or external position.
+Status as of 2026-08-31T22:08:00-07:00. This synthesis supersedes the historical [0.2.12 status synthesis](current-evidence-status-0.2.12.md). It preserves the private unencoded font-proof validation and Band-stop/Notch dossier, then incorporates the evidence-only pass/cut alias-equivalence dossier without changing an assessment, live record, artwork, study state, or external position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.12 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.11 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
 | Assessments | 0.3.3, format 0.2.0 | `registry/assessments/registry-0.2.9-2026-08-31.json`; independent adverse review passed |
-| Derived analyses | 0.2.14, format 0.1.0 | `evidence/derived-analyses.json` |
+| Derived analyses | 0.2.13, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.8.0 | `package.json` |
 
 ## Current records
@@ -22,14 +22,12 @@ Band-pass is `registry-candidate`; the other five records remain `evidence-colle
 | `asr:filter.low-pass` | 18/20 | Bounded `High Cut` alias recommendation awaits separate semantic review |
 | `asr:filter.band-pass` | 20/20 | `registry-candidate`; no candidate blocker or material question remains |
 | `asr:filter.band-stop` | 15/20 | Current snapshot retains the material Notch boundary; DA-020 recommends resolving it by controlled-polysemy policy in a separate reassessment |
-| `asr:filter.low-shelf` | 17/20 | Pending mechanical incorporation of newly established topology convergence; six-way recognition and shelving-term disposition remain open; bounded friction threshold now met |
-| `asr:filter.high-shelf` | 17/20 | Pending mechanical incorporation of newly established topology convergence; six-way recognition and shelving-term disposition remain open; open friction safeguard |
+| `asr:filter.low-shelf` | 17/20 | Visual convergence, six-way recognition, and shelving-term disposition; bounded friction threshold now met |
+| `asr:filter.high-shelf` | 17/20 | Visual convergence, six-way recognition, shelving-term disposition, and open friction safeguard |
 
 Scores remain those of the immutable 0.3.3 assessment snapshot. DA-020 does not preempt the next assessment. It finds that the broad Band-stop/Band-reject semantic nucleus is stable even though `Notch` varies among narrow subtype, exact product/API synonym, response feature, and implementation-local mode. The stable containment rule is to keep Band-stop canonical, treat Notch as context-dependent and commonly narrower, and exclude Notch-only evidence unless its own source explicitly maps or contrasts the broad concept.
 
 DA-018 likewise does not preempt a semantic review or assessment. It supports `Low Cut` -> high-pass and `High Cut` -> low-pass as bounded audio filter-type response-class aliases while directly rejecting universal implementation and arbitrary-phrase equivalence. The current aliases and live records remain unchanged.
-
-DA-019 does not preempt a shelf reassessment. EV-170 through EV-172 establish three independent Apple, Ableton, and Avid implementations of the mirrored, axis-free, sign-agnostic affected-side two-prong shelf topology with signed gain handled separately. This resolves the topology-existence question, while exact locked contours and proportions remain original project implementation and isolated recognition remains unproved.
 
 ## New evidence and recommendations
 
@@ -43,13 +41,10 @@ DA-019 does not preempt a shelf reassessment. EV-170 through EV-172 establish th
 - EV-189 documents a general two-edge MathWorks Band-stop implementation.
 - EV-160 through EV-166 add explicit pass/cut pairings across Steinberg, Apple, Icon Collective, Stanford Exploration Project, Sound Devices, and ToneShiftEQ; existing W3C EV-150 remains the standards-adjacent comparator.
 - Apple EV-161 and Steinberg HALion EV-162 directly show why a response-class alias cannot promise identical parameters or universal product behavior.
-- EV-170 through EV-172 establish cross-vendor shelf-fork topology convergence; EV-173 and EV-174 preserve polarity-bearing and polarity-dependent counterexamples; EV-175 and EV-176 are excluded from exact-form counting.
 
 DA-020 recommends that the next mechanical Band-stop reassessment raise semantic stability from 2 to 3 and close the material Notch blocker by policy, while preserving contradictory naming as non-material interoperability caution. `Notch` should remain outside exact aliases, and no Notch-only implementation, glyph, or usage should transfer without an explicit source-local mapping or contrast.
 
 DA-018 recommends a separate D-021 semantic review that retains the existing inverse cut aliases with an explicit audio filter-type boundary. Order, slope, Q/resonance, phase, cutoff convention, parameter, and preset equivalence remain excluded. Capitalization and space/hyphen variation are orthographic lookup normalization, not additional aliases; `low cutoff` and arbitrary phrases such as `cut the lows` do not transfer.
-
-DA-019 supports a future visual-convergence score 3 only after a mechanical assessment explicitly verifies record-level exclusions for axes, color, parameter values, slope, orientation changes, interaction state, and exact proportions. It does not establish portable text use, identical artwork, reuse rights, or Unicode eligibility.
 
 The remaining gaps are unaffected:
 
@@ -74,17 +69,6 @@ The [private unencoded font proof](private-unencoded-font-proof-2026-08-31.md) r
 3. Seek a third independent explicit axis-less Band-stop/Band-reject implementation and independently published portable text-friction evidence.
 4. Continue private six-way recognition validation without treating original study artwork as industry adoption.
 5. Preserve the private proof findings without treating font feasibility as a substitute for independent character use or Unicode eligibility.
-6. Mechanically reassess both shelf records against DA-019 while preserving six-way recognition, exact-artwork, interchange, and Unicode blockers.
-
-## Agent Report - 2026-08-31T22:14:43-07:00
-
-- Report status: completed after sequential integration and exact-head adverse confirmation; CI and merge remain pending.
-- Sequential integration: rebased after the private font proof, Band-stop/Notch dossier, and pass/cut alias dossier; tooling 0.8.0 and DA-006 v0.2.11 through v0.2.13 are preserved immutably, with this synthesis allocated as DA-006 v0.2.14 and consuming historical v0.2.13.
-- Scope: EV-170 through EV-176 and DA-019, limited to shelf-fork form stability, topology/contour distinction, negative forms, and exact-form exclusions.
-- Result: the mirrored, sign-agnostic affected-side two-prong topology is independently established; the exact locked path remains original project implementation.
-- Exclusions: no live record, assessment, semantic field, alias, identifier, status, artwork, study, Unicode position, release, outreach, or external-authority change. Unicode remains `HOLD`.
-- Validation: the sequentially rebased worktree passed `npm test` 117/117, registry validation for six records, seven assessment sets, and 106 evidence sources at registry 0.2.12 with tooling 0.8.0, Agent Report hygiene, historical and current derived-artifact hash reconciliation, JSON parsing, and `git diff --check`.
-- Independent review: APPROVE at exact sequential-integration head `38cb93f28de4883c438c9372fc9abd23c292a79e` on base `6d2ddd4c2f3b980f887336110b66dcad67cc5893`. The reviewer confirmed the prior substantive verdict survives byte-for-byte; EV-170 through EV-176 have no ID collision; all 34 derived hashes and the sequential SemVer chain reconcile; DA-018, DA-020, the private proof, tooling 0.8.0, protected trees, and Unicode `HOLD` remain intact; fresh `npm test` passes 117/117; and the stable FabFilter JPEG digest reproduces. This approval-report-only annotation is permitted by that verdict.
 
 ## Agent Report - 2026-08-31T21:38:59-07:00
 
