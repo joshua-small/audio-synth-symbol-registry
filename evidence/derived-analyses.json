@@ -1,7 +1,7 @@
 {
   "$schema": "../registry/schema/derived-analysis-registry.schema.json",
   "schema_version": "0.1.0",
-  "registry_version": "0.2.14",
+  "registry_version": "0.2.15",
   "artifacts": [
     {
       "id": "DA-001",
@@ -1760,7 +1760,7 @@
       "id": "DA-006",
       "version": "0.2.14",
       "title": "Current evidence-status synthesis",
-      "path": "docs/current-evidence-status.md",
+      "path": "docs/current-evidence-status-0.2.14.md",
       "kind": "status-synthesis",
       "produced_at": "2026-08-31T22:14:43-07:00",
       "content_sha256": "5e52e3a24e9938e8d320732d1cba84c7eb6ff31287a0b8d12711a579b7016dc0",
@@ -1787,6 +1787,110 @@
       "limitations": [
         "The current immutable shelf scores predate EV-170 through EV-176 and DA-019; score incorporation requires a new assessment snapshot.",
         "Topology convergence does not establish isolated recognition, portable text use, identical contour, artwork reuse rights, or Unicode eligibility; Unicode remains HOLD."
+      ]
+    },
+    {
+      "id": "DA-021",
+      "version": "0.1.0",
+      "title": "Six-record semantic disposition",
+      "path": "evidence/reports/2026-08-31-six-record-semantic-disposition.md",
+      "kind": "boundary-analysis",
+      "produced_at": "2026-08-31T22:23:49-07:00",
+      "content_sha256": "391ef15b3c0eb38536a7746bf2d5719af2579ca5c4ea212896fb97085dbbc951",
+      "input_evidence_ids": [
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166",
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176",
+        "EV-180",
+        "EV-181",
+        "EV-182",
+        "EV-183",
+        "EV-184",
+        "EV-185",
+        "EV-186",
+        "EV-187",
+        "EV-188",
+        "EV-189"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-018",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-019",
+          "artifact_version": "0.1.0"
+        },
+        {
+          "artifact_id": "DA-020",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Applies bounded pass/cut response-class aliases, Band-stop/Notch controlled polysemy, and independently established shelf topology and orientation to five live provisional records without reassessment or lifecycle movement.",
+      "limitations": [
+        "The semantic dispositions do not establish implementation equivalence, an unconditional Notch alias, isolated shelf recognition, portable text use, artwork reuse rights, or Unicode eligibility.",
+        "The current immutable assessment predates these live-record clarifications; no score, blocker, eligibility, or lifecycle conclusion changes in this artifact."
+      ]
+    },
+    {
+      "id": "DA-006",
+      "version": "0.2.15",
+      "title": "Current evidence-status synthesis",
+      "path": "docs/current-evidence-status.md",
+      "kind": "status-synthesis",
+      "produced_at": "2026-08-31T22:23:49-07:00",
+      "content_sha256": "fea141910257376b74035cf623dbc6dfa5ae88c468c9162e3472b77301d56db8",
+      "input_evidence_ids": [
+        "EV-160",
+        "EV-161",
+        "EV-162",
+        "EV-163",
+        "EV-164",
+        "EV-165",
+        "EV-166",
+        "EV-170",
+        "EV-171",
+        "EV-172",
+        "EV-173",
+        "EV-174",
+        "EV-175",
+        "EV-176",
+        "EV-180",
+        "EV-181",
+        "EV-182",
+        "EV-183",
+        "EV-184",
+        "EV-185",
+        "EV-186",
+        "EV-187",
+        "EV-188",
+        "EV-189"
+      ],
+      "input_artifact_refs": [
+        {
+          "artifact_id": "DA-006",
+          "artifact_version": "0.2.14"
+        },
+        {
+          "artifact_id": "DA-021",
+          "artifact_version": "0.1.0"
+        }
+      ],
+      "scope": "Superseding six-record status synthesis after applying the bounded semantic dispositions from DA-018 through DA-021 without reassessment, lifecycle movement, artwork change, or external action.",
+      "limitations": [
+        "The current immutable scores and statuses remain unchanged pending a separate mechanical reassessment and exact-head independent review.",
+        "Resolved semantic and topology questions do not establish isolated recognition, portable character use, artwork acceptance, encoding necessity, or Unicode eligibility; Unicode remains HOLD."
       ]
     }
   ]
