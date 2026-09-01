@@ -86,6 +86,8 @@ Tooling 0.7.0 adds a private, offline, synthetic-only participant-surface harnes
 
 Tooling 0.8.0 adds deterministic construction and validation for a private, cmap-free, unencoded six-glyph font proof plus a separate abstract character-property simulator. Generated font bytes, specimens, and simulation output must remain outside the repository. This version allocates no Unicode or Private Use Area code points, changes no locked SVG bytes, publishes no font, and does not change registry, evidence, schema, artwork, or study-package versions.
 
+Tooling 0.9.0 adds deterministic construction and validation for a private, non-PUA SVG and Iconify-style package over the six byte-locked draft sources. Generated manifests, byte-identical individual SVGs, a sprite, Iconify JSON, typed fail-closed whole-label alias lookup, unique-ID inline accessibility examples, and integrity commitments must remain outside the repository. The package keeps Unicode, SMuFL, and Private Use Area code points explicitly null; preserves unpublished, noncanonical, unaccepted artwork state; selects no package-output publication license; and authorizes no release or external use.
+
 Derived analyses 0.2.11 preserves DA-006 0.2.10 at its immutable historical path and adds the superseding current synthesis as DA-006 0.2.11. It records tooling 0.8.0 and the internal proof result without treating private technical validation as an independent evidence source or changing any record, assessment, artwork, or Unicode position.
 
 ## Compatibility rules

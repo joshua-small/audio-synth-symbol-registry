@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://audio-synth-symbol-registry.invalid/private-icon-package-manifest.schema.json",
+  "title": "Private audio filter icon package manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "package", "source", "boundaries", "icons"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "format_version", "visibility", "canonical", "published", "license"],
+      "properties": {
+        "name": { "const": "asr-private-filter-icons" },
+        "format_version": { "const": "0.1.0" },
+        "visibility": { "const": "private-internal" },
+        "canonical": { "const": false },
+        "published": { "const": false },
+        "license": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_artwork", "package_output", "publication_license_selected"],
+          "properties": {
+            "source_artwork": { "const": "CC0-1.0" },
+            "package_output": { "type": "null" },
+            "publication_license_selected": { "const": false }
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["registry_version", "registry_schema_version", "artwork_version", "artwork_publication_status", "artwork_canonical_assets", "artwork_lock_id"],
+      "properties": {
+        "registry_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "registry_schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "artwork_version": { "const": "0.0.0" },
+        "artwork_publication_status": { "const": "unpublished" },
+        "artwork_canonical_assets": { "type": "array", "maxItems": 0 },
+        "artwork_lock_id": { "const": "six-member-compact-a-2026-08-30" }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated_outside_repository", "source_geometry_authoritative", "unicode_hold_changed", "artwork_accepted", "external_release_authorized", "character_interchange_claimed"],
+      "properties": {
+        "generated_outside_repository": { "const": true },
+        "source_geometry_authoritative": { "const": true },
+        "unicode_hold_changed": { "const": false },
+        "artwork_accepted": { "const": false },
+        "external_release_authorized": { "const": false },
+        "character_interchange_claimed": { "const": false }
+      }
+    },
+    "icons": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "$ref": "#/definitions/icon" }
+    }
+  },
+  "definitions": {
+    "nullableMapping": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "relationship", "evidence_id"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "relationship": { "enum": ["exact-class", "related-only"] },
+            "evidence_id": { "type": "string", "pattern": "^EV-[0-9]{3}$" }
+          }
+        }
+      ]
+    },
+    "icon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_id", "package_key", "name", "definition", "aliases", "related_terms", "alias_policy", "text_fallback", "spoken_label", "registry_status", "artwork", "svg", "accessibility", "external_mappings", "code_points"],
+      "properties": {
+        "semantic_id": { "type": "string", "pattern": "^asr:filter\\.[a-z-]+$" },
+        "package_key": { "type": "string", "pattern": "^filter-[a-z-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string", "minLength": 1 },
+        "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "related_terms": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "alias_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["match_scope", "exact_labels", "allowed_lookup_labels", "related_only_labels", "blocked_examples", "normalization", "explicit_product_documentation", "prohibited_inference"],
+          "properties": {
+            "match_scope": { "const": "whole-label-audio-filter-response-class-only" },
+            "exact_labels": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+            "allowed_lookup_labels": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+            "related_only_labels": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+            "blocked_examples": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+            "normalization": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ascii_case_fold", "trim_outer_ascii_whitespace", "attributive_separator_variants", "other_separator_changes", "morphological_inference"],
+              "properties": {
+                "ascii_case_fold": { "const": true },
+                "trim_outer_ascii_whitespace": { "const": true },
+                "attributive_separator_variants": { "const": "first-internal-space-or-hyphen-only" },
+                "other_separator_changes": { "const": false },
+                "morphological_inference": { "const": false }
+              }
+            },
+            "explicit_product_documentation": { "const": "overrides-and-disables-generic-lookup" },
+            "prohibited_inference": {
+              "type": "array",
+              "minItems": 6,
+              "uniqueItems": true,
+              "items": { "enum": ["substring", "arbitrary-phrase", "morphological", "parameter", "implementation", "preset", "algorithm", "product-behavior"] }
+            }
+          }
+        },
+        "text_fallback": { "type": "string", "minLength": 1 },
+        "spoken_label": { "type": "string", "minLength": 1 },
+        "registry_status": { "enum": ["evidence-collecting", "registry-candidate"] },
+        "artwork": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["family", "asset_id", "source_asset_status", "registry_asset_status", "publication_status", "canonical", "accepted"],
+          "properties": {
+            "family": { "const": "compact-a" },
+            "asset_id": { "type": "string", "pattern": "^asr-art:compact-a\\.filter\\.[a-z-]+$" },
+            "source_asset_status": { "const": "draft" },
+            "registry_asset_status": { "const": "not-yet-drawn" },
+            "publication_status": { "const": "unpublished" },
+            "canonical": { "const": false },
+            "accepted": { "const": false }
+          }
+        },
+        "svg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["view_box", "sha256", "source_path", "package_path", "provenance_path", "source_bytes_preserved"],
+          "properties": {
+            "view_box": { "const": "0 0 24 24" },
+            "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "source_path": { "type": "string", "pattern": "^artwork/candidates/compact-a/svg/" },
+            "package_path": { "type": "string", "pattern": "^svg/filter-[a-z-]+\\.svg$" },
+            "provenance_path": { "type": "string", "pattern": "^artwork/candidates/compact-a/provenance/" },
+            "source_bytes_preserved": { "const": true }
+          }
+        },
+        "accessibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["informative_alt", "control_label", "decorative_hidden", "iconify_default_hidden", "color_inherits_current_color"],
+          "properties": {
+            "informative_alt": { "type": "string", "minLength": 1 },
+            "control_label": { "type": "string", "minLength": 1 },
+            "decorative_hidden": { "const": true },
+            "iconify_default_hidden": { "const": true },
+            "color_inherits_current_color": { "const": true }
+          }
+        },
+        "external_mappings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fontaudio_iconify", "ardour_toolkit", "dsssp", "smufl_glyph_name"],
+          "properties": {
+            "fontaudio_iconify": { "$ref": "#/definitions/nullableMapping" },
+            "ardour_toolkit": { "$ref": "#/definitions/nullableMapping" },
+            "dsssp": { "$ref": "#/definitions/nullableMapping" },
+            "smufl_glyph_name": { "type": "null" }
+          }
+        },
+        "code_points": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["unicode", "smufl", "private_use"],
+          "properties": {
+            "unicode": { "type": "null" },
+            "smufl": { "type": "null" },
+            "private_use": { "type": "null" }
+          }
+        }
+      }
+    }
+  }
+}
