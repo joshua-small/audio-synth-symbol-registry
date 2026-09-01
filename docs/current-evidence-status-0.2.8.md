@@ -1,15 +1,15 @@
 # Current Evidence Status
 
-Status as of 2026-08-31T20:55:21-07:00. This synthesis supersedes the historical [0.2.8 status synthesis](current-evidence-status-0.2.8.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
+Status as of 2026-08-31T20:45:43-07:00. This synthesis supersedes the historical [0.2.7 status synthesis](current-evidence-status-0.2.7.md). It reports repository state; it does not promote records, accept artwork, authorize a study, or change the project's external-standards position.
 
 ## Current artifacts
 
 | Artifact | Version | Current authority |
 | --- | --- | --- |
-| Registry and evidence ledger | 0.2.8 | `registry/registry-metadata.json` and `evidence/ledger.json` |
+| Registry and evidence ledger | 0.2.7 | `registry/registry-metadata.json` and `evidence/ledger.json` |
 | Schema | 0.4.0 | `registry/registry-metadata.json` |
-| Assessments | 0.3.2, format 0.2.0 | `registry/assessments/registry-0.2.3-2026-08-31.json`; material EV-120, EV-130, and EV-131 await mechanical reassessment, while EV-150/EV-151 and DA-017 establish repertoire coherence without changing record readiness or assessment conclusions |
-| Derived analyses | 0.2.9, format 0.1.0 | `evidence/derived-analyses.json` |
+| Assessments | 0.3.2, format 0.2.0 | `registry/assessments/registry-0.2.3-2026-08-31.json`; material EV-120, EV-130, and EV-131 await mechanical reassessment |
+| Derived analyses | 0.2.8, format 0.1.0 | `evidence/derived-analyses.json` |
 | Tooling | 0.7.0 | `package.json` |
 
 ## Current records
@@ -46,14 +46,11 @@ Scores are readiness diagnostics, not status promotion. DA-012 and EV-100/EV-101
 - EV-131 independently expands Band-Stop Filter to `BSF` in a university course and supplies an axis-bearing teaching diagram; it is terminology support, not an axis-less target implementation or portable-text case.
 - EV-140 documents a public low-shelf and high-shelf identification failure in which missing vendor documentation forced cross-product visual comparison.
 - EV-141 documents a current vendor-manual copy-and-label defect that calls low-shelf choices and controls high-shelf items.
-- EV-150 pins the Web Audio API's six relevant semantic neighborhoods, including separate signed shelf gain and product-local treatment of notch as band-stop/band-rejection.
-- EV-151 pins JUCE APIs that independently preserve the pass, notch, and shelf neighborhoods without defining a glyph vocabulary.
 - EV-054/EV-100 count as one Image-Line independence group, and EV-005/EV-101 count as one DSSSP group. URLs and revisits do not multiply independent sources.
 - Image-Line's mixed `Notch` and `Band stop` wording is product-local and does not resolve the cross-domain D-011/DA-004 boundary.
 - EV-110 through EV-118 and DA-013 map the current SEW proposal path. They confirm that independent character usage, community-level stability, and public plain-text interchange need remain the controlling Unicode blockers even if downstream technical proposal artifacts are completed.
-- DA-017 finds that the six concepts form a durable, coherent semantic response taxonomy across manufacturers, decades, education, standards-adjacent APIs, and open-source implementation. It explicitly does not establish universal standalone drawing identity or character use.
 
-Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 found no portable independent text use for any active concept. DA-015 closes the specifically named second-render and drafted-fallback provenance gaps without inferring assessment or lifecycle movement. DA-016 finds bounded recurring public communication friction only for low shelf under its conservative internal threshold; it does not establish portable character use, encoding necessity, or Unicode eligibility. DA-017 establishes semantic-taxonomy coherence but not universal form stability. Unicode remains `HOLD`.
+Derived reports DA-001 through DA-010 and DA-012 through DA-016 organize and constrain the direct evidence. DA-011 remains reserved and unused. Derived reports are not additional independent sources and are not double-counted in assessment scores. DA-014 found no portable independent text use for any active concept. DA-015 closes the specifically named second-render and drafted-fallback provenance gaps without inferring assessment or lifecycle movement. DA-016 finds bounded recurring public communication friction only for low shelf under its conservative internal threshold; it does not establish portable character use, encoding necessity, or Unicode eligibility. Unicode remains `HOLD`.
 
 ## Current position
 
@@ -68,8 +65,9 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 2. Mechanically reassess band-stop against EV-120, EV-130, and EV-131 without borrowing Notch-only evidence or presuming lifecycle movement.
 3. Continue the bounded search for independently published, record-specific plain-text friction and portable symbol use.
 4. Use internal recognition validation to test six-way discrimination; do not infer industry adoption from original study artwork.
-5. Prepare a rights inventory for independently authored usage images.
-6. Run the merged provisional property simulations and complete names, ordering, cross-references, and rendering work; do not treat properties or a private font proof as substitutes for usage evidence.
+5. Build a decade-spanning repertoire-boundary and glyph-stability dossier that preserves divergent conventions.
+6. Prepare a rights inventory for independently authored usage images.
+7. Run the merged provisional property simulations and complete names, ordering, cross-references, and rendering work; do not treat properties or a private font proof as substitutes for usage evidence.
 
 ## Agent Report - 2026-08-31T20:00:07-07:00
 
@@ -126,15 +124,3 @@ Derived reports DA-001 through DA-010 and DA-012 through DA-017 organize and con
 - Limitations: the casebook is not a prevalence estimate and establishes neither portable character use nor Unicode eligibility; no semantic, alias, identifier, artwork, assessment, score, study, status, outreach, release, or external-position change is implied; Unicode remains `HOLD`.
 - Validation: exact current substantive worktree passed `npm test` 112/112 and `git diff --check`; registry validation reported six records, six assessment sets, and 80 evidence sources at registry 0.2.7, and Agent Report hygiene passed.
 - Independent review: APPROVE at exact substantive head `10c6bee29f94de25a3b8f940c6b39fe64ca5d660` on base `694f015dcf2cf96e754306078fa253320a5d4d0c`; the reviewer verified sequential versions, immutable status hashes and dependencies, DA-016 and EV inputs, threshold arithmetic, source independence, exclusions, Unicode HOLD, unchanged live records, and 112/112 tests. This approval-report-only annotation is permitted by that verdict.
-
-## Agent Report - 2026-08-31T20:55:21-07:00
-
-- Report status: completed after sequential-lane rebase and exact-head adverse re-review.
-- Scope: six-concept repertoire stability and semantic-boundary synthesis; assessments and all six live records remain unchanged.
-- Evidence: EV-150 and EV-151, synthesizing the existing manufacturer, historical, education, engineering, standards-adjacent, open-source, and terminology corpus without double-counting derived reports.
-- Derived inputs: DA-002, DA-003, DA-004, DA-007, DA-008, DA-009, DA-012, DA-013, and DA-017; none is counted as independent evidence.
-- Result: the six active concepts form a coherent and durable semantic response taxonomy. Universal drawing identity, portable character use, and Unicode eligibility remain unestablished.
-- Boundaries: notch remains a related, commonly narrower or context-dependent term for band-stop; low/high cut relationships remain unresolved as unrestricted exact aliases; shelf gain sign remains separate state.
-- Limitations: no semantic, alias, identifier, artwork, assessment, score, study, status, outreach, release, or external-position change; Unicode remains `HOLD`.
-- Validation: exact head `214b9df2b6b3c4aa8bf9a0f4a42a30b249d91fc2` passed `npm test` 112/112 and `git diff --check`; validation reported six records, six assessment sets, and 82 evidence sources at registry 0.2.8, and Agent Report hygiene passed.
-- Independent review: APPROVE at exact substantive head `214b9df2b6b3c4aa8bf9a0f4a42a30b249d91fc2` on base `33fe0279887a31ffc2623759fab8c4b05f766f05`; the reviewer independently verified preservation of EV-120 through EV-141 and DA-014 through DA-016, all 26 derived-artifact hashes, sequential versions, source digests and rights, semantic boundaries, Unicode `HOLD`, and the exact full suite. This approval-report-only annotation is permitted by that verdict.

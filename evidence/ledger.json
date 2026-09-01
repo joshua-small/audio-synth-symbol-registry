@@ -1,5 +1,5 @@
 {
-  "ledger_version": "0.2.7",
+  "ledger_version": "0.2.8",
   "accessed_on": "2026-09-01",
   "sources": [
     {
@@ -1717,6 +1717,68 @@
           "limitations": "The page is mutable, the digest includes dynamic page markup, and the error may be corrected without notice."
         }
       }
-    }
+    },
+      {
+        "id": "EV-150",
+        "type": "standards-reference",
+        "publisher": "W3C Audio Working Group",
+        "title": "Web Audio API Editor's Draft: BiquadFilterType",
+        "url": "https://github.com/WebAudio/web-audio-api/blob/bfc7143fcf798a5a0fc056a2e31f78f679e219ea/index.bs",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "Immutable commit bfc7143fcf798a5a0fc056a2e31f78f679e219ea, index.bs lines 6562-6694 and BiquadFilterNode parameter definitions",
+        "direct_observation": "The normative enum groups lowpass, highpass, bandpass, lowshelf, highshelf, peaking, notch, and allpass as distinct filter types. It defines notch as also known as band-stop or band-rejection, defines low and high shelves by affected frequency side, and uses a separate signed gain parameter for both shelves. The specification prescribes semantic tokens and transfer behavior, not standalone glyph forms.",
+        "interpretation": "This independently maintained implementation standard supports a coherent core family containing the project's six concepts while preserving two boundaries: notch is the API's term for a band-stop/band-rejection behavior, and shelf polarity is parameter state rather than type identity. It establishes semantic repertoire stability in software, not community glyph identity or Unicode character use.",
+        "rights_note": "The public W3C specification source was inspected at an immutable Git commit. No specification text, diagrams, or code are redistributed beyond source metadata, a digest, and short factual summary.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T20:21:44-07:00",
+          "product": "Web Audio API",
+          "product_version": "Editor's Draft at bfc7143fcf798a5a0fc056a2e31f78f679e219ea",
+          "exact_locator": "index.bs lines 6562-6694; BiquadFilterNode type, Q, frequency, and gain definitions",
+          "stable_fragment": "Git commit bfc7143fcf798a5a0fc056a2e31f78f679e219ea",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "81e7d84df0623c7d94a86d4ae03c2641349f1c487d809a7f236abe1f0aab7670",
+              "scope": "Raw index.bs bytes at Git commit bfc7143fcf798a5a0fc056a2e31f78f679e219ea"
+            },
+            "rights_basis": "The public specification repository was lawfully inspected at an immutable commit; only metadata and a digest are recorded.",
+            "limitations": "The editor's draft can change after the pinned commit. Its semantic API taxonomy does not prescribe visual representations or prove character-like use."
+          }
+        }
+      },
+      {
+        "id": "EV-151",
+        "type": "engineering-reference",
+        "publisher": "JUCE contributors",
+        "title": "JUCE DSP filter type and coefficient APIs at commit 7aae7d8e8deb8413bb01633d2795ef9974a181c5",
+        "url": "https://github.com/juce-framework/JUCE/tree/7aae7d8e8deb8413bb01633d2795ef9974a181c5/modules/juce_dsp",
+        "publication_date": null,
+        "accessed_on": "2026-08-31",
+        "location": "modules/juce_dsp/processors/juce_StateVariableTPTFilter.h and juce_IIRFilter.h",
+        "direct_observation": "JUCE's state-variable filter enum distinguishes lowpass, bandpass, and highpass. Its IIR coefficient API separately exposes notch plus low-pass shelf and high-pass shelf constructors with variable Q and gain. The API represents these as named software operations and does not define a glyph vocabulary.",
+        "interpretation": "An independent audio-development framework preserves the same six semantic neighborhoods even though its API surface is split by implementation class and uses notch rather than band-stop. This corroborates stable software concepts while showing that repertoire cohesion does not require one uniform naming layer or one drawing.",
+        "rights_note": "The public JUCE repository was inspected at an immutable commit. The reviewed modules are offered under AGPLv3/commercial licensing; no source file or implementation code is copied into this repository.",
+        "source_capture": {
+          "accessed_at": "2026-08-31T20:21:44-07:00",
+          "product": "JUCE",
+          "product_version": "Git commit 7aae7d8e8deb8413bb01633d2795ef9974a181c5",
+          "exact_locator": "juce_StateVariableTPTFilter.h lines 38-53; juce_IIRFilter.h notch and low/high shelf coefficient declarations",
+          "stable_fragment": "Git commit 7aae7d8e8deb8413bb01633d2795ef9974a181c5",
+          "preservation": {
+            "mode": "checksum-only",
+            "archive_url": null,
+            "checksum": {
+              "algorithm": "sha256",
+              "digest": "45d38cf49cc7dd2dab36b0c2b9a170220225dee28ecb072788cf00e6fa734e18",
+              "scope": "Concatenation in lexical path order of raw juce_IIRFilter.h (sha256 219d1eac2bc74a5c3e00824eb41e4c656e67337b28c00437657368a40f29ad9a) and juce_StateVariableTPTFilter.h (sha256 4e1155bc20fd577450bac6749740256f7d9595e106f5bdfdbbdcd4be8ef19377) bytes at the pinned commit"
+            },
+            "rights_basis": "The public repository was lawfully inspected at an immutable commit; only metadata and digests are recorded. No reuse right is claimed under either JUCE module license.",
+            "limitations": "The combined digest is an evidence commitment, not a redistribution. JUCE APIs establish implementation semantics, not historical priority, glyph form, or Unicode eligibility."
+          }
+        }
+      }
   ]
 }
