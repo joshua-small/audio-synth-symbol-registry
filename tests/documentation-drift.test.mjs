@@ -83,6 +83,31 @@ test("font strategy preserves the unencoded HOLD boundary", async () => {
   assert.match(fontStrategy, /font proves renderability rather than encoding need/i);
 });
 
+test("internal Unicode skeleton remains visibly non-submittable and covers all live records", async () => {
+  const [skeleton, symbolFiles] = await Promise.all([
+    readText("docs/internal-unicode-proposal-skeleton.md"),
+    import("node:fs/promises").then(({ readdir }) => readdir(path.join(root, "registry/symbols"))),
+  ]);
+  const records = await Promise.all(symbolFiles.filter((file) => file.endsWith(".json"))
+    .map((file) => readJson(`registry/symbols/${file}`)));
+  const repertoireRows = skeleton.split("\n")
+    .filter((line) => line.startsWith("| [`asr:filter."));
+
+  assert.equal(repertoireRows.length, records.length);
+  for (const record of records) {
+    const matchingRows = repertoireRows.filter((line) => line.includes("[`" + record.id + "`]"));
+    assert.equal(matchingRows.length, 1, `skeleton needs exactly one protected repertoire row for ${record.id}`);
+    assert.match(matchingRows[0], /\| `\[UNMET - immutable name\]` \| `\[UNASSIGNED\]` \| `\[PLACEHOLDER - no proposal glyph accepted\]` \| `\[UNMET\]` \|$/);
+  }
+  assert.match(skeleton, /NOT A PROPOSAL\. NOT SUBMITTABLE\. Unicode status: `HOLD`/);
+  assert.match(skeleton, /\[UNASSIGNED\]/);
+  assert.match(skeleton, /\[UNMET - IMMUTABLE NAME\]/i);
+  assert.match(skeleton, /no Unicode proposal has been submitted/i);
+  assert.match(skeleton, /No third-party image is embedded/i);
+  assert.match(skeleton, /DA-014 found no portable independent character use/i);
+  assert.doesNotMatch(skeleton, /U\+[0-9A-F]{4,6}\s+(?:AUDIO|FILTER)/i);
+});
+
 test("band-pass candidate-readiness package remains status-neutral and assessment-backed", async () => {
   const [metadata, record, readiness] = await Promise.all([
     readJson("registry/registry-metadata.json"),
