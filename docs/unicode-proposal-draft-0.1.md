@@ -1,6 +1,6 @@
 # Draft 0.1: Proposal to Encode Audio Filter Response Symbols
 
-**Status:** internal working draft; not submitted; not a request for action by Unicode, ISO/IEC, or any external body.  
+**Status:** publicly reachable GitHub working draft; not filed or submitted to Unicode, ISO/IEC, or any external body; not a request for external action.  
 **Prepared:** 2026-09-03  
 **Scope:** six audio filter-response concepts only.  
 **Repository status:** Unicode preparatory research is on HOLD.
@@ -124,7 +124,7 @@ The draft does not propose PUA mappings, variation selectors, ZWJ sequences, emo
 
 ## 9. Representative glyphs and font status
 
-Original neutral SVG candidates exist privately in this repository. They are noncanonical, unaccepted, unlicensed for Unicode submission, and intentionally not reproduced here as a character chart. The project has demonstrated a private, unencoded font proof and non-PUA icon packaging, but neither demonstrates customary text use or supplies an appropriate Unicode submission font.
+Project-controlled original neutral SVG candidates and the project-controlled unencoded font/icon proof assets are in this public repository. They are noncanonical and unaccepted. Their presence does not establish a documented submission-use rights chain for Unicode, and this draft grants or publishes no additional reuse rights. The draft intentionally does not reproduce a character chart. The proof assets demonstrate neither customary text use nor an appropriate Unicode submission font.
 
 A future submission must include an appropriate licensed font before SEW can recommend it to UTC. Artwork acceptance and any canonical designation remain human-review decisions in this project.
 
@@ -156,7 +156,7 @@ A future submission must include an appropriate licensed font before SEW can rec
 
 ## 12. Submission posture and governance
 
-The current posture is **do not submit**. This document neither creates a Unicode proposal nor authorizes a SEW account action, CLA, outreach, artwork publication, participant work, public release, or external contact.
+The current posture is **do not submit**. This publicly reachable GitHub working draft is not a filed Unicode proposal. It publishes neither canonical artwork nor any new reuse rights. It neither creates a Unicode proposal nor authorizes a SEW account action, CLA, outreach, artwork publication, participant work, public release, or external contact.
 
 Any later external submission requires a separate complete-package review and authorization under the repository's human-review policy. A decision to keep researching, revise the draft, narrow it, favor an open icon registry, or abandon Unicode remains valid.
 
@@ -184,9 +184,9 @@ Project evidence and boundary documents:
 - [Recognition Study Protocol](recognition-study-protocol.md)
 - [Private Unencoded Font Proof](private-unencoded-font-proof-2026-08-31.md)
 
-## Agent Report - 2026-09-02T19:31:42-07:00
+## Agent Report - 2026-09-02T19:34:54-07:00
 
-- Scope: created an internal Unicode-shaped proposal scaffold for the active six-concept filter repertoire.
+- Scope: created a publicly reachable GitHub working draft, not a filed Unicode proposal, for the active six-concept filter repertoire.
 - Finding: semantic/registry evidence supports continued work, but no proposed item currently satisfies the demonstrated-use and public-interchange showing required for an external character submission.
 - Evidence boundary: vendor UI, IEC references, convenience claims, and model-token claims are not treated as proof of character use or encoding need.
 - Protected state: no live registry status, artwork, geometry, identifiers, licensing position, participant authorization, or external posture changed.
