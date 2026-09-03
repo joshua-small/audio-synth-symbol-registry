@@ -32,7 +32,7 @@ The current SEW process requires proposal submissions to include the ISO/IEC JTC
 | Proposed code position | None | No allocation request |
 | Proposed category | Symbol, Other (`So`) is a working hypothesis | Must be reviewed under current property guidance |
 | Proposed presentation | Text only if eligible | No emoji, VS, PUA, or rich-text fallback proposal |
-| Proposed font | None supplied | Private proof is not a submission font |
+| Proposed font | None supplied | Project-controlled proof is not a submission font |
 | References and drawings | Repository candidates are original and provisional | No canonical artwork or publishing authorization |
 | Similar existing characters | Preliminary audit only | Requires version-pinned exhaustive analysis |
 
